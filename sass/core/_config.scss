@@ -1,0 +1,87 @@
+// =========================================
+// project initial setting
+// =========================================
+
+
+// ---- compass setting ----
+// compass vertical rhythm
+$base-font-size: 16px;
+$base-line-height: 24px;
+$relative-font-sizing: false;
+
+// compass support ie
+$legacy-support-for-ie: false;
+
+
+// ---- susy setting ----
+// basic for susy
+$total-columns  : 4;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+// add media
+$phone          : $total-columns;
+$pad            : 640px 6;
+$desktop        : 900px 12;
+
+
+// class variable
+$page-container: ".page";
+
+
+// ---- vendor mixin libraries ----
+@import "compass";
+@import "susy";
+
+// ---- modular scale import ----
+@import "vender/modular-scale";
+
+// ---- modular scale setting ----
+$ms-base: 13px 42px;
+$ms-ratio: $golden;
+
+
+// =========================================
+// global variables
+// =========================================
+
+
+// ======== Base Color ========
+// gray
+$color-black        : #333;
+$color-gray         : #999;
+$color-gray-light   : #eeeeef;
+
+// blue
+$color-blue-light   : #dee9ef;
+$color-blue         : #53caf5;
+$color-blue-dark    : darken($color-blue, 10%);
+
+// red by musou.tw
+$color-red-dark     : #A70000;
+$color-red          : #880013;
+$color-red-light    : #E70000;
+
+// text-color
+$text-black         : #444;
+$text-black-light   : #666;
+$text-gray          : #8a8a8a;
+$text-gray-light    : lighten($text-gray, 15%);
+
+// global-text-color
+$global-text-color       : $text-black;
+$global-text-color-muted : $text-gray;
+$global-link-color       : $color-blue-dark;
+$global-link-color-hover : darken($color-blue-dark, 20%);
+
+// background & border
+$global-background       : #f3f3f3;
+$global-divider          : $color-gray-light;
+$global-divider-dark     : #ccc;
+
+
+
+// =========================================
+// partial variables
+// =========================================

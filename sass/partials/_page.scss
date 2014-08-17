@@ -1,0 +1,83 @@
+#{$page-container}, .container {
+  @include container($phone, $pad, $desktop);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: $global-text-color;
+}
+
+body.open-menu {
+  height: 100%;
+}
+
+.wrap {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  // @include transition(max-width 1s);
+  .open-menu & {
+    overflow: hidden;
+  }
+}
+
+.open-menu .wrap {
+  height: 100%;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 260px;
+}
+
+.open-menu .menu {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  @include at-breakpoint($desktop) {
+    overflow-y: visible;
+  }
+}
+
+.main {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+  background: inherit;
+  @include transition(left .3s);
+  .open-menu & {
+    left: 260px;
+  }
+}
+
+
+@include at-breakpoint($desktop) {
+  #{$page-container} {
+    $container-style: magic;
+    @include set-container-width;
+  }
+  .open-menu .wrap {
+    overflow: visible;
+  }
+  .menu {
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    @include set-container-width;
+  }
+  .main {
+    position: static;
+  }
+}
+
+// @include at-breakpoint(1680px 12) {
+//   .wrap {
+//     max-width: 1500px;
+//   }
+// }

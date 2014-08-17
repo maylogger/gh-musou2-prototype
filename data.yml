@@ -1,0 +1,8 @@
+site-url: "http://localhost:3000"
+site-title: "國會無雙2.0"
+site-name: "國會無雙2.0"
+site-description: "國會無雙是沃草的第一個產品，本公司致力於提供公民更好的參與時政的空間、工具與平台。我們認為，公民應該監督立法院與民意代表，因為我們都有能讓國家更好的權利，而我們應該為了自己、也為了自己珍惜的理念和人們，行使我們的權力。"
+
+og-type: "website"
+og-image: "http://localhost:3000/fb.png"
+fb-admins: "123456"

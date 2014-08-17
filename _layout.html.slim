@@ -1,0 +1,16 @@
+doctype 5
+html lang="zh-TW"
+  head
+    = render "/layout_head"
+    = render "/layout_og"
+  body
+    .wrap
+      .menu
+        = render "/partials/menu"
+      .main
+        = render "/partials/header"
+        .page
+          = yield
+          = render "/partials/footer"
+    = render "/layout_foot"
+    = render "/layout_livereload"
