@@ -1,0 +1,12 @@
+- 3.times do
+  .committee
+    h2 #{zh_lorem_words(2+rand(7))}委員會
+  - 3.times do
+    a.sitting href="#"
+      = render "/partials/person-info"
+      .main-info
+        .date =lorem_date.to_date
+        h3.title =zh_lorem_sentence
+        .topic
+          .label 議題
+          =zh_lorem_words(5+rand(10))

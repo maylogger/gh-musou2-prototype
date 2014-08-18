@@ -1,0 +1,26 @@
+.page-header
+  .page-header-inner
+    h1.page-header-title 準備開戰
+.container
+  .article
+    h2.article-title 觀賽重點
+    = render "/partials/article"
+  .aside
+    .aside-item
+      = render "/partials/person-info"
+      ul.list
+        li
+          .list-label 議題
+          .list-content = zh_lorem_words 5 + rand(10)
+        li
+          .list-label 委員會
+          .list-content #{zh_lorem_words(2+rand(7))}委員會
+        li
+          .list-label 主席
+          .list-content = zh_lorem_name
+        li
+          .list-label 開會日期
+          .list-content = lorem_date.to_date
+        li
+          .list-label 開會時間
+          .list-content 上午（09:00 - 12:00）

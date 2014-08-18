@@ -1,0 +1,13 @@
+.article {
+  @include at-breakpoint($desktop) {
+    @include box-sizing(border-box);
+    @include span-columns(8);
+    @include leader();
+    padding-right: 48px;
+  }
+}
+.article-title {
+  @include trailer(.5);
+  @include padding-trailer(.5);
+  border-bottom: 1px solid $global-divider;
+}

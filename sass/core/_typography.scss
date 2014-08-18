@@ -29,29 +29,29 @@ body {
   @include reset-box-model;
   font-weight: normal;
 }
-h1 {
-  @include adjust-font-size-to(ms(3), 1.5);
+%h1, h1 {
+  @include adjust-font-size-to(ms(4), 2);
 }
-h2 {
-  @include adjust-font-size-to(ms(2), 1.25);
+%h2, h2 {
+  @include adjust-font-size-to(ms(3), 1.75);
 }
-h3 {
-  @include adjust-font-size-to(ms(1));
+%h3, h3 {
+  @include adjust-font-size-to(ms(2), 1.5);
 }
-h4 {
-  @include adjust-font-size-to(ms(0), .875);
+%h4, h4 {
+  @include adjust-font-size-to(ms(1), 1.25);
 }
-h5 {
-  @include adjust-font-size-to(ms(-1), .75);
+%h5, h5 {
+  @include adjust-font-size-to(ms(0));
 }
-h6 {
-  @include adjust-font-size-to(ms(-2), .75);
+%h6, h6 {
+  @include adjust-font-size-to(ms(-1), .875);
 }
 
 p {
   @include leader(0);
   @include trailer(1);
-  @include adjust-font-size-to(ms(0), .875);
+  @include adjust-font-size-to(ms(1), 1.2);
 }
 
 
@@ -154,7 +154,6 @@ a {
 
 img {
   max-width: 100%;
-  @include trailer(1);
 }
 
 // divider

@@ -1,0 +1,28 @@
+.aside {
+  @include leader();
+  @include trailer();
+  @include at-breakpoint($desktop) {
+    @include span-columns(4 omega);
+  }
+}
+
+.aside-item {
+  @include trailer(2);
+  .person-info {
+    display: block;
+    @include padding-trailer();
+    border-bottom: 1px solid $global-divider;
+    .anchor, .reviewer, .president {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .avatar img {
+      border: 5px solid $color-gray-light;
+    }
+  }
+}
+
+.aside-title {
+  @include trailer(.5);
+  border-bottom: 1px solid $color-gray-light;
+}

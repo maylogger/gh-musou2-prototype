@@ -1,0 +1,40 @@
+.footer {
+  position: relative;
+  padding: rhythm(2) 0;
+  background-color: lighten($color-black, 40%);
+  @include pie-clearfix;
+  .link-item {
+    float: none;
+    text-align: center;
+    margin-bottom: rhythm(1);
+    @include at-breakpoint($desktop) {
+      float: left;
+      margin-bottom: 0;
+      text-align: left;
+    }
+    a {
+      display: block;
+      color: white;
+      padding: rhythm(.25) 0;
+      @include at-breakpoint($pad) {
+        display: inline-block;
+        padding: 0 rhythm(.5);
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+  .credit {
+    float: none;
+    text-align: center;
+    color: white;
+    @include at-breakpoint($desktop) {
+      float: right;
+      text-align: right;
+    }
+    .copyright {
+      @extend %anti-break;
+    }
+  }
+}

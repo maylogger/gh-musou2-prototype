@@ -16,7 +16,7 @@ $legacy-support-for-ie: false;
 // ---- susy setting ----
 // basic for susy
 $total-columns  : 4;
-$column-width   : 4em;
+$column-width   : 5em;
 $gutter-width   : 1em;
 $grid-padding   : $gutter-width;
 
@@ -27,7 +27,7 @@ $desktop        : 900px 12;
 
 
 // class variable
-$page-container: ".page";
+$page-container: ".container";
 
 
 // ---- vendor mixin libraries ----
@@ -58,10 +58,11 @@ $color-blue-light   : #dee9ef;
 $color-blue         : #53caf5;
 $color-blue-dark    : darken($color-blue, 10%);
 
-// red by musou.tw
+// color by musou.tw
 $color-red-dark     : #A70000;
 $color-red          : #880013;
 $color-red-light    : #E70000;
+$color-orange       : #FF5000;
 
 // text-color
 $text-black         : #444;

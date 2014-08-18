@@ -1,0 +1,18 @@
+.page-header
+  .page-header-inner
+    h1.page-header-title 賽事
+ul.schedule-tab
+  li.active
+    a.schedule-forecast href="#forecast" role="tab" data-toggle="tab" 準備開戰
+  li
+    a.schedule-live href="#live" role="tab" data-toggle="tab" 戰鬥中
+  li
+    a.schedule-report href="#report" role="tab" data-toggle="tab" 戰況報告
+.container
+  .schedule-table.tab-content
+    .tab-pane.fade.in.active#forecast
+      = render "/partials/sitting-group"
+    .tab-pane.fade#live
+      = render "/partials/sitting-group"
+    .tab-pane.fade#report
+      = render "/partials/sitting-group"

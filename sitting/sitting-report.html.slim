@@ -1,0 +1,31 @@
+.page-header
+  .page-header-inner
+    h1.page-header-title 戰況報告
+.container
+  .article
+    = render "/partials/article"
+  .aside
+    .aside-item
+      h2.aside-title 精選影音
+      ul.list-with-image
+        li: a href=""
+          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .list-content =zh_lorem_sentence
+        li: a href=""
+          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .list-content =zh_lorem_sentence
+        li: a href=""
+          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .list-content =zh_lorem_sentence
+    .aside-item
+      h2.aside-title 精選場邊評論
+      ul.list-with-image
+        li: a href=""
+          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .list-content =zh_lorem_sentence
+        li: a href=""
+          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .list-content =zh_lorem_sentence
+        li: a href=""
+          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .list-content =zh_lorem_sentence

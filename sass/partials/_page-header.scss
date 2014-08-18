@@ -1,0 +1,11 @@
+.page-header {
+  background-color: $color-black;
+  .page-header-inner {
+    @extend %container;
+    padding-top: rhythm(1.5);
+    padding-bottom: rhythm(1.5);
+    .page-header-title {
+      color: white;
+    }
+  }
+}

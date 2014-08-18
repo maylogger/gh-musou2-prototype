@@ -1,0 +1,64 @@
+%list, .list {
+  @include reset-box-model;
+  @include leader(.5);
+  @include trailer(.5);
+  list-style: none;
+  @include adjust-font-size-to(ms(0));
+  @include at-breakpoint($pad) {
+    @include adjust-font-size-to(ms(1));
+  }
+  li {
+    @include pie-clearfix;
+  }
+  li + li {
+    @include leader(.5);
+    @include padding-leader(.5);
+    border-top: 1px solid $global-divider;
+  }
+  .list-label {
+    font-weight: bold;
+    color: $color-gray;
+    @include at-breakpoint($pad) {
+        float: left;
+        width: 7em;
+    }
+  }
+  .list-content {
+    color: $text-black;
+    a {
+      display: inline-block;
+      width: 100%;
+      @include ellipsis;
+    }
+    @include at-breakpoint($pad) {
+        overflow: hidden;
+    }
+  }
+  .list-content-row {
+    @include pie-clearfix;
+    @include at-breakpoint($pad) {
+      padding-bottom: rhythm(.25);
+    }
+  }
+}
+
+.list-with-image {
+  @extend %list;
+  a {
+    display: block;
+    @include pie-clearfix;
+  }
+  .list-image {
+    float: left;
+    max-width: 25%;
+    margin-right: 6px;
+    line-height: 0;
+  }
+  .list-content {
+    float: left;
+    width: 70%;
+    height: 48px;
+    overflow: hidden;
+    text-align: left;
+  }
+}
