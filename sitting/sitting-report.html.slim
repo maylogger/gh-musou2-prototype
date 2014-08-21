@@ -3,29 +3,48 @@
     h1.page-header-title 戰況報告
 .container
   .article
+    h2.article-title 第8屆第5會期第2次臨時會第2次會議
+    .article-meta
+      .sitting-topic
+        .label 會議議題
+        = zh_lorem_sentence
     = render "/partials/article"
+    .extend-content
+      h3.content-title 相關戰報
+      ul.list-with-image
+        - 4.times do
+          li: a href=""
+            .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+            .list-content =zh_lorem_sentence
   .aside
     .aside-item
-      h2.aside-title 精選影音
-      ul.list-with-image
-        li: a href=""
-          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
-          .list-content =zh_lorem_sentence
-        li: a href=""
-          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
-          .list-content =zh_lorem_sentence
-        li: a href=""
-          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
-          .list-content =zh_lorem_sentence
+      .president.in-sitting
+        .avatar
+          .party =image_tag("/images/DPP.png")
+          =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+        .name
+          .label 主席
+          =zh_lorem_name
+
+      ul.list
+        li
+          .list-label 委員會
+          .list-content #{zh_lorem_words(2+rand(7))}委員會
+        li
+          .list-label 聯席委員會
+          .list-content #{zh_lorem_words(2+rand(7))}委員會
+
     .aside-item
-      h2.aside-title 精選場邊評論
+      h3.aside-title 精選影音
       ul.list-with-image
-        li: a href=""
-          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
-          .list-content =zh_lorem_sentence
-        li: a href=""
-          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
-          .list-content =zh_lorem_sentence
-        li: a href=""
-          .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
-          .list-content =zh_lorem_sentence
+        - 3.times do
+          li: a href=""
+            .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+            .list-content =zh_lorem_sentence
+    .aside-item
+      h3.aside-title 精選場邊評論
+      ul.list-with-image
+        - 3.times do
+          li: a href=""
+            .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+            .list-content =zh_lorem_sentence
