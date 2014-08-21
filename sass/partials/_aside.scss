@@ -7,22 +7,21 @@
 }
 
 .aside-item {
-  @include trailer(2);
-  .person-info {
-    display: block;
-    @include padding-trailer();
-    border-bottom: 1px solid $global-divider;
-    .anchor, .reviewer, .president {
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .avatar img {
-      border: 5px solid $color-gray-light;
-    }
-  }
+  @include trailer(1);
+  padding: 10px 12px;
+  border: 1px solid $global-divider;
+  @include border-radius(5px);
 }
 
 .aside-title {
   @include trailer(.5);
+  @include padding-trailer(.25);
+  font-weight: bold;
   border-bottom: 1px solid $color-gray-light;
+}
+
+@include at-breakpoint($desktop) {
+  .aside-item {
+    padding: 20px 24px;
+  }
 }
