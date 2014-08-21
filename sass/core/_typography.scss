@@ -30,22 +30,22 @@ body {
   font-weight: normal;
 }
 %h1, h1 {
-  @include adjust-font-size-to(ms(4), 2);
+  @include adjust-font-size-to(ms(3), 1.5);
 }
 %h2, h2 {
-  @include adjust-font-size-to(ms(3), 1.75);
+  @include adjust-font-size-to(ms(2), 1.25);
 }
 %h3, h3 {
-  @include adjust-font-size-to(ms(2), 1.5);
+  @include adjust-font-size-to(ms(1));
 }
 %h4, h4 {
-  @include adjust-font-size-to(ms(1), 1.25);
-}
-%h5, h5 {
   @include adjust-font-size-to(ms(0));
 }
-%h6, h6 {
+%h5, h5 {
   @include adjust-font-size-to(ms(-1), .875);
+}
+%h6, h6 {
+  @include adjust-font-size-to(ms(-2), .75);
 }
 
 p {
@@ -54,6 +54,32 @@ p {
   @include adjust-font-size-to(ms(1), 1.2);
 }
 
+@include at-breakpoint($pad) {
+  %h1, h1 {
+  @include adjust-font-size-to(ms(4), 2);
+  }
+  %h2, h2 {
+    @include adjust-font-size-to(ms(3), 1.5);
+  }
+  %h3, h3 {
+    @include adjust-font-size-to(ms(2), 1.25);
+  }
+  %h4, h4 {
+    @include adjust-font-size-to(ms(1));
+  }
+  %h5, h5 {
+    @include adjust-font-size-to(ms(0));
+  }
+  %h6, h6 {
+    @include adjust-font-size-to(ms(-1), .875);
+  }
+
+  p {
+    @include leader(0);
+    @include trailer(1);
+    @include adjust-font-size-to(ms(1), 1.2);
+  }
+}
 
 // 引用他處文獻
 blockquote {
