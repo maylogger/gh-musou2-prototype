@@ -1,0 +1,15 @@
+- 10.times do
+  a.sitting-report href="/sitting/sitting-report.html"
+    .report-image =image_tag("http://hhhhold.com/355x200/#{rand(100)}")
+    .report-content
+      h2.report-title =zh_lorem_sentence
+      .report-meta
+        .meta
+          .label 議題
+          =zh_lorem_sentence
+        .meta
+          .label 委員會
+          | #{zh_lorem_words(2+rand(7))}委員會
+      p.report-summary =zh_lorem_paragraph
+
+= render "/partials/pagination"
