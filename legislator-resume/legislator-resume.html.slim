@@ -1,0 +1,46 @@
+.page-header
+  .page-header-inner
+    h1.page-header-title 立委線上履歷 - #{zh_lorem_name}
+.container
+  .sidebar
+    .legislator-info.sidebar-item
+      .legislator-bgimage style="background-image:url('http://hhhhold.com/300x200/')"
+      .legislator
+        .avatar.is-large.has-party
+          .party =image_tag("/images/DPP.png")
+          =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+        .name =zh_lorem_name
+      ul.list
+        li
+          .list-label 黨籍
+          .list-content #{zh_lorem_words(2+rand(3))}黨
+        li
+          .list-label 委員會
+          .list-content #{zh_lorem_words(2+rand(5))}委員會
+        li
+          .list-label 近況
+          .list-content
+            .positive-status 參選南投市長
+            .positive-status 參選立法委員
+            .negative-status 然後都落選
+
+    button.btn_ask-legislator 我要發問
+    .legislator-ignore-rate.sidebar-item
+      span 已讀不回率
+      span.rate #{rand(100)}%
+
+  .legislator-resume
+    ul.resume-tab
+      li.active
+        a.legislator-news href="#news" role="tab" data-toggle="tab" 近況
+      li
+        a.legislator-ask href="#ask" role="tab" data-toggle="tab" 發問
+      li
+        a.legislator-data href="#data" role="tab" data-toggle="tab" 數據
+    .tab-content.resume-content
+      .tab-pane.fade.in.active#news
+        = render "/partials/legislator-news"
+      .tab-pane.fade#ask
+        = render "/partials/legislator-ask"
+      .tab-pane.fade#data
+        = render "/partials/legislator-data"
