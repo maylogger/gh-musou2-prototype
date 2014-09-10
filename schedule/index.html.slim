@@ -1,3 +1,5 @@
+- @page_name = "schedule"
+
 .page-header
   .page-header-inner
     h1.page-header-title 賽事
@@ -15,4 +17,10 @@ ul.schedule-tab
     .tab-pane.fade#live
       = render "/partials/schedule-live"
     .tab-pane.fade#report
-      = render "/partials/schedule-report"
+      = render "/partials/search"
+      = render "/partials/filter"
+      .tab-pane.fade.in.active#tab1
+        = render "/partials/schedule-report"
+      - 6.times do |i|
+        .tab-pane.fade id="tab#{i+2}"
+          = render "/partials/schedule-report"
