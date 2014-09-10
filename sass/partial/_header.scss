@@ -1,17 +1,16 @@
 .header {
   background-color: $color-red;
-}
-
-.logo {
-  padding: 11px 0 13px;
-  text-align: center;
-  a {
-    display: inline-block;
-    vertical-align: top;
-    @include replace-text-with-svg("logo");
-  }
-  @include at-breakpoint($desktop) {
-    text-align: left;
+  .logo {
+    padding: 11px 0 13px;
+    text-align: center;
+    a {
+      display: inline-block;
+      vertical-align: top;
+      @include replace-text-with-svg("logo");
+    }
+    @include at-breakpoint($desktop) {
+      text-align: left;
+    }
   }
 }
 
@@ -22,6 +21,7 @@
   height: 60px;
   background-color: transparent;
   border: none;
+  @include border-radius(0);
   &:focus {
     outline: none;
   }

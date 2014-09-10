@@ -1,0 +1,63 @@
+.legislator-resume {
+  .ask-form {
+    @include trailer();
+    @include padding-trailer();
+    border-bottom: 1px solid $global-divider;
+    textarea {
+      @include reset-box-model;
+      @include box-sizing(border-box);
+      width: 100%;
+      @include leader(.5);
+      @include trailer(.5);
+      padding: rhythm(.25);
+      border: 1px solid $color-gray;
+      @include border-radius(5px);
+      &:disabled {
+        background-color: $color-gray-light;
+      }
+    }
+  }
+  .ask-list {
+    .tab-pane { padding: 0; }
+  }
+  .ask-question {
+    @include trailer();
+    @include padding-trailer();
+    border-bottom: 1px solid $global-divider;
+    .que {
+      position: relative;
+      padding-left: 32px;
+      &:before {
+        content: "Q";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: ms(4);
+        font-weight: bold;
+        color: $color-gray;
+      }
+    }
+    .ans {
+      position: relative;
+      @include leader();
+      padding-left: 32px;
+      &:before {
+        content: "A";
+        position: absolute;
+        top: 0;
+        left: 1px;
+        font-size: ms(4);
+        font-weight: bold;
+        color: lighten($color-red, 35%);
+      }
+    }
+  }
+  .ask-interaction {
+    @include leader();
+    text-align: right;
+    .push-message {
+      padding-right: 6px;
+      color: $color-red;
+    }
+  }
+}

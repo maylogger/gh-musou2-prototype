@@ -1,0 +1,128 @@
+.btn-share-module {
+  display: inline-block;
+  margin-left: 6px;
+  text-align: center;
+  vertical-align: bottom;
+  @include border-radius(2px);
+  &:hover { text-decoration: none; }
+  .counter {
+    color: $color-blue-deep;
+    @include adjust-font-size-to(ms(0), .5);
+  }
+  .button {
+    margin-top: 8px;
+    padding: 0 9px;
+    color: white;
+    @include adjust-font-size-to(ms(0));
+    background-color: $color-blue-deep;
+    &:hover { background-color: lighten($color-blue-deep, 10%); }
+  }
+}
+
+.btn-like-module {
+  display: inline-block;
+  margin-left: 6px;
+  text-align: center;
+  padding: 9px 12px 0;
+  text-align: center;
+  background-color: $color-gray-light;
+  @include border-radius(2px);
+  &:hover {
+    text-decoration: none;
+    background-color: lighten($color-gray-light, 3%);
+  }
+  .counter {
+    color: $color-red;
+    @include adjust-font-size-to(ms(0), .5);
+  }
+  .button {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 0;
+    @include replace-text-with-svg("like-button");
+    background-color: transparent;
+  }
+}
+
+.btn-dislike-module {
+  display: inline-block;
+  margin-left: 6px;
+  text-align: center;
+  padding: 9px 12px 0;
+  text-align: center;
+  background-color: $color-gray-light;
+  @include border-radius(2px);
+  &:hover {
+    text-decoration: none;
+    background-color: lighten($color-gray-light, 3%);
+  }
+  .counter {
+    color: $color-gray;
+    @include adjust-font-size-to(ms(0), .5);
+  }
+  .button {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 0;
+    @include replace-text-with-svg("dislike-button");
+    background-color: transparent;
+  }
+}
+
+.btn-like-module+.btn-dislike-module {
+  position: relative;
+  margin-left: -1px;
+  @include border-radius(0 2px 2px 0);
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background-color: $color-gray;
+  }
+}
+
+.btn_search {
+  padding: 4px 12px;
+  color: white;
+  background-color: $color-red;
+  @include border-radius(0 5px 5px 0);
+  @include transition(background-color .25s);
+  &:hover { background-color: lighten($color-red, 10%); }
+}
+
+.btn_loadmore {
+  width: 100%;
+  @include leader();
+  padding: 12px 12px;
+  color: white;
+  background-color: $color-red;
+  @include border-radius(5px);
+  @include transition(background-color .25s);
+  &:hover { background-color: lighten($color-red, 10%); }
+}
+
+.btn_push {
+  color: white;
+  background-color: $color-red;
+  @include transition(background-color .25s);
+  &:hover { background-color: lighten($color-red, 10%); }
+}
+
+.btn_push + .btn_share {
+  margin-left: 6px;
+}
+
+.btn_ask-legislator {
+  @include trailer();
+  width: 100%;
+  padding: 6px 12px;
+  @include adjust-font-size-to(ms(3));
+  color: white;
+  background-color: $color-red;
+  @include border-radius(5px);
+  @include transition(background-color .25s);
+  &:hover { background-color: lighten($color-red, 10%); }
+}

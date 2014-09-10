@@ -4,9 +4,6 @@
   @include trailer(.5);
   list-style: none;
   @include adjust-font-size-to(ms(0));
-  @include at-breakpoint($pad) {
-    @include adjust-font-size-to(ms(1));
-  }
   li {
     @include pie-clearfix;
   }
@@ -16,27 +13,26 @@
     border-top: 1px solid $global-divider;
   }
   .list-label {
-    font-weight: bold;
+    @extend %subpixel;
+    float: left;
+    width: 7em;
     color: $color-gray;
-    @include at-breakpoint($pad) {
-        float: left;
-        width: 7em;
-    }
   }
   .list-content {
     color: $text-black;
+    overflow: hidden;
     a {
       display: inline-block;
       width: 100%;
       @include ellipsis;
     }
-    @include at-breakpoint($pad) {
-        overflow: hidden;
-    }
   }
   .list-content-row {
     @include pie-clearfix;
-    @include at-breakpoint($pad) {
+  }
+  @include at-breakpoint($pad) {
+    @include adjust-font-size-to(ms(1));
+    .list-content-row {
       padding-bottom: rhythm(.25);
     }
   }

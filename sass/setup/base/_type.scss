@@ -1,3 +1,10 @@
+// ---- modular scale import ----
+@import "vender/modular-scale";
+
+// ---- modular scale setting ----
+$ms-base: 13px 42px;
+$ms-ratio: $golden;
+
 @include establish-baseline;
 
 %avenir {
@@ -10,6 +17,12 @@
     font-family: "Helvetica Neue", "Helvetica", "Arial", "STHeitiTC-Light","Microsoft JhengHei", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+%code-font {
+  font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New" ,MonoSpace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 %subpixel {
@@ -81,7 +94,6 @@ p {
   }
 }
 
-// 引用他處文獻
 blockquote {
   @include reset-box-model;
   @include leader(1);
@@ -98,49 +110,59 @@ blockquote {
   }
 }
 
+code {
+  // display: inline-block;
+  @extend %code-font;
+  @include adjust-font-size-to(13px);
+  padding: 0 6px;
+  background-color: $global-background-color;
+  white-space: nowrap;
+}
 
-// code 示範區（具有陰影提示）
 pre {
+  @include leader(1);
+  @include trailer(1);
   code {
-    $code-block-background-color: $global-background;
-    $code-block-cover-size: 80px;
-    $code-block-cover-position: 12.5%;
-    $code-block-shadow-color: #999;
-    $code-block-shadow-size: $code-block-cover-size * ($code-block-cover-position/100%);
-    $code-block-weight: .3;
-
-    font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New" ,MonoSpace;
+    @extend %code-font;
     display: block;
-    @include leader(1);
-    @include trailer(1);
     padding: rhythm(.75);
-    color: #333;
-    @include adjust-font-size-to(12px, .75);
-    overflow: auto;
-    white-space: pre;
-    -webkit-overflow-scrolling: touch;
-    background-image:
-      /* Shadow covers */
-      linear-gradient(to right, $code-block-background-color $code-block-cover-position, rgba($code-block-background-color, 0) ),
-      linear-gradient(to right, rgba($code-block-background-color, 0),  $code-block-background-color ( 100% - $code-block-cover-position ) ),
-      /* Shadows */
-      radial-gradient(0 50%, farthest-side, rgba($code-block-shadow-color, $code-block-weight), rgba($code-block-shadow-color, 0) ),
-      radial-gradient(100% 50%,farthest-side, rgba($code-block-shadow-color, $code-block-weight), rgba($code-block-shadow-color, 0) );
-    background-image:
-      /* Shadow covers */
-      linear-gradient(to right, $code-block-background-color $code-block-cover-position, rgba($code-block-background-color, 0) ),
-      linear-gradient(to right, rgba($code-block-background-color, 0),  $code-block-background-color ( 100% - $code-block-cover-position ) ),
-      /* Shadows */
-      radial-gradient(farthest-side at 0 50%,  rgba($code-block-shadow-color, $code-block-weight), rgba( $code-block-shadow-color, 0) ),
-      radial-gradient(farthest-side at 100% 50%,  rgba($code-block-shadow-color, $code-block-weight), rgba( $code-block-shadow-color, 0) );
-    background-repeat: no-repeat;
-    background-color: $code-block-background-color;
-    background-size: $code-block-cover-size 100%, $code-block-cover-size 100%, $code-block-shadow-size 110%, $code-block-shadow-size 110%;
-    background-attachment: local, local, scroll, scroll;
-    background-position: left center, right center, left center, right center;
+    color: $global-text-color;
+    font-size:  $base-font-size * 0.75;
+    line-height: 1.6;
+    @extend %code-scroll;
   }
 }
 
+%code-scroll {
+  overflow: auto;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  $background-color: $global-background-color;
+  $shadow-color: #999;
+  $cover-size: 80px;
+  $cover-position: 12.5%;
+  $shadow-size: $cover-size * ($cover-position/100%);
+  $shadow-weight: .3;
+  background-image:
+    /* Shadow covers */
+    linear-gradient(to right, $background-color $cover-position, rgba($background-color, 0) ),
+    linear-gradient(to right, rgba($background-color, 0),  $background-color ( 100% - $cover-position ) ),
+    /* Shadows */
+    radial-gradient(0 50%, farthest-side, rgba($shadow-color, $shadow-weight), rgba($shadow-color, 0) ),
+    radial-gradient(100% 50%,farthest-side, rgba($shadow-color, $shadow-weight), rgba($shadow-color, 0) );
+  background-image:
+    /* Shadow covers */
+    linear-gradient(to right, $background-color $cover-position, rgba($background-color, 0) ),
+    linear-gradient(to right, rgba($background-color, 0),  $background-color ( 100% - $cover-position ) ),
+    /* Shadows */
+    radial-gradient(farthest-side at 0 50%,  rgba($shadow-color, $shadow-weight), rgba( $shadow-color, 0) ),
+    radial-gradient(farthest-side at 100% 50%,  rgba($shadow-color, $shadow-weight), rgba( $shadow-color, 0) );
+  background-repeat: no-repeat;
+  background-color: $background-color;
+  background-size: $cover-size 100%, $cover-size 100%, $shadow-size 110%, $shadow-size 110%;
+  background-attachment: local, local, scroll, scroll;
+  background-position: left center, right center, left center, right center;
+}
 
 // list
 ol, ul {
@@ -164,7 +186,6 @@ dl {
   }
 }
 
-
 // inline style
 a {
   @include link-colors($global-link-color, $global-link-color-hover);
@@ -176,10 +197,6 @@ a {
 
 .break-all {
   @include word-break(break-all);
-}
-
-img {
-  max-width: 100%;
 }
 
 // divider

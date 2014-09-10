@@ -1,0 +1,36 @@
+.legislator-info {
+  overflow: hidden;
+  .legislator-bgimage {
+    position: relative;
+    height: 150px;
+    margin: -20px -24px -50px;
+    @include background-size(cover);
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      @include background(linear-gradient(to bottom, rgba(black, 0), rgba(black, .2)));
+    }
+  }
+  .legislator {
+    .name {
+      display: inline-block;
+      position: relative;
+      top: -22px;
+      padding-left: 12px;
+      @include adjust-font-size-to(ms(3));
+      font-weight: bold;
+    }
+  }
+}
+.legislator-ignore-rate {
+  color: $color-red;
+  font-weight: bold;
+  .rate {
+    float: right;
+    @include adjust-font-size-to(ms(3), 1);
+  }
+}

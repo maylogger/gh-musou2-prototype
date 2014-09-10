@@ -1,19 +1,18 @@
-.aside {
+.sidebar {
   @include leader();
-  @include trailer();
   @include at-breakpoint($desktop) {
     @include span-columns(4 omega);
   }
 }
 
-.aside-item {
+.sidebar-item {
   @include trailer(1);
   padding: 10px 12px;
   border: 1px solid $global-divider;
   @include border-radius(5px);
 }
 
-.aside-title {
+.sidebar-title {
   @include trailer(.5);
   @include padding-trailer(.25);
   font-weight: bold;
@@ -21,7 +20,7 @@
 }
 
 @include at-breakpoint($desktop) {
-  .aside-item {
+  .sidebar-item {
     padding: 20px 24px;
   }
 }

@@ -1,0 +1,37 @@
+.filter {
+  @include reset-box-model;
+  @include pie-clearfix;
+  margin-left: -16px;
+  margin-right: -16px;
+  @include trailer(.5);
+  overflow-x: scroll;
+  list-style: none;
+  @include nowrap;
+  border-bottom: 1px solid $color-gray-light;
+  li {
+    display: inline-block;
+    a {
+      @include unstyled-link;
+      display: block;
+      padding: 3px 12px;
+      @include adjust-font-size-to(ms(0));
+      color: $text-black-light;
+      @include transition(color .25s);
+    }
+    &:hover a {
+      color: $color-red;
+    }
+    &.active a {
+      @extend %subpixel;
+      color: $color-red;
+      border-bottom: 3px solid $color-red;
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .filter {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

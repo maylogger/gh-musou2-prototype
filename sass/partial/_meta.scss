@@ -1,0 +1,19 @@
+.meta-info {
+  @include trailer(.25);
+  @include adjust-font-size-to(ms(0));
+  .meta {
+    display: block;
+    margin-right: 6px;
+    .label { display: inline-block; }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .meta-info {
+    .meta { display: inline-block; }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .meta-info { @include adjust-font-size-to(ms(1)); }
+}

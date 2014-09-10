@@ -1,34 +1,39 @@
-.article {
+.post {
   @include box-sizing(border-box);
   @include leader();
   @include at-breakpoint($desktop) {
     @include span-columns(8);
     padding-right: 48px;
   }
-  h1, h2, h3, h4, h5, h6 {
+  .post-title {
     @include trailer(.5);
-  }
-  h3, h4, h5, h6 {
+    @include padding-trailer(.5);
     font-weight: bold;
+    border-bottom: 1px solid $global-divider;
   }
-  img {
-    @include trailer();
+
+  .post-meta {
+    @include pie-clearfix;
+    @include trailer(.5);
+    @include padding-trailer(.5);
+    font-weight: bold;
+    border-bottom: 1px solid $global-divider;
+    .label {
+      float: left;
+      padding: 3px 9px;
+      color: white;
+      background-color: $color-black;
+    }
+    .topic {
+      float: left;
+      padding: 3px 9px;
+      color: white;
+      background-color: $color-red;
+    }
   }
-}
-.article-title {
-  @include trailer(.5);
-  @include padding-trailer(.5);
-  font-weight: bold;
-  border-bottom: 1px solid $global-divider;
 }
 
-.article-meta {
-  @include trailer(.5);
-  @include padding-trailer(.5);
-  border-bottom: 1px solid $global-divider;
-}
-
-.extend-content {
+.post-extend-content {
   @include leader(3);
   @include trailer(3);
   @include padding-leader(.5);
@@ -45,7 +50,7 @@
 }
 
 @include at-breakpoint($desktop) {
-  .extend-content {
+  .post-extend-content {
     .list-with-image {
       @include pie-clearfix;
       li {

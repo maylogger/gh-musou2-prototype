@@ -1,42 +1,36 @@
-// *************************************
-//
-// Project-name
-//
-// *************************************
+// ==== setup ====
+@import "setup";
 
+// ==== layout ====
+@import "layout/base-layout";
 
-// -------------------------------------
-// core
-// -------------------------------------
-@import "core/normalize",
-        "core/config",
-        "core/helpers",
-        "core/typography";
+// ==== component ====
+@import "component/page-header",
+        "component/tab",
+        "component/list",
+        "component/filter",
+        "component/button-module",
+        "component/pagination",
+        "component/search",
+        "component/common",
+        "component/avatar",
+        "component/article",
+        "component/post";
 
+// ==== partial ====
+@import "partial/menu",
+        "partial/header",
+        "partial/sidebar",
+        "partial/meta",
+        "partial/live",
+        "partial/iframe",
+        "partial/footer";
 
-
-// -------------------------------------
-// partials
-// -------------------------------------
-@import "partials/page",
-        "partials/menu",
-        "partials/header",
-        "partials/page-header",
-        "partials/tab",
-        "partials/avatar",
-        "partials/schedule",
-        "partials/article",
-        "partials/aside",
-        "partials/list",
-        "partials/live",
-        "partials/iframe",
-        "partials/button",
-        "partials/pagination",
-        "partials/footer",
-        "partials/common";
-
-
-// -------------------------------------
-// tools
-// -------------------------------------
-// @include layout-debug;
+// ==== page ====
+@import "page/legislator-resume/legislator-list",
+        "page/legislator-resume/legislator-resume",
+        "page/legislator-resume/legislator-resume-news",
+        "page/legislator-resume/legislator-resume-ask",
+        "page/legislator-resume/legislator-sidebar",
+        "page/schedule",
+        "page/sitting";

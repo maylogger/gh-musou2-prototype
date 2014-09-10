@@ -1,0 +1,14 @@
+.search-bar {
+  @include trailer(.5);
+  input {
+    @include reset-box-model;
+    padding: 6px 12px;
+    border: 1px solid $global-divider;
+    border-right: none;
+    outline: none;
+    @include transition(border-color .25s);
+    &:focus {
+      border-color: darken($global-divider, 10%);
+    }
+  }
+}

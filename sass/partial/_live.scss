@@ -8,15 +8,21 @@
   .title {
     @include trailer(.5);
     @include padding-trailer(.5);
-    border-bottom: 1px solid $global-divider;
+    border-bottom: 1px solid $color-gray-light;
   }
+}
+.live-comment-list {
+  max-height: 500px;
+  overflow-y: scroll;
 }
 
 .live-comment {
-  margin: 9px 0;
+  margin: 12px 0;
   padding: 12px 6px;
-  background-color: lighten($color-gray-light, 3%);
+  background-color: $color-gray-light;
+  border: 1px solid darken($color-gray-light, 5%);
   @include border-radius(5px);
+  &.highlight { border-color: $color-red; }
   .time {
     display: block;
     @include trailer(.5);
@@ -30,22 +36,38 @@
     display: block;
     text-align: center;
     .legislator {
+      @include box-sizing(border-box);
+      position: relative;
       display: inline-block;
-      padding: 0 3px;
-      vertical-align: middle;
       .avatar {
-        margin-bottom: 3px;
-        img {
-          max-width: none;
-          display: block;
-          margin: 0 auto;
-          @include border-radius(100%);
-          border: 5px solid white;
-        }
+        margin: 0 6px 3px 6px;
+        img { margin-bottom: 0; }
       }
       .name {
-        text-align: center;
+        display: none;
+        position: absolute;
+        top: -28px;
+        width: 100%;
         @include adjust-font-size-to(ms(0));
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        background-color: $color-black;
+        @include border-radius(2px);
+        &:after {
+          content: "";
+          position: absolute;
+          top: 24px;
+          left: 50%;
+          margin-left: -4px;
+          border: 4px solid transparent;
+          border-top-color: $color-black;
+        }
+      }
+      &:hover {
+        .name {
+          display: block;
+        }
       }
     }
     .text {
@@ -57,6 +79,7 @@
       @include padding-leader(.25);
       border-top: 1px solid darken($color-gray-light, 3%);
     }
+    img { margin: 0; }
   }
   .share {
     display: block;

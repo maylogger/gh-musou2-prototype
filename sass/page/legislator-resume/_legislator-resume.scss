@@ -1,0 +1,97 @@
+.legislator-resume {
+  @include box-sizing(border-box);
+  @include leader();
+  .resume-tab {
+    @include reset-box-model;
+    @include pie-clearfix;
+    overflow: hidden;
+    list-style: none;
+    border-bottom: 1px solid $color-gray-light;
+    li {
+      @include box-sizing(border-box);
+      position: relative;
+      float: left;
+      width: 33.333%;
+      a {
+        @include unstyled-link;
+        @extend %h3;
+        display: block;
+        padding: rhythm(.5) 0;
+        text-align: center;
+        text-decoration: none;
+        color: $text-black-light;
+        @include transition(color .25s);
+        &:hover {
+          color: $color-red;
+        }
+      }
+      &.active a {
+        color: $color-red;
+        border-bottom: 5px solid $color-red;
+      }
+    }
+  }
+  .resume-content {
+    @include leader();
+    border: 1px solid $global-divider;
+    @include border-radius(5px);
+    .tab-pane {
+      padding: rhythm(.5);
+    }
+  }
+
+  .legislator-data {
+    .data-title {
+      @include trailer(.5);
+      @include padding-trailer(.5);
+      font-weight: bold;
+      border-bottom: 1px solid $global-divider;
+    }
+  }
+}
+.legislator-info {
+  .positive-status {
+    position: relative;
+    @include trailer(.25);
+    padding-left: 30px;
+    color: $color-red;
+    font-weight: bold;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      @include replace-text-with-svg("positive-status");
+    }
+  }
+  .negative-status {
+    position: relative;
+    @include trailer(.25);
+    padding-left: 30px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      @include replace-text-with-svg("negative-status");
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .legislator-resume {
+    .resume-content {
+      .tab-pane {
+        padding: rhythm();
+      }
+    }
+    .ask-list {
+      .tab-pane { padding: 0; }
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .legislator-resume {
+    @include span-columns(8);
+    padding-right: 48px;
+  }
+}

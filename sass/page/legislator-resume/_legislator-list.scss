@@ -1,0 +1,87 @@
+.legislator-list-item {
+  @include pie-clearfix;
+  @include unstyled-link;
+  @include box-sizing(border-box);
+  display: block;
+  position: relative;
+  @include trailer();
+  margin-left: -16px;
+  margin-right: -16px;
+  background-color: $color-gray-light;
+  border: 1px solid darken($color-gray-light, 5%);
+  @include transition(background-color .25s);
+  @include at-breakpoint($pad) {
+    margin-left: 0;
+    margin-right: 0;
+    @include border-radius(3px);
+  }
+  &:hover {
+    @include unstyled-link;
+    background-color: lighten($color-gray-light, 2.5%);
+  }
+  .legislator-summary {
+    padding: 12px;
+  }
+  .legislator-avatar {
+    display: inline-block;
+    margin: rhythm(.25) rhythm(.5) 0 0;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .legislator-data {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+    text-align: left;
+    .legislator-name {
+      @include trailer(.25);
+      font-weight: bold;
+      color: $color-red;
+    }
+  }
+  .latest-update {
+    @include pie-clearfix;
+    background-color: white;
+    @include border-radius(0 0 4px 4px);
+    .title {
+      float: left;
+      position: relative;
+      padding: 10px 18px;
+      @include adjust-font-size-to(ms(0));
+      font-weight: bold;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 15%;
+        right: 0;
+        bottom: 15%;
+        border-right: 1px solid darken($color-gray-light, 5%);
+      }
+    }
+    p {
+      @include trailer(0);
+      padding: 10px 0 10px 18px;
+      @include adjust-font-size-to(ms(0));
+      text-align: left;
+      @include ellipsis;
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .legislator-list-item {
+    .legislator-avatar {
+      margin: rhythm(.25) rhythm(1) 0 rhythm(.5);
+    }
+    .legislator-summary {
+      width: 72.5%;
+      .latest-update { @include adjust-font-size-to(ms(1)); }
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .legislator-list-item {
+    .legislator-summary { width: 80%; }
+  }
+}

@@ -1,7 +1,6 @@
 // animation
 .tab-pane {
   @include pie-clearfix;
-  @include leader();
   display: none;
   &.active {
     display: block;

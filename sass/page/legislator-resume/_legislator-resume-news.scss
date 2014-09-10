@@ -1,0 +1,78 @@
+.legislator-resume {
+  .news-post {
+    @include trailer();
+    @include padding-trailer();
+    border-bottom: 1px solid $global-divider;
+    .news-date {
+      color: $color-gray;
+      @include adjust-font-size-to(ms(0));
+    }
+    .news-title {
+      @extend %h3;
+      font-weight: bold;
+      @include trailer();
+    }
+  }
+  .news-interactive {
+    @include leader();
+    @include pie-clearfix;
+    .news-rating {
+      float: right;
+    }
+    .news-comment-btn {
+      float: left;
+      padding-top: 27px;
+    }
+    .news-comment-form {
+      display: none;
+      clear: both;
+      position: relative;
+      top: 12px;
+      &.active { display: block; }
+      .avatar {
+        float: left;
+        margin-right: 12px;
+      }
+      input {
+        @include reset-box-model;
+        @include box-sizing(border-box);
+        overflow: hidden;
+        width: 75%;
+        margin: 9px 0;
+        padding: 6px;
+        border: 1px solid $color-gray;
+        @include border-radius(3px);
+      }
+    }
+  }
+  .news-interactive + .news-comment {
+    @include leader();
+  }
+  .news-comment {
+    .avatar {
+      float: left;
+      margin-right: 12px;
+    }
+    .content {
+      overflow: hidden;
+      .name {
+        font-weight: bold;
+        @include adjust-font-size-to(ms(0));
+      }
+      p {
+        @include trailer(.5);
+        @include adjust-font-size-to(ms(0));
+      }
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .legislator-resume {
+    .news-interactive {
+      .news-comment-form {
+        input { width: 85%; }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.sitting-info-card {
+  .president {
+    @include trailer();
+    text-align: center;
+  }
+  .presenter {
+    @include trailer();
+    text-align: center;
+    .anchor,
+    .reviewer {
+      display: inline-block;
+      padding: 0 12px;
+    }
+  }
+}
