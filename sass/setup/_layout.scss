@@ -1,0 +1,22 @@
+// ---- susy setting ----
+// basic for susy
+$total-columns  : 4;
+$column-width   : 5em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+// add media
+$phone          : $total-columns;
+$pad            : 640px 6;
+$desktop        : 900px 12;
+
+
+// class variable
+$page-container: ".container";
+
+
+#{$page-container}, %container, .container {
+  $container-style: fluid;
+  @include container($phone, $pad, $desktop);
+  &.lead { @include leader(); }
+}
