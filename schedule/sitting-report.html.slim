@@ -1,0 +1,45 @@
+.page-header
+  .page-header-inner
+    h1.page-header-title 第8屆第5會期第2次臨時會第2次會議 - 戰況報告
+.container
+  .article.post
+    .post-meta
+      .label 議題
+      .topic =zh_lorem_words(4+rand(5))
+    p = zh_lorem_paragraphs 2+rand(3)
+    p = zh_lorem_paragraphs 3+rand(5)
+    .post-extend-content
+      h3.content-title 戰況記錄
+      = render "/partials/live-comment"
+  .sidebar
+    .sitting-info-card.sidebar-item
+      .president
+        .avatar.is-large.is-highlight.has-party
+          .party =image_tag("/images/DPP.png")
+          =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+        .name
+          .label 主席
+          =zh_lorem_name
+
+      ul.list
+        li
+          .list-label 委員會
+          .list-content #{zh_lorem_words(2+rand(5))}委員會
+        li
+          .list-label 聯席委員會
+          .list-content #{zh_lorem_words(2+rand(5))}委員會
+
+    .sidebar-item
+      h3.sidebar-title 精選影音
+      ul.list-with-image
+        - 3.times do
+          li: a href=""
+            .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+            .list-content =zh_lorem_sentence
+    .sidebar-item
+      h3.sidebar-title 精選場邊評論
+      ul.list-with-image
+        - 3.times do
+          li: a href=""
+            .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+            .list-content =zh_lorem_sentence

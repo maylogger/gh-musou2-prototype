@@ -1,6 +1,6 @@
 .page-header
   .page-header-inner
-    h1.page-header-title 戰鬥中
+    h1.page-header-title 第8屆第5會期第2次臨時會第2次會議 - 火熱直播中
 
 .live
   .container
@@ -8,38 +8,25 @@
       iframe src="https://livehouse.in/embed/channel/watchout" frameborder="0"
 
 .container
-  .article
+  .article.post
+    .post-meta
+      .label 議題
+      .topic =zh_lorem_words(4+rand(5))
     .live-situation
       h2.title 即時戰報
-      .article-meta
-        .sitting-topic
-          .label 會議議題
-          = zh_lorem_sentence
-      - 5.times do |i|
-        .live-comment
-          .time 10:3#{5-i}
-          .comment
-            - (rand(8)).times do
-              .legislator
-                .avatar
-                  .party =image_tag("/images/DPP.png")
-                  =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
-                .name =zh_lorem_name
-            .text =zh_lorem_sentences 5
-          .share
-            a.button.btn_share href="#" 分享
+      = render "/partials/live-comment"
 
-  .aside
-    .aside-item
-      .president.in-sitting
-        .avatar
+  .sidebar
+    .sitting-info-card.sidebar-item
+      .president
+        .avatar.is-large.is-highlight.has-party
           .party =image_tag("/images/DPP.png")
           =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
         .name
           .label 主席
           =zh_lorem_name
 
-      .broadcast-presenter.in-sitting
+      .presenter
         .anchor
           .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
           .name
@@ -54,10 +41,10 @@
       ul.list
         li
           .list-label 委員會
-          .list-content #{zh_lorem_words(2+rand(7))}委員會
+          .list-content #{zh_lorem_words(2+rand(5))}委員會
         li
           .list-label 聯席委員會
-          .list-content #{zh_lorem_words(2+rand(7))}委員會
+          .list-content #{zh_lorem_words(2+rand(5))}委員會
         li
           .list-label 開會日期
           .list-content = lorem_date.to_date
