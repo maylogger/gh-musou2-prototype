@@ -1,31 +1,37 @@
+- sitting_time =[['9:00-12:00'], ['14:30-17:30'], ['9:00-17:30']]
+
 - 3.times do
-  .committee
-    h2 #{zh_lorem_words(2+rand(7))}委員會
-  - (1 + rand(5)).times do
-    a.sitting-forecast href="/sitting/sitting-forecast.html"
-      .president
-        .avatar
-          .party =image_tag("/images/DPP.png")
-          =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-        .name
-          .label 主席
-          =zh_lorem_name
-
-      .broadcast-presenter.in-schedule-forecast
-        .anchor
-          .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
+  h2.committee #{zh_lorem_words(2+rand(5))}委員會
+  - (1 + rand(3)).times do
+    a.sitting href="/schedule/sitting-forecast.html"
+      .sitting-info
+        .president
+          .avatar.is-president.has-party
+            .party =image_tag("/images/DPP.png")
+            =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
           .name
-            .label 主播
-            =zh_lorem_name
-        .reviewer
-          .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-          .name
-            .label 賽評
+            .label 主席
             =zh_lorem_name
 
-      .main-info
-        .date =lorem_date.to_date
-        h3.title =zh_lorem_sentence
-        .topic
-          .label 議題
-          =zh_lorem_words(5+rand(10))
+        .presenter
+          .anchor
+            .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
+            .name
+              .label 主播
+              =zh_lorem_name
+          .reviewer
+            .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
+            .name
+              .label 賽評
+              =zh_lorem_name
+
+        .main-info
+          .date #{lorem_date.to_date} #{sitting_time[rand(3)]}
+          h3.title =zh_lorem_sentence
+          .topic
+            .label 議題
+            =zh_lorem_words(4+rand(5))
+
+      .sitting-summary
+        .title 即時戰況
+        p =zh_lorem_sentence
