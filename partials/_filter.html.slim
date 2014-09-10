@@ -1,0 +1,7 @@
+ul.filter
+  - if @page_name == "schedule"
+    li.active: a href="#tab1" role="tab" data-toggle="tab" 全部
+  - if @page_name == "legislator-list"
+    li.active: a href="#tab1" role="tab" data-toggle="tab" 最新更新
+  - 6.times do |i|
+    li: a href="#tab#{i+2}" role="tab" data-toggle="tab" #{zh_lorem_words(2+rand(5))}委員會
