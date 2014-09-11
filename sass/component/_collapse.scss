@@ -1,0 +1,11 @@
+.collapse {
+  height: 0;
+  overflow-y: hidden;
+}
+.in {
+  height: auto;
+}
+.collapsing {
+  overflow-y: hidden;
+  @include transition(height .5s ease-in-out);
+}
