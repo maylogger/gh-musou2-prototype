@@ -1,13 +1,14 @@
 .filter {
   @include reset-box-model;
   @include pie-clearfix;
+  position: relative;
   margin-left: -16px;
   margin-right: -16px;
   @include trailer(.5);
   overflow-x: scroll;
   list-style: none;
   @include nowrap;
-  border-bottom: 1px solid $color-gray-light;
+  border-bottom: 1px solid darken($color-gray-light, 5%);
   li {
     display: inline-block;
     a {
