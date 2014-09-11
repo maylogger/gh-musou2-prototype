@@ -42,6 +42,18 @@
     @include replace-text-with-svg("like-button");
     background-color: transparent;
   }
+  &.in-question {
+    padding: 0;
+    background-color: transparent;
+    .button {
+      margin-top: 0;
+      vertical-align: middle;
+    }
+    .counter {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
 }
 
 .btn-dislike-module {
