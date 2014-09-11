@@ -1,6 +1,8 @@
 .legislator-resume {
   @include box-sizing(border-box);
   @include leader();
+  margin-left: -16px;
+  margin-right: -16px;
   .resume-tab {
     @include reset-box-model;
     @include pie-clearfix;
@@ -34,7 +36,6 @@
   .resume-content {
     @include leader();
     border: 1px solid $global-divider;
-    @include border-radius(5px);
     .tab-pane {
       padding: rhythm(.5);
     }
@@ -78,7 +79,10 @@
 
 @include at-breakpoint($pad) {
   .legislator-resume {
+    margin-left: 0;
+    margin-right: 0;
     .resume-content {
+      @include border-radius(5px);
       .tab-pane {
         padding: rhythm();
       }
