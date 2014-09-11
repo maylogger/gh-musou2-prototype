@@ -31,16 +31,16 @@
 
   .legislator-resume
     ul.resume-tab
-      li.active
-        a.legislator-news href="#news" role="tab" data-toggle="tab" 近況
       li
+        a.legislator-news href="#news" role="tab" data-toggle="tab" 近況
+      li.active
         a.legislator-ask href="#ask" role="tab" data-toggle="tab" 發問
       li
         a.legislator-data href="#data" role="tab" data-toggle="tab" 數據
     .tab-content.resume-content
-      .tab-pane.fade.in.active#news
-        = render "/partials/legislator-news"
-      .tab-pane.fade#ask
-        = render "/partials/legislator-ask"
+      .tab-pane.fade#news
+        = render "/partials/legislator-resume-news"
+      .tab-pane.fade.in.active#ask
+        = render "/partials/legislator-resume-ask"
       .tab-pane.fade#data
-        = render "/partials/legislator-data"
+        = render "/partials/legislator-resume-data"

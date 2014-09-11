@@ -1,0 +1,27 @@
+.ask-form
+  h3 請輸入您要問的問題
+  .label 問題敘述
+  input type="text"
+  .label 完整說明
+  textarea rows="5"
+  button 我要提問
+
+.question-list
+  .sort
+    | 排序
+    select
+      option 最新發問
+      option 最早發問
+  ul.filter
+    li.active: a href="#all-question" role="tab" data-toggle="tab" 全部
+    li: a href="#answered" role="tab" data-toggle="tab" 已回答
+    li: a href="#unanswered" role="tab" data-toggle="tab" 未回答
+
+  .tab-pane.fade.in.active#all-question
+    = render "legislator-resume-ask-question-item-all"
+  .tab-pane.fade#answered
+    = render "legislator-resume-ask-question-item-answered"
+  .tab-pane.fade#unanswered
+    = render "legislator-resume-ask-question-item-unanswered"
+
+button.btn_loadmore 看更多
