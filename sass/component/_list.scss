@@ -8,9 +8,14 @@
     @include pie-clearfix;
   }
   li + li {
-    @include leader(.5);
-    @include padding-leader(.5);
+    @include leader(.25);
+    @include padding-leader(.25);
     border-top: 1px solid $global-divider;
+  }
+  a {
+    @include unstyled-link;
+    display: block;
+    &:hover { text-decoration: underline; }
   }
   .list-label {
     @extend %subpixel;
@@ -21,17 +26,16 @@
   .list-content {
     color: $text-black;
     overflow: hidden;
-    a {
-      display: inline-block;
-      width: 100%;
-      @include ellipsis;
-    }
   }
   .list-content-row {
     @include pie-clearfix;
   }
   @include at-breakpoint($pad) {
     @include adjust-font-size-to(ms(1));
+    li + li {
+      @include leader(.5);
+      @include padding-leader(.5);
+    }
     .list-content-row {
       padding-bottom: rhythm(.25);
     }
@@ -41,13 +45,15 @@
 .list-with-image {
   @extend %list;
   a {
-    display: block;
     @include pie-clearfix;
+    &:hover {
+      .list-content { text-decoration: underline; }
+    }
   }
   .list-image {
-    float: left;
+    float: right;
     max-width: 25%;
-    margin-right: 10px;
+    margin-left: 10px;
     line-height: 0;
   }
   .list-content {
