@@ -1,0 +1,27 @@
+- 10.times do |i|
+  .topic-item.panel
+    .topic-header style="background-image: url('http://hhhhold.com/1136x200/#{rand(100)}')"
+      .topic-title
+        h2 =zh_lorem_words(4+rand(5))
+        .sitting-time 上次交戰於：2014年9月12日
+        a.topic-entrance href="/topic/topic-detail.html" 了解此議題
+      .topic-detail-toggle data-parent="#topic-list" data-toggle="collapse" href="#topic#{i+1}"
+    .topic-detail.collapse id="topic#{i+1}"
+      .topic-summary
+        h3 摘要
+        p =zh_lorem_paragraphs 2
+
+      .topic-report
+        h3 相關戰報
+        ul.list
+          - 3.times do
+            li: a href="#"
+              .list-content =zh_lorem_sentence
+
+      .topic-focus
+        h3 相關場邊焦點
+        ul.list-with-image
+          - 3.times do
+            li: a href="#"
+              .list-content =zh_lorem_sentence
+              .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")

@@ -1,0 +1,44 @@
+.page-header
+  .page-header-inner
+    h1.page-header-title 重大議題 - 兩岸服務貿易協議
+.container
+  .article.post
+    - (3+rand(3)).times do
+      h3 = zh_lorem_sentence
+      p = zh_lorem_paragraphs 3+rand(5)
+
+  #topic-timeline.topic-timeline.sidebar
+    .month-post.panel
+        .month-title.is-open data-parent="#topic-timeline" data-toggle="collapse" href="#month9" 2014 年 9 月
+        .month-post-list.collapse.in id="month9"
+          .month-foucs-list
+            .title 場邊焦點
+            ul.list-with-image
+              - (3+rand(3)).times do
+                li: a href="#"
+                  .list-content =zh_lorem_sentence
+                  .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .month-report-list
+            .title 戰況報告
+            ul.list
+              - (3+rand(3)).times do
+                li: a href="#"
+                  .list-content =zh_lorem_sentence
+    - 6.times do |i|
+      .month-post.panel
+        .month-title data-parent="#topic-timeline" data-toggle="collapse" href="#month#{8-i}" 2014 年 #{8-i} 月
+        .month-post-list.collapse id="month#{8-i}"
+          .month-foucs-list
+            .title 場邊焦點
+            ul.list-with-image
+              - (3+rand(3)).times do
+                li: a href="#"
+                  .list-content =zh_lorem_sentence
+                  .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .month-report-list
+            .title 戰況報告
+            ul.list
+              - (3+rand(3)).times do
+                li: a href="#"
+                  .list-content =zh_lorem_sentence
+    .topic-start 議題發起

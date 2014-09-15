@@ -1,0 +1,143 @@
+.topic-item {
+  @include trailer();
+  overflow: hidden;
+  @include border-radius(2px);
+  .topic-header {
+    position: relative;
+    padding: 24px 12px;
+    color: white;
+    background-position: center center;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include background(linear-gradient(to bottom, rgba(black, 1), rgba(black, .0) 100%));
+    }
+    .topic-title {
+      position: relative;
+      z-index: 1;
+      padding-left: 54px;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        @include replace-text-with-svg("icon_topic");
+      }
+      h2 {
+        font-weight: bold;
+        @include ellipsis;
+      }
+      .sitting-time { @include adjust-font-size-to(ms(0)); }
+    }
+    .topic-entrance {
+      display: block;
+      width: 68px;
+      margin: 6px 0 48px;
+      padding: 3px 9px;
+      @include adjust-font-size-to(ms(0));
+      color: white;
+      text-decoration: none;
+      background-color: rgba(black, .6);
+      border: 1px solid white;
+      @include border-radius(2px);
+      @include transition(background-color .25s);
+      &:hover {
+        background-color: rgba(black, .8);
+      }
+    }
+    .topic-detail-toggle {
+      position: relative;
+      z-index: 1;
+      height: 20px;
+      margin: 24px -24px -24px -24px;
+      background-color: rgba(white, .6);
+      @include transition(background-color .35s);
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -32px;
+        @include replace-text-with-svg("topic-card-open");
+      }
+      &.is-open {
+        background-color: $color-gray-light;
+        &:after {
+          @include replace-text-with-svg("topic-card-close");
+        }
+      }
+    }
+  }
+  .topic-detail {
+    padding: 0 12px;
+    background-color: $color-gray-light;
+    .topic-summary, .topic-report, .topic-focus {
+      @include leader();
+      @include trailer(2);
+      h3 {
+        @include trailer(.5);
+        color: $color-gray;
+        font-weight: bold;
+      }
+    }
+    .topic-summary {
+      p { @include adjust-font-size-to(ms(0)); }
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .topic-item {
+    .topic-header {
+      padding: 24px;
+      &:before { @include background(linear-gradient(to right, rgba(black, 1), rgba(black, .0) 70%)); }
+      .topic-title {
+        .sitting-time { @include adjust-font-size-to(ms(1)); }
+      }
+      .topic-entrance {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        margin: 12px;
+        padding: 6px 18px;
+        @include adjust-font-size-to(ms(1));
+      }
+    }
+    .topic-detail {
+      padding: 0 24px;
+      .topic-summary {
+        @include trailer();
+        p { @include adjust-font-size-to(ms(1)); }
+      }
+      .topic-report {
+        @include trailer();
+        @include span-columns(3);
+      }
+      .topic-focus {
+        @include span-columns(3 omega);
+      }
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .topic-item {
+    .topic-detail {
+      .topic-summary {
+        @include span-columns(4);
+      }
+      .topic-report {
+        @include span-columns(4);
+      }
+      .topic-focus {
+        @include span-columns(4 omega);
+      }
+    }
+  }
+}
