@@ -3,7 +3,7 @@
   @include leader();
   @include at-breakpoint($desktop) {
     @include span-columns(8);
-    padding-right: 48px;
+    padding-right: rhythm(3);
   }
   .post-title {
     @include trailer(.5);
