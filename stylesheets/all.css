@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; font-weight: normal; 
 
 .page-header .page-header-inner .page-header-title, h1 { font-size: 25.95743px; line-height: 36px; }
 
-h2 { font-size: 21.03444px; line-height: 30px; }
+.month-post .month-title, h2 { font-size: 21.03444px; line-height: 30px; }
 
 .legislator-resume .resume-tab li a, .legislator-resume .news-post .news-title, .schedule-tab li a, h3 { font-size: 16.04257px; line-height: 24px; }
 
@@ -157,7 +157,7 @@ h6 { font-size: 8.03444px; line-height: 18px; }
 p { margin-top: 0px; margin-bottom: 24px; font-size: 16.04257px; line-height: 28px; }
 
 @media (min-width: 640px) { .page-header .page-header-inner .page-header-title, h1 { font-size: 34.03444px; line-height: 48px; }
-  h2 { font-size: 25.95743px; line-height: 36px; }
+  .month-post .month-title, h2 { font-size: 25.95743px; line-height: 36px; }
   .legislator-resume .resume-tab li a, .legislator-resume .news-post .news-title, .schedule-tab li a, h3 { font-size: 21.03444px; line-height: 30px; }
   h4 { font-size: 16.04257px; line-height: 24px; }
   h5 { font-size: 13px; line-height: 24px; }
@@ -181,8 +181,8 @@ dl { margin-top: 24px; margin-bottom: 24px; }
 dl dt { font-weight: bold; }
 dl dd { margin: 0; }
 
-a { color: #23bbf2; text-decoration: none; }
-a:hover { color: #0a7ca5; }
+a { color: #2391c8; text-decoration: none; }
+a:hover { color: #145271; }
 a:hover { text-decoration: underline; }
 a img { border: none; }
 
@@ -234,17 +234,20 @@ body.open-menu { height: 100%; }
 
 .list-with-image, .list { margin: 0; padding: 0; border: 0; margin-top: 12px; margin-bottom: 12px; list-style: none; font-size: 13px; line-height: 24px; }
 .list-with-image li:after, .list li:after { content: ""; display: table; clear: both; }
-.list-with-image li + li, .list li + li { margin-top: 12px; padding-top: 12px; border-top: 1px solid #eeeeee; }
+.list-with-image li + li, .list li + li { margin-top: 6px; padding-top: 6px; border-top: 1px solid #eeeeee; }
+.list-with-image a, .list a { color: inherit; text-decoration: inherit; cursor: inherit; display: block; }
+.list-with-image a:active, .list-with-image a:focus, .list a:active, .list a:focus { outline: none; }
+.list-with-image a:hover, .list a:hover { text-decoration: underline; }
 .list-with-image .list-label, .list .list-label { float: left; width: 7em; color: #999999; }
 .list-with-image .list-content, .list .list-content { color: #444444; overflow: hidden; }
-.list-with-image .list-content a, .list .list-content a { display: inline-block; width: 100%; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 .list-with-image .list-content-row:after, .list .list-content-row:after { content: ""; display: table; clear: both; }
 @media (min-width: 640px) { .list-with-image, .list { font-size: 16.04257px; line-height: 24px; }
+  .list-with-image li + li, .list li + li { margin-top: 12px; padding-top: 12px; }
   .list-with-image .list-content-row, .list .list-content-row { padding-bottom: 6px; } }
 
-.list-with-image a { display: block; }
 .list-with-image a:after { content: ""; display: table; clear: both; }
-.list-with-image .list-image { float: left; max-width: 25%; margin-right: 10px; line-height: 0; }
+.list-with-image a:hover .list-content { text-decoration: underline; }
+.list-with-image .list-image { float: right; max-width: 25%; margin-left: 10px; line-height: 0; }
 .list-with-image .list-content { float: left; width: 70%; height: 48px; overflow: hidden; text-align: left; }
 
 .filter { margin: 0; padding: 0; border: 0; position: relative; margin-left: -16px; margin-right: -16px; margin-bottom: 12px; overflow-x: scroll; list-style: none; white-space: nowrap; border-bottom: 1px solid #e6e6e6; }
@@ -330,7 +333,7 @@ body.open-menu { height: 100%; }
 .article img { margin-bottom: 24px; }
 
 .post { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-top: 24px; }
-@media (min-width: 900px) { .post { width: 66.19718%; float: left; margin-right: 1.40845%; padding-right: 48px; } }
+@media (min-width: 900px) { .post { width: 66.19718%; float: left; margin-right: 1.40845%; padding-right: 72px; } }
 .post .post-title { margin-bottom: 12px; padding-bottom: 12px; font-weight: bold; border-bottom: 1px solid #eeeeee; }
 .post .post-meta { margin-bottom: 12px; padding-bottom: 12px; font-weight: bold; border-bottom: 1px solid #eeeeee; }
 .post .post-meta:after { content: ""; display: table; clear: both; }
@@ -461,11 +464,6 @@ body.open-menu { height: 100%; }
 .legislator-resume .resume-content .tab-pane { padding: 12px; }
 .legislator-resume .legislator-data .data-title { margin-bottom: 12px; padding-bottom: 12px; font-weight: bold; border-bottom: 1px solid #eeeeee; }
 
-.legislator-info .positive-status { position: relative; margin-bottom: 6px; padding-left: 30px; color: #880013; font-weight: bold; }
-.legislator-info .positive-status:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/positive-status.png?1410349618'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/positive-status.svg?1410349618'); }
-.legislator-info .negative-status { position: relative; margin-bottom: 6px; padding-left: 30px; }
-.legislator-info .negative-status:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/negative-status.png?1410349618'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/negative-status.svg?1410349618'); }
-
 @media (min-width: 640px) { .legislator-resume { margin-left: 0; margin-right: 0; }
   .legislator-resume .resume-content { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
   .legislator-resume .resume-content .tab-pane { padding: 24px; }
@@ -494,6 +492,9 @@ body.open-menu { height: 100%; }
 .legislator-resume .ask-form .label { font-size: 13px; line-height: 24px; font-weight: bold; }
 .legislator-resume .ask-form textarea, .legislator-resume .ask-form input { margin: 0; padding: 0; border: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow: hidden; width: 100%; margin-top: 6px; margin-bottom: 12px; padding: 6px; border: 1px solid #999999; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 .legislator-resume .ask-form textarea:disabled, .legislator-resume .ask-form input:disabled { background-color: #f3f3f3; }
+.legislator-resume .ask-form .rule { font-size: 13px; line-height: 24px; }
+.legislator-resume .ask-form .close { margin-top: 24px; text-align: center; }
+.legislator-resume .ask-form .close p { font-size: 21.03444px; line-height: 48px; }
 .legislator-resume .question-list { position: relative; }
 .legislator-resume .question-list .sort { margin: 0 0 12px 12px; font-size: 13px; line-height: 24px; }
 .legislator-resume .question-list .sort select { margin-left: 6px; font-size: 16.04257px; line-height: 24px; }
@@ -520,7 +521,7 @@ body.open-menu { height: 100%; }
 .legislator-resume .question-content .question:before { content: "Ｑ"; position: absolute; left: -40px; font-size: 34.03444px; line-height: 48px; font-weight: bold; color: #ff8899; }
 .legislator-resume .question-content .answer { position: relative; margin-bottom: 24px; }
 .legislator-resume .question-content .answer .unanswered-message { color: #8a8a8a; font-weight: bold; }
-.legislator-resume .question-content .answer:before { content: "Ａ"; position: absolute; left: -40px; font-size: 34.03444px; line-height: 48px; font-weight: bold; color: #83d9f8; }
+.legislator-resume .question-content .answer:before { content: "Ａ"; position: absolute; left: -40px; font-size: 34.03444px; line-height: 48px; font-weight: bold; color: #6bbde6; }
 .legislator-resume .question-content .interactive { margin-bottom: 12px; text-align: right; font-size: 13px; line-height: 24px; }
 
 @media (min-width: 640px) { .legislator-resume .question-list .sort { position: absolute; right: 0; padding-top: 3px; }
@@ -532,9 +533,66 @@ body.open-menu { height: 100%; }
 .legislator-info .legislator-bgimage { position: relative; height: 150px; margin: -20px -24px -50px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .legislator-info .legislator-bgimage:after { content: ""; position: absolute; height: 100px; bottom: 0; left: 0; right: 0; background: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.2))); background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); }
 .legislator-info .legislator .name { display: inline-block; position: relative; top: -22px; padding-left: 12px; font-size: 25.95743px; line-height: 48px; font-weight: bold; }
+.legislator-info .positive-status { position: relative; margin-bottom: 6px; padding-left: 30px; color: #880013; font-weight: bold; }
+.legislator-info .positive-status:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/positive_status.png?1410349618'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/positive_status.svg?1410349618'); }
+.legislator-info .negative-status { position: relative; margin-bottom: 6px; padding-left: 30px; }
+.legislator-info .negative-status:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/negative_status.png?1410349618'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/negative_status.svg?1410349618'); }
+.legislator-info .facebook { position: relative; margin-bottom: 6px; padding-left: 30px; }
+.legislator-info .facebook:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_facebook.png?1402999263'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_facebook.svg?1402999263'); }
+.legislator-info .wikipedia { position: relative; margin-bottom: 6px; padding-left: 30px; }
+.legislator-info .wikipedia:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_wiki.png?1402999263'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_wiki.svg?1402999263'); }
+.legislator-info .lyvote { position: relative; margin-bottom: 6px; padding-left: 30px; }
+.legislator-info .lyvote:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_lyvote.png?1410507298'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_lyvote.svg?1410507298'); }
 
 .legislator-ignore-rate { color: #880013; font-weight: bold; }
 .legislator-ignore-rate .rate { float: right; font-size: 25.95743px; line-height: 24px; }
+
+.topic-item { margin-bottom: 24px; overflow: hidden; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
+.topic-item .topic-header { position: relative; padding: 24px 12px; color: white; background-position: center center; }
+.topic-item .topic-header:before { content: ""; position: absolute; z-index: 0; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(linear, to bottom, to top, color-stop(0%, #000000), color-stop(100%, rgba(0, 0, 0, 0))); background: -webkit-linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0) 100%); background: -moz-linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0) 100%); background: -o-linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0) 100%); background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0) 100%); }
+.topic-item .topic-header .topic-title { position: relative; z-index: 1; padding-left: 54px; }
+.topic-item .topic-header .topic-title:before { content: ""; position: absolute; top: 6px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_topic.png?1410515607'); background-repeat: no-repeat; background-position: 50% 50%; width: 48px; height: 48px; background-image: none, url('/images/icon_topic.svg?1410515607'); }
+.topic-item .topic-header .topic-title h2 { font-weight: bold; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+.topic-item .topic-header .topic-title .sitting-time { font-size: 13px; line-height: 24px; }
+.topic-item .topic-header .topic-entrance { display: block; width: 68px; margin: 6px 0 48px; padding: 3px 9px; font-size: 13px; line-height: 24px; color: white; text-decoration: none; background-color: rgba(0, 0, 0, 0.6); border: 1px solid white; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
+.topic-item .topic-header .topic-entrance:hover { background-color: rgba(0, 0, 0, 0.8); }
+.topic-item .topic-header .topic-detail-toggle { position: relative; z-index: 1; height: 20px; margin: 24px -24px -24px -24px; background-color: rgba(255, 255, 255, 0.6); -webkit-transition: background-color 0.35s; -moz-transition: background-color 0.35s; -o-transition: background-color 0.35s; transition: background-color 0.35s; }
+.topic-item .topic-header .topic-detail-toggle:after { content: ""; position: absolute; bottom: 0; left: 50%; margin-left: -32px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/topic-card-open.png?1410767789'); background-repeat: no-repeat; background-position: 50% 50%; width: 64px; height: 32px; background-image: none, url('/images/topic-card-open.svg?1410767789'); }
+.topic-item .topic-header .topic-detail-toggle.is-open { background-color: #f3f3f3; }
+.topic-item .topic-header .topic-detail-toggle.is-open:after { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/topic-card-close.png?1410767776'); background-repeat: no-repeat; background-position: 50% 50%; width: 64px; height: 32px; background-image: none, url('/images/topic-card-close.svg?1410767776'); }
+.topic-item .topic-detail { padding: 0 12px; background-color: #f3f3f3; }
+.topic-item .topic-detail .topic-summary, .topic-item .topic-detail .topic-report, .topic-item .topic-detail .topic-focus { margin-top: 24px; margin-bottom: 48px; }
+.topic-item .topic-detail .topic-summary h3, .topic-item .topic-detail .topic-report h3, .topic-item .topic-detail .topic-focus h3 { margin-bottom: 12px; color: #999999; font-weight: bold; }
+.topic-item .topic-detail .topic-summary p { font-size: 13px; line-height: 24px; }
+
+@media (min-width: 640px) { .topic-item .topic-header { padding: 24px; }
+  .topic-item .topic-header:before { background: -webkit-gradient(linear, to right, to left, color-stop(0%, #000000), color-stop(70%, rgba(0, 0, 0, 0))); background: -webkit-linear-gradient(to right, #000000, rgba(0, 0, 0, 0) 70%); background: -moz-linear-gradient(to right, #000000, rgba(0, 0, 0, 0) 70%); background: -o-linear-gradient(to right, #000000, rgba(0, 0, 0, 0) 70%); background: linear-gradient(to right, #000000, rgba(0, 0, 0, 0) 70%); }
+  .topic-item .topic-header .topic-title .sitting-time { font-size: 16.04257px; line-height: 24px; }
+  .topic-item .topic-header .topic-entrance { position: absolute; top: 0; right: 0; width: auto; margin: 12px; padding: 6px 18px; font-size: 16.04257px; line-height: 24px; }
+  .topic-item .topic-detail { padding: 0 24px; }
+  .topic-item .topic-detail .topic-summary { margin-bottom: 24px; }
+  .topic-item .topic-detail .topic-summary p { font-size: 16.04257px; line-height: 24px; }
+  .topic-item .topic-detail .topic-report { margin-bottom: 24px; width: 48.57143%; float: left; margin-right: 2.85714%; }
+  .topic-item .topic-detail .topic-focus { width: 48.57143%; float: right; margin-right: 0; } }
+@media (min-width: 900px) { .topic-item .topic-detail .topic-summary { width: 32.39437%; float: left; margin-right: 1.40845%; }
+  .topic-item .topic-detail .topic-report { width: 32.39437%; float: left; margin-right: 1.40845%; }
+  .topic-item .topic-detail .topic-focus { width: 32.39437%; float: right; margin-right: 0; } }
+.month-post { position: relative; padding-bottom: 24px; }
+.month-post:before { content: ""; position: absolute; top: 16px; bottom: -16px; left: -3px; width: 2px; background-color: #999999; }
+.month-post .month-title { position: relative; padding-left: 18px; font-weight: bold; cursor: pointer; }
+.month-post .month-title:before { content: ""; position: absolute; top: 50%; left: -7px; width: 10px; height: 10px; margin-top: -5px; background-color: #880013; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+.month-post .month-title:after { content: ""; position: absolute; top: 50%; right: 0; margin-top: -7px; border: 7px solid transparent; border-right: 0; border-left-color: #333333; -webkit-transition: -webkit-transform 0.25s; -moz-transition: -moz-transform 0.25s; -o-transition: -o-transform 0.25s; transition: transform 0.25s; }
+.month-post .month-title.is-open:after { -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
+.month-post .month-post-list { padding-left: 18px; }
+.month-post .month-foucs-list { margin-top: 24px; }
+.month-post .month-foucs-list .title { position: relative; padding-left: 30px; padding-bottom: 6px; font-size: 13px; line-height: 24px; font-weight: bold; border-bottom: 1px solid #e6e6e6; }
+.month-post .month-foucs-list .title:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_focus.png?1410775260'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_focus.svg?1410775260'); }
+.month-post .month-report-list { margin-top: 24px; }
+.month-post .month-report-list .title { position: relative; padding-left: 30px; padding-bottom: 6px; font-size: 13px; line-height: 24px; font-weight: bold; border-bottom: 1px solid #e6e6e6; }
+.month-post .month-report-list .title:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_report.png?1410775260'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_report.svg?1410775260'); }
+
+.topic-start { position: relative; padding-left: 18px; font-weight: bold; color: #999999; cursor: pointer; }
+.topic-start:before { content: ""; position: absolute; top: 50%; left: -7px; width: 10px; height: 10px; margin-top: -5px; background-color: #880013; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 
 @keyframes livenow { 0% { background-position: 0 0, 0 -1px; }
   100% { background-position: 0 0, -100px -1px; } }
@@ -576,7 +634,7 @@ a.sitting .president { display: inline-block; margin: 0 6px; text-align: center;
 a.sitting .presenter { display: inline-block; text-align: center; }
 a.sitting .presenter .anchor, a.sitting .presenter .reviewer { display: inline-block; margin: 0 6px; vertical-align: middle; }
 a.sitting .sitting-livenow { text-indent: -119988px; overflow: hidden; text-align: left; overflow: hidden; position: relative; height: 20px; margin-left: -1px; margin-right: -1px; background-color: #880013; background-image: url("/images/livenow-text.png"); background-image: none, url("/images/livenow-text.svg"); background-repeat: repeat-x; -webkit-transition: background-color 0.5s; -moz-transition: background-color 0.5s; -o-transition: background-color 0.5s; transition: background-color 0.5s; animation: livenow 5s linear infinite; -webkit-animation: livenow 5s linear infinite; }
-a.sitting .sitting-livenow:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, #55000c 0%, rgba(85, 0, 12, 0) 50%, #55000c 100%); }
+a.sitting .sitting-livenow:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(linear, to right, to left, color-stop(0%, #55000c), color-stop(50%, rgba(85, 0, 12, 0)), color-stop(100%, #55000c)); background: -webkit-linear-gradient(to right, #55000c 0%, rgba(85, 0, 12, 0) 50%, #55000c 100%); background: -moz-linear-gradient(to right, #55000c 0%, rgba(85, 0, 12, 0) 50%, #55000c 100%); background: -o-linear-gradient(to right, #55000c 0%, rgba(85, 0, 12, 0) 50%, #55000c 100%); background: linear-gradient(to right, #55000c 0%, rgba(85, 0, 12, 0) 50%, #55000c 100%); }
 a.sitting:nth-child(even) .sitting-livenow { animation: livenow-offset 5s linear infinite; -webkit-animation: livenow-offset 5s linear infinite; }
 a.sitting .sitting-summary { background-color: white; -webkit-border-radius: 0 0 4px 4px; -moz-border-radius: 0 0 4px 4px; -ms-border-radius: 0 0 4px 4px; -o-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px; }
 a.sitting .sitting-summary:after { content: ""; display: table; clear: both; }
