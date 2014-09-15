@@ -50,32 +50,6 @@
     }
   }
 }
-.legislator-info {
-  .positive-status {
-    position: relative;
-    @include trailer(.25);
-    padding-left: 30px;
-    color: $color-red;
-    font-weight: bold;
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      @include replace-text-with-svg("positive-status");
-    }
-  }
-  .negative-status {
-    position: relative;
-    @include trailer(.25);
-    padding-left: 30px;
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      @include replace-text-with-svg("negative-status");
-    }
-  }
-}
 
 @include at-breakpoint($pad) {
   .legislator-resume {

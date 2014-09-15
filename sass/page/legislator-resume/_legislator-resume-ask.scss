@@ -22,6 +22,12 @@
         background-color: $color-gray-light;
       }
     }
+    .rule { @include adjust-font-size-to(ms(0)); }
+    .close {
+      @include leader();
+      text-align: center;
+      p { @include adjust-font-size-to(ms(2)); }
+    }
   }
   .question-list {
     position: relative;
