@@ -1,0 +1,56 @@
+.breadcrumb
+  ol.breadcrumb-list
+    li: a href="/" 首頁
+    li: a href="/focus/" 場邊焦點
+    li: a href="/focus/focus-post.html" 文章內容
+
+.container
+  .article.post
+    h1 =zh_lorem_sentence
+    .meta-info
+      .meta
+        .label 日期
+        =lorem_date.to_date
+
+    .iframe-video
+      iframe src="//www.youtube.com/embed/Enxp3Gor-hk" frameborder="0" allowfullscreen=""
+
+    h3 = zh_lorem_sentence
+    p = zh_lorem_paragraphs 3+rand(5)
+
+    .post-extend-content
+      h3.content-title 相關影音
+      ul.list-with-image
+        - 4.times do
+          li: a href=""
+            .list-content =zh_lorem_sentence
+            .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+
+  .sidebar
+    .author-card.sidebar-item
+      .author
+        .avatar.is-large.is-highlight
+          =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+        .name
+          .label 作者
+          =zh_lorem_name
+      ul.list
+        li
+          .list-label 作者簡介
+          .list-content =zh_lorem_paragraph
+
+    .sidebar-item
+      h3.sidebar-title 精選影音
+      ul.list-with-image
+        - 3.times do
+          li: a href=""
+            .list-content =zh_lorem_sentence
+            .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+
+    .sidebar-item
+      h3.sidebar-title 精選場邊評論
+      ul.list-with-image
+        - 3.times do
+          li: a href=""
+            .list-content =zh_lorem_sentence
+            .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
