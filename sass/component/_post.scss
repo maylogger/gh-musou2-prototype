@@ -9,27 +9,7 @@
     @include trailer(.5);
     @include padding-trailer(.5);
     font-weight: bold;
-    border-bottom: 1px solid $global-divider;
-  }
-
-  .post-meta {
-    @include pie-clearfix;
-    @include trailer(.5);
-    @include padding-trailer(.5);
-    font-weight: bold;
-    border-bottom: 1px solid $global-divider;
-    .label {
-      float: left;
-      padding: 3px 9px;
-      color: white;
-      background-color: $color-black;
-    }
-    .topic {
-      float: left;
-      padding: 3px 9px;
-      color: white;
-      background-color: $color-red;
-    }
+    border-bottom: 1px solid $color-gray-light;
   }
 }
 
@@ -42,7 +22,7 @@
     @include trailer(.5);
     @include padding-trailer(.5);
     font-weight: bold;
-    border-bottom: 1px solid $global-divider;
+    border-bottom: 1px solid $color-gray-light;
   }
   img {
     @include trailer(0);
@@ -58,8 +38,10 @@
         width: 48%;
         margin-right: 2%;
         @include leader(0);
-        @include padding-leader(1);
-        border: none;
+        @include padding-leader(.5);
+        @include padding-trailer(.5);
+        border-top: none;
+        border-bottom: 1px solid $color-gray-light;
       }
     }
   }
