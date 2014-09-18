@@ -12,7 +12,6 @@
     color: white;
     text-decoration: none;
     background: $color-black;
-    @include box-shadow(0 3px 0px lighten($color-black, 50%));
     @include border-radius(3px);
     @include transition(background ease-in-out .2s);
     &.more { padding: rhythm(.3) rhythm(.45); }
@@ -38,11 +37,9 @@
     &.disabled {
       pointer-events: none;
       cursor: default;
-      @include box-shadow(0 3px 0px lighten($color-black, 75%));
       background: lighten($color-black, 70%);
     }
     &.active {
-      @include box-shadow(0 3px 0px lighten($color-red, 50%));
       background: $color-red;
     }
     &.active:hover { background: lighten($color-red, 10%); }
@@ -50,7 +47,6 @@
     &:active {
       position: relative;
       top: 3px;
-      @include box-shadow(none);
     }
     @include at-breakpoint($pad) {
       margin: 0 rhythm(.15);
