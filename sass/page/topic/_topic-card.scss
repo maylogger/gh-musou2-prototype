@@ -1,11 +1,12 @@
 .topic-item {
   @include trailer();
+  margin-left: -16px;
+  margin-right: -16px;
   overflow: hidden;
   @include border-radius(2px);
   .topic-header {
     position: relative;
-    padding: 24px 12px;
-    color: white;
+    background-color: lighten($color-black, 25%);
     background-position: center center;
     &:before {
       content: "";
@@ -18,15 +19,21 @@
       @include background(linear-gradient(to bottom, rgba(black, 1), rgba(black, .0) 100%));
     }
     .topic-title {
+      display: block;
       position: relative;
       z-index: 1;
-      padding-left: 54px;
+      padding: 24px 12px 24px 66px;
+      color: white;
+      text-decoration: none;
       &:before {
         content: "";
         position: absolute;
-        top: 6px;
-        left: 0;
+        top: 30px;
+        left: 12px;
         @include replace-text-with-svg("icon_topic");
+      }
+      &:hover {
+        .topic-entrance { background-color: rgba(black, .8); }
       }
       h2 {
         font-weight: bold;
@@ -37,7 +44,7 @@
     .topic-entrance {
       display: block;
       width: 68px;
-      margin: 6px 0 48px;
+      margin: 6px 0 12px;
       padding: 3px 9px;
       @include adjust-font-size-to(ms(0));
       color: white;
@@ -46,15 +53,11 @@
       border: 1px solid white;
       @include border-radius(2px);
       @include transition(background-color .25s);
-      &:hover {
-        background-color: rgba(black, .8);
-      }
     }
     .topic-detail-toggle {
       position: relative;
       z-index: 1;
       height: 20px;
-      margin: 24px -24px -24px -24px;
       background-color: rgba(white, .6);
       @include transition(background-color .35s);
       &:after {
@@ -93,10 +96,13 @@
 
 @include at-breakpoint($pad) {
   .topic-item {
+    margin-left: 0;
+    margin-right: 0;
     .topic-header {
-      padding: 24px;
       &:before { @include background(linear-gradient(to right, rgba(black, 1), rgba(black, .0) 70%)); }
       .topic-title {
+        padding: 24px 24px 24px 78px;
+        &:before { left: 24px; }
         .sitting-time { @include adjust-font-size-to(ms(1)); }
       }
       .topic-entrance {
@@ -104,7 +110,7 @@
         top: 0;
         right: 0;
         width: auto;
-        margin: 12px;
+        margin: 36px 24px;
         padding: 6px 18px;
         @include adjust-font-size-to(ms(1));
       }
