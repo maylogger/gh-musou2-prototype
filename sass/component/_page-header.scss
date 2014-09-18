@@ -1,12 +1,51 @@
 .page-header {
+  position: relative;
   background-color: $color-black;
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include background(linear-gradient(to bottom, rgba($color-black, 1), rgba($color-black, .0) 100%));
+  }
   .page-header-inner {
+    position: relative;
+    z-index: 1;
     @extend %container;
     padding-top: rhythm(1.5);
     padding-bottom: rhythm(1.5);
+    .avatar { float: left; }
     .page-header-title {
-      @extend %h1;
+      text-align: center;
       color: white;
+      &.has-avatar {
+        float: left;
+        margin-top: 4px;
+        margin-left: 12px;
+        text-align: left;
+      }
+      .sub-title {
+        display: block;
+        @extend %h3;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .page-header {
+    &:after { @include background(linear-gradient(to right, rgba($color-black, 1) 25%, rgba($color-black, .0) 100%)); }
+    .page-header-inner {
+      .page-header-title {
+        text-align: left;
+        &.has-avatar {
+          margin-top: -4px;
+        }
+      }
     }
   }
 }
