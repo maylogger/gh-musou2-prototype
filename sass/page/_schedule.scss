@@ -68,7 +68,17 @@
     font-weight: bold;
     color: $color-red;
   }
-  .label { display: block; }
+  .label {
+    display: block;
+    @include adjust-font-size-to(ms(0), .75);
+    font-weight: bold;
+    color: $color-red;
+  }
+  .topic-label {
+    display: block;
+    font-weight: bold;
+    color: $color-red;
+  }
 }
 
 a.sitting {
@@ -190,7 +200,7 @@ a.sitting {
 
 @include at-breakpoint($pad) {
   .schedule-table {
-    .label { display: inline-block; }
+    .topic-label { display: inline-block; }
   }
   a.sitting {
     margin-left: 0;
