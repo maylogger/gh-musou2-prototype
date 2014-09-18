@@ -16,7 +16,9 @@
       float: left;
     }
     &.active {
-      background-color: lighten($color-red, 10%);
+      a {
+        background-color: darken($color-red, 10%);
+      }
     }
   }
   li + li {
@@ -30,13 +32,20 @@
     padding: 18px 12px;
     color: white;
     font-weight: 600;
-    @include transition(background-color, .2s);
     &:hover {
       text-decoration: none;
-      background-color: lighten($color-red, 10%);
+      background-color: darken($color-red, 10%);
+      border-bottom: 3px solid darken($color-red, 10%);
     }
     &:active {
-      background-color: lighten($color-red, 5%);
+      background-color: darken($color-red, 10%);
     }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .main-nav {
+    li.active a { border-bottom: 3px solid white; }
+    a { padding: 18px 12px 15px; }
   }
 }
