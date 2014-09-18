@@ -100,7 +100,7 @@
   padding: 4px 12px;
   color: white;
   background-color: $color-red;
-  @include border-radius(0 5px 5px 0);
+  @include border-radius(0 2px 2px 0);
   @include transition(background-color .25s);
   &:hover { background-color: lighten($color-red, 10%); }
 }
