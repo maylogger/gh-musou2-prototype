@@ -1,0 +1,16 @@
+- @page_name = "legislators-list"
+
+.breadcrumb
+  ol.breadcrumb-list
+    li: a href="/" 首頁
+    li: a href="/legislators/" 立委線上
+.container.lead
+  = render "/partials/search"
+  = render "/partials/filter"
+  .tab-pane.fade.in.active#tab1
+    = render "/partials/legislators-list"
+  - 6.times do |i|
+    .tab-pane.fade id="tab#{i+2}"
+      = render "/partials/legislators-list"
+
+  button.btn_loadmore 看更多

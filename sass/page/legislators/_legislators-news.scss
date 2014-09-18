@@ -1,8 +1,8 @@
-.legislator-resume {
+.legislators {
   .news-post {
     @include trailer();
     @include padding-trailer();
-    border-bottom: 1px solid $global-divider;
+    border-bottom: 1px solid $color-gray-light;
     .news-date {
       color: $color-gray;
       @include adjust-font-size-to(ms(0));
@@ -68,7 +68,7 @@
 }
 
 @include at-breakpoint($pad) {
-  .legislator-resume {
+  .legislators {
     .news-interactive {
       .news-comment-form {
         input { width: 85%; }

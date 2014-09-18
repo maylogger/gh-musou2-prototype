@@ -1,8 +1,8 @@
-.legislator-resume {
+.legislators {
   .ask-form {
     @include trailer();
     @include padding-trailer();
-    border-bottom: 1px solid $global-divider;
+    border-bottom: 1px solid $color-gray-light;
     h3 { @include trailer(.5);}
     .label {
       @include adjust-font-size-to(ms(0));
@@ -132,11 +132,12 @@
   }
 }
 @include at-breakpoint($pad) {
-  .legislator-resume {
+  .legislators {
     .question-list {
       .sort {
         position: absolute;
         right: 0;
+        z-index: 1;
         padding-top: 3px;
       }
     }
@@ -160,7 +161,7 @@
 }
 
 @include at-breakpoint($desktop) {
-  .legislator-resume {
+  .legislators {
     .question-header {
       li.question-title {
         width: 55%;

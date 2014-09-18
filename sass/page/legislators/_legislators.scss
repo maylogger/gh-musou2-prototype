@@ -1,4 +1,4 @@
-.legislator-resume {
+.legislators {
   @include box-sizing(border-box);
   @include leader();
   margin-left: -16px;
@@ -6,12 +6,23 @@
   .resume-tab {
     @include reset-box-model;
     @include pie-clearfix;
+    position: relative;
     overflow: hidden;
     list-style: none;
-    border-bottom: 1px solid $color-gray-light;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: darken($color-gray-light, 10%);
+    }
     li {
       @include box-sizing(border-box);
       position: relative;
+      z-index: 10;
       float: left;
       width: 33.333%;
       a {
@@ -35,7 +46,7 @@
   }
   .resume-content {
     @include leader();
-    border: 1px solid $global-divider;
+    border: 1px solid $color-gray-light;
     .tab-pane {
       padding: rhythm(.5);
     }
@@ -46,13 +57,22 @@
       @include trailer(.5);
       @include padding-trailer(.5);
       font-weight: bold;
-      border-bottom: 1px solid $global-divider;
+      border-bottom: 1px solid $color-gray-light;
+    }
+    .note {
+      text-align: right;
+      @include trailer(0);
+      @include adjust-font-size-to(ms(0));
+      a {
+        display: inline-block;
+        color: $color-blue;
+      }
     }
   }
 }
 
 @include at-breakpoint($pad) {
-  .legislator-resume {
+  .legislators {
     margin-left: 0;
     margin-right: 0;
     .resume-content {
@@ -64,11 +84,16 @@
     .ask-list {
       .tab-pane { padding: 0; }
     }
+    .legislator-data {
+      .note {
+        text-align: right;
+      }
+    }
   }
 }
 
 @include at-breakpoint($desktop) {
-  .legislator-resume {
+  .legislators {
     @include span-columns(8);
     padding-right: 48px;
   }
