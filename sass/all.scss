@@ -5,7 +5,8 @@
 @import "layout/base-layout";
 
 // ==== component ====
-@import "component/page-header",
+@import "component/breadcrumb",
+        "component/page-header",
         "component/tab",
         "component/list",
         "component/filter",
@@ -28,12 +29,13 @@
         "partial/footer";
 
 // ==== page ====
-@import "page/legislator-resume/legislator-list",
-        "page/legislator-resume/legislator-resume",
-        "page/legislator-resume/legislator-resume-news",
-        "page/legislator-resume/legislator-resume-ask",
-        "page/legislator-resume/legislator-sidebar",
+@import "page/legislators/legislators-list",
+        "page/legislators/legislators",
+        "page/legislators/legislators-news",
+        "page/legislators/legislators-ask",
+        "page/legislators/legislators-sidebar",
         "page/topic/topic-card",
         "page/topic/topic-detail",
+        "page/focus",
         "page/schedule",
         "page/sitting";
