@@ -1,16 +1,22 @@
 .meta-info {
-  @include trailer(.25);
+  @include trailer(.5);
+  @include padding-trailer(.5);
   @include adjust-font-size-to(ms(0));
+  border-bottom: 1px solid $color-gray-light;
   .meta {
-    display: block;
+    display: inline-block;
     margin-right: 6px;
     .label { display: inline-block; }
-  }
-}
-
-@include at-breakpoint($pad) {
-  .meta-info {
-    .meta { display: inline-block; }
+    &.is-highlight {
+      padding-right: 9px;
+      color: white;
+      background-color: $color-red;
+      .label {
+        padding: 3px 9px;
+        color: white;
+        background-color: $color-black;
+      }
+    }
   }
 }
 
