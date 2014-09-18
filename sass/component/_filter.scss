@@ -2,21 +2,35 @@
   @include reset-box-model;
   @include pie-clearfix;
   position: relative;
+  @include leader(1.5);
+  @include trailer();
   margin-left: -16px;
   margin-right: -16px;
-  @include trailer(.5);
-  overflow-x: scroll;
   list-style: none;
+  overflow-x: scroll;
   @include nowrap;
-  border-bottom: 1px solid darken($color-gray-light, 5%);
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: darken($color-gray-light, 10%);
+  }
   li {
     display: inline-block;
+    margin-left: -4px;
     a {
       @include unstyled-link;
       display: block;
-      padding: 3px 12px;
+      position: relative;
+      z-index: 10;
+      padding: 3px 12px 3px;
       @include adjust-font-size-to(ms(0));
       color: $text-black-light;
+      border-bottom: 1px solid darken($color-gray-light, 10%);
       @include transition(color .25s);
     }
     &:hover a {
@@ -24,6 +38,7 @@
     }
     &.active a {
       @extend %subpixel;
+      padding: 3px 12px 1px;
       color: $color-red;
       border-bottom: 3px solid $color-red;
     }
