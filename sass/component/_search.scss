@@ -3,12 +3,13 @@
   input {
     @include reset-box-model;
     padding: 6px 12px;
-    border: 1px solid $global-divider;
+    border: 1px solid darken($color-gray-light, 15%);
     border-right: none;
     outline: none;
-    @include transition(border-color .25s);
+    @include border-radius(2px 0 0 2px);
+    @include transition(background-color .25s);
     &:focus {
-      border-color: darken($global-divider, 10%);
+      background-color: #ffffee;
     }
   }
 }
