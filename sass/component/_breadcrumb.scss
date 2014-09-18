@@ -1,0 +1,23 @@
+.breadcrumb {
+  background-color: lighten($color-black, 7%);
+  .breadcrumb-list {
+    @include reset-box-model;
+    @extend %container;
+    margin: 0 auto;
+    padding: rhythm(.25);
+    list-style: none;
+    a {
+      color: lighten($color-gray, 10%);
+      font-weight: bold;
+    }
+    li { display: inline-block; }
+    li + li:before {
+      content: "/";
+      padding: 0 3px;
+      color: $color-gray;
+    }
+    li:last-child {
+      a { color: white; }
+    }
+  }
+}

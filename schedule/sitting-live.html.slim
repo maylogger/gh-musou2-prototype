@@ -1,17 +1,25 @@
+.breadcrumb
+  ol.breadcrumb-list
+    li: a href="/" 首頁
+    li: a href="/schedule/" 賽事
+    li: a href="/schedule/sitting-forecast.html" 火熱直播中
+
 .page-header
   .page-header-inner
-    h1.page-header-title 第8屆第5會期第2次臨時會第2次會議 - 火熱直播中
+    h1.page-header-title 第8屆第5會期第2次臨時會第2次會議
 
 .live
   .container
-    .iframe-video
+    .iframe-livehouse-in
       iframe src="https://livehouse.in/embed/channel/watchout" frameborder="0"
 
 .container
   .article.post
-    .post-meta
-      .label 議題
-      .topic =zh_lorem_words(4+rand(5))
+    .meta-info
+      .meta.is-highlight
+        .label 議題
+        =zh_lorem_words(4+rand(5))
+
     .live-situation
       h2.title 即時戰報
       = render "/partials/live-comment"
@@ -30,12 +38,12 @@
         .anchor
           .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
           .name
-            .label 主播
+            .label 主播 - 上午
             =zh_lorem_name
         .reviewer
           .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
           .name
-            .label 賽評
+            .label 主播 - 下午
             =zh_lorem_name
 
       ul.list

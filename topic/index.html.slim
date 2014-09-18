@@ -1,6 +1,7 @@
-.page-header
-  .page-header-inner
-    h1.page-header-title 重大議題
-.container.lead#topic-list
+.breadcrumb
+  ol.breadcrumb-list
+    li: a href="/" 首頁
+    li: a href="/topic/" 重大議題
+.container.lead
   = render "/partials/topic-card"
   = render "/partials/pagination"

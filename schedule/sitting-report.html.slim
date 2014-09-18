@@ -1,11 +1,16 @@
-.page-header
-  .page-header-inner
-    h1.page-header-title 第8屆第5會期第2次臨時會第2次會議 - 戰況報告
+.breadcrumb
+  ol.breadcrumb-list
+    li: a href="/" 首頁
+    li: a href="/schedule/" 賽事
+    li: a href="/schedule/sitting-report.html" 戰況報告
+
 .container
   .article.post
-    .post-meta
-      .label 議題
-      .topic =zh_lorem_words(4+rand(5))
+    h1 第8屆第5會期第2次臨時會第2次會議
+    .meta-info
+      .meta.is-highlight
+        .label 議題
+        =zh_lorem_words(4+rand(5))
     p = zh_lorem_paragraphs 2+rand(3)
     p = zh_lorem_paragraphs 3+rand(5)
     .post-extend-content
@@ -28,6 +33,12 @@
         li
           .list-label 聯席委員會
           .list-content #{zh_lorem_words(2+rand(5))}委員會
+        li
+          .list-label 開會日期
+          .list-content = lorem_date.to_date
+        li
+          .list-label 開會時間
+          .list-content 上午（09:00 - 12:00）
 
     .sidebar-item
       h3.sidebar-title 精選影音
