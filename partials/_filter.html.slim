@@ -1,7 +1,18 @@
 ul.filter
   - if @page_name == "schedule"
     li.active: a href="#tab1" role="tab" data-toggle="tab" 全部
-  - if @page_name == "legislator-list"
+    - 6.times do |i|
+      li: a href="#tab#{i+2}" role="tab" data-toggle="tab" #{zh_lorem_words(2+rand(5))}委員會
+
+  - if @page_name == "legislators-list"
     li.active: a href="#tab1" role="tab" data-toggle="tab" 最新更新
-  - 6.times do |i|
-    li: a href="#tab#{i+2}" role="tab" data-toggle="tab" #{zh_lorem_words(2+rand(5))}委員會
+    - 6.times do |i|
+      li: a href="#tab#{i+2}" role="tab" data-toggle="tab" #{zh_lorem_words(2+rand(5))}委員會
+
+  - if @page_name == "focus"
+    li.active: a href="#tab1" role="tab" data-toggle="tab" 全部
+    li: a href="#tab2" role="tab" data-toggle="tab" 精選評論
+    li: a href="#tab3" role="tab" data-toggle="tab" 沃草出品
+    li: a href="#tab4" role="tab" data-toggle="tab" 國會調查兵團
+    li: a href="#tab5" role="tab" data-toggle="tab" 民間司改會
+    li: a href="#tab6" role="tab" data-toggle="tab" 獨立公民寫手
