@@ -98,7 +98,7 @@ blockquote {
   @include reset-box-model;
   @include leader(1);
   @include trailer(1);
-  border-left: 3px solid $global-divider;
+  border-left: 3px solid $color-gray-light;
   padding-left: rhythm(1);
   @include adjust-font-size-to($base-font-size);
   cite {
@@ -190,6 +190,7 @@ dl {
 a {
   @include link-colors($global-link-color, $global-link-color-hover);
   @include hover-link;
+  cursor: pointer;
   img {
     border: none;
   }
@@ -203,5 +204,5 @@ a {
 hr, .divider {
   @include leader(1);
   @include trailer(1);
-  border-top: 1px solid $global-divider;
+  border-top: 1px solid $color-gray-light;
 }

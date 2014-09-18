@@ -1,7 +1,7 @@
 // gray
 $color-black        : #333;
 $color-gray         : #999;
-$color-gray-light   : #f3f3f3;
+$color-gray-light   : #eee;
 
 
 // blue
@@ -17,7 +17,7 @@ $color-red-light    : #E70000;
 $color-orange       : #FF5000;
 
 // text-color
-$text-black         : #444;
+$text-black         : #333330;
 $text-black-light   : #666;
 $text-gray          : #8a8a8a;
 $text-gray-light    : lighten($text-gray, 15%);
@@ -30,5 +30,3 @@ $global-link-color-hover : darken($color-blue-dark, 20%);
 
 // background & border
 $global-background-color : #f3f3f3;
-$global-divider          : #eee;
-$global-divider-dark     : #ccc;
