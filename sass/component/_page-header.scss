@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    @include background(linear-gradient(to bottom, rgba($color-black, 1), rgba($color-black, .0) 100%));
+    @include background(linear-gradient(to bottom, rgba($color-black, .75), rgba($color-black, 0) 100%));
   }
   .page-header-inner {
     position: relative;
@@ -20,6 +20,7 @@
     .avatar { float: left; }
     .page-header-title {
       text-align: center;
+      @include text-shadow(0 0 7px rgba($color-black, 1));
       color: white;
       &.has-avatar {
         float: left;
@@ -38,7 +39,7 @@
 
 @include at-breakpoint($pad) {
   .page-header {
-    &:after { @include background(linear-gradient(to right, rgba($color-black, 1) 25%, rgba($color-black, .0) 100%)); }
+    &:after { @include background(linear-gradient(to right, rgba($color-black, 1) 15%, rgba($color-black, .0) 100%)); }
     .page-header-inner {
       .page-header-title {
         text-align: left;

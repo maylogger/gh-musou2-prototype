@@ -44,10 +44,6 @@
     }
     &.active:hover { background: lighten($color-red, 10%); }
     &:hover { background: lighten($color-black, 15%); }
-    &:active {
-      position: relative;
-      top: 3px;
-    }
     @include at-breakpoint($pad) {
       margin: 0 rhythm(.15);
       padding: rhythm(.35) rhythm(.55);

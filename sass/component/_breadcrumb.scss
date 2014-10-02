@@ -1,12 +1,19 @@
 .breadcrumb {
   background-color: lighten($color-black, 7%);
-  .breadcrumb-list {
-    @include reset-box-model;
+  .breadcrumb-inner {
+    @include pie-clearfix;
     @extend %container;
-    margin: 0 auto;
-    padding: rhythm(.25);
-    list-style: none;
+    position: relative;
+    overflow: hidden;
+    .breadcrumb-list {
+      @include reset-box-model;
+      margin: 0 auto;
+      padding: rhythm(.25) 0;
+      list-style: none;
+      @include ellipsis;
+    }
     a {
+      display: inline-block;
       color: lighten($color-gray, 10%);
       font-weight: bold;
     }

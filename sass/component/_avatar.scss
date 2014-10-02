@@ -1,8 +1,8 @@
 .avatar {
   display: inline-block;
-  margin-bottom: 3px;
   @include border-radius(100%);
   border: 1px solid $color-black;
+  background-color: $color-gray-light;
   img {
     display: block;
     width: 60px;
@@ -15,6 +15,7 @@
     position: relative;
     .party {
       position: absolute;
+      z-index: 1;
       right: -3px;
       bottom: -3px;
       img {
@@ -33,11 +34,13 @@
   }
   &.is-small {
     img {
+      margin: 0;
       width: 40px;
       height: 40px;
     }
     .party {
       img {
+        margin: 0;
         width: 20px;
         height: 20px;
       }
@@ -45,12 +48,14 @@
   }
   &.is-large {
     img {
+      margin: 0;
       width: 90px;
       height: 90px;
       border: 3px solid white;
     }
     .party {
       img {
+        margin: 0;
         width: 30px;
         height: 30px;
       }

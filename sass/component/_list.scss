@@ -53,8 +53,11 @@
   .list-image {
     float: right;
     max-width: 25%;
+    width: 80px;
+    height: 50px;
     margin-left: 10px;
     line-height: 0;
+    background-image: url(/images/list-image-bg.png);
   }
   .list-content {
     float: left;

@@ -1,29 +1,29 @@
 .btn-share-module {
   display: inline-block;
-  margin-left: 6px;
   text-align: center;
   vertical-align: bottom;
   @include border-radius(2px);
   &:hover { text-decoration: none; }
   .counter {
+    display: inline-block;
     color: $color-blue-deep;
     @include adjust-font-size-to(ms(0), .5);
   }
   .button {
-    margin-top: 8px;
-    padding: 0 9px;
+    padding: 2px 9px 3px;
     color: white;
     @include adjust-font-size-to(ms(0));
     background-color: $color-blue-deep;
     &:hover { background-color: lighten($color-blue-deep, 10%); }
   }
+  .counter + .button { margin-top: 8px; }
+  .button + .counter { margin-right: 4px; }
 }
 
 .btn-like-module {
   display: inline-block;
-  margin-left: 6px;
   text-align: center;
-  padding: 9px 12px 0;
+  padding: 3px 12px;
   text-align: center;
   background-color: $color-gray-light;
   @include border-radius(2px);
@@ -32,18 +32,38 @@
     background-color: lighten($color-gray-light, 3%);
   }
   .counter {
+    display: inline-block;
+    position: relative;
+    top: -2px;
     color: $color-red;
+    vertical-align: middle;
     @include adjust-font-size-to(ms(0), .5);
   }
   .button {
     display: inline-block;
-    margin-top: 6px;
     padding: 0;
+    vertical-align: middle;
     @include replace-text-with-svg("like-button");
     background-color: transparent;
   }
+  &.push {
+    padding: 6px 12px;
+    background-color: $color-red;
+    &:hover { background-color: lighten($color-red, 10%); }
+    .button {
+      vertical-align: middle;
+      @include replace-text-with-svg("like-button-white");
+    }
+    .text {
+      display: inline-block;
+      color: white;
+      vertical-align: middle;
+      @extend %subpixel;
+    }
+  }
+  .counter + .button { margin-top: 6px; }
   &.in-question {
-    padding: 0;
+    padding: 0 6px;
     background-color: transparent;
     .button {
       margin-top: 0;
@@ -58,9 +78,8 @@
 
 .btn-dislike-module {
   display: inline-block;
-  margin-left: 6px;
   text-align: center;
-  padding: 9px 12px 0;
+  padding: 3px 12px;
   text-align: center;
   background-color: $color-gray-light;
   @include border-radius(2px);
@@ -69,19 +88,24 @@
     background-color: lighten($color-gray-light, 3%);
   }
   .counter {
+    display: inline-block;
+    position: relative;
+    top: -2px;
     color: $color-gray;
+    vertical-align: middle;
     @include adjust-font-size-to(ms(0), .5);
   }
   .button {
     display: inline-block;
-    margin-top: 6px;
     padding: 0;
+    vertical-align: middle;
     @include replace-text-with-svg("dislike-button");
     background-color: transparent;
   }
+  .counter + .button { margin-top: 6px; }
 }
 
-.btn-like-module+.btn-dislike-module {
+.btn-like-module + .btn-dislike-module {
   position: relative;
   margin-left: -1px;
   @include border-radius(0 2px 2px 0);
@@ -96,42 +120,16 @@
   }
 }
 
-.btn_search {
-  padding: 4px 12px;
-  color: white;
-  background-color: $color-red;
-  @include border-radius(0 2px 2px 0);
-  @include transition(background-color .25s);
-  &:hover { background-color: lighten($color-red, 10%); }
+.btn-share-module + .btn-like-module,
+.btn-like-module + .btn-share-module {
+  margin-left: 6px;
 }
+
 
 .btn_loadmore {
   width: 100%;
   @include leader();
   padding: 12px 12px;
-  color: white;
-  background-color: $color-red;
-  @include border-radius(5px);
-  @include transition(background-color .25s);
-  &:hover { background-color: lighten($color-red, 10%); }
-}
-
-.btn_push {
-  color: white;
-  background-color: $color-red;
-  @include transition(background-color .25s);
-  &:hover { background-color: lighten($color-red, 10%); }
-}
-
-.btn_push + .btn_share {
-  margin-left: 6px;
-}
-
-.btn_ask-legislator {
-  @include trailer();
-  width: 100%;
-  padding: 6px 12px;
-  @include adjust-font-size-to(ms(3));
   color: white;
   background-color: $color-red;
   @include border-radius(5px);
