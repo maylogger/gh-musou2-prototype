@@ -24,7 +24,7 @@ function playVideo() {
 
 
 // youtube controller
-$('.video-info > .play-button').on("click", function(event){
+$('.video-info-inner > .play-button').on("click", function(event){
   $('.video-cover').addClass('is-hidden').delay(500).queue(function(){
     $('.video-cover').remove();
   });
