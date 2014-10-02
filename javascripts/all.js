@@ -57,26 +57,10 @@ $('.writer-intro .close').on("click", function(){
   $('.writer-intro').removeClass('is-open');
 });
 
-var videoContentSize =function () {
-  videoContentHeight = $(window).height() - 196;
-  $('.is-scroll').css('height', videoContentHeight);
-  if ( $(window).width() < 900 ) {
-    $('.video-content').removeClass('is-scroll');
-    $('.video-content').css('height', 'auto');
-  }
-  if ( $(window).width() > 900 ) {
-    $('.video-content').addClass('is-scroll');
-  }
-}
-videoContentSize();
-
-$(window).resize(function(){
-  videoContentSize();
-});
-
 $('.search-bar-toggle').on("click", function(){
   $(this).toggleClass('is-open');
   $('.search-bar').toggleClass('is-open');
 });
 
-$('.article p').macho();
+$('.article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6').macho();
+
