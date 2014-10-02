@@ -74,11 +74,6 @@
     font-weight: bold;
     color: $color-red;
   }
-  .topic-label {
-    display: block;
-    font-weight: bold;
-    color: $color-red;
-  }
 }
 
 a.sitting {
@@ -118,9 +113,9 @@ a.sitting {
       color: $color-gray;
       font-weight: bold;
     }
-    .topic {
+    .meta-info {
       @include leader(.25);
-      @include adjust-font-size-to(ms(0));
+      .meta { display: block; }
     }
   }
   .president {
@@ -206,9 +201,6 @@ a.sitting {
     margin-left: 0;
     margin-right: 0;
     @include border-radius(5px);
-    .main-info {
-      .topic { @include adjust-font-size-to(ms(1)); }
-    }
     .sitting-summary {
       p { @include adjust-font-size-to(ms(1)); }
     }
@@ -227,6 +219,11 @@ a.sitting {
       padding: 12px 0 12px 24px;
       text-align: left;
       vertical-align: middle;
+      .meta-info {
+        @include adjust-font-size-to(ms(1));
+        .meta { display: inline-block; }
+        .label { @include adjust-font-size-to(ms(1)); }
+      }
     }
     .president {
       min-width: 102px;
