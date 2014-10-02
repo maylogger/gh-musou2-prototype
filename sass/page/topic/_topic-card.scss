@@ -59,7 +59,7 @@
       z-index: 1;
       height: 20px;
       background-color: rgba(white, .6);
-      @include transition(background-color .35s);
+      @include transition(background-color .25s);
       &:after {
         content: "";
         position: absolute;
@@ -70,18 +70,15 @@
       }
       &.is-open {
         background-color: $color-gray-light;
-        &:after {
-          @include replace-text-with-svg("topic-card-close");
-        }
+        &:after { @include replace-text-with-svg("topic-card-close"); }
       }
     }
   }
   .topic-detail {
     padding: 0 12px;
     background-color: $color-gray-light;
-    .topic-summary, .topic-report, .topic-focus {
-      @include leader();
-      @include trailer(2);
+    .topic-summary, .topic-report {
+      @include trailer();
       h3 {
         @include trailer(.5);
         color: $color-gray;
@@ -89,7 +86,14 @@
       }
     }
     .topic-summary {
+      @include leader(.5);
       p { @include adjust-font-size-to(ms(0)); }
+    }
+    .topic-report {
+      @include leader();
+    }
+    .list, .list-with-image {
+      li + li { border-top: 1px solid darken($color-gray-light, 10%); }
     }
   }
 }
@@ -118,14 +122,11 @@
     .topic-detail {
       padding: 0 24px;
       .topic-summary {
-        @include trailer();
+        @include leader();
+        @include span-columns(3);
         p { @include adjust-font-size-to(ms(1)); }
       }
       .topic-report {
-        @include trailer();
-        @include span-columns(3);
-      }
-      .topic-focus {
         @include span-columns(3 omega);
       }
     }
@@ -135,15 +136,7 @@
 @include at-breakpoint($desktop) {
   .topic-item {
     .topic-detail {
-      .topic-summary {
-        @include span-columns(4);
-      }
-      .topic-report {
-        @include span-columns(4);
-      }
-      .topic-focus {
-        @include span-columns(4 omega);
-      }
+      padding: 0 96px;
     }
   }
 }

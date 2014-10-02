@@ -1,4 +1,4 @@
-.month-post {
+.timeline {
   position: relative;
   @include padding-trailer();
   &:before {
@@ -43,6 +43,12 @@
         @include rotate(90deg);
       }
     }
+    .post-counter {
+      float: right;
+      margin: 3px 15px;
+      @include adjust-font-size-to(ms(0));
+      font-weight: normal;
+    }
   }
   .month-post-list {
     padding-left: 18px;
@@ -86,20 +92,30 @@
 }
 
 .topic-start {
-    position: relative;
-    padding-left: 18px;
-    font-weight: bold;
-    color: $color-gray;
-    cursor: pointer;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -7px;
-      width: 10px;
-      height: 10px;
-      margin-top: -5px;
-      background-color: $color-red;
-      @include border-radius(5px);
+  position: relative;
+  padding-left: 18px;
+  font-weight: bold;
+  color: $color-gray;
+  cursor: pointer;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    background-color: $color-red;
+    @include border-radius(5px);
+  }
+}
+
+@include at-breakpoint($pad) {
+  .timeline {
+    .month-title {
+      .post-counter {
+        margin: 6px 15px;
+      }
     }
   }
+}
