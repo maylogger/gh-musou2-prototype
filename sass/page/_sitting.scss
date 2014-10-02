@@ -1,5 +1,7 @@
 .sitting-info-card {
   .president {
+    @include unstyled-link;
+    display: block;
     @include trailer();
     text-align: center;
   }
