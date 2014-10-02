@@ -6,11 +6,28 @@
     @include padding-trailer(.5);
     color: $text-black;
     border-bottom: 1px solid darken($color-gray-light, 10%);
+    &:first-child {
+      @include padding-leader();
+      border-top: 1px solid darken($color-gray-light, 10%);
+    }
     .focus-image {
       @include box-sizing(border-box);
       float: right;
       width: 30%;
-      img { display: block; }
+      .focus-image-wrap {
+        position: relative;
+        height: 0;
+        padding-top: 56.667%;
+        background-image: url(/images/focus-image-bg.png);
+        background-size: cover;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+      }
     }
     .focus-content {
       @include box-sizing(border-box);
@@ -20,11 +37,6 @@
         margin-bottom: 3px;
         color: $color-red;
         @include ellipsis;
-      }
-      .meta-info {
-        @include padding-trailer(0);
-        @include adjust-font-size-to(ms(0));
-        border-bottom: none;
       }
       p { display: none; }
     }
@@ -40,6 +52,11 @@
   .author {
     @include trailer();
     text-align: center;
+  }
+  .label {
+    display: block;
+    @include adjust-font-size-to(ms(0), .75);
+    font-weight: bold;
   }
 }
 
@@ -66,6 +83,13 @@
       &:hover {
         .focus-content {
           p { color: $text-black; }
+        }
+      }
+      &.video {
+        .focus-content {
+          .title {
+            &:before { top: 4px; }
+          }
         }
       }
     }
