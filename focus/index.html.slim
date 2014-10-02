@@ -1,0 +1,21 @@
+- @page_name = "focus"
+
+.breadcrumb
+  .breadcrumb-inner
+    ol.breadcrumb-list
+      li: a href="/" 首頁
+      li: a href="/focus/" 場邊焦點
+    = render "/partials/search"
+
+.container.lead.thin
+  .nav-select
+    .select-label 寫手分類
+    select
+      option 全部
+      option 沃草精選
+      - 4.times do
+        option #{zh_lorem_words(3+rand(5))}
+  .focus-list
+    = render "/partials/focus-list"
+
+  = render "/partials/pagination"

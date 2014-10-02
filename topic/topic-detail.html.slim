@@ -1,0 +1,53 @@
+.breadcrumb
+  .breadcrumb-inner
+    ol.breadcrumb-list
+      li: a href="/" 首頁
+      li: a href="/topic/" 重大議題
+
+.page-header style="background-image: url('http://hhhhold.com/1680x300/#{rand(100)}')"
+  .page-header-inner
+    h1.page-header-title 兩岸服務貿易協議
+
+.container.lead
+  .post
+    .article
+      - (2+rand(3)).times do
+        = render "/partials/article"
+
+  .topic-timeline.sidebar
+    - 2.times do |i|
+      .timeline.panel
+        .month-title.is-open data-parent="#topic-timeline" data-toggle="collapse" href="#month#{8-i}" 2014 年 #{8-i} 月 <span class="post-counter">(#{rand(100)})</span>
+        .month-post-list.collapse.in id="month#{8-i}"
+          .month-foucs-list
+            .title 場邊焦點
+            ul.list-with-image
+              - (3+rand(3)).times do
+                li: a href="#"
+                  .list-content =zh_lorem_sentence
+                  .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .month-report-list
+            .title 戰況報告
+            ul.list
+              - (3+rand(3)).times do
+                li: a href="#"
+                  .list-content =zh_lorem_sentence
+
+    - 5.times do |i|
+      .timeline.panel
+        .month-title data-parent="#topic-timeline" data-toggle="collapse" href="#month#{6-i}" 2014 年 #{6-i} 月 <span class="post-counter">(#{rand(100)})</span>
+        .month-post-list.collapse id="month#{6-i}"
+          .month-foucs-list
+            .title 場邊焦點
+            ul.list-with-image
+              - (3+rand(3)).times do
+                li: a href="#"
+                  .list-content =zh_lorem_sentence
+                  .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+          .month-report-list
+            .title 戰況報告
+            ul.list
+              - (3+rand(3)).times do
+                li: a href="#"
+                  .list-content =zh_lorem_sentence
+    .topic-start 議題發起

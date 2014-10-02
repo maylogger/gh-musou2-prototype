@@ -1,0 +1,14 @@
+.nav-select {
+  @include trailer();
+  &.in-filter {
+    display: inline-block;
+    @include trailer(0);
+    margin-right: 12px;
+  }
+  .select-label {
+    display: inline-block;
+    margin-right: 6px;
+    @include adjust-font-size-to(ms(0));
+    font-weight: bold;
+  }
+}

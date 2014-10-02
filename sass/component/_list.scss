@@ -1,0 +1,69 @@
+%list, .list {
+  @include reset-box-model;
+  @include leader(.5);
+  @include trailer(.5);
+  list-style: none;
+  @include adjust-font-size-to(ms(0));
+  li {
+    @include pie-clearfix;
+  }
+  li + li {
+    @include leader(.25);
+    @include padding-leader(.25);
+    border-top: 1px solid $color-gray-light;
+  }
+  a {
+    @include unstyled-link;
+    display: block;
+    &:hover { text-decoration: underline; }
+  }
+  .list-label {
+    @extend %subpixel;
+    float: left;
+    width: 7em;
+    color: $color-gray;
+  }
+  .list-content {
+    color: $text-black;
+    overflow: hidden;
+  }
+  .list-content-row {
+    @include pie-clearfix;
+  }
+  @include at-breakpoint($pad) {
+    @include adjust-font-size-to(ms(1));
+    li + li {
+      @include leader(.5);
+      @include padding-leader(.5);
+    }
+    .list-content-row {
+      padding-bottom: rhythm(.25);
+    }
+  }
+}
+
+.list-with-image {
+  @extend %list;
+  a {
+    @include pie-clearfix;
+    &:hover {
+      .list-content { text-decoration: underline; }
+    }
+  }
+  .list-image {
+    float: right;
+    max-width: 25%;
+    width: 80px;
+    height: 50px;
+    margin-left: 10px;
+    line-height: 0;
+    background-image: url(/images/list-image-bg.png);
+  }
+  .list-content {
+    float: left;
+    width: 70%;
+    height: 48px;
+    overflow: hidden;
+    text-align: left;
+  }
+}

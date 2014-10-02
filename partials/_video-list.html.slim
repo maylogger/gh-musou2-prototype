@@ -1,0 +1,18 @@
+- video_type = [ '好球', '烏龍球', '界外球' ]
+
+- 12.times do
+  a.video-list-item href="/video/post-with-video.html"
+    .video-image
+      = image_tag("http://hhhhold.com/480x270/#{rand(100)}")
+    .video-intro
+      h3.title = zh_lorem_sentence
+      .meta-info
+        .meta
+          .label 類型
+          = video_type[rand(3)]
+        .meta
+          .label 日期
+          =lorem_date.to_date
+        .meta
+          .label 作者
+          | 阿草

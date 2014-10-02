@@ -1,0 +1,152 @@
+.video-list-item {
+  @include unstyled-link;
+  @include box-sizing(border-box);
+  display: block;
+  overflow: hidden;
+  @include trailer();
+  border: 1px solid darken($color-gray-light, 2.5%);
+  @include border-radius(5px);
+  background-color: $color-gray-light;
+  @include transition(background-color .25s);
+  &:hover {
+    @include unstyled-link;
+    background-color: lighten($color-gray-light, 2.5%);
+  }
+  .video-image {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      margin-top: -25px;
+      margin-left: -25px;
+      width: 50px;
+      height: 50px;
+      background-color: $color-red;
+      border: 2px solid white;
+      @include border-radius(100%);
+      opacity: .75;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      margin-top: -8px;
+      margin-left: -6px;
+      border: 10px solid transparent;
+      border-left: 20px solid white;
+      opacity: .9;
+    }
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.video-intro {
+  padding: 12px;
+  .title {
+    @include adjust-font-size-to(ms(1));
+    font-weight:  bold;
+    @include ellipsis;
+  }
+}
+
+.video-content {
+  margin-top: -12px;
+  padding-top: 12px;
+  &.is-scroll {
+    @extend %scroll-hidden;
+  }
+}
+
+.video {
+  position: relative;
+  margin-bottom: rhythm(2);
+  @include background( radial-gradient($color-black-light ,black) );
+  .video-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    background-color: $color-black;
+    @include background-size(cover);
+    background-position: center center;
+    opacity: 1;
+    @include transition(opacity .5s);
+    &.is-hidden { opacity: 0; }
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include background( radial-gradient(transparent 0%, black 70%) );
+    }
+    .video-info {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      padding: 0 128px;
+      text-align: center;
+      @include text-shadow(0 0 10px black);
+      @include translateY(-50%);
+      h1 {
+        @include adjust-font-size-to(ms(5));
+        font-weight: bold;
+      }
+      .meta-info {
+        @include leader(.5);
+        color: white;
+        font-weight: bold;
+        .label {
+          color: white;
+          font-weight: bold;
+        }
+      }
+      .play-button {
+        @include leader(2);
+        display: inline-block;
+        padding: 3px 30px;
+        @include adjust-font-size-to(ms(2));
+        font-weight: bold;
+        cursor: pointer;
+        background-color: rgba(black, .5);
+        border: 1px solid white;
+        @include transition(background-color .25s);
+        &:hover { background-color: rgba(black, .9); }
+      }
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .video-list-item {
+    @include span-columns(3);
+    @include nth-omega(2n);
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .video-list-item {
+    @include span-columns(4);
+    @include remove-nth-omega(2n);
+    @include nth-omega(3n);
+  }
+}

@@ -1,0 +1,19 @@
+%button, button, .button {
+  @include reset-box-model;
+  @include unstyled-link;
+  display: inline-block;
+  padding: 3px 12px;
+  @include adjust-font-size-to(ms(1));
+  @extend %subpixel;
+  color: white;
+  text-align: center;
+  background-color: $color-red;
+  @include border-radius(2px);
+  &:hover { background-color: lighten($color-red, 10%); }
+  &.btn_small {
+    padding: 0 9px;
+    @include adjust-font-size-to(ms(0));
+  }
+}
+
+%button, button { cursor: pointer; }

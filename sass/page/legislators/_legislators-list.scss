@@ -1,0 +1,91 @@
+.legislator-list { @include pie-clearfix; }
+.legislator-list-item {
+  @include unstyled-link;
+  @include box-sizing(border-box);
+  display: block;
+  overflow: hidden;
+  @include trailer();
+  background-color: $color-gray-light;
+  border: 1px solid darken($color-gray-light, 2.5%);
+  @include border-radius(5px);
+  @include transition(background-color .25s);
+  &:hover {
+    @include unstyled-link;
+    background-color: lighten($color-gray-light, 2.5%);
+  }
+  .legislator-bgimage {
+    position: relative;
+    height: 120px;
+    background-position: center center;
+    @include background-size(cover);
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      @include background(linear-gradient(to bottom, rgba(black, 0), rgba(black, .2)));
+    }
+  }
+  .legislator-avatar {
+    display: block;
+    margin-top: -45px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .legislator-data {
+    display: block;
+    text-align: center;
+    .legislator-name {
+      @include trailer(.25);
+      font-weight: bold;
+      color: $color-red;
+      @include ellipsis;
+    }
+    .meta-info { @include trailer(.5); }
+    .meta { display: block; }
+  }
+  .latest-update {
+    @include pie-clearfix;
+    background-color: white;
+    @include border-radius(0 0 4px 4px);
+    .title {
+      float: left;
+      position: relative;
+      padding: 12px;
+      @include adjust-font-size-to(ms(0));
+      font-weight: bold;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 15%;
+        right: 0;
+        bottom: 15%;
+        border-right: 1px solid darken($color-gray-light, 5%);
+      }
+    }
+    p {
+      @include trailer(0);
+      padding: 12px;
+      @include adjust-font-size-to(ms(0));
+      text-align: left;
+      @include ellipsis;
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .legislator-list-item {
+    @include span-columns(3);
+    @include nth-omega(2n);
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .legislator-list-item {
+    @include span-columns(4);
+    @include remove-nth-omega(2n);
+    @include nth-omega(3n);
+  }
+}

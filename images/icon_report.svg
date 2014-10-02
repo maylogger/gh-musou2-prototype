@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_report</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Element" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="ICON" sketch:type="MSLayerGroup" transform="translate(-3.000000, -221.000000)" fill="#333333">
+            <g id="report-2" transform="translate(5.018519, 222.000000)" sketch:type="MSShapeGroup">
+                <path d="M19.2564815,17 L16.9814815,19.2300781 L19.2564815,21.4 L19.1814815,21.4 L21.0202315,19.2833594 L20.4089815,17 L19.2564815,17 Z" id="Rectangle-31" stroke="#FFFFFF" transform="translate(18.981481, 19.000000) scale(-1, 1) translate(-18.981481, -19.000000) "></path>
+                <path d="M1.275,0 L3.66375,2.27412109 L-0.475,19.7770117 L1.68625,22 L17.61125,22 L15.45,19.9048438 L19.58875,2.24748047 L17.2,0 L1.275,0 Z M5.47500001,6.76923077 L4.25,11.8461538 L14.75,11.8461538 L15.975,6.76923077 L5.47500001,6.76923077 Z M3.75648187,13 L3.58148186,13.8461538 L14.0814819,13.8461538 L14.2564819,13 L3.75648187,13 Z M3.28750001,15 L3.1125,15.8461538 L13.6125,15.8461538 L13.7875,15 L3.28750001,15 Z M2.85000001,17 L2.675,17.8461538 L8.8,17.8461538 L8.97500001,17 L2.85000001,17 Z" id="Rectangle-29"></path>
+                <path d="M2.25648148,0 L-0.0185185185,2.23007813 L2.25648148,4.4 L15.8951178,4.4 L13.7338678,2.28335938 L16.1226178,0 L2.25648148,0 Z" id="Rectangle-30" stroke="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

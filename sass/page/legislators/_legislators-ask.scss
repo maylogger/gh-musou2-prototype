@@ -1,0 +1,211 @@
+.legislator-profile {
+  .push-threshold {
+    float: right;
+    position: relative;
+    top: -4px;
+    color: $color-red;
+    font-weight: bold;
+    @include adjust-font-size-to(ms(0));
+    .number {
+      height: 24px;
+      @include adjust-font-size-to(ms(3), 1);
+    }
+  }
+  .ask-form {
+    @include trailer();
+    @include padding-trailer();
+    border-bottom: 1px solid $color-gray-light;
+    h3 { @include trailer(.5); }
+    .label {
+      @include adjust-font-size-to(ms(0));
+      font-weight: bold;
+    }
+    textarea, input {
+      @include reset-box-model;
+      @include box-sizing(border-box);
+      overflow: hidden;
+      width: 100%;
+      @include leader(.25);
+      @include trailer(.5);
+      padding: rhythm(.25);
+      border: 1px solid $color-gray;
+      @include border-radius(5px);
+      &:disabled {
+        background-color: $color-gray-light;
+      }
+    }
+    .rule { @include adjust-font-size-to(ms(0)); }
+    .close {
+      @include leader();
+      text-align: center;
+      p { @include adjust-font-size-to(ms(2)); }
+    }
+  }
+  .question-list {
+    position: relative;
+    .sort {
+      @include trailer(.5);
+      @include adjust-font-size-to(ms(0));
+      select {
+        margin-left: 6px;
+        @include adjust-font-size-to(ms(1));
+      }
+    }
+    .filter { margin: 0; }
+    .tab-pane { padding: 0; }
+  }
+  .question-item:nth-child(odd) {
+    .question-header { background-color: $color-gray-light; }
+  }
+  .question-header {
+    @include pie-clearfix;
+    @include reset-box-model;
+    padding: rhythm(.5) 0;
+    border-bottom: 1px solid darken($color-gray-light, 5%);
+    list-style: none;
+    li {
+      float: left;
+      margin-right: 12px;
+      @include adjust-font-size-to(ms(0));
+      font-weight: bold;
+    }
+    li.push {
+      width: 64px;
+      margin-top: -2px;
+    }
+    li.date { width: 40px; }
+    li.question-title {
+      width: 100%;
+      padding-left: 6px;
+      @include ellipsis;
+    }
+    li.open { float: right; }
+  }
+  .question-content {
+    padding: 0 rhythm(.5) 0 rhythm(1.5);
+    &.in {
+      border-bottom: 1px solid darken($color-gray-light, 5%);
+    }
+    .question-status {
+      @include pie-clearfix;
+      @include leader(.5);
+      @include trailer(.5);
+      @include adjust-font-size-to(ms(0));
+      .info {
+        @include trailer(.5);
+        @include adjust-font-size-to(ms(0), .75);
+        .date {
+          color: $color-red;
+          font-weight: bold;
+        }
+      }
+      .action {
+        .button { margin: 0; }
+        .btn-share-module {
+          .button { padding: 7px 9px 6px; }
+        }
+      }
+    }
+    .question-title {
+      @include trailer(.5);
+      font-weight: bold;
+    }
+    .question {
+      position: relative;
+      @include trailer();
+      &:before {
+        content: "Ｑ";
+        position: absolute;
+        left: -40px;
+        @include adjust-font-size-to(ms(4));
+        font-weight: bold;
+        color: lighten($color-red, 5%);
+      }
+    }
+    .answer {
+      position: relative;
+      @include trailer();
+      .unanswered-message {
+        color: $text-gray;
+        font-weight: bold;
+      }
+      &:before {
+        content: "Ａ";
+        position: absolute;
+        left: -40px;
+        @include adjust-font-size-to(ms(4));
+        font-weight: bold;
+        color: $color-gray;
+      }
+    }
+    .feedback {
+      @include trailer();
+      text-align: left;
+      span {
+        display: block;
+        @include trailer(.25);
+        margin-right: 6px;
+        color: $color-gray;
+        vertical-align: middle;
+      }
+      .btn-like-module { vertical-align: middle; }
+      .btn-dislike-module { vertical-align: middle; }
+    }
+  }
+}
+@include at-breakpoint($pad) {
+  .legislator-profile {
+    .push-threshold {
+      top: -3px;
+      @include adjust-font-size-to(ms(1));
+    }
+    .ask-form {
+      .label { @include adjust-font-size-to(ms(1)); }
+    }
+    .question-list {
+      .sort {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        padding-top: 3px;
+      }
+    }
+    .question-header {
+      li.question-title {
+        float: left;
+        width: 60%;
+      }
+    }
+    .question-content {
+      .question-status {
+        .info {
+          float: left;
+          width: auto;
+        }
+        .action { float: right; }
+      }
+      .answer {
+        .unanswered-message {
+          @include adjust-font-size-to(ms(2), 1.75);
+        }
+      }
+      .feedback {
+        text-align: left;
+        span {
+          @include trailer(0);
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .legislator-profile {
+    .question-header {
+      li.question-title {
+        width: 55%;
+      }
+    }
+  }
+}

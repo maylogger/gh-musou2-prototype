@@ -1,0 +1,32 @@
+.sidebar {
+  @include at-breakpoint($desktop) {
+    @include span-columns(4 omega);
+  }
+}
+
+.sidebar-item {
+  @include trailer();
+  padding: 10px 12px;
+  background-color: white;
+  border: 1px solid $color-gray-light;
+  @include border-radius(5px);
+  &.is-borderless {
+    padding: 0;
+    border: none;
+    @include border-radius(none);
+  }
+}
+
+.sidebar-title {
+  @include trailer(.5);
+  @include padding-trailer(.25);
+  @include adjust-font-size-to(ms(1), 1.25);
+  font-weight: bold;
+  border-bottom: 1px solid rgba($color-red, .5);
+}
+
+@include at-breakpoint($desktop) {
+  .sidebar-item {
+    padding: 20px 24px;
+  }
+}

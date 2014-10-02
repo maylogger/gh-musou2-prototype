@@ -1,0 +1,61 @@
+.breadcrumb
+  .breadcrumb-inner
+    ol.breadcrumb-list
+      li: a href="/" 首頁
+      li: a href="/legislators/" 立委線上
+      li: a href="/legislators/legislator.html" #{zh_lorem_name}
+
+.legislator-header
+  .legislator-header-bg style="background-image: url('/images/DPP_banner.png')"
+    .legislator-header-inner
+      .legislator-head
+        .avatar.is-large.has-party
+          .party =image_tag("/images/DPP.png")
+          =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+        .name =zh_lorem_name
+
+  .legislator-header-inner
+    .ask-info-wrap
+      button.btn_ask-legislator 我要發問
+    .profile-tab-wrap
+      ul.profile-tab
+        li.active
+          a.legislator-news href="#news" role="tab" data-toggle="tab" 新消息
+        li
+          a.legislator-ask href="#ask" role="tab" data-toggle="tab" 發問
+        li
+          a.legislator-data href="#data" role="tab" data-toggle="tab" 簡介
+
+.legislator-main
+  .container
+    .sidebar
+      .legislator-info.sidebar-item
+        h3.sidebar-title 基本資料
+        ul.list
+          li
+            .list-label 黨籍
+            .list-content #{zh_lorem_words(2+rand(3))}黨
+          li
+            .list-label 委員會
+            .list-content #{zh_lorem_words(2+rand(5))}委員會
+          li
+            .list-label 近期動態
+            .list-content
+              .positive-status 參選南投市長
+              .positive-status 參選立法委員
+              .negative-status 然後都落選
+          li
+            .list-label 相關連結
+            .list-content
+              a.facebook target="_blank" href="#" 官方臉書
+              a.wikipedia target="_blank" href="#" 維基百科
+              a.lyvote target="_blank" href="http://vote.ly.g0v.tw/" g0v 立委投票指南
+
+    .legislator-profile
+      .tab-content.profile-content
+        .tab-pane.fade.in.active#news
+          = render "/partials/legislators-news"
+        .tab-pane.fade#ask
+          = render "/partials/legislators-ask"
+        .tab-pane.fade#data
+          = render "/partials/legislators-data"

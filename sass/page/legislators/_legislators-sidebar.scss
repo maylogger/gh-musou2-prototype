@@ -1,0 +1,30 @@
+.legislator-info {
+  display: none;
+  border: 1px solid $color-gray-light;
+  @include border-radius(5px);
+}
+
+@mixin text-with-icon($icon-name) {
+  position: relative;
+  @include trailer(.25);
+  padding-left: 30px;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    @include replace-text-with-svg($icon-name);
+  }
+}
+.positive-status {
+  @include text-with-icon("positive_status");
+  color: $color-red;
+  font-weight: bold;
+}
+.negative-status { @include text-with-icon("negative_status"); }
+.facebook { @include text-with-icon("icon_facebook"); }
+.wikipedia { @include text-with-icon("icon_wiki"); }
+.lyvote { @include text-with-icon("icon_lyvote"); }
+
+@include at-breakpoint($desktop) {
+  .legislator-info { display: block; }
+}

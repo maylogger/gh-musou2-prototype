@@ -1,0 +1,125 @@
+.post {
+  @include box-sizing(border-box);
+  &.isolate {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .meta-info {
+      text-align: center;
+    }
+  }
+  .post-title {
+    @include trailer(.5);
+    @include padding-trailer(.5);
+    font-weight: bold;
+    border-bottom: 1px solid $color-gray-light;
+  }
+  .meta-info {
+    @include trailer(.5);
+    @include padding-trailer(.5);
+    border-bottom: 1px solid $color-gray-light;
+  }
+}
+
+.post-extend-content {
+  @include leader(2);
+  @include trailer(3);
+  @include padding-leader(.5);
+  border-top: 3px solid $color-gray-light;
+  .content-title {
+    @extend %h3;
+    @include trailer(.5);
+    @include padding-trailer(.5);
+    font-weight: bold;
+    border-bottom: 1px solid $color-gray-light;
+    .isolate & {
+      text-align: center;
+    }
+  }
+  ul { padding-left: 0; }
+  img {
+    @include trailer(0);
+  }
+}
+
+.writer-intro-button {
+  margin-left: 6px;
+  padding: 0 6px;
+  @include adjust-font-size-to(ms(0), .9);
+  color: $text-gray;
+  background-color: transparent;
+  border: 1px solid $color-gray;
+  @include transition(background-color .25s);
+  &:hover { background-color: $color-gray-light; }
+}
+.writer-intro {
+  display: none;
+  @include pie-clearfix;
+  position: relative;
+  @include leader(.5);
+  @include trailer(.5);
+  padding: 12px;
+  background-color: $color-gray-light;
+  @include border-radius(2px);
+  &.is-open { display: block; }
+  .writer {
+    .name {
+      @include adjust-font-size-to(ms(1));
+    }
+  }
+  .intro-content {
+    overflow: hidden;
+    margin-bottom: 0;
+    @include adjust-font-size-to(ms(0));
+    text-align: left;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 9px;
+    color: $text-gray;
+    @include adjust-font-size-to(ms(4), 1);
+    @include transition(color .25s);
+    cursor: pointer;
+    &:hover { color: $text-black; }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .writer-intro {
+    padding: 24px 48px 24px 24px;
+    .writer {
+      float: left;
+      margin-right: 24px;
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .post {
+    @include span-columns(8);
+    padding-right: rhythm(3);
+    &.isolate {
+      @include squish(2,2);
+      @include span-columns(8);
+      padding-right: 0;
+    }
+  }
+  .post-extend-content {
+    .list-with-image {
+      @include pie-clearfix;
+      li {
+        float: left;
+        width: 48%;
+        margin-right: 2%;
+        @include leader(0);
+        @include padding-leader(.5);
+        @include padding-trailer(.5);
+        border-top: none;
+        border-bottom: 1px solid $color-gray-light;
+      }
+    }
+  }
+}

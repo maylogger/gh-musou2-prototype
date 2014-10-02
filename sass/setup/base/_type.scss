@@ -1,0 +1,182 @@
+// ---- modular scale import ----
+@import "vender/modular-scale";
+
+// ---- modular scale setting ----
+$ms-base: 13px 42px;
+$ms-ratio: $golden;
+
+@include establish-baseline;
+
+%avenir {
+  font-family: "AvenirNext-DemiBoldItalic", "Avenir-HeavyOblique", "Arial", "STHeitiTC-Light", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%helvetica {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "STHeitiTC-Light","Microsoft JhengHei", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+%code-font {
+  font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New" ,MonoSpace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%subpixel {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+  @extend %helvetica;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: $global-text-color;
+}
+
+// heading
+#{headings()} {
+  @include reset-box-model;
+  font-weight: normal;
+}
+%h1, h1 { @include adjust-font-size-to(ms(3), 1.5); }
+%h2, h2 { @include adjust-font-size-to(ms(2), 1.25); }
+%h3, h3 { @include adjust-font-size-to(ms(1)); }
+%h4, h4 { @include adjust-font-size-to(ms(0)); }
+%h5, h5 { @include adjust-font-size-to(ms(-1), .875); }
+%h6, h6 { @include adjust-font-size-to(ms(-2), .75); }
+
+p {
+  @include leader(0);
+  @include trailer(1);
+  @include adjust-font-size-to(ms(1), 1.2);
+}
+
+@include at-breakpoint($pad) {
+  %h1, h1 { @include adjust-font-size-to(ms(4), 2); }
+  %h2, h2 { @include adjust-font-size-to(ms(3), 1.5); }
+  %h3, h3 { @include adjust-font-size-to(ms(2), 1.25); }
+  %h4, h4 { @include adjust-font-size-to(ms(1)); }
+  %h5, h5 { @include adjust-font-size-to(ms(0)); }
+  %h6, h6 { @include adjust-font-size-to(ms(-1), .875); }
+  p {
+    @include leader(0);
+    @include trailer(1);
+    @include adjust-font-size-to(ms(1), 1.2);
+  }
+}
+
+blockquote {
+  @include reset-box-model;
+  @include leader(1);
+  @include trailer(1);
+  border-left: 3px solid $color-gray-light;
+  padding-left: rhythm(1);
+  @include adjust-font-size-to($base-font-size);
+  cite {
+    display: block;
+    color: $global-text-color-muted;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+code {
+  // display: inline-block;
+  @extend %code-font;
+  @include adjust-font-size-to(13px);
+  padding: 0 6px;
+  background-color: $global-background-color;
+  white-space: nowrap;
+}
+
+pre {
+  @include leader(1);
+  @include trailer(1);
+  code {
+    @extend %code-font;
+    display: block;
+    padding: rhythm(.75);
+    color: $global-text-color;
+    font-size:  $base-font-size * 0.75;
+    line-height: 1.6;
+    @extend %code-scroll;
+  }
+}
+
+%scroll-hidden {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  $background-color: white;
+  $shadow-color: #999;
+  $cover-size: 80px;
+  $cover-position: 12.5%;
+  $shadow-size: $cover-size * ($cover-position/100%);
+  $shadow-weight: .3;
+  background-image:
+    /* Shadow covers */
+    linear-gradient(to bottom, $background-color $cover-position, rgba($background-color, 0) ),
+    linear-gradient(to bottom, rgba($background-color, 0),  $background-color ( 100% - $cover-position ) ),
+    /* Shadows */
+    radial-gradient(50% 0, farthest-side, rgba($shadow-color, $shadow-weight), rgba($shadow-color, 0) ),
+    radial-gradient(50% 100%,farthest-side, rgba($shadow-color, $shadow-weight), rgba($shadow-color, 0) );
+  background-image:
+    /* Shadow covers */
+    linear-gradient(to bottom, $background-color $cover-position, rgba($background-color, 0) ),
+    linear-gradient(to bottom, rgba($background-color, 0),  $background-color ( 100% - $cover-position ) ),
+    /* Shadows */
+    radial-gradient(farthest-side at 50% 0,  rgba($shadow-color, $shadow-weight), rgba( $shadow-color, 0) ),
+    radial-gradient(farthest-side at 50% 100%,  rgba($shadow-color, $shadow-weight), rgba( $shadow-color, 0) );
+  background-repeat: no-repeat;
+  background-color: $background-color;
+  background-size: 100% $cover-size, 100% $cover-size, 110% $shadow-size, 110% $shadow-size;
+  background-attachment: local, local, scroll, scroll;
+  background-position: top center, bottom center, top center, bottom center;
+}
+
+// list
+ol, ul {
+  @include leader(1);
+  @include trailer(1);
+  padding-left: 24px;
+  ol, ul {
+    margin: 0;
+  }
+}
+
+dl {
+  @include leader(1);
+  @include trailer(1);
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin: 0;
+
+  }
+}
+
+// inline style
+a {
+  @include link-colors($global-link-color, $global-link-color-hover);
+  @include hover-link;
+  cursor: pointer;
+  img {
+    border: none;
+  }
+}
+
+.break-all {
+  @include word-break(break-all);
+}
+
+// divider
+hr, .divider {
+  @include leader(1);
+  @include trailer(1);
+  border-top: 1px solid $color-gray-light;
+}

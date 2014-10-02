@@ -1,0 +1,18 @@
+// ---- compass setting ----
+// compass vertical rhythm
+$base-font-size: 16px;
+$base-line-height: 24px;
+$relative-font-sizing: false;
+$legacy-support-for-ie: false;
+
+
+// ---- vendor mixin libraries ----
+@import "compass",
+        "susy";
+
+// ---- import setup----
+@import "setup/normalize",
+        "setup/helper",
+        "setup/layout",
+        "setup/base",
+        "setup/visibility";

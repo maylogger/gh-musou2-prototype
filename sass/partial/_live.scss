@@ -1,0 +1,157 @@
+.live {
+  position: relative;
+  padding: rhythm(2) 0;
+  @include background( radial-gradient($color-red, black) );
+  .live-title {
+    color: white;
+    @include trailer();
+  }
+}
+
+.live-situation {
+  @include trailer();
+  .title {
+    @include trailer(.5);
+    @include padding-trailer(.5);
+    border-bottom: 1px solid $color-gray-light;
+  }
+}
+.live-comment-list {}
+
+.top-comment {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 12px;
+  .live-comment {
+    border: none;
+    @include box-shadow(0 5px 10px rgba(black, .5));
+  }
+}
+
+.live-comment {
+  @include box-sizing(border-box);
+  margin: 12px 0;
+  padding: 12px 6px;
+  background-color: lighten($color-gray-light, 2.5%);
+  border: 1px solid darken($color-gray-light, 5%);
+  @include border-radius(5px);
+  &.highlight { border-color: $color-red; }
+  .time {
+    display: block;
+    @include trailer(.5);
+    @include padding-trailer(.5);
+    text-align: center;
+    color: $text-gray;
+    font-weight: bold;
+    border-bottom: 1px solid darken($color-gray-light, 3%);
+  }
+  .comment {
+    display: block;
+    text-align: center;
+    .legislator {
+      @include box-sizing(border-box);
+      position: relative;
+      display: inline-block;
+      .avatar {
+        margin: 0 6px 3px 6px;
+        img { margin-bottom: 0; }
+      }
+      .name {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: -28px;
+        span {
+          display: inline-block;
+          margin-left: -100%;
+          width: auto;
+          padding: 0 6px;
+          @include adjust-font-size-to(ms(0));
+          font-weight: bold;
+          text-align: center;
+          color: white;
+          background-color: $color-black;
+          @include border-radius(2px);
+          @include nowrap;
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 24px;
+            margin-left: -4px;
+            border: 4px solid transparent;
+            border-top-color: $color-black;
+          }
+        }
+      }
+      &:hover {
+        .name {
+          display: block;
+        }
+      }
+    }
+    .text {
+      display: block;
+      text-align: left;
+    }
+    .legislator + .text {
+      @include leader(.25);
+      @include padding-leader(.25);
+      border-top: 1px solid darken($color-gray-light, 3%);
+    }
+    a {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+  .share {
+    display: block;
+    @include leader(.5);
+    text-align: center;
+    .counter { display: block; }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .top-comment {
+    display: block;
+    left: 50%;
+    .live-comment {
+      margin-left: -360px;
+      width: 720px;
+      p {
+        @include trailer(0);
+        @include adjust-font-size-to(ms(1));
+        text-align: left;
+      }
+    }
+  }
+  .live-comment {
+    .time {
+      display: inline-block;
+      width: 10%;
+      @include trailer(0);
+      @include padding-trailer(0);
+      vertical-align: middle;
+      border-bottom: none;
+    }
+    .comment {
+      display: inline-block;
+      width: 75%;
+      vertical-align: middle;
+      text-align: left;
+      .legislator {
+        .name {
+          span { margin-left: -50%; }
+        }
+      }
+    }
+    .share {
+      display: inline-block;
+      width: 12%;
+      @include leader(0);
+      vertical-align: middle;
+    }
+  }
+}

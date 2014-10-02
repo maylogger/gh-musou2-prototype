@@ -1,0 +1,53 @@
+.menu {
+  background-color: $color-black;
+  @include at-breakpoint($pad) {
+    width: 90%;
+  }
+}
+
+.main-nav {
+  list-style: none;
+  @include reset-box-model;
+  @include at-breakpoint($desktop) {
+    float: right;
+  }
+  li {
+    @include at-breakpoint($desktop) {
+      float: left;
+    }
+    &.active {
+      a {
+        background-color: darken($color-red, 10%);
+      }
+    }
+  }
+  li + li {
+    border-top: 1px solid lighten($color-black, 10%);
+    @include at-breakpoint($desktop) {
+        border-top: none;
+    }
+  }
+  a {
+    display: block;
+    padding: 18px 12px;
+    color: white;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+      background-color: $color-red-dark;
+    }
+    &.active {
+      background-color: darken($color-red, 10%);
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .main-nav {
+    li.active a { border-bottom: 3px solid white; }
+    a {
+      padding: 18px 12px 15px;
+      &:hover { border-bottom: 3px solid $color-red-dark; }
+    }
+  }
+}

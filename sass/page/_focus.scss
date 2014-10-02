@@ -1,0 +1,109 @@
+.focus-list {
+  .focus-item {
+    @include pie-clearfix;
+    display: block;
+    @include trailer(.5);
+    @include padding-trailer(.5);
+    color: $text-black;
+    border-bottom: 1px solid darken($color-gray-light, 10%);
+    &:first-child {
+      @include padding-leader();
+      border-top: 1px solid darken($color-gray-light, 10%);
+    }
+    .focus-image {
+      @include box-sizing(border-box);
+      float: right;
+      width: 30%;
+      .focus-image-wrap {
+        position: relative;
+        height: 0;
+        padding-top: 56.667%;
+        background-image: url(/images/focus-image-bg.png);
+        background-size: cover;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+      }
+    }
+    .focus-content {
+      @include box-sizing(border-box);
+      float: left;
+      width: 69%;
+      .title {
+        margin-bottom: 3px;
+        color: $color-red;
+        @include ellipsis;
+      }
+      p { display: none; }
+    }
+    &:hover {
+      .focus-content {
+        .title { text-decoration: underline; }
+      }
+    }
+  }
+}
+
+.author-card {
+  .author {
+    @include trailer();
+    text-align: center;
+  }
+  .label {
+    display: block;
+    @include adjust-font-size-to(ms(0), .75);
+    font-weight: bold;
+  }
+}
+
+@include at-breakpoint($pad) {
+  .focus-list {
+    .focus-item {
+      @include trailer();
+      @include padding-trailer();
+      .focus-image { width: 30%; }
+      .focus-content {
+        display: inline-block;
+        width: 67%;
+        .meta-info { @include trailer(.5); }
+        p {
+          display: block;
+          overflow: hidden;
+          @include trailer(0);
+          height: 48px;
+          @include adjust-font-size-to(ms(0));
+          color: lighten($text-black, 25%);
+          @include transition(color .25s);
+        }
+      }
+      &:hover {
+        .focus-content {
+          p { color: $text-black; }
+        }
+      }
+      &.video {
+        .focus-content {
+          .title {
+            &:before { top: 4px; }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .focus-list {
+    .focus-item {
+      .focus-image { width: 27%; }
+      .focus-content {
+        width: 70%;
+        p { height: 72px; }
+      }
+    }
+  }
+}

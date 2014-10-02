@@ -1,0 +1,247 @@
+@keyframes livenow {
+  0% { background-position: 0 0, 0 -1px; }
+  100% { background-position: 0 0, -100px -1px; }
+}
+
+@-webkit-keyframes livenow {
+  0% { background-position: 0 0, 0 -1px; }
+  100% { background-position: 0 0, -100px -1px; }
+}
+
+@keyframes livenow-offset {
+  0% { background-position: 0 0, 50px -1px; }
+  100% { background-position: 0 0, -50px -1px; }
+}
+
+@-webkit-keyframes livenow-offset {
+  0% { background-position: 0 0, 50px -1px; }
+  100% { background-position: 0 0, -50px -1px; }
+}
+
+.schedule-tab {
+  @include reset-box-model;
+  @include pie-clearfix;
+  list-style: none;
+  background-color: lighten($color-gray-light, 1%);
+  li {
+    @include box-sizing(border-box);
+    position: relative;
+    float: left;
+    width: 33.333%;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      right: 0;
+      bottom: 20%;
+      width: 1px;
+      background-color: $color-gray;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+    a {
+      @include unstyled-link;
+      @extend %h3;
+      display: block;
+      padding: rhythm(1.5) 0;
+      text-align: center;
+      text-decoration: none;
+      color: $text-black;
+      @include transition(background-color .25s);
+      &:hover {
+        color: $color-red;
+        background-color: darken($color-gray-light, 2.5%);
+      }
+    }
+    &.active a { color: $color-red; }
+  }
+}
+
+.schedule-table {
+  @include leader();
+  .committee {
+    @include trailer(.5);
+    @include adjust-font-size-to(ms(1));
+    font-weight: bold;
+    color: $color-red;
+  }
+  .label {
+    display: block;
+    @include adjust-font-size-to(ms(0), .75);
+    font-weight: bold;
+    color: $color-red;
+  }
+}
+
+a.sitting {
+  @include pie-clearfix;
+  @include unstyled-link;
+  @include box-sizing(border-box);
+  display: block;
+  @include trailer();
+  margin-left: -16px;
+  margin-right: -16px;
+  text-align: center;
+  background-color: $color-gray-light;
+  @include transition(background-color .25s);
+  border: 1px solid darken($color-gray-light, 5%);
+  &:hover {
+    background-color: lighten($color-gray-light, 2.5%);
+    .sitting-livenow {
+      background-color: lighten($color-red, 15%);
+    }
+  }
+  .sitting-info {
+    position: relative;
+    padding: 24px 0;
+  }
+  .main-info {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    .title {
+      font-weight: bold;
+      @include ellipsis;
+    }
+    .date {
+      @include trailer(.15);
+      @include adjust-font-size-to(ms(0));
+      color: $color-gray;
+      font-weight: bold;
+    }
+    .meta-info {
+      @include leader(.25);
+      .meta { display: block; }
+    }
+  }
+  .president {
+    display: inline-block;
+    margin: 0 6px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .presenter {
+    display: inline-block;
+    text-align: center;
+    .anchor, .reviewer {
+      display: inline-block;
+      margin: 0 6px;
+      vertical-align: middle;
+    }
+  }
+  .sitting-livenow {
+    @include hide-text();
+    $color-red-dark: darken($color-red, 10%);
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+    margin-left: -1px;
+    margin-right: -1px;
+    background-color: $color-red;
+    background-image: url("/images/livenow-text.png");
+    background-image: none, url("/images/livenow-text.svg");
+    background-repeat: repeat-x;
+    @include transition(background-color .5s);
+    animation: livenow 5s linear infinite;
+    -webkit-animation: livenow 5s linear infinite;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include background(linear-gradient(to right, $color-red-dark 0%, rgba($color-red-dark, 0) 50%, $color-red-dark 100%));
+    }
+  }
+  &:nth-child(even) {
+    .sitting-livenow {
+      animation: livenow-offset 5s linear infinite;
+      -webkit-animation: livenow-offset 5s linear infinite;
+    }
+  }
+  .sitting-summary {
+    @include pie-clearfix;
+    background-color: white;
+    @include border-radius(0 0 4px 4px);
+    .title {
+      float: left;
+      position: relative;
+      padding: 10px 18px;
+      @include adjust-font-size-to(ms(0));
+      font-weight: bold;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 15%;
+        right: 0;
+        bottom: 15%;
+        border-right: 1px solid darken($color-gray-light, 5%);
+      }
+    }
+    p {
+      @include trailer(0);
+      padding: 10px 0 10px 18px;
+      @include adjust-font-size-to(ms(0));
+      text-align: left;
+      @include ellipsis;
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .schedule-table {
+    .topic-label { display: inline-block; }
+  }
+  a.sitting {
+    margin-left: 0;
+    margin-right: 0;
+    @include border-radius(5px);
+    .sitting-summary {
+      p { @include adjust-font-size-to(ms(1)); }
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  a.sitting {
+    text-align: left;
+    .sitting-info { padding: 0; }
+    .main-info {
+      display: inline-block;
+      width: 55%;
+      vertical-align: middle;
+      margin-top: 0;
+      padding: 12px 0 12px 24px;
+      text-align: left;
+      vertical-align: middle;
+      .meta-info {
+        @include adjust-font-size-to(ms(1));
+        .meta { display: inline-block; }
+        .label { @include adjust-font-size-to(ms(1)); }
+      }
+    }
+    .president {
+      min-width: 102px;
+      padding: 12px;
+      margin: 0;
+      background-color: darken($color-gray-light, 2%);
+      @include border-radius(4px 0 0 0);
+    }
+    .presenter {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      @include translateY(-50%);
+      .anchor, .reviewer {
+        min-width: 90px;
+        margin-left: 0;
+        margin-right: 12px;
+      }
+    }
+  }
+}

@@ -1,30 +1,43 @@
-// *************************************
-//
-// Project-name
-//
-// *************************************
+// ==== setup ====
+@import "setup";
 
+// ==== layout ====
+@import "layout/base-layout";
 
-// -------------------------------------
-// core
-// -------------------------------------
-@import "core/normalize",
-        "core/config",
-        "core/helpers",
-        "core/typography";
+// ==== component ====
+@import "component/breadcrumb",
+        "component/page-header",
+        "component/tab",
+        "component/list",
+        "component/filter",
+        "component/button-module",
+        "component/pagination",
+        "component/search",
+        "component/article",
+        "component/post",
+        "component/meta",
+        "component/collapse",
+        "component/avatar",
+        "component/select";
 
+// ==== partial ====
+@import "partial/menu",
+        "partial/header",
+        "partial/sidebar",
+        "partial/live",
+        "partial/iframe",
+        "partial/footer";
 
-
-// -------------------------------------
-// partials
-// -------------------------------------
-@import "partials/page",
-        "partials/header",
-        "partials/menu",
-        "partials/footer";
-
-
-// -------------------------------------
-// tools
-// -------------------------------------
-// @include layout-debug;
+// ==== page ====
+@import "page/legislators/legislators-list",
+        "page/legislators/legislators",
+        "page/legislators/legislators-news",
+        "page/legislators/legislators-ask",
+        "page/legislators/legislators-sidebar",
+        "page/topic/topic-card",
+        "page/topic/topic-detail",
+        "page/focus",
+        "page/video",
+        "page/schedule",
+        "page/sitting",
+        "page/dictionary";

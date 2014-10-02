@@ -1,0 +1,176 @@
+.legislator-header {
+  position: relative;
+  .legislator-header-bg {
+    position: relative;
+    background-color: $color-black;
+    background-position: center center;
+    @include background-size(cover);
+    border-bottom: 1px solid $color-gray-light;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      @include background(linear-gradient(to bottom, rgba(black, .95), rgba(black, 0)));
+    }
+  }
+  .legislator-header-inner { @extend %container; }
+  .legislator-head {
+    position: relative;
+    z-index: 10;
+    padding: rhythm(1) 0 rhythm(1);
+    text-align: center;
+    .avatar { vertical-align: middle; }
+    .name {
+      display: inline-block;
+      padding-left: 12px;
+      @include adjust-font-size-to(ms(4));
+      color: white;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+  }
+  .ask-info-wrap {
+    @include pie-clearfix;
+    position: relative;
+    text-align: center;
+    .btn_ask-legislator {
+      position: relative;
+      display: inline-block;
+      margin-top : 8px;
+      padding: 9px 18px 9px 48px;
+      @include adjust-font-size-to(ms(1), 1);
+      color: white;
+      background-color: $color-red;
+      @include border-radius(5px);
+      @include transition(background-color .25s);
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        margin-top: -12px;
+        @include replace-text-with-svg("icon_ask");
+      }
+      &:hover { background-color: lighten($color-red, 10%); }
+    }
+  }
+  .profile-tab {
+    @include reset-box-model;
+    @include pie-clearfix;
+    position: relative;
+    margin-left: -16px;
+    margin-right: -16px;
+    list-style: none;
+    li {
+      @include box-sizing(border-box);
+      position: relative;
+      z-index: 10;
+      float: left;
+      width: 33.333%;
+      a {
+        @include unstyled-link;
+        @extend %h3;
+        display: block;
+        padding: rhythm(.6) 0 rhythm(.45);
+        text-align: center;
+        text-decoration: none;
+        color: $text-black-light;
+        @include transition(color .25s);
+        &:hover {
+          color: $color-red;
+        }
+      }
+      &.active a {
+        color: $color-red;
+        border-bottom: 5px solid $color-red;
+      }
+    }
+  }
+}
+
+.legislator-main {
+  @include padding-leader();
+  background-color: $color-gray-light;
+  padding-bottom: 48px;
+  margin-bottom: -48px;
+  .sidebar {
+    .sidebar-item { border: none; }
+  }
+}
+
+.legislator-profile {
+  @include box-sizing(border-box);
+  margin-left: -8px;
+  margin-right: -8px;
+  background-color: white;
+  @include border-radius(5px);
+  .profile-content {
+    .tab-pane { padding: rhythm(.5); }
+  }
+
+  .legislator-data {
+    .data-title {
+      @include trailer(.5);
+      @include padding-trailer(.5);
+      font-weight: bold;
+      border-bottom: 1px solid $color-gray-light;
+    }
+    .note {
+      text-align: right;
+      @include trailer(0);
+      @include adjust-font-size-to(ms(0));
+      a {
+        display: inline-block;
+        color: $color-blue;
+      }
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .legislator-header {
+    .legislator-header-bg {
+      &:after { @include background(linear-gradient(to right, rgba(black, .75), rgba(black, 0))); }
+    }
+    .legislator-head { text-align: left; }
+    .ask-info-wrap {
+      @include span-columns(3 omega);
+      text-align: right;
+      .legislator-ignore-rate { display: inline-block; }
+      .btn_ask-legislator { display: inline-block; }
+    }
+    .profile-tab-wrap {
+      @include span-columns(3);
+    }
+    .profile-tab {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .legislator-profile {
+    margin-left: 0;
+    margin-right: 0;
+    .profile-content {
+      .tab-pane { padding: rhythm(); }
+    }
+    .legislator-data {
+      .note { text-align: right; }
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .legislator-header {
+    .profile-tab-wrap {
+      @include box-sizing(border-box);
+      @include span-columns(8);
+    }
+    .ask-info-wrap { @include span-columns(4 omega);}
+  }
+  .legislator-profile {
+    @include span-columns(8);
+  }
+}

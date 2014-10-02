@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_focus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Element" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="ICON" sketch:type="MSLayerGroup" transform="translate(-2.000000, -262.000000)" fill="#333333">
+            <path d="M19,267.5 L22.5859737,267.5 L25,270.151611 L25,281.168701 L22.5981807,283.5 L5.58475297,283.5 L3,281.140625 L3,270.117432 L5.58670609,267.5 L9,267.5 L9,264.5 L19,264.5 L19,267.5 L19,267.5 Z M14,281.5 C17.3137085,281.5 20,278.813708 20,275.5 C20,272.186292 17.3137085,269.5 14,269.5 C10.6862915,269.5 8,272.186292 8,275.5 C8,278.813708 10.6862915,281.5 14,281.5 Z M14,279.5 C16.209139,279.5 18,277.709139 18,275.5 C18,273.290861 16.209139,271.5 14,271.5 C11.790861,271.5 10,273.290861 10,275.5 C10,277.709139 11.790861,279.5 14,279.5 Z M10.25,265.5 L10.25,267.5 L17.75,267.5 L17.75,265.5 L10.25,265.5 Z M6.5,272.5 C7.32842712,272.5 8,271.828427 8,271 C8,270.171573 7.32842712,269.5 6.5,269.5 C5.67157288,269.5 5,270.171573 5,271 C5,271.828427 5.67157288,272.5 6.5,272.5 Z" id="Rectangle-36" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

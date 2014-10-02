@@ -1,0 +1,121 @@
+.timeline {
+  position: relative;
+  @include padding-trailer();
+  &:before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    bottom: -16px;
+    left: -3px;
+    width: 2px;
+    background-color: $color-gray;
+  }
+  .month-title {
+    position: relative;
+    @extend %h2;
+    padding-left: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -7px;
+      width: 10px;
+      height: 10px;
+      margin-top: -5px;
+      background-color: $color-red;
+      @include border-radius(5px);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -7px;
+      border: 7px solid transparent;
+      border-right: 0;
+      border-left-color: $color-black;
+      @include transition(transform .25s);
+    }
+    &.is-open {
+      &:after {
+        @include rotate(90deg);
+      }
+    }
+    .post-counter {
+      float: right;
+      margin: 3px 15px;
+      @include adjust-font-size-to(ms(0));
+      font-weight: normal;
+    }
+  }
+  .month-post-list {
+    padding-left: 18px;
+  }
+  .month-foucs-list {
+    @include leader();
+    .title {
+      position: relative;
+      padding-left: 30px;
+      padding-bottom: 6px;
+      @include adjust-font-size-to(ms(0));
+      font-weight: bold;
+      border-bottom: 1px solid darken($color-gray-light, 5%);
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include replace-text-with-svg("icon_focus");
+      }
+    }
+  }
+  .month-report-list {
+    @include leader();
+    .title {
+      position: relative;
+      padding-left: 30px;
+      padding-bottom: 6px;
+      @include adjust-font-size-to(ms(0));
+      font-weight: bold;
+      border-bottom: 1px solid darken($color-gray-light, 5%);
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include replace-text-with-svg("icon_report");
+      }
+    }
+  }
+}
+
+.topic-start {
+  position: relative;
+  padding-left: 18px;
+  font-weight: bold;
+  color: $color-gray;
+  cursor: pointer;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    background-color: $color-red;
+    @include border-radius(5px);
+  }
+}
+
+@include at-breakpoint($pad) {
+  .timeline {
+    .month-title {
+      .post-counter {
+        margin: 6px 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.filter {
+  position: relative;
+  @include leader(1.5);
+  @include trailer();
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: darken($color-gray-light, 10%);
+  }
+  ul {
+    @include reset-box-model;
+    @include pie-clearfix;
+    display: inline-block;
+    list-style: none;
+    li {
+      display: inline-block;
+      a {
+        @include unstyled-link;
+        display: block;
+        position: relative;
+        z-index: 10;
+        padding: 3px 12px 3px;
+        @include adjust-font-size-to(ms(0));
+        color: $text-black-light;
+        border-bottom: 1px solid darken($color-gray-light, 10%);
+        @include transition(color .25s);
+      }
+      &:hover a {
+        color: $color-red;
+      }
+      &.active a {
+        @extend %subpixel;
+        padding: 3px 12px 1px;
+        color: $color-red;
+        border-bottom: 3px solid $color-red;
+      }
+    }
+    li + li { margin-left: -4px; }
+  }
+}
