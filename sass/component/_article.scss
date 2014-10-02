@@ -3,7 +3,31 @@
     @include trailer(.5);
     font-weight: bold;
   }
+  h2 ~ h2 {
+    @include leader(2);
+  }
+  ul { padding-left: 24px; }
   img {
+    display: block;
     @include trailer();
+  }
+  &.big-text {
+    #{headings()} {
+      @include leader(2);
+      @include trailer();
+      text-align: center;
+    }
+    @include at-breakpoint($desktop) {
+      %h1, h1 { @include adjust-font-size-to(ms(4), 2); }
+      %h2, h2 { @include adjust-font-size-to(ms(3), 1.5); }
+      %h3, h3 { @include adjust-font-size-to(ms(2), 1.25); }
+      %h4, h4 { @include adjust-font-size-to(ms(1)); }
+      %h5, h5 { @include adjust-font-size-to(ms(0), .875); }
+      %h6, h6 { @include adjust-font-size-to(ms(-1), .75); }
+      p { @include adjust-font-size-to(ms(2), 1.5); }
+      h2 ~ h2 {
+        @include leader(3);
+      }
+    }
   }
 }
