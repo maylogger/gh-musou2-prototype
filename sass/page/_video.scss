@@ -73,64 +73,27 @@
 
 .video {
   position: relative;
-  margin-bottom: rhythm(2);
-  @include background( radial-gradient($color-black-light ,black) );
+  background-color: $color-black;
   .video-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: white;
-    background-color: $color-black;
-    @include background-size(cover);
-    background-position: center center;
-    opacity: 1;
-    @include transition(opacity .5s);
-    &.is-hidden { opacity: 0; }
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      @include background( radial-gradient(transparent 0%, black 70%) );
-    }
+    color: black;
+    background-color: white;
     .video-info {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      padding: 0 128px;
-      text-align: center;
-      @include text-shadow(0 0 10px black);
-      @include translateY(-50%);
-      h1 {
-        @include adjust-font-size-to(ms(5));
-        font-weight: bold;
-      }
-      .meta-info {
-        @include leader(.5);
-        color: white;
-        font-weight: bold;
-        .label {
-          color: white;
+      background-color: white;
+      .video-info-inner {
+        @extend %container;
+        text-align: left;
+        h1 {
+          @include padding-leader();
+          @include padding-trailer(.5);
+          @include adjust-font-size-to(ms(3), 1.5);
           font-weight: bold;
         }
-      }
-      .play-button {
-        @include leader(2);
-        display: inline-block;
-        padding: 3px 30px;
-        @include adjust-font-size-to(ms(2));
-        font-weight: bold;
-        cursor: pointer;
-        background-color: rgba(black, .5);
-        border: 1px solid white;
-        @include transition(background-color .25s);
-        &:hover { background-color: rgba(black, .9); }
+        .meta-info {
+          display: none;
+        }
+        .play-button {
+          display: none;
+        }
       }
     }
   }
@@ -148,5 +111,73 @@
     @include span-columns(4);
     @include remove-nth-omega(2n);
     @include nth-omega(3n);
+  }
+}
+@include at-breakpoint(1024px 12) {
+  .video {
+    margin-bottom: rhythm(2);
+    .video-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: white;
+      background-color: $color-black;
+      @include background-size(cover);
+      background-position: center center;
+      opacity: 1;
+      @include transition(opacity .5s);
+      &.is-hidden { opacity: 0; }
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include background( radial-gradient(transparent 0%, black 70%) );
+      }
+      .video-info {
+        background-color: transparent;
+        .video-info-inner {
+          @extend %container;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          text-align: center;
+          @include text-shadow(0 0 10px black);
+          @include translateY(-50%);
+          h1 {
+            @include padding-leader(0);
+            @include adjust-font-size-to(ms(5));
+            font-weight: bold;
+          }
+          .meta-info {
+            @include leader(.5);
+            color: white;
+            font-weight: bold;
+            .label {
+              color: white;
+              font-weight: bold;
+            }
+          }
+          .play-button {
+            @include leader(2);
+            display: inline-block;
+            padding: 3px 30px;
+            @include adjust-font-size-to(ms(2));
+            font-weight: bold;
+            cursor: pointer;
+            background-color: rgba(black, .5);
+            border: 1px solid white;
+            @include transition(background-color .25s);
+            &:hover { background-color: rgba(black, .9); }
+          }
+        }
+      }
+    }
   }
 }
