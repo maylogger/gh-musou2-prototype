@@ -3,11 +3,12 @@
     .time 10:57
     .comment
       - (rand(8)).times do
-        a.legislator href="/legislators/legislators.html"
+        a.legislator href="/legislators/legislator.html"
           .avatar.is-small.has-party
             .party =image_tag("/images/DPP.png")
             =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
-          .name =zh_lorem_name
+          .name
+            span =zh_lorem_name
       p.text =zh_lorem_sentences 5
       a href="#"
         img src="http://hhhhold.com/150x100/#{rand(100)}"
@@ -20,11 +21,12 @@
       .time 10:#{50-i*7}
       .comment
         - (rand(8)).times do
-          a.legislator href="/legislators/legislators.html"
+          a.legislator href="/legislators/legislator.html"
             .avatar.is-small.has-party
               .party =image_tag("/images/DPP.png")
               =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
-            .name =zh_lorem_name
+            .name
+              span =zh_lorem_name
         .text =zh_lorem_sentences 5
       .share
         a.btn-share-module href="#"
