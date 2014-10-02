@@ -1,0 +1,34 @@
+- @page_name = "dictionary"
+
+.breadcrumb
+  .breadcrumb-inner
+    ol.breadcrumb-list
+      li: a href="/" 首頁
+      li: a href="/dictionary/" 立院小知識
+      li: a href="/dictionary/theme.html" =zh_lorem_words(2+rand(8))
+    = render "/partials/search"
+
+.container.lead
+  .sidebar
+    .catalog.sidebar-item.is-borderless
+      h3.sidebar-title.dictionary-menu-toggle 目錄
+      ul.dictionary-menu
+        li: a href="/dictionary/index.html" 簡介
+        li.active
+          a href="/dictionary/index.html" 立法院初步
+          ul.nav
+            li: a.go-anchor href="#tab0" =zh_lorem_words(2+rand(8))
+            - 10.times do |i|
+              li: a.go-anchor href="#tab#{i+1}" =zh_lorem_words(2+rand(8))
+        li: a href="/dictionary/theme.html" 立法院的權利
+        li: a href="/dictionary/theme.html" 立法院成份分析
+        li: a href="/dictionary/theme.html" 立院之緣起緣滅
+        li: a href="/dictionary/theme.html" 立院權力怎麼使 - 基礎篇
+        li: a href="/dictionary/theme.html" 立院權力怎麼使 - 法案篇
+        li: a href="/dictionary/theme.html" 立法院議事規則
+  .dictionary
+    .article
+      h3#tab0 = zh_lorem_sentence
+      p = zh_lorem_paragraphs 1+rand(3)
+      = render "/partials/dictionary-card"
+

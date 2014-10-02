@@ -1,0 +1,125 @@
+.dictionary {
+  @include box-sizing(border-box);
+  @include at-breakpoint($desktop) {
+    @include span-columns(8);
+    padding-right: rhythm(2);
+  }
+}
+
+.dictionary-menu-toggle {
+  position: relative;
+  padding: 3px 12px;
+  background-color: $color-gray-light;
+  border-bottom: none;
+  @include border-radius(2px);
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -3px;
+    border: 5px solid transparent;
+    border-top-color: $color-black;
+  }
+}
+
+.dictionary-card {
+  @include trailer();
+  @include padding-leader();
+}
+
+.dictionary-card-inner {
+  border: 1px solid $color-gray-light;
+  @include border-radius(2px);
+  .title {
+    @include pie-clearfix;
+    @include trailer(0);
+    padding: 12px 18px;
+    font-weight: bold;
+    background-image: url("/images/card-highlight-bg.png");
+    background-image: none, url("/images/card-highlight-bg.svg");
+    background-repeat: repeat;
+    @include border-radius(3px 3px 0 0);
+    h3 {
+      display: inline-block;
+      margin-bottom: 0;
+      width: 80%;
+    }
+    .btn-share-module {
+      float: right;
+      .button { margin-top: 0; }
+    }
+  }
+  .entry {
+    padding: 18px;
+  }
+}
+
+.dictionary-menu {
+  display: none;
+  @extend %list;
+  @include leader(.25);
+  &.is-open {
+    display: block;
+    padding: 12px;
+    background-color: lighten($color-gray-light, 2.5%);
+    @include border-radius(2px);
+  }
+  li + li {
+    @include leader(.25);
+    @include padding-leader(0);
+    border-top: none;
+  }
+  li.active a { color: $color-red; }
+  li.active li a { color: $text-black; }
+  ul.nav {
+    @include reset-box-model;
+    @include leader(.5);
+    @include trailer(.5);
+    margin-left: 1px;
+    list-style: none;
+    @include adjust-font-size-to(ms(0));
+  }
+  .nav a { padding-left: 12px; }
+  .nav .active a {
+    padding-left: 7px;
+    color: $color-red;
+    border-left: 5px solid $color-red;
+  }
+  a {
+    @include transition(background-color .25s);
+    &:hover {
+      color: $color-red;
+      text-decoration: none;
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .dictionary-card-inner {
+    .title {
+      .btn-share-module { margin-top: 2px; }
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .dictionary-menu-toggle {
+    @include trailer(.25);
+    padding: 0 0 6px 0;
+    background-color: transparent;
+    border-bottom: 1px solid rgba($color-red, .5);
+    @include border-radius(0px);
+    &:after {
+      display: none;
+    }
+  }
+  .dictionary-menu {
+    display: block;
+    margin-left: 2px;
+    &.is-open {
+    padding: 0;
+    background-color: transparent;
+    }
+  }
+}
