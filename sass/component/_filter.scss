@@ -1,14 +1,7 @@
 .filter {
-  @include reset-box-model;
-  @include pie-clearfix;
   position: relative;
   @include leader(1.5);
   @include trailer();
-  margin-left: -16px;
-  margin-right: -16px;
-  list-style: none;
-  overflow-x: scroll;
-  @include nowrap;
   &:after {
     content: "";
     display: block;
@@ -19,35 +12,34 @@
     height: 1px;
     background-color: darken($color-gray-light, 10%);
   }
-  li {
+  ul {
+    @include reset-box-model;
+    @include pie-clearfix;
     display: inline-block;
-    margin-left: -4px;
-    a {
-      @include unstyled-link;
-      display: block;
-      position: relative;
-      z-index: 10;
-      padding: 3px 12px 3px;
-      @include adjust-font-size-to(ms(0));
-      color: $text-black-light;
-      border-bottom: 1px solid darken($color-gray-light, 10%);
-      @include transition(color .25s);
+    list-style: none;
+    li {
+      display: inline-block;
+      a {
+        @include unstyled-link;
+        display: block;
+        position: relative;
+        z-index: 10;
+        padding: 3px 12px 3px;
+        @include adjust-font-size-to(ms(0));
+        color: $text-black-light;
+        border-bottom: 1px solid darken($color-gray-light, 10%);
+        @include transition(color .25s);
+      }
+      &:hover a {
+        color: $color-red;
+      }
+      &.active a {
+        @extend %subpixel;
+        padding: 3px 12px 1px;
+        color: $color-red;
+        border-bottom: 3px solid $color-red;
+      }
     }
-    &:hover a {
-      color: $color-red;
-    }
-    &.active a {
-      @extend %subpixel;
-      padding: 3px 12px 1px;
-      color: $color-red;
-      border-bottom: 3px solid $color-red;
-    }
-  }
-}
-
-@include at-breakpoint($pad) {
-  .filter {
-    margin-left: 0;
-    margin-right: 0;
+    li + li { margin-left: -4px; }
   }
 }
