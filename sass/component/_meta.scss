@@ -1,17 +1,16 @@
 .meta-info {
-  @include trailer(.5);
-  @include padding-trailer(.5);
   @include adjust-font-size-to(ms(0));
-  border-bottom: 1px solid $color-gray-light;
   .meta {
     display: inline-block;
     margin-right: 6px;
     .label { display: inline-block; }
     &.is-highlight {
+      @extend %subpixel;
       padding-right: 9px;
       color: white;
       background-color: $color-red;
       .label {
+        margin-right: 3px;
         padding: 3px 9px;
         color: white;
         background-color: $color-black;
@@ -20,6 +19,8 @@
   }
 }
 
-@include at-breakpoint($desktop) {
-  .meta-info { @include adjust-font-size-to(ms(1)); }
+.label {
+  display: inline-block;
+  padding-right: 2px;
+  color: $color-red;
 }
