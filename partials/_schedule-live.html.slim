@@ -26,9 +26,13 @@
       .main-info
         .date #{lorem_date.to_date} #{sitting_time[rand(3)]}
         h3.title =zh_lorem_sentence
-        .topic
-          .topic-label 議題
-          =zh_lorem_words(4+rand(5))
+        .meta-info
+          .meta
+            .label 議題
+            =zh_lorem_words(4+rand(5))
+          .meta
+            .label 委員會
+            =zh_lorem_words(4+rand(5))
 
     .sitting-livenow LIVENOW!
 
