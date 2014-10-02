@@ -1,3 +1,13 @@
+.search-bar-toggle
 .search-bar
-  input type="text" placeholder="輸入關鍵字"
+  - if @page_name == "schedule"
+    input type="text" placeholder="搜尋賽事"
+  - if @page_name == "focus"
+    input type="text" placeholder="搜尋場邊焦點"
+  - if @page_name == "video"
+    input type="text" placeholder="搜尋影音"
+  - if @page_name == "legislator"
+    input type="text" placeholder="搜尋立委"
+  - if @page_name == "dictionary"
+    input type="text" placeholder="搜尋小知識"
   button.btn_search 搜尋
