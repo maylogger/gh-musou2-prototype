@@ -1,43 +1,50 @@
+.legislator-list { @include pie-clearfix; }
 .legislator-list-item {
-  @include pie-clearfix;
   @include unstyled-link;
   @include box-sizing(border-box);
   display: block;
-  position: relative;
+  overflow: hidden;
   @include trailer();
-  margin-left: -16px;
-  margin-right: -16px;
   background-color: $color-gray-light;
-  border: 1px solid darken($color-gray-light, 5%);
+  border: 1px solid darken($color-gray-light, 2.5%);
+  @include border-radius(5px);
   @include transition(background-color .25s);
-  @include at-breakpoint($pad) {
-    margin-left: 0;
-    margin-right: 0;
-    @include border-radius(3px);
-  }
   &:hover {
     @include unstyled-link;
     background-color: lighten($color-gray-light, 2.5%);
   }
-  .legislator-summary {
-    padding: 12px;
+  .legislator-bgimage {
+    position: relative;
+    height: 120px;
+    background-position: center center;
+    @include background-size(cover);
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      @include background(linear-gradient(to bottom, rgba(black, 0), rgba(black, .2)));
+    }
   }
   .legislator-avatar {
-    display: inline-block;
-    margin: rhythm(.25) rhythm(.5) 0 0;
+    display: block;
+    margin-top: -45px;
     vertical-align: middle;
     text-align: center;
   }
   .legislator-data {
-    display: inline-block;
-    width: 70%;
-    vertical-align: middle;
-    text-align: left;
+    display: block;
+    text-align: center;
     .legislator-name {
       @include trailer(.25);
       font-weight: bold;
       color: $color-red;
+      @include ellipsis;
     }
+    .meta-info { @include trailer(.5); }
+    .meta { display: block; }
   }
   .latest-update {
     @include pie-clearfix;
@@ -46,7 +53,7 @@
     .title {
       float: left;
       position: relative;
-      padding: 10px 18px;
+      padding: 12px;
       @include adjust-font-size-to(ms(0));
       font-weight: bold;
       &:after {
@@ -60,7 +67,7 @@
     }
     p {
       @include trailer(0);
-      padding: 10px 0 10px 18px;
+      padding: 12px;
       @include adjust-font-size-to(ms(0));
       text-align: left;
       @include ellipsis;
@@ -70,18 +77,15 @@
 
 @include at-breakpoint($pad) {
   .legislator-list-item {
-    .legislator-avatar {
-      margin: rhythm(.25) rhythm(1) 0 rhythm(.5);
-    }
-    .legislator-summary {
-      width: 72.5%;
-      .latest-update { @include adjust-font-size-to(ms(1)); }
-    }
+    @include span-columns(3);
+    @include nth-omega(2n);
   }
 }
 
 @include at-breakpoint($desktop) {
   .legislator-list-item {
-    .legislator-summary { width: 80%; }
+    @include span-columns(4);
+    @include remove-nth-omega(2n);
+    @include nth-omega(3n);
   }
 }

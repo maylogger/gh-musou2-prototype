@@ -1,9 +1,21 @@
-.legislators {
+.legislator-profile {
+  .push-threshold {
+    float: right;
+    position: relative;
+    top: -4px;
+    color: $color-red;
+    font-weight: bold;
+    @include adjust-font-size-to(ms(0));
+    .number {
+      height: 24px;
+      @include adjust-font-size-to(ms(3), 1);
+    }
+  }
   .ask-form {
     @include trailer();
     @include padding-trailer();
     border-bottom: 1px solid $color-gray-light;
-    h3 { @include trailer(.5);}
+    h3 { @include trailer(.5); }
     .label {
       @include adjust-font-size-to(ms(0));
       font-weight: bold;
@@ -32,7 +44,7 @@
   .question-list {
     position: relative;
     .sort {
-      margin: 0 0 12px 12px;
+      @include trailer(.5);
       @include adjust-font-size-to(ms(0));
       select {
         margin-left: 6px;
@@ -57,8 +69,8 @@
       @include adjust-font-size-to(ms(0));
       font-weight: bold;
     }
-    li.like-button {
-      width: 60px;
+    li.push {
+      width: 64px;
       margin-top: -2px;
     }
     li.date { width: 40px; }
@@ -80,16 +92,18 @@
       @include trailer(.5);
       @include adjust-font-size-to(ms(0));
       .info {
-        width: 75%;
-        float: left;
+        @include trailer(.5);
+        @include adjust-font-size-to(ms(0), .75);
         .date {
           color: $color-red;
           font-weight: bold;
         }
       }
-      .share {
-        float: right;
+      .action {
         .button { margin: 0; }
+        .btn-share-module {
+          .button { padding: 7px 9px 6px; }
+        }
       }
     }
     .question-title {
@@ -105,7 +119,7 @@
         left: -40px;
         @include adjust-font-size-to(ms(4));
         font-weight: bold;
-        color: lighten($color-red, 50%);
+        color: lighten($color-red, 5%);
       }
     }
     .answer {
@@ -121,18 +135,33 @@
         left: -40px;
         @include adjust-font-size-to(ms(4));
         font-weight: bold;
-        color: lighten($color-blue, 10%);
+        color: $color-gray;
       }
     }
-    .interactive {
-      @include trailer(.5);
-      text-align: right;
-      @include adjust-font-size-to(ms(0));
+    .feedback {
+      @include trailer();
+      text-align: left;
+      span {
+        display: block;
+        @include trailer(.25);
+        margin-right: 6px;
+        color: $color-gray;
+        vertical-align: middle;
+      }
+      .btn-like-module { vertical-align: middle; }
+      .btn-dislike-module { vertical-align: middle; }
     }
   }
 }
 @include at-breakpoint($pad) {
-  .legislators {
+  .legislator-profile {
+    .push-threshold {
+      top: -3px;
+      @include adjust-font-size-to(ms(1));
+    }
+    .ask-form {
+      .label { @include adjust-font-size-to(ms(1)); }
+    }
     .question-list {
       .sort {
         position: absolute;
@@ -149,11 +178,22 @@
     }
     .question-content {
       .question-status {
-        .info { width: auto; }
+        .info {
+          float: left;
+          width: auto;
+        }
+        .action { float: right; }
       }
       .answer {
         .unanswered-message {
           @include adjust-font-size-to(ms(2), 1.75);
+        }
+      }
+      .feedback {
+        text-align: left;
+        span {
+          @include trailer(0);
+          display: inline-block;
         }
       }
     }
@@ -161,7 +201,7 @@
 }
 
 @include at-breakpoint($desktop) {
-  .legislators {
+  .legislator-profile {
     .question-header {
       li.question-title {
         width: 55%;

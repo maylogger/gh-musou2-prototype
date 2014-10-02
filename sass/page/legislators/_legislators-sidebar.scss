@@ -1,56 +1,30 @@
 .legislator-info {
-  overflow: hidden;
-  .legislator-bgimage {
-    position: relative;
-    height: 150px;
-    margin: -20px -24px -50px;
-    @include background-size(cover);
-    &:after {
-      content: "";
-      position: absolute;
-      height: 100px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      @include background(linear-gradient(to bottom, rgba(black, 0), rgba(black, .2)));
-    }
-  }
-  .legislator {
-    .name {
-      display: inline-block;
-      position: relative;
-      top: -22px;
-      padding-left: 12px;
-      @include adjust-font-size-to(ms(3));
-      font-weight: bold;
-    }
-  }
-  @mixin text-with-icon($icon-name) {
-    position: relative;
-    @include trailer(.25);
-    padding-left: 30px;
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      @include replace-text-with-svg($icon-name);
-    }
-  }
-  .positive-status {
-    @include text-with-icon("positive_status");
-    color: $color-red;
-    font-weight: bold;
-  }
-  .negative-status { @include text-with-icon("negative_status"); }
-  .facebook { @include text-with-icon("icon_facebook"); }
-  .wikipedia { @include text-with-icon("icon_wiki"); }
-  .lyvote { @include text-with-icon("icon_lyvote"); }
+  display: none;
+  border: 1px solid $color-gray-light;
+  @include border-radius(5px);
 }
-.legislator-ignore-rate {
+
+@mixin text-with-icon($icon-name) {
+  position: relative;
+  @include trailer(.25);
+  padding-left: 30px;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    @include replace-text-with-svg($icon-name);
+  }
+}
+.positive-status {
+  @include text-with-icon("positive_status");
   color: $color-red;
   font-weight: bold;
-  .rate {
-    float: right;
-    @include adjust-font-size-to(ms(3), 1);
-  }
+}
+.negative-status { @include text-with-icon("negative_status"); }
+.facebook { @include text-with-icon("icon_facebook"); }
+.wikipedia { @include text-with-icon("icon_wiki"); }
+.lyvote { @include text-with-icon("icon_lyvote"); }
+
+@include at-breakpoint($desktop) {
+  .legislator-info { display: block; }
 }

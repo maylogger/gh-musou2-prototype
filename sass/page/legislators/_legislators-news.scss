@@ -1,4 +1,4 @@
-.legislators {
+.legislator-profile {
   .news-post {
     @include trailer();
     @include padding-trailer();
@@ -8,47 +8,28 @@
       @include adjust-font-size-to(ms(0));
     }
     .news-title {
-      @extend %h3;
       font-weight: bold;
       @include trailer();
     }
   }
   .news-interactive {
-    @include leader();
+    @include leader(.5);
+    @include trailer();
     @include pie-clearfix;
-    .news-rating {
-      float: right;
-    }
-    .news-comment-btn {
-      float: left;
-      padding-top: 27px;
-    }
-    .news-comment-form {
-      display: none;
-      clear: both;
-      position: relative;
-      top: 12px;
-      &.active { display: block; }
-      .avatar {
-        float: left;
-        margin-right: 12px;
-      }
-      input {
-        @include reset-box-model;
-        @include box-sizing(border-box);
-        overflow: hidden;
-        width: 75%;
-        margin: 9px 0;
-        padding: 6px;
-        border: 1px solid $color-gray;
-        @include border-radius(3px);
-      }
-    }
   }
   .news-interactive + .news-comment {
     @include leader();
   }
+  .news-comment-title {
+    @include trailer(.25);
+    font-weight: bold;
+  }
   .news-comment {
+    padding: 12px;
+    background-color: lighten($color-gray-light, 2.5%);
+    @include border-radius(2px);
+  }
+  .comment-item {
     .avatar {
       float: left;
       margin-right: 12px;
@@ -65,14 +46,48 @@
       }
     }
   }
+  .comment-form {
+    @include pie-clearfix;
+    clear: both;
+    position: relative;
+    .avatar {
+      float: left;
+      margin-right: 12px;
+      opacity: 0;
+      @include transition(opacity .25s);
+    }
+    &.is-open {
+      .avatar { opacity: 1; }
+    }
+  }
+  .comment-button {
+    overflow: hidden;
+    padding: 9px 0;
+    color: $color-gray;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover { text-decoration: underline; }
+  }
+  .comment-input {
+    display: none;
+    &.is-open { display: block; }
+    input {
+      @include reset-box-model;
+      @include box-sizing(border-box);
+      overflow: hidden;
+      width: 75%;
+      margin: 6px 0;
+      padding: 6px;
+      border: 1px solid $color-gray;
+      @include border-radius(3px);
+    }
+  }
 }
 
 @include at-breakpoint($pad) {
-  .legislators {
-    .news-interactive {
-      .news-comment-form {
-        input { width: 85%; }
-      }
+  .legislator-profile {
+    .news-comment-form {
+      input { width: 85%; }
     }
   }
 }
