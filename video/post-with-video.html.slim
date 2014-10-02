@@ -10,17 +10,18 @@
     .iframe-video
       #player
 
-  / .video-cover style="background-image: url('http://hhhhold.com/1280x720/#{rand(100)}')"
-  /   .video-info
-  /     h1 =zh_lorem_sentence
-  /     .meta-info
-  /       .meta
-  /         .label 日期
-  /         =lorem_date.to_date
-  /       .meta
-  /         .label 作者
-  /         =zh_lorem_name
-  /     .play-button 播放
+  .video-cover style="background-image: url('http://hhhhold.com/1280x720/#{rand(100)}')"
+    .video-info
+      .video-info-inner
+        h1 =zh_lorem_sentence
+        .meta-info
+          .meta
+            .label 日期
+            =lorem_date.to_date
+          .meta
+            .label 作者
+            =zh_lorem_name
+        .play-button 播放
 
 .container
   .post
