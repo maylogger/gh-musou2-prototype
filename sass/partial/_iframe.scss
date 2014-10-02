@@ -1,7 +1,6 @@
 .iframe-video {
   position: relative;
   height: 0;
-  @include trailer();
   padding-bottom: 56.25%;
   iframe, object {
     position: absolute;
@@ -15,7 +14,6 @@
 .iframe-livehouse-in {
   position: relative;
   height: 0;
-  @include trailer();
   padding-bottom: 150%;
   iframe, object {
     position: absolute;
@@ -34,6 +32,6 @@
 
 @include at-breakpoint($desktop) {
   .iframe-livehouse-in {
-    padding-bottom: 33.333%
+    padding-bottom: 56.25%
   }
 }
