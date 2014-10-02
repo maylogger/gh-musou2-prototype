@@ -13,17 +13,17 @@
         "component/button-module",
         "component/pagination",
         "component/search",
-        "component/common",
-        "component/avatar",
         "component/article",
         "component/post",
-        "component/collapse";
+        "component/meta",
+        "component/collapse",
+        "component/avatar",
+        "component/select";
 
 // ==== partial ====
 @import "partial/menu",
         "partial/header",
         "partial/sidebar",
-        "partial/meta",
         "partial/live",
         "partial/iframe",
         "partial/footer";
@@ -37,5 +37,7 @@
         "page/topic/topic-card",
         "page/topic/topic-detail",
         "page/focus",
+        "page/video",
         "page/schedule",
-        "page/sitting";
+        "page/sitting",
+        "page/dictionary";
