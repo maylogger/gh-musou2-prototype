@@ -5,11 +5,19 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Oval-1-+-Rectangle-22-+-Rectangle-23" sketch:type="MSLayerGroup">
-            <path d="M64,32 C64,14.326888 49.673112,0 32,0 C14.326888,0 0,14.326888 0,32 L64,32 Z" id="Oval-1" fill="#F3F3F3" sketch:type="MSShapeGroup"></path>
-            <g id="Rectangle-22-+-Rectangle-23" transform="translate(22.222222, 11.555556)" fill="#333333" sketch:type="MSShapeGroup">
-                <path d="M9.12820513,7.87844255 L-0.444444444,3.62393162 L-0.444444444,0.136752137 L9.57264957,4.58879392 L19.5897436,0.136752137 L19.5897436,3.62393162 L10.017094,7.87844255 L10.017094,8.27350427 L9.57264957,8.07597341 L9.12820513,8.27350427 L9.12820513,7.87844255 Z" id="Rectangle-22" transform="translate(9.777778, 4.136752) rotate(-180.000000) translate(-9.777778, -4.136752) "></path>
-                <path d="M9.12820513,14.9895537 L-0.444444444,10.7350427 L-0.444444444,7.24786325 L9.57264957,11.699905 L19.5897436,7.24786325 L19.5897436,10.7350427 L10.017094,14.9895537 L10.017094,15.3846154 L9.57264957,15.1870845 L9.12820513,15.3846154 L9.12820513,14.9895537 Z" id="Rectangle-23" transform="translate(9.777778, 11.247863) rotate(-180.000000) translate(-9.777778, -11.247863) "></path>
+        <g id="topic-card-open" sketch:type="MSLayerGroup" transform="translate(0.000000, 5.000000)">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="topic-card-open">
+                    <g id="Page-1">
+                        <g id="Oval-1-+-Rectangle-22-+-Rectangle-23" transform="translate(0.000000, -0.500000)">
+                            <g id="Rectangle-22-+-Rectangle-23" transform="translate(32.222222, 17.666666) scale(1, -1) translate(-32.222222, -17.666666) translate(0.222222, -0.333334)">
+                                <rect id="Rectangle-1" fill="#EEEEEE" x="-0.222222" y="0" width="64" height="36.166666" rx="5"></rect>
+                                <path d="M31.5726491,20.8784426 L21.9999996,16.6239316 L21.9999996,13.1367521 L32.0170936,17.5887939 L42.0341876,13.1367521 L42.0341876,16.6239316 L32.461538,20.8784426 L32.461538,21.2735043 L32.0170936,21.0759734 L31.5726491,21.2735043 L31.5726491,20.8784426 L31.5726491,20.8784426 Z" id="Rectangle-22" fill="#333333" transform="translate(32.000000, 17.136752) scale(1, -1) rotate(180.000000) translate(-32.000000, -17.136752) "></path>
+                                <path d="M31.5726491,27.9895537 L21.9999996,23.7350427 L21.9999996,20.2478632 L32.0170936,24.699905 L42.0341876,20.2478632 L42.0341876,23.7350427 L32.461538,27.9895537 L32.461538,28.3846154 L32.0170936,28.1870845 L31.5726491,28.3846154 L31.5726491,27.9895537 L31.5726491,27.9895537 Z" id="Rectangle-23" fill="#333333" transform="translate(32.000000, 24.247863) scale(1, -1) rotate(180.000000) translate(-32.000000, -24.247863) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
             </g>
         </g>
     </g>
