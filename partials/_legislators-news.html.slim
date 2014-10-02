@@ -1,36 +1,38 @@
 - 5.times do
   .news-post
     .news-date =lorem_date.to_date
-    .news-title =zh_lorem_sentence
+    h3.news-title =zh_lorem_sentence
     .news-content
       p =zh_lorem_paragraph
       - rand(2).times do
         =image_tag lorem_image("640x360")
     .news-interactive
-      .news-comment-btn
-        button.btn_small 立委回覆
       .news-rating
         a.btn-share-module href="#"
-          .counter #{rand(1000)}
           .button 分享
-        a.btn-like-module href="#"
           .counter #{rand(1000)}
+        a.btn-like-module href="#"
           .button 讚
+          .counter #{rand(1000)}
         a.btn-dislike-module href="#"
-          .counter #{rand(100)}
           .button 噓
-      .news-comment-form
-        .avatar.is-small.has-party
+          .counter #{rand(100)}
+    h4.news-comment-title 立委評論
+    .news-comment
+      - rand(5).times do
+        .comment-item
+          a.avatar.is-small.has-party href="/legislators/legislator.html"
+            .party =image_tag("/images/DPP.png")
+            =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+          .content
+            .name =zh_lorem_name
+            p =zh_lorem_sentence
+      .comment-form
+        a.avatar.is-small.has-party href="/legislators/legislator.html"
           .party =image_tag("/images/DPP.png")
           =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
-        input type="text" placeholder="請輸入訊息..."
-    - (1+rand(4)).times do
-      .news-comment
-        .avatar.is-small.has-party
-          .party =image_tag("/images/DPP.png")
-          =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
-        .content
-          .name =zh_lorem_name
-          p =zh_lorem_sentence
+        .comment-button 發表評論...
+        .comment-input
+          input type="text" placeholder="請輸入訊息..."
 
 button.btn_loadmore 看更多

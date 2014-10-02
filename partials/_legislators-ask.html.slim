@@ -2,10 +2,10 @@
 
 .ask-form
   - if @ask_form_status == "open"
-    h3 請輸入您要問的問題
-    .label 問題敘述
+    .push-threshold 大推門檻 <span class="number">50</span> 推
+    .label 請輸入要問的問題
     input type="text"
-    .label 完整說明
+    .label 完整敘述
     textarea rows="5"
     p.rule 一天可以發問 5 個問題，發問的問題在尚未回答或尚未過大推門檻前會存在一個月，問題一個月內立委未回答或未過大推門檻將會刪除。
     button 我要提問
@@ -19,10 +19,11 @@
     select
       option 最新發問
       option 最早發問
-  ul.filter
-    li.active: a href="#all-question" role="tab" data-toggle="tab" 全部
-    li: a href="#answered" role="tab" data-toggle="tab" 已回答
-    li: a href="#unanswered" role="tab" data-toggle="tab" 未回答
+  .filter
+    ul
+      li.active: a href="#all-question" role="tab" data-toggle="tab" 全部
+      li: a href="#answered" role="tab" data-toggle="tab" 已回答
+      li: a href="#unanswered" role="tab" data-toggle="tab" 未回答
 
   .tab-pane.fade.in.active#all-question
     = render "legislators-ask-question-item-all"

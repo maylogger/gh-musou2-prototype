@@ -1,18 +1,22 @@
 - (3+rand(7)).times do |i|
   .question-item.panel
     ul.question-header
-      li.like-button
-        a.btn-like-module.in-question href="#"
-          .button 讚
+      li.push
+        .btn-like-module.in-question
+          .button 大推
           .counter #{rand(1000)}
       li.date 09/12
       li.open
         button.btn_small data-parent="#unanswered" data-toggle="collapse" href="#question-unanswered#{i+1}" 展開
       li.question-title =zh_lorem_sentence
+
     .question-content.collapse id="question-unanswered#{i+1}"
       .question-status
         .info 3200 人已大推，至 <span class="date">10/12</span> 問題消失前，尚需 1800 人大推。
-        .share
+        .action
+          a.btn-like-module.push href="#"
+            .button 讚
+            .text 大推
           a.btn-share-module href="#"
             .button 分享
       h3.question-title =zh_lorem_sentence
