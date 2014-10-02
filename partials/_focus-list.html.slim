@@ -1,5 +1,5 @@
 - 10.times do
-  a.focus-item href="/focus/focus-post.html"
+  a.focus-item href="/focus/post.html"
     .focus-content
       h3.title =zh_lorem_sentence
       .meta-info
@@ -11,4 +11,5 @@
           | 阿草
       p =zh_lorem_paragraphs 2
     .focus-image
-      =image_tag("http://hhhhold.com/300x170/#{rand(100)}")
+      .focus-image-wrap
+        =image_tag("http://hhhhold.com/300x170/#{rand(100)}")
