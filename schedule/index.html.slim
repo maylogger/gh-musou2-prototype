@@ -1,9 +1,12 @@
 - @page_name = "schedule"
 
 .breadcrumb
-  ol.breadcrumb-list
-    li: a href="/" 首頁
-    li: a href="/schedule/" 賽事
+  .breadcrumb-inner
+    ol.breadcrumb-list
+      li: a href="/" 首頁
+      li: a href="/schedule/" 賽事
+    = render "/partials/search"
+
 ul.schedule-tab
   li.active
     a.schedule-forecast href="#forecast" role="tab" data-toggle="tab" 準備開戰
@@ -18,10 +21,10 @@ ul.schedule-tab
     .tab-pane.fade#live
       = render "/partials/schedule-live"
     .tab-pane.fade#report
-      = render "/partials/search"
-      = render "/partials/filter"
-      .tab-pane.fade.in.active#tab1
-        = render "/partials/schedule-report"
-      - 6.times do |i|
-        .tab-pane.fade id="tab#{i+2}"
-          = render "/partials/schedule-report"
+      .nav-select
+        .select-label 委員會分類
+        select
+          option 全部
+          - 11.times do
+            option #{zh_lorem_words(3+rand(5))}委員會
+      = render "/partials/schedule-report"

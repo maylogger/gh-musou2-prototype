@@ -1,21 +1,23 @@
 .breadcrumb
-  ol.breadcrumb-list
-    li: a href="/" 首頁
-    li: a href="/schedule/" 賽事
-    li: a href="/schedule/sitting-forecast.html" 觀賽重點
+  .breadcrumb-inner
+    ol.breadcrumb-list
+      li: a href="/" 首頁
+      li: a href="/schedule/" 賽事
+      li: a href="/schedule/sitting-forecast.html" 觀賽重點
 
-.container
-  .article.post
-    h1 第8屆第5會期第2次臨時會第2次會議
-    .meta-info
-      .meta.is-highlight
-        .label 議題
-        =zh_lorem_words(4+rand(5))
+.container.lead
+  .post
+    .article
+      h1 第8屆第5會期第2次臨時會第2次會議
+      .meta-info
+        .meta.is-highlight
+          .label 議題
+          =zh_lorem_words(4+rand(5))
 
-    = render "/partials/article"
+      = render "/partials/article"
   .sidebar
     .sitting-info-card.sidebar-item
-      .president
+      a.president href="/legislators/legislator.html"
         .avatar.is-large.is-highlight.has-party
           .party =image_tag("/images/DPP.png")
           =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
