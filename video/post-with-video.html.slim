@@ -8,7 +8,8 @@
 .video
   .container
     .iframe-video
-      #player
+      .iframe-video-inner
+        #player
 
   .video-cover style="background-image: url('http://hhhhold.com/1280x720/#{rand(100)}')"
     .video-info
@@ -40,8 +41,8 @@
             .avatar =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
           p.intro-content =zh_lorem_paragraphs 2
       h2 影片簡介
-      p = zh_lorem_paragraphs 3+rand(2)
-      p = zh_lorem_paragraphs 3+rand(2)
+      - 5.times do
+        p = zh_lorem_paragraphs 3+rand(5)
 
   .sidebar
     .sidebar-item.is-borderless

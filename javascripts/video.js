@@ -25,8 +25,26 @@ function playVideo() {
 
 // youtube controller
 $('.video-info-inner > .play-button').on("click", function(event){
+  $('.video').addClass('is-playing');
   $('.video-cover').addClass('is-hidden').delay(500).queue(function(){
-    $('.video-cover').remove();
+    $('.video-cover').addClass('is-remove');
   });
   playVideo();
+});
+
+$(window).scroll(function() {
+
+  var windowScroll = $(window).scrollTop();
+  var fixedStart = $('.post').offset().top - 48;
+  var playingVideo = $('.is-playing .iframe-video-inner');
+
+  if ( windowScroll > fixedStart ) {
+    playingVideo.addClass('is-fixed').delay(500).queue(function(){
+      playingVideo.addClass('is-visible');
+      playingVideo.dequeue();
+    });
+  } else {
+    playingVideo.removeClass('is-fixed is-visible');
+  }
+
 });

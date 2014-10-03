@@ -99,6 +99,7 @@
   }
 }
 
+
 @include at-breakpoint($pad) {
   .video-list-item {
     @include span-columns(3);
@@ -113,7 +114,7 @@
     @include nth-omega(3n);
   }
 }
-@include at-breakpoint(1024px 12) {
+@include at-breakpoint(1025px 12) {
   .video {
     margin-bottom: rhythm(2);
     .video-cover {
@@ -129,6 +130,7 @@
       opacity: 1;
       @include transition(opacity .5s);
       &.is-hidden { opacity: 0; }
+      &.is-remove { display: none; }
       &:before {
         content: "";
         position: absolute;
@@ -178,6 +180,48 @@
           }
         }
       }
+    }
+  }
+  .iframe-video-inner.is-fixed {
+    position: fixed;
+    top: auto;
+    left: auto;
+    bottom: 192px;
+    max-width: 1136px;
+    width: 90%;
+    height: auto;
+    opacity: 0;
+    &.is-visible {
+      opacity: 1;
+      @include transition(opacity .25s);
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -96px;
+      bottom: -32px;
+      right: 0;
+      width: 368px;
+      @include background(linear-gradient(to bottom, rgba(white, 0) 0%, white 10%, white 90%, rgba(white, 0) 100%));
+    }
+    &:after {
+      content: "即時預覽";
+      display: block;
+      position: absolute;
+      top: -42px;
+      right: 0;
+      width: 368px;
+      height: 30px;
+      color: $color-gray;
+      font-weight: bold;
+      border-bottom: 1px solid rgba($color-red, .5);
+    }
+    iframe {
+      position: relative;
+      float: right;
+      width: 368px;
+      height: 210px;
     }
   }
 }
