@@ -5,7 +5,8 @@
 @import "layout/base-layout";
 
 // ==== component ====
-@import "component/breadcrumb",
+@import "component/announce",
+        "component/breadcrumb",
         "component/page-header",
         "component/tab",
         "component/list",

@@ -57,10 +57,13 @@ $('.writer-intro .close').on("click", function(){
   $('.writer-intro').removeClass('is-open');
 });
 
+$('.announce .close').on("click", function(){
+  $('.announce').remove();
+});
+
 $('.search-bar-toggle').on("click", function(){
   $(this).toggleClass('is-open');
   $('.search-bar').toggleClass('is-open');
 });
 
-$('.article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6').macho();
-
+$('.big-text h1, .big-text h2, .big-text h3, .big-text h4, .video-info-inner h1').macho();
