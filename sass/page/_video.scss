@@ -203,7 +203,7 @@
       bottom: -32px;
       right: 0;
       width: 368px;
-      @include background(linear-gradient(to bottom, rgba(white, 0) 0%, white 10%, white 90%, rgba(white, 0) 100%));
+      @include background(linear-gradient(to bottom, rgba(white, 0) 0%, white 15%, white 90%, rgba(white, 0) 100%));
     }
     &:after {
       content: "即時預覽";
