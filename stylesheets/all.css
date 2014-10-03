@@ -774,7 +774,7 @@ body.open-menu { height: 100%; }
   .video-list-item:nth-child(2n) { float: left; margin-right: 1.40845%; }
   .video-list-item:nth-child(3n) { float: right; margin-right: 0; } }
 @media (min-width: 1025px) { .video { margin-bottom: 48px; }
-  .video .video-cover { position: absolute; top: 0; left: 0; right: 0; bottom: 0; color: white; background-color: #333333; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-position: center center; opacity: 1; -webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s; transition: opacity 0.5s; }
+  .video .video-cover { position: absolute; top: 0; left: 0; right: 0; bottom: 0; color: white; background-color: #333333; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-position: center center; opacity: 1; -webkit-transition: opacity 0.75s; -moz-transition: opacity 0.75s; -o-transition: opacity 0.75s; transition: opacity 0.75s; }
   .video .video-cover.is-hidden { opacity: 0; }
   .video .video-cover.is-remove { display: none; }
   .video .video-cover:before { content: ""; position: absolute; z-index: 0; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 70, color-stop(0%, transparent), color-stop(70%, #000000)); background: -webkit-radial-gradient(transparent 0%, #000000 70%); background: -moz-radial-gradient(transparent 0%, #000000 70%); background: -o-radial-gradient(transparent 0%, #000000 70%); background: radial-gradient(transparent 0%, #000000 70%); }

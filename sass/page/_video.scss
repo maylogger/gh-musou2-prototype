@@ -128,7 +128,7 @@
       @include background-size(cover);
       background-position: center center;
       opacity: 1;
-      @include transition(opacity .5s);
+      @include transition(opacity .75s);
       &.is-hidden { opacity: 0; }
       &.is-remove { display: none; }
       &:before {
