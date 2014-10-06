@@ -33,6 +33,22 @@
   }
 }
 
+.search-results-title {
+  @include trailer();
+  @extend %h3;
+  color: $color-gray;
+  font-weight: bold;
+}
+
+.search-results {
+  .sub-results-title {
+    @include trailer(.5);
+    @include adjust-font-size-to(ms(1));
+    font-weight: bold;
+    color: $color-red;
+  }
+}
+
 @include at-breakpoint($pad) {
   .search-bar-toggle {
     display: none;
