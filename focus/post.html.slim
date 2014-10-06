@@ -27,12 +27,13 @@
 
     .post-extend-content
       .content-title 相關議題
-      .topic-item
-        .topic-header style="background-image: url('http://hhhhold.com/1136x200/#{rand(100)}')"
-          a.topic-title href="/topic/topic-detail.html"
-            h2 =zh_lorem_words(4+rand(5))
-            .sitting-time 上次交戰於：2014年9月12日
-            .topic-entrance 了解此議題
+      - (1+rand(2)).times do
+        .topic-item
+          .topic-header style="background-image: url('http://hhhhold.com/1136x200/#{rand(100)}')"
+            a.topic-title href="/topic/topic-detail.html"
+              h2 =zh_lorem_words(4+rand(5))
+              .sitting-time 上次交戰於：2014年9月12日
+              .topic-entrance 了解此議題
 
     .post-extend-content
       .content-title 相關場邊焦點
