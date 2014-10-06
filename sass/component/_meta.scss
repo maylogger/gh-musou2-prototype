@@ -2,7 +2,7 @@
   @include adjust-font-size-to(ms(0));
   .meta {
     display: inline-block;
-    margin-right: 6px;
+    margin-right: 12px;
     .label { display: inline-block; }
     &.is-highlight {
       @extend %subpixel;
@@ -21,6 +21,6 @@
 
 .label {
   display: inline-block;
-  padding-right: 2px;
+  padding-right: 3px;
   color: $color-red;
 }
