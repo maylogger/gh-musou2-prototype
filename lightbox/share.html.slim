@@ -1,0 +1,15 @@
+.share-popup
+  .share-popup-title 分享此則內容
+
+  .share-facebook
+    a.button href="#" 分享至 Facebook
+  span.text 或
+  .share-direct
+    input.share-link type="text" value="http://musou.tw/content/123456789?share=true" readonly=""
+    a.button href="#" 複製網址
+
+  javascript:
+    $('.share-link').on("click", function(event){
+      $(this).select();
+        event.preventDefault();
+    });

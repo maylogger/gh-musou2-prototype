@@ -1,0 +1,56 @@
+.share-popup {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  text-align: center;
+  background-color: white;
+  @include border-radius(2px);
+  .share-popup-title {
+    @extend %h4;
+    @include trailer(.5);
+    @include padding-trailer(.25);
+    font-weight: bold;
+    border-bottom: 1px solid $color-gray-light;
+  }
+  .share-facebook {
+    .button {
+      display: block;
+      background-color: $color-blue-deep;
+      @include transition(background-color .25s);
+      &:hover {
+        @include unstyled-link;
+        color: white;
+        background-color: lighten($color-blue-deep, 10%);
+      }
+    }
+  }
+  .text {
+    display: block;
+    @include leader(.25);
+    @include trailer(.25);
+    color: $color-gray;
+    font-weight: bold;
+  }
+  .share-direct {
+    input {
+      @include reset-box-model;
+      @include box-sizing(border-box);
+      display: block;
+      @include trailer(.5);
+      padding: 6px;
+      width: 100%;
+      border: 1px solid $color-gray;
+      @include border-radius(2px);
+      &:focus {
+        background-color: #ffc;
+      }
+    }
+    .button {
+      display: block;
+      &:hover {
+        @include unstyled-link;
+        color: white;
+      }
+    }
+  }
+}
