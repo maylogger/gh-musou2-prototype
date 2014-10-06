@@ -1,0 +1,65 @@
+.announce {
+  @include box-sizing(border-box);
+  position: fixed;
+  z-index: 1000;
+  top: 48px;
+  left: 0;
+  padding: 6px;
+  width: 100%;
+  text-align: center;
+  .announce-inner {
+    @include pie-clearfix;
+    position: relative;
+    display: inline-block;
+    max-width: 720px;
+    padding: 24px;
+    text-align: left;
+    background-color: $color-gray-light;
+    border: 2px solid $color-red;
+    @include border-radius(5px);
+    @include box-shadow(0px 5px 10px rgba(black, .5));
+  }
+  .announcer { display: none; }
+  .announce-content {
+    overflow: hidden;
+    .title {
+      color: $color-gray;
+      font-weight: bold;
+      @include adjust-font-size-to(ms(0));
+    }
+    .content {
+      // height: 48px;
+      overflow: hidden;
+      @include adjust-font-size-to(ms(0));
+    }
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 5px;
+    color: $text-gray;
+    @include adjust-font-size-to(ms(4), 1);
+    @include transition(color .25s);
+    cursor: pointer;
+    &:hover { color: $text-black; }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .announce {
+    top: 72px;
+    .announce-inner {
+      padding: 18px;
+    }
+    .announcer {
+      display: block;
+      float: left;
+      margin-top: 3px;
+      margin-right: 12px;
+    }
+    .announce-content {
+      .content { @include adjust-font-size-to(ms(1)); }
+    }
+  }
+}

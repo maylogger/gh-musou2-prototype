@@ -1,15 +1,18 @@
 - 10.times do
   a.focus-item href="/focus/post.html"
     .focus-content
-      h3.title =zh_lorem_sentence
+      h3.title = zh_lorem_sentence
       .meta-info
         .meta
           .label 日期
-          =lorem_date.to_date
+          = lorem_date.to_date
+        .meta
+          .label 團體
+          = zh_lorem_words (4+rand(3))
         .meta
           .label 作者
-          | 阿草
-      p =zh_lorem_paragraphs 2
+          = zh_lorem_name
+      p = zh_lorem_paragraphs 2
     .focus-image
       .focus-image-wrap
-        =image_tag("http://hhhhold.com/300x170/#{rand(100)}")
+        = image_tag("http://hhhhold.com/300x170/#{rand(100)}")

@@ -7,13 +7,12 @@
     color: $text-black;
     border-bottom: 1px solid darken($color-gray-light, 10%);
     &:first-child {
-      @include padding-leader();
+      @include padding-leader(.5);
       border-top: 1px solid darken($color-gray-light, 10%);
     }
     .focus-image {
       @include box-sizing(border-box);
-      float: right;
-      width: 30%;
+      display: none;
       .focus-image-wrap {
         position: relative;
         height: 0;
@@ -32,7 +31,7 @@
     .focus-content {
       @include box-sizing(border-box);
       float: left;
-      width: 69%;
+      width: 100%;
       .title {
         margin-bottom: 3px;
         color: $color-red;
@@ -65,7 +64,12 @@
     .focus-item {
       @include trailer();
       @include padding-trailer();
-      .focus-image { width: 30%; }
+      &:first-child { @include padding-leader(); }
+      .focus-image {
+        float: right;
+        display: block;
+        width: 30%;
+      }
       .focus-content {
         display: inline-block;
         width: 67%;

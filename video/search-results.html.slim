@@ -1,0 +1,16 @@
+- @page_name = "video"
+
+.breadcrumb
+  .breadcrumb-inner
+    ol.breadcrumb-list
+      li: a href="/" 首頁
+      li: a href="/video/" 沃草影音
+    = render "/partials/search"
+
+.container.lead
+  .search-results-title 「#{zh_lorem_words (2+rand(5))}」搜尋結果
+  .search-results
+    .video-list
+      = render "/partials/video-list"
+
+  = render "/partials/pagination"

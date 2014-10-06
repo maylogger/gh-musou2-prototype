@@ -64,11 +64,9 @@
   @include border-radius(2px);
   &.is-open { display: block; }
   .writer {
-    .name {
-      @include adjust-font-size-to(ms(1));
-    }
+    text-align: center;
   }
-  .intro-content {
+  p.intro-content {
     overflow: hidden;
     margin-bottom: 0;
     @include adjust-font-size-to(ms(0));

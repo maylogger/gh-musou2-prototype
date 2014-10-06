@@ -1,0 +1,4 @@
+.schedule-slider {
+  padding-top: 1px;
+  @include background( radial-gradient( $color-gray 0%, black 100%) );
+}

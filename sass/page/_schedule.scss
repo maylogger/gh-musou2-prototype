@@ -68,12 +68,6 @@
     font-weight: bold;
     color: $color-red;
   }
-  .label {
-    display: block;
-    @include adjust-font-size-to(ms(0), .75);
-    font-weight: bold;
-    color: $color-red;
-  }
 }
 
 a.sitting {
@@ -132,6 +126,12 @@ a.sitting {
       margin: 0 6px;
       vertical-align: middle;
     }
+  }
+  .label {
+    display: block;
+    @include adjust-font-size-to(ms(0), .75);
+    font-weight: bold;
+    color: $color-red;
   }
   .sitting-livenow {
     @include hide-text();
@@ -220,9 +220,7 @@ a.sitting {
       text-align: left;
       vertical-align: middle;
       .meta-info {
-        @include adjust-font-size-to(ms(1));
         .meta { display: inline-block; }
-        .label { @include adjust-font-size-to(ms(1)); }
       }
     }
     .president {

@@ -8,14 +8,9 @@
     = render "/partials/search"
 
 .container.lead.thin
-  .nav-select
-    .select-label 團體分類
-    select
-      option 全部
-      option 沃草精選
-      - 4.times do
-        option #{zh_lorem_words(3+rand(5))}
-  .focus-list
-    = render "/partials/focus-list"
+  .search-results-title 「#{zh_lorem_words (2+rand(5))}」搜尋結果
+  .search-results
+    .focus-list
+      = render "/partials/focus-list"
 
   = render "/partials/pagination"

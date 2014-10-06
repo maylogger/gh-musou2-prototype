@@ -1,8 +1,8 @@
 .nav-select {
   @include trailer();
   &.in-filter {
-    display: inline-block;
-    @include trailer(0);
+    display: block;
+    @include trailer(.5);
     margin-right: 12px;
   }
   .select-label {
@@ -10,5 +10,14 @@
     margin-right: 6px;
     @include adjust-font-size-to(ms(0));
     font-weight: bold;
+  }
+}
+
+@include at-breakpoint($pad) {
+  .nav-select {
+    &.in-filter {
+      display: inline-block;
+      @include trailer(0);
+    }
   }
 }
