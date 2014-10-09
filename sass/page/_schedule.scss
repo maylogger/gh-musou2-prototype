@@ -83,11 +83,11 @@
       &:after {
         content: "";
         position: absolute;
-        top: -20px;
+        bottom: -20px;
         left: 50%;
         margin-left: -10px;
         border: 10px solid transparent;
-        border-bottom-color: $color-gray;
+        border-top-color: $color-gray;
       }
     }
   }

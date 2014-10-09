@@ -794,6 +794,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .schedule-slider .schedule-table { margin-top: 0px; margin-bottom: 48px; }
 .schedule-slider .sitting { margin-left: 12px; margin-right: 12px; }
 .schedule-slider #slider-forecast .sitting, .schedule-slider #slider-report .sitting { margin-top: 10px; margin-bottom: 34px; }
+.schedule-slider .schedule-tab li.active a:after { content: ""; position: absolute; top: -20px; bottom: auto; left: 50%; margin-left: -10px; border: 10px solid transparent; border-bottom-color: #999999; }
 
 .slogan { margin-bottom: 48px; background: #eeeeee; }
 .slogan .slogan-content { padding: 12px 0 24px; color: #999999; font-size: 16.04257px; line-height: 48px; text-align: center; }
@@ -923,7 +924,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .schedule-tab li a:hover span:before { opacity: 1; }
 .schedule-tab li.active a { position: relative; color: white; }
 .schedule-tab li.active a span:before { opacity: 1; }
-.schedule-tab li.active a:after { content: ""; position: absolute; top: -20px; left: 50%; margin-left: -10px; border: 10px solid transparent; border-bottom-color: #999999; }
+.schedule-tab li.active a:after { content: ""; position: absolute; bottom: -20px; left: 50%; margin-left: -10px; border: 10px solid transparent; border-top-color: #999999; }
 
 .schedule-table { margin-top: 24px; }
 .schedule-table .committee { margin-bottom: 12px; font-size: 16.04257px; line-height: 24px; font-weight: bold; color: #880013; }
