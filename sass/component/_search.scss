@@ -2,11 +2,11 @@
   position: absolute;
   top: 0;
   right: 0;
-  @include replace-text-with-svg("icon-search");
+  @include replace-text-with-svg("icon_search");
   padding: 6px;
   background-color: $color-black;
   cursor: pointer;
-  &.is-open { @include replace-text-with-svg("icon-search-close"); }
+  &.is-open { @include replace-text-with-svg("icon_search_close"); }
 }
 .search-bar {
   display: none;
@@ -25,7 +25,7 @@
   }
   .btn_search {
     float: right;
-    @include replace-text-with-svg("icon-search");
+    @include replace-text-with-svg("icon_search");
     padding: 18px;
     vertical-align: top;
     background-color: $color-black;

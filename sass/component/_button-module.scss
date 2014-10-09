@@ -44,7 +44,7 @@
     display: inline-block;
     padding: 0;
     vertical-align: middle;
-    @include replace-text-with-svg("like-button");
+    @include replace-text-with-svg("like_button");
     background-color: transparent;
   }
   &.push {
@@ -53,10 +53,11 @@
     &:hover { background-color: lighten($color-red, 10%); }
     .button {
       vertical-align: middle;
-      @include replace-text-with-svg("like-button-white");
+      @include replace-text-with-svg("like_button_white");
     }
     .text {
       display: inline-block;
+      margin-left: 3px;
       color: white;
       vertical-align: middle;
       @extend %subpixel;
@@ -101,7 +102,7 @@
     display: inline-block;
     padding: 0;
     vertical-align: middle;
-    @include replace-text-with-svg("dislike-button");
+    @include replace-text-with-svg("dislike_button");
     background-color: transparent;
   }
   .counter + .button { margin-top: 6px; }
