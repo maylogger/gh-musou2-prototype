@@ -1,4 +1,147 @@
 .schedule-slider {
-  padding-top: 1px;
+  @include padding-leader();
   @include background( radial-gradient( $color-gray 0%, black 100%) );
+  .slider-title {
+    @include trailer(.5);
+    @include adjust-font-size-to(ms(3));
+    text-align: center;
+    color: $color-gray;
+  }
+  .schedule-table {
+    @include leader(0);
+    @include trailer(2);
+  }
+  .sitting {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  #slider-forecast .sitting,
+  #slider-report .sitting {
+    margin-top: 10px;
+    margin-bottom: 34px;
+  }
 }
+
+.slogan {
+  @include trailer(2);
+  background: $color-gray-light;
+  .slogan-content {
+    padding: rhythm(.5) 0 rhythm(1);
+    color: $color-gray;
+    @include adjust-font-size-to(ms(1), 2);
+    text-align: center;
+    @include at-breakpoint($pad) {
+      @include adjust-font-size-to(ms(2));
+    }
+  }
+  .slogan-mark {
+    position: relative;
+    top: 16px;
+    display: inline-block;
+    @include replace-text-with-dimensions("icon_mark.png");
+    background-image: none, image-url("icon_mark.svg");
+  }
+}
+
+.focus-collection, .video-collection {
+  @include leader(2);
+  .title {
+    @include trailer(.5);
+    @include padding-trailer(.25);
+    @include adjust-font-size-to(ms(1), 1.25);
+    font-weight: bold;
+    border-bottom: 1px solid $color-red;
+    .entrance {
+      float: right;
+      margin-top: 6px;
+      @include adjust-font-size-to(ms(0), 1);
+    }
+  }
+}
+
+.legislator-update {
+  @include leader(2);
+  .title {
+    @include trailer(.5);
+    @include padding-trailer(.25);
+    @include adjust-font-size-to(ms(1), 1.25);
+    font-weight: bold;
+    border-bottom: 1px solid $color-red;
+    .entrance {
+      float: right;
+      margin-top: 6px;
+      @include adjust-font-size-to(ms(0), 1);
+    }
+  }
+  .list a { min-height: 50px; }
+  .avatar {
+    float: left;
+    margin-right: 12px;
+  }
+  .update-content {
+    overflow: hidden;
+    .name {
+      @include adjust-font-size-to(ms(1));
+      color: $color-gray;
+      font-weight: bold;
+    }
+    .content {
+      @include ellipsis;
+    }
+  }
+}
+
+.dictionary-tip {
+  @include pie-clearfix;
+  @include leader(2);
+  @include padding-leader();
+  @include padding-trailer();
+  margin-bottom: -48px;
+  background-color: $color-gray-light;
+  .container { position: relative; }
+  .dictionary-card {
+    .title {
+      @include trailer(.25);
+      @include adjust-font-size-to(ms(1), 1.25);
+      font-weight: bold;
+      .entrance {
+        float: right;
+        margin-top: 6px;
+        @include adjust-font-size-to(ms(0), 1);
+      }
+    }
+  }
+}
+
+@include at-breakpoint($pad) {
+  .dictionary-tip {
+
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .focus-collection, .video-collection {
+    @include box-sizing(border-box);
+    @include span-columns(4);
+    @include leader(0);
+    padding-right: 24px;
+  }
+
+  .legislator-update {
+    @include span-columns(4 omega);
+    @include leader(0);
+  }
+  .dictionary-tip {
+    .dictionary-card {
+      @include pre(1);
+      @include span-columns(9);
+    }
+    .a-cao {
+      position: absolute;
+      bottom: -24px;
+      right: 0;
+      @include replace-text-with-dimensions("dictionary_acao.png");
+    }
+  }
+}
+
