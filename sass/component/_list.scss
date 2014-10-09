@@ -3,7 +3,7 @@
   @include leader(.5);
   @include trailer(.5);
   list-style: none;
-  @include adjust-font-size-to(ms(0));
+  @include adjust-font-size-to(ms(0), .75);
   li {
     @include pie-clearfix;
   }
@@ -57,13 +57,21 @@
     height: 50px;
     margin-left: 10px;
     line-height: 0;
-    background-image: url(/images/list-image-bg.png);
+    background-image: url(/images/list_image_bg.png);
   }
   .list-content {
     float: left;
+    margin-top: 6px;
     width: 70%;
-    height: 48px;
+    height: 36px;
     overflow: hidden;
     text-align: left;
   }
+  @include at-breakpoint($pad) {
+    .list-content {
+      margin-top: 3px;
+      height: 48px;
+    }
+  }
 }
+
