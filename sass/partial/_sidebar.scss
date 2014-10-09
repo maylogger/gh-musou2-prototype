@@ -22,7 +22,7 @@
   @include padding-trailer(.25);
   @include adjust-font-size-to(ms(1), 1.25);
   font-weight: bold;
-  border-bottom: 1px solid rgba($color-red, .5);
+  border-bottom: 1px solid $color-red;
 }
 
 @include at-breakpoint($desktop) {

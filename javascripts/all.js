@@ -73,3 +73,5 @@ $('.btn-share-module').magnificPopup({
 });
 
 $('.big-text h1, .big-text h2, .big-text h3, .big-text h4, .video-info-inner h1').macho();
+
+$('.carousel').carousel();

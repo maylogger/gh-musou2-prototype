@@ -27,8 +27,8 @@
       margin-left: -25px;
       width: 50px;
       height: 50px;
-      background-color: $color-red;
-      border: 2px solid white;
+      background-color: $color-black;
+      border: 3px solid white;
       @include border-radius(100%);
       opacity: .75;
     }
@@ -38,7 +38,7 @@
       z-index: 2;
       top: 50%;
       left: 50%;
-      margin-top: -8px;
+      margin-top: -7px;
       margin-left: -6px;
       border: 10px solid transparent;
       border-left: 20px solid white;
@@ -61,14 +61,6 @@
     @include adjust-font-size-to(ms(1));
     font-weight:  bold;
     @include ellipsis;
-  }
-}
-
-.video-content {
-  margin-top: -12px;
-  padding-top: 12px;
-  &.is-scroll {
-    @extend %scroll-hidden;
   }
 }
 
@@ -149,11 +141,11 @@
         .video-info-inner {
           @extend %container;
           position: absolute;
-          top: 50%;
+          top: 45%;
           left: 0;
           right: 0;
           text-align: center;
-          @include text-shadow(0 0 10px black);
+          @include text-shadow(0 0 15px black);
           @include translateY(-50%);
           h1 {
             @include padding-leader(0);
@@ -161,8 +153,10 @@
             font-weight: bold;
           }
           .meta-info {
+            display: block;
             @include leader(.5);
             color: white;
+            @include adjust-font-size-to(ms(1));
             font-weight: bold;
             .label {
               color: white;
@@ -170,16 +164,38 @@
             }
           }
           .play-button {
-            @include leader(2);
-            display: inline-block;
-            padding: 3px 30px;
-            @include adjust-font-size-to(ms(2));
-            font-weight: bold;
+            position: relative;
+            display: block;
+            @include leader(3);
+            text-indent: -119988px;
             cursor: pointer;
-            background-color: rgba(black, .5);
-            border: 1px solid white;
-            @include transition(background-color .25s);
-            &:hover { background-color: rgba(black, .9); }
+            &:before {
+              content: "";
+              position: absolute;
+              z-index: 1;
+              top: 50%;
+              left: 50%;
+              margin-top: -40px;
+              margin-left: -40px;
+              width: 80px;
+              height: 80px;
+              background-color: $color-black;
+              border: 3px solid white;
+              @include border-radius(100%);
+              opacity: .75;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              z-index: 2;
+              top: 50%;
+              left: 50%;
+              margin-top: -12px;
+              margin-left: -10px;
+              border: 15px solid transparent;
+              border-left: 30px solid white;
+              opacity: 1;
+            }
           }
         }
       }

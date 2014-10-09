@@ -7,19 +7,25 @@
       li: a href="/schedule/" 賽事
     = render "/partials/search"
 
-ul.schedule-tab
-  li.active
-    a.schedule-forecast href="#forecast" role="tab" data-toggle="tab" 準備開戰
-  li
-    a.schedule-live href="#live" role="tab" data-toggle="tab" 戰鬥中
-  li
-    a.schedule-report href="#report" role="tab" data-toggle="tab" 戰況報告
+.schedule-tab
+  ul
+    li.active
+      a.schedule-forecast href="#forecast" role="tab" data-toggle="tab" <span>準備開戰</span>
+    li
+      a.schedule-live href="#live" role="tab" data-toggle="tab" <span>戰鬥中</span>
+    li
+      a.schedule-report href="#report" role="tab" data-toggle="tab" <span>戰況報告</span>
+
 .container
   .schedule-table.tab-content
     .tab-pane.fade.in.active#forecast
-      = render "/partials/schedule-forecast"
+      - 3.times do
+        h2.committee #{zh_lorem_words(2+rand(5))}委員會
+        - (1 + rand(3)).times do
+          = render "/partials/schedule/schedule-forecast"
     .tab-pane.fade#live
-      = render "/partials/schedule-live"
+      - (1 + rand(5)).times do
+        = render "/partials/schedule/schedule-live"
     .tab-pane.fade#report
       .nav-select
         .select-label 委員會分類
@@ -27,4 +33,6 @@ ul.schedule-tab
           option 全部
           - 11.times do
             option #{zh_lorem_words(3+rand(5))}委員會
-      = render "/partials/schedule-report"
+      - (10).times do
+        = render "/partials/schedule/schedule-report"
+      = render "/partials/pagination"

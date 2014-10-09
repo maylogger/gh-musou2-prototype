@@ -1,7 +1,5 @@
 .topic-item {
   @include trailer();
-  margin-left: -16px;
-  margin-right: -16px;
   overflow: hidden;
   @include border-radius(2px);
   .topic-header {
@@ -66,11 +64,11 @@
         bottom: 0;
         left: 50%;
         margin-left: -32px;
-        @include replace-text-with-svg("topic-card-open");
+        @include replace-text-with-svg("topic_card_open");
       }
       &.is-open {
         background-color: $color-gray-light;
-        &:after { @include replace-text-with-svg("topic-card-close"); }
+        &:after { @include replace-text-with-svg("topic_card_close"); }
       }
     }
   }
@@ -100,8 +98,6 @@
 
 @include at-breakpoint($pad) {
   .topic-item {
-    margin-left: 0;
-    margin-right: 0;
     .topic-header {
       &:before { @include background(linear-gradient(to right, rgba(black, 1), rgba(black, .0) 70%)); }
       .topic-title {

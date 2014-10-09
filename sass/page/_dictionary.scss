@@ -29,6 +29,7 @@
 }
 
 .dictionary-card-inner {
+  background-color: white;
   border: 1px solid $color-gray-light;
   @include border-radius(2px);
   .title {
@@ -36,8 +37,8 @@
     @include trailer(0);
     padding: 12px 18px;
     font-weight: bold;
-    background-image: url("/images/card-highlight-bg.png");
-    background-image: none, url("/images/card-highlight-bg.svg");
+    background-image: url("/images/card_highlight_bg.png");
+    background-image: none, url("/images/card_highlight_bg.svg");
     background-repeat: repeat;
     @include border-radius(3px 3px 0 0);
     h3 {
@@ -108,7 +109,7 @@
     @include trailer(.5);
     padding: 0 0 6px 0;
     background-color: transparent;
-    border-bottom: 1px solid rgba($color-red, .5);
+    border-bottom: 1px solid $color-red;
     @include border-radius(0px);
     &:after {
       display: none;

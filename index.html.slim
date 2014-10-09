@@ -1,131 +1,59 @@
-- sitting_time =[['9:00-12:00'], ['14:30-17:30'], ['9:00-17:30']]
-
 .schedule-slider
+  h1.slider-title 精彩賽事
+  = render "/partials/index/schedule"
+
+.slogan
   .container
-    .schedule-table.tab-content
-      .tab-pane.fade#forecast
+    .slogan-content
+      | 一天一分鐘
+      span.slogan-mark
+      | 國會大小事
 
-        a.sitting href="/schedule/sitting-forecast.html"
-          .sitting-info
-            .president
-              .avatar.is-president.has-party
-                .party =image_tag("/images/DPP.png")
-                =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-              .name
-                .label 主席
-                =zh_lorem_name
+.container
+  .focus-collection
+    .title
+      | 精選場邊焦點
+      a.entrance href="/focus/" 回顧歷史
+    ul.list-with-image
+      - 6.times do
+        li: a href=""
+          .list-content = zh_lorem_sentence
+          .list-image = image_tag("http://hhhhold.com/80x50/#{rand(100)}")
 
-            .presenter
-              .anchor
-                .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-                .name
-                  .label 主播 - 上午
-                  =zh_lorem_name
-              .reviewer
-                .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-                .name
-                  .label 主播 - 下午
-                  =zh_lorem_name
+  .video-collection
+    .title
+      | 精選沃草影音
+      a.entrance href="/video/" 回顧歷史
+    ul.list-with-image
+      - 6.times do
+        li: a href=""
+          .list-content = zh_lorem_sentence
+          .list-image = image_tag("http://hhhhold.com/80x50/#{rand(100)}")
 
-            .main-info
-              .date #{lorem_date.to_date} #{sitting_time[rand(3)]}
-              h3.title =zh_lorem_sentence
-              .meta-info
-                .meta
-                  .label 議題
-                  =zh_lorem_words(4+rand(5))
-                .meta
-                  .label 委員會
-                  =zh_lorem_words(4+rand(5))
+  .legislator-update
+    .title
+      | 立委線上近況
+      a.entrance href="/legislators/" 回顧歷史
+    ul.list
+      - 6.times do
+        li: a href=""
+          .avatar.is-small.has-party
+            .party = image_tag("/images/DPP.png")
+            = image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+          .update-content
+            .name = zh_lorem_name
+            .content = zh_lorem_sentence
 
-          .sitting-summary
-            .title 觀賽重點
-            p =zh_lorem_sentence
-
-      .tab-pane.fade.in.active#live
-
-        a.sitting href="/schedule/sitting-live.html"
-          .sitting-info
-            .president
-              .avatar.is-president.has-party
-                .party =image_tag("/images/DPP.png")
-                =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-              .name
-                .label 主席
-                =zh_lorem_name
-
-            .presenter
-              .anchor
-                .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-                .name
-                  .label 主播 - 上午
-                  =zh_lorem_name
-              .reviewer
-                .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-                .name
-                  .label 主播 - 下午
-                  =zh_lorem_name
-
-            .main-info
-              .date #{lorem_date.to_date} #{sitting_time[rand(3)]}
-              h3.title =zh_lorem_sentence
-              .meta-info
-                .meta
-                  .label 議題
-                  =zh_lorem_words(4+rand(5))
-                .meta
-                  .label 委員會
-                  =zh_lorem_words(4+rand(5))
-
-          .sitting-livenow LIVENOW!
-
-          .sitting-summary
-            .title 即時戰況
-            p =zh_lorem_sentence
-
-      .tab-pane.fade#report
-
-        a.sitting href="/schedule/sitting-report.html"
-          .sitting-info
-            .president
-              .avatar.is-president.has-party
-                .party =image_tag("/images/DPP.png")
-                =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-              .name
-                .label 主席
-                =zh_lorem_name
-
-            .presenter
-              .anchor
-                .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-                .name
-                  .label 主播 - 上午
-                  =zh_lorem_name
-              .reviewer
-                .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
-                .name
-                  .label 主播 - 下午
-                  =zh_lorem_name
-
-            .main-info
-              .date #{lorem_date.to_date} #{sitting_time[rand(3)]}
-              h3.title =zh_lorem_sentence
-              .meta-info
-                .meta
-                  .label 議題
-                  =zh_lorem_words(4+rand(5))
-                .meta
-                  .label 委員會
-                  =zh_lorem_words(4+rand(5))
-
-          .sitting-summary
-            .title 戰況報告
-            p =zh_lorem_sentence
-
-  ul.schedule-tab
-    li
-      a.schedule-forecast href="#forecast" role="tab" data-toggle="tab" 準備開戰
-    li.active
-      a.schedule-live href="#live" role="tab" data-toggle="tab" 戰鬥中
-    li
-      a.schedule-report href="#report" role="tab" data-toggle="tab" 戰況報告
+.dictionary-tip
+  .container
+    .dictionary-card
+      .title
+        | 立院小知識
+        a.entrance href="/dictionary/" 更多知識
+      .dictionary-card-inner
+        .title
+          h3 =zh_lorem_words(2+rand(8))
+          a.btn-share-module href="/lightbox/share.html"
+            .button 分享
+        .entry.article =zh_lorem_paragraphs 2
+    .a-cao
