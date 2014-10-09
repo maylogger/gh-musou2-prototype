@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="50px" viewBox="0 0 34 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>carousel_arrow_prev</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-21-+-Rectangle-22" sketch:type="MSLayerGroup" transform="translate(4.000000, 5.000000)" fill="#999999">
+            <path d="M-12.7649573,12.1880342 L-12.7649573,18.982906 L7.61965812,28.042735 L7.61965812,21.2478632 L-12.7649573,12.1880342 Z M28.0042735,12.1880342 L28.0042735,18.982906 L7.61965812,28.042735 L7.61965812,21.2478632 L28.0042735,12.1880342 Z" id="Rectangle-21" sketch:type="MSShapeGroup" transform="translate(7.619658, 20.115385) scale(-1, 1) rotate(-90.000000) translate(-7.619658, -20.115385) "></path>
+            <path d="M-2.76495726,12.1880342 L-2.76495726,18.982906 L17.6196581,28.042735 L17.6196581,21.2478632 L-2.76495726,12.1880342 Z M38.0042735,12.1880342 L38.0042735,18.982906 L17.6196581,28.042735 L17.6196581,21.2478632 L38.0042735,12.1880342 Z" id="Rectangle-22" sketch:type="MSShapeGroup" transform="translate(17.619658, 20.115385) scale(-1, 1) rotate(-90.000000) translate(-17.619658, -20.115385) "></path>
+        </g>
+    </g>
+</svg>

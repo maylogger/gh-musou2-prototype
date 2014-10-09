@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="50px" viewBox="0 0 34 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>carousel_arrow_prev_small</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-21-+-Rectangle-22" sketch:type="MSLayerGroup" transform="translate(9.000000, 5.000000)" fill="#999999">
+            <path d="M7.5,27.482906 L-11.8846154,18.8675214 L-11.8846154,12.0726496 L8,20.9102564 L27.8846154,12.0726496 L27.8846154,18.8675214 L8.5,27.482906 L8.5,27.9273504 L8,27.7051282 L7.5,27.9273504 L7.5,27.482906 Z" id="Rectangle-21" sketch:type="MSShapeGroup" transform="translate(8.000000, 20.000000) scale(-1, 1) rotate(-90.000000) translate(-8.000000, -20.000000) "></path>
+        </g>
+    </g>
+</svg>
