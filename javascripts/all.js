@@ -25,6 +25,14 @@ $('.month-post-list').on("hide.bs.collapse", function(){
   $(this).prev('.month-title').removeClass('is-open');
 });
 
+$('.question-collapse-button').on("click", function(){
+  if($(this).text() == '展開'){
+    $(this).text('收合');
+  } else {
+    $(this).text('展開');
+  }
+});
+
 $('.catalog').hcSticky({
   top: 24,
   responsive: true,
