@@ -2,7 +2,7 @@
   position: relative;
   @include leader(2);
   padding: rhythm(2) 0;
-  background-color: lighten($color-black, 40%);
+  background-color: $color-black;
   @include pie-clearfix;
   .link-item {
     float: none;
