@@ -12,7 +12,9 @@
         .avatar.is-large.has-party
           .party =image_tag("/images/DPP.png")
           =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
-        .name =zh_lorem_name
+        .name
+          h2 =zh_lorem_name
+          .online-status.online 待命中
 
   .legislator-header-inner
     .ask-info-wrap
