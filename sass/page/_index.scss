@@ -14,6 +14,19 @@
   .sitting {
     margin-left: 12px;
     margin-right: 12px;
+    &.empty {
+      @include padding-leader(6);
+      height: 339px;
+      @include adjust-font-size-to(ms(3));
+      text-align: center;
+      color: $color-gray-light;
+      background-color: transparent;
+      border: 1px solid $color-gray;
+      &:hover {
+        color: $color-gray-light;
+        background-color: transparent;
+      }
+    }
   }
   #slider-forecast .sitting,
   #slider-report .sitting {
@@ -85,7 +98,10 @@
       @include adjust-font-size-to(ms(0), 1);
     }
   }
-  .list a { min-height: 50px; }
+  .list {
+    li { margin-top: 13px; }
+    a { min-height: 50px; }
+  }
   .avatar {
     float: left;
     margin-right: 12px;
@@ -126,12 +142,24 @@
 }
 
 @include at-breakpoint($pad) {
-  .dictionary-tip {
-
+  .schedule-slider {
+    .sitting {
+      &.empty {
+        height: 345px;
+      }
+    }
   }
 }
 
 @include at-breakpoint($desktop) {
+  .schedule-slider {
+    .sitting {
+      &.empty {
+        @include padding-leader(3);
+        height: 186px;
+      }
+    }
+  }
   .focus-collection, .video-collection {
     @include box-sizing(border-box);
     @include span-columns(4);

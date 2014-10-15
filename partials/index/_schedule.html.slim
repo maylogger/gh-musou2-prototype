@@ -4,20 +4,21 @@
   .schedule-table.tab-content
     .tab-pane.fade#forecast
       #slider-forecast.carousel.slide data-ride="carousel"
-        ol.carousel-indicators
-          li.active data-target="#slider-forecast" data-slide-to="0"
-          li data-target="#slider-forecast" data-slide-to="1"
-          li data-target="#slider-forecast" data-slide-to="2"
+        / ol.carousel-indicators
+        /   li.active data-target="#slider-forecast" data-slide-to="0"
+        /   li data-target="#slider-forecast" data-slide-to="1"
+        /   li data-target="#slider-forecast" data-slide-to="2"
         .carousel-inner
           .item.active
-            = render "/partials/schedule/schedule-forecast"
-          - 2.times do
-            .item
-              = render "/partials/schedule/schedule-forecast"
-        a.left.carousel-control href="#slider-forecast" data-slide="prev"
-          span.glyphicon.icon-prev
-        a.right.carousel-control href="#slider-forecast" data-slide="next"
-          span.glyphicon.icon-next
+            .sitting.empty 目前沒有賽事
+            / = render "/partials/schedule/schedule-forecast"
+          / - 2.times do
+          /   .item
+          /     = render "/partials/schedule/schedule-forecast"
+        / a.left.carousel-control href="#slider-forecast" data-slide="prev"
+        /   span.glyphicon.icon-prev
+        / a.right.carousel-control href="#slider-forecast" data-slide="next"
+        /   span.glyphicon.icon-next
 
     .tab-pane.fade.in.active#live
       #slider-live.carousel.slide data-ride="carousel"
