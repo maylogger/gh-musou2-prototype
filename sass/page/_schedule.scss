@@ -103,7 +103,17 @@
   }
 }
 
-a.sitting {
+.schedule-empty {
+  @include leader(5);
+  @include trailer(3);
+  text-align: center;
+  span {
+    display: block;
+    @include adjust-font-size-to(ms(3));
+  }
+}
+
+.sitting {
   @include pie-clearfix;
   @include unstyled-link;
   @include box-sizing(border-box);
@@ -115,6 +125,7 @@ a.sitting {
   border: 1px solid darken($color-gray-light, 5%);
   @include border-radius(2px);
   &:hover {
+    @include unstyled-link;
     background-color: lighten($color-gray-light, 2.5%);
     .sitting-livenow {
       background-color: lighten($color-red, 15%);
@@ -230,7 +241,7 @@ a.sitting {
   .schedule-table {
     .topic-label { display: inline-block; }
   }
-  a.sitting {
+  .sitting {
     @include border-radius(5px);
     .sitting-summary {
       p { @include adjust-font-size-to(ms(1)); }
@@ -239,8 +250,12 @@ a.sitting {
 }
 
 @include at-breakpoint($desktop) {
-  a.sitting {
+  .sitting {
     text-align: left;
+    &.empty {
+      @include padding-leader(3);
+      height: 186px;
+    }
     .sitting-info { padding: 0; }
     .main-info {
       display: inline-block;
