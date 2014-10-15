@@ -24,6 +24,7 @@
 .facebook { @include text-with-icon("icon_facebook"); }
 .wikipedia { @include text-with-icon("icon_wiki"); }
 .lyvote { @include text-with-icon("icon_lyvote"); }
+.hyperlink { @include text-with-icon("icon_hyperlink"); }
 
 @include at-breakpoint($desktop) {
   .legislator-info { display: block; }
