@@ -1,7 +1,13 @@
 - 5.times do
   .news-post
-    .news-date =lorem_date.to_date
     h3.news-title =zh_lorem_sentence
+    .meta-info
+        .meta
+          .label 日期
+          =lorem_date.to_date
+        .meta
+          .label 作者
+          =zh_lorem_name
     .news-content
       p =zh_lorem_paragraph
       - rand(2).times do
