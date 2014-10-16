@@ -1,3 +1,5 @@
+- @legislator_online_status = "online"
+
 .breadcrumb
   .breadcrumb-inner
     ol.breadcrumb-list
@@ -14,11 +16,15 @@
           =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
         .name
           h2 =zh_lorem_name
-          .online-status.online 待命中
+          - if @legislator_online_status == "online"
+            .online-status.online 待命中
+          - if @legislator_online_status == "offline"
+            .online-status 未待命
 
   .legislator-header-inner
     .ask-info-wrap
-      button.btn_ask-legislator 我要發問
+      form
+        button.btn_ask-legislator 我要發問
     .profile-tab-wrap
       ul.profile-tab
         li.active
@@ -57,7 +63,10 @@
     .legislator-profile
       .tab-content.profile-content
         .tab-pane.fade.in.active#news
-          = render "/partials/legislators/legislators-news"
+          = render "/partials/legislators/legislators-news-ask-answer"
+          - 4.times do
+            = render "/partials/legislators/legislators-news"
+          button.btn_loadmore 看更多
         .tab-pane.fade#ask
           = render "/partials/legislators/legislators-ask"
         .tab-pane.fade#data

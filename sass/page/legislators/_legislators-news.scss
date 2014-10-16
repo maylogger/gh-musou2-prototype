@@ -6,6 +6,25 @@
     .news-title { font-weight: bold; }
     .meta-info { @include trailer(); }
     .news-content {
+      .question {
+        position: relative;
+        @include trailer();
+        padding-left: 20px;
+        @include adjust-font-size-to(ms(1), 1.2);
+        &:before {
+          content: "Ｑ";
+          position: absolute;
+          top: -10px;
+          left: -20px;
+          @include adjust-font-size-to(ms(4));
+          font-weight: bold;
+          color: lighten($color-red, 5%);
+        }
+      }
+      .answer-link {
+        &:before { content: "[ "; }
+        &:after { content: " ]"; }
+      }
       .video-wrap {
         position: relative;
         width: 100%;
@@ -22,7 +41,7 @@
     }
   }
   .news-interactive {
-    @include leader(.5);
+    @include leader();
     @include trailer();
     @include pie-clearfix;
   }
