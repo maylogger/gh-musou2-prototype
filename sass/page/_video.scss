@@ -67,6 +67,10 @@
 .video {
   position: relative;
   background-color: $color-black;
+  .container { max-width: 960px; }
+  .fixed-container {
+    height: 100%;
+  }
   .video-cover {
     color: black;
     background-color: white;
@@ -92,6 +96,12 @@
   }
 }
 
+.iframe-video-inner.is-fixed {
+  .fixed-container {
+    @include pie-clearfix;
+    @extend %container;
+  }
+}
 
 @include at-breakpoint($pad) {
   .video-list-item {
@@ -204,42 +214,31 @@
   .iframe-video-inner.is-fixed {
     position: fixed;
     top: auto;
-    left: auto;
-    bottom: 192px;
-    max-width: 1136px;
-    width: 90%;
+    left: 0;
+    bottom: 48px;
     height: auto;
     opacity: 0;
+    @include translateX(50%);
     &.is-visible {
       opacity: 1;
-      @include transition(opacity .25s);
+      @include translateX(0%);
+      @include transition(opacity .25s, transform .5s);
     }
     &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -96px;
-      bottom: -32px;
-      right: 0;
-      width: 368px;
-      @include background(linear-gradient(to bottom, rgba(white, 0) 0%, white 15%, white 90%, rgba(white, 0) 100%));
+
     }
     &:after {
-      content: "即時預覽";
-      display: block;
-      position: absolute;
-      top: -42px;
-      right: 0;
-      width: 368px;
-      height: 30px;
-      font-weight: bold;
-      border-bottom: 1px solid rgba($color-red, .5);
+
     }
     iframe {
-      position: relative;
-      float: right;
-      width: 368px;
+      @include box-sizing(border-box);
+      @include span-columns(4 omega);
+      padding: 6px;
       height: 210px;
+      border: 1px solid $color-gray;
+      @include border-radius(5px);
+      background-color: white;
+      @include box-shadow(0px 0px 10px rgba(black, .5));
     }
   }
 }
