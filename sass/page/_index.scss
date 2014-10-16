@@ -75,7 +75,7 @@
     @include padding-trailer(.25);
     @include adjust-font-size-to(ms(1), 1.25);
     font-weight: bold;
-    border-bottom: 1px solid $color-red;
+    border-bottom: 1px solid $color-gray;
     .entrance {
       float: right;
       margin-top: 6px;
@@ -91,7 +91,7 @@
     @include padding-trailer(.25);
     @include adjust-font-size-to(ms(1), 1.25);
     font-weight: bold;
-    border-bottom: 1px solid $color-red;
+    border-bottom: 1px solid $color-gray;
     .entrance {
       float: right;
       margin-top: 6px;
@@ -100,7 +100,18 @@
   }
   .list {
     li { margin-top: 13px; }
-    a { min-height: 50px; }
+    a {
+      min-height: 50px;
+      &:hover {
+        text-decoration: none;
+        .update-content {
+          .content {
+            color: $color-red;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
   }
   .avatar {
     float: left;
