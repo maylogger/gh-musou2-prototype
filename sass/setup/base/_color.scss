@@ -29,8 +29,8 @@ $text-gray-light    : lighten($text-gray, 15%);
 // global-text-color
 $global-text-color       : $text-black;
 $global-text-color-muted : $text-gray;
-$global-link-color       : $color-blue-dark;
-$global-link-color-hover : darken($color-blue-dark, 20%);
+$global-link-color       : darken($color-red, 5%);
+$global-link-color-hover : $color-red;
 
 // background & border
 $global-background-color : #f3f3f3;
