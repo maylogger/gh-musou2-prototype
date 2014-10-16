@@ -1,18 +1,24 @@
-- @ask_form_status = "open"
+- @ask_form_status = "no_signin"
 
 .ask-form
   - if @ask_form_status == "open"
     .push-threshold 大推門檻 <span class="number">50</span> 推
     .label 請輸入要問的問題
-    input type="text"
+    input type="text" placeholder="請簡述您的問題，4 字以上，30 字以下。"
     .label 完整敘述
     textarea rows="5"
     p.rule 一天可以發問 5 個問題，發問的問題在尚未回答或尚未過大推門檻前會存在一個月，問題一個月內立委未回答或未過大推門檻將會刪除。
-    button 我要提問
+    form
+      button 我要提問
   - if @ask_form_status == "close"
     .close
       = image_tag("ask_close.jpg")
       p 沃草！你今天的扣打已經用完了，明天請早。
+  - if @ask_form_status == "no_signin"
+    .close
+      = image_tag("ask_close.jpg")
+      p 您尚未登入喔，請先登入才能發問喔。
+      button 登入
 .question-list
   .sort
     | 排序

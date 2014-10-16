@@ -4,12 +4,15 @@ $color-black-light  : #555;
 $color-gray         : #999;
 $color-gray-light   : #eee;
 
-
 // blue
 $color-blue-light   : #53caf5;
 $color-blue         : #40a9de;
 $color-blue-dark    : darken($color-blue, 10%);
 $color-blue-deep    : #415692;
+
+//green
+$color-green        : #00d607;
+$color-green-light  : #00ff08;
 
 // color by musou.tw
 $color-red-dark     : #700007;
@@ -26,8 +29,8 @@ $text-gray-light    : lighten($text-gray, 15%);
 // global-text-color
 $global-text-color       : $text-black;
 $global-text-color-muted : $text-gray;
-$global-link-color       : $color-blue-dark;
-$global-link-color-hover : darken($color-blue-dark, 20%);
+$global-link-color       : darken($color-red, 5%);
+$global-link-color-hover : $color-red;
 
 // background & border
 $global-background-color : #f3f3f3;

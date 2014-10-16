@@ -1,0 +1,615 @@
+.breadcrumb
+  .breadcrumb-inner
+    ol.breadcrumb-list
+      li: a href="/" 首頁
+      li: a href="/legislators/" 立委線上
+      li: a href="/legislators/legislator.html" 阿草
+
+.legislator-header
+  .legislator-header-bg style="background-image: url('/images/WO_banner.png')"
+    .legislator-header-inner
+      .legislator-head
+        .avatar.is-large.has-party
+          .party =image_tag("/images/WO.png")
+          =image_tag("/images/a_cao.png")
+        .name
+          h2 阿草
+          .online-status.online 待命中
+
+  .legislator-header-inner
+    .ask-info-wrap
+      button.btn_ask-legislator 我要發問
+    .profile-tab-wrap
+      ul.profile-tab
+        li.active
+          a.legislator-news href="#news" role="tab" data-toggle="tab" 新消息
+        li
+          a.legislator-ask href="#ask" role="tab" data-toggle="tab" 發問
+        li
+          a.legislator-data href="#data" role="tab" data-toggle="tab" 簡介
+
+.legislator-main
+  .container
+    .sidebar
+      .legislator-info.sidebar-item
+        h3.sidebar-title 基本資料
+        ul.list
+          li
+            .list-label 黨籍
+            .list-content 沃草黨
+          li
+            .list-label 委員會
+            .list-content 草泥馬保育委員會
+          li
+            .list-label 近期動態
+            .list-content
+              .positive-status 參選南投市長
+              .positive-status 參選立法委員
+          li
+            .list-label 相關連結
+            .list-content
+              a.facebook target="_blank" href="#" 官方臉書
+              a.wikipedia target="_blank" href="#" 維基百科
+              a.lyvote target="_blank" href="http://vote.ly.g0v.tw/" g0v 立委投票指南
+
+    .legislator-profile
+      .tab-content.profile-content
+        .tab-pane.fade.in.active#news
+
+          .news-post
+            h3.news-title 沃草！是公民社會的肥沃草原
+            .meta-info
+              .meta
+                .label 日期
+                =lorem_date.to_date
+              .meta
+                .label 作者
+                =zh_lorem_name
+            .news-content
+              .video-wrap
+                iframe src="//www.youtube.com/embed/V1VrrNS49PE" frameborder="0" allowfullscreen=""
+            .news-interactive
+              .news-rating
+                a.btn-share-module href="/lightbox/share.html"
+                  .button 分享
+                  .counter #{rand(1000)}
+                a.btn-like-module href="#"
+                  .button 讚
+                  .counter #{rand(1000)}
+                a.btn-dislike-module href="#"
+                  .button 噓
+                  .counter 0
+            h4.news-comment-title 立委評論
+            .news-comment
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p 加油~很感謝你們為台灣地付出~
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p 感謝沃草提供這樣的平台，加油！
+              .comment-form
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .comment-button 發表評論...
+                .comment-input
+                  input type="text" placeholder="請輸入訊息..."
+
+          .news-post
+            h3.news-title 【阿草假日特輯．第一話】意味不明的調查
+            .meta-info
+              .meta
+                .label 日期
+                =lorem_date.to_date
+              .meta
+                .label 作者
+                =zh_lorem_name
+            .news-content
+              img src="/images/news_image.jpg"
+            .news-interactive
+              .news-rating
+                a.btn-share-module href="/lightbox/share.html"
+                  .button 分享
+                  .counter #{rand(1000)}
+                a.btn-like-module href="#"
+                  .button 讚
+                  .counter #{rand(1000)}
+                a.btn-dislike-module href="#"
+                  .button 噓
+                  .counter #{rand(10)}
+            h4.news-comment-title 立委評論
+            .news-comment
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p XDDDD
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p 阿草雖然胖還是很可愛的
+              .comment-form
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .comment-button 發表評論...
+                .comment-input
+                  input type="text" placeholder="請輸入訊息..."
+
+          .news-post
+            h3.news-title 國會無雙今日五分鐘戰報
+            .meta-info
+              .meta
+                .label 日期
+                =lorem_date.to_date
+              .meta
+                .label 作者
+                =zh_lorem_name
+            .news-content
+              p 今日食安事件再次爆出令人震驚的消息，食藥署直接將廠商聲明稿作為稽查報告提供給立法委員，多名立委質疑食藥署已引發國家體制問題，且甚至搞不清楚政府與廠商的立場，面對行政院管轄單位接連出狀況，行政院院長江宜樺明日接受施政報告質詢，將如何面對立委猛烈的砲火？
+              ul
+                li 明日直播賽事：<a href="http://musou.tw/schedules">http://musou.tw/schedules</a>
+                li 開始時間：9點整
+            .news-interactive
+              .news-rating
+                a.btn-share-module href="/lightbox/share.html"
+                  .button 分享
+                  .counter #{rand(1000)}
+                a.btn-like-module href="#"
+                  .button 讚
+                  .counter #{rand(1000)}
+                a.btn-dislike-module href="#"
+                  .button 噓
+                  .counter #{rand(10)}
+            h4.news-comment-title 立委評論
+            .news-comment
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p 期待明天的直播！
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p 希望有有利於人民的結果！
+              .comment-form
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .comment-button 發表評論...
+                .comment-input
+                  input type="text" placeholder="請輸入訊息..."
+
+          .news-post
+            h3.news-title 沃草系列專題：雪谷纜車
+            .meta-info
+              .meta
+                .label 日期
+                =lorem_date.to_date
+              .meta
+                .label 作者
+                =zh_lorem_name
+            .news-content
+              p 政府正著手興建連結溫泉之鄉「谷關」與「大雪山森林遊樂區」的「雪谷纜車」，引發環保團體疑慮，認為此舉將破壞大雪山台灣黑熊棲地。環保團體並於今年七月15日，號召一千多人走上台中街頭參與「雪谷熊之戰」，反對纜車興建，捍衛臺灣黑熊生存權。雪谷纜車對環境如何造成影響？是否能為當地居民帶來錢潮？
+              p 在兩方勢力爭奪的「雪谷熊之戰」中，卻少有人提及，無論谷關商圈或大雪山，過去都是泰雅族原住民的活動領域。當地原住民社團「十文溪社區發展協會」理事長歐賓．舒樣接受《沃草》專訪時表示，希望部落能從雪谷纜車計劃中受惠。
+            .news-interactive
+              .news-rating
+                a.btn-share-module href="/lightbox/share.html"
+                  .button 分享
+                  .counter #{rand(1000)}
+                a.btn-like-module href="#"
+                  .button 讚
+                  .counter #{rand(1000)}
+                a.btn-dislike-module href="#"
+                  .button 噓
+                  .counter #{rand(10)}
+            h4.news-comment-title 立委評論
+            .news-comment
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p 臺灣黑熊是臺灣非常重要的保育類動物，一定要保護！
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p 雪谷纜車真的能受惠泰雅族嗎？
+              .comment-form
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .comment-button 發表評論...
+                .comment-input
+                  input type="text" placeholder="請輸入訊息..."
+
+          .news-post
+            h3.news-title 島民自造X群眾掀起的三場革命
+            .meta-info
+              .meta
+                .label 日期
+                =lorem_date.to_date
+              .meta
+                .label 作者
+                =zh_lorem_name
+            .news-content
+              p 這個Friday Night，沃草柳林醫師將與大家相約，聊聊「市長，給問嗎？」最新動態～<br>顛覆鬼島，啟動改變的力量！<br>我們腳下的這片土地，佈滿了政治混亂、教改失敗、媒體毒瘤、官員貪腐、體制失效的亂象叢生。台灣的未來，究竟由誰決定？
+              p 或許有的人選擇離開台灣到國外發展，但有另外一群人，卻選擇留在這裡，努力地讓這片土地從鬼島變成寶島。
+              p 改變的力量正透過FlyingV不斷發生，10月的FlyingV Friday Night邀請到在電視生態、美學教育、政治民主三個領域努力的團隊，來分享他們如何跨出改變的第一步。
+              p「我們不是來適應社會的，我們是來改變社會的」
+              p 十月Flying Friday Night邀您一起參與改變。
+            .news-interactive
+              .news-rating
+                a.btn-share-module href="/lightbox/share.html"
+                  .button 分享
+                  .counter #{rand(1000)}
+                a.btn-like-module href="#"
+                  .button 讚
+                  .counter #{rand(1000)}
+                a.btn-dislike-module href="#"
+                  .button 噓
+                  .counter #{rand(10)}
+            h4.news-comment-title 立委評論
+            .news-comment
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p 喔喔喔喔！！太酷了
+              .comment-item
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .content
+                  .name =zh_lorem_name
+                  p 沃草加油啊!!!
+              .comment-form
+                a.avatar.is-small.has-party href="/legislators/legislator.html"
+                  .party =image_tag("/images/WO.png")
+                  =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+                .comment-button 發表評論...
+                .comment-input
+                  input type="text" placeholder="請輸入訊息..."
+
+          button.btn_loadmore 看更多
+
+        .tab-pane.fade#ask
+          .ask-form
+            .push-threshold 大推門檻 <span class="number">50</span> 推
+            .label 請輸入要問的問題
+            input type="text"
+            .label 完整敘述
+            textarea rows="5"
+            p.rule 一天可以發問 5 個問題，發問的問題在尚未回答或尚未過大推門檻前會存在一個月，問題一個月內立委未回答或未過大推門檻將會刪除。
+            button 我要提問
+          .question-list
+            .sort
+              | 排序
+              select
+                option 最新發問
+                option 最早發問
+            .filter
+              ul
+                li.active: a href="#all-question" role="tab" data-toggle="tab" 全部
+                li: a href="#answered" role="tab" data-toggle="tab" 已回答
+                li: a href="#unanswered" role="tab" data-toggle="tab" 未回答
+
+            .tab-pane.fade.in.active#all-question
+              .question-item.panel
+                ul.question-header
+                  li.push
+                    .btn-like-module.in-question
+                      .button 大推
+                      .counter #{rand(100)}
+                  li.date 09/12
+                  li.open
+                    button.btn_small data-parent="#all-question" data-toggle="collapse" href="#question-all-1" 展開
+                  li.question-title 為何不考慮徵收空屋稅？
+
+                .question-content.collapse id="question-all-1"
+                  .question-status
+                    .info 22 人已大推，至 <span class="date">12/31</span> 問題消失前，尚需 28 人大推。
+                    .action
+                      a.btn-like-module.push href="#"
+                        .button 讚
+                        .text 大推
+                      a.btn-share-module href="/lightbox/share.html"
+                        .button 分享
+                  h3.question-title 為何不考慮徵收空屋稅？
+                  .question
+                    p 台北房價居高不下，現在有在交易中的房舍也大多不是自住客在購買，幾乎都是投資課在互相轉手炒房價。台北新北的新成屋到晚上幾乎開燈的沒幾戶，都是空屋。<br>請問是否有考慮增收空屋稅？除了增收之外也可以開放大家檢舉人頭空屋增加稅收，如此一來可以預期<br>1. 房價下降，因為空屋就會課重稅<br>2. 房租下跌，投機客需要儘速將房屋租出去<br>這樣相信對台北的房價有所幫助，請問為何都不曾考慮要這樣做呢？
+                  .answer
+                    .unanswered-message 尚未有任何回答，快推爆此問題，我們會幫您請教立委。
+
+              .question-item.panel
+                ul.question-header
+                  li.push
+                    .btn-like-module.in-question
+                      .button 大推
+                      .counter #{rand(100)}
+                  li.date 09/12
+                  li.open
+                    button.btn_small data-parent="#all-question" data-toggle="collapse" href="#question-all-2" 展開
+                  li.question-title 對流浪動物的政策規劃
+
+                .question-content.collapse id="question-all-2"
+                  .question-status
+                    .info 22 人已大推，至 <span class="date">12/31</span> 問題消失前，尚需 28 人大推。
+                    .action
+                      a.btn-like-module.push href="#"
+                        .button 讚
+                        .text 大推
+                      a.btn-share-module href="/lightbox/share.html"
+                        .button 分享
+                  h3.question-title 對流浪動物的政策規劃
+                  .question
+                    p 在台灣關進動物收容所的流浪狗倘若無人認養，牠們的生命就只有短暫的十二天。 每年粗估有10萬隻流浪狗遭到撲殺，雖然如此，流浪動物的數量並沒有因此下降。 流浪動物以TNR（捕捉、絕育、放回）方式進行數量控制是近幾年逐步成熟的概念， 根據民間團體的粗估，一隻流浪狗從捕捉、安置到安樂死，大約需花上4810元，但進行結紮手術僅需要1000元， 即使加上術後休養，價格仍比目前政府執行的處理方式便宜。 1.是否贊成台北市以TNR（捕捉、絕育、放回）方式控制流浪動物的數量? 2.會有何具體做法? 3.另外對於流浪犬製造來源之一，繁殖大量幼犬,又無領牌的非法狗場。又有何管制辦法?
+                  .answer
+                    p 我主張台北市要建立一個對動物友善的城市，將來公園腹地大到一個程度，應該要有一個柵欄的空間讓動物奔跑。公園裡也增加提供公園犬貓拾便袋的設施。建立一個動物友善的空間，讓更多的餐廳、公共場所、遊樂設施等，讓寵物可以進入。
+                    p 另外要加強養育動物的教育，教育是一切的根本。我認為在國民義務教育裡面，要灌輸學童正確的概念，比方說以領養的方式來代替購買，或是餵養動物要餵飼料，而不是剩菜剩飯。也可鼓勵民間成立犬貓學校，不只是訓練貓狗，同時也要提供飼主教材，透過教育方式來灌輸與寵物相處的觀念。
+                  .feedback
+                    span 你對這回答滿意嗎？
+                    a.btn-like-module href="#"
+                      .button 讚
+                      .counter #{rand(1000)}
+                    a.btn-dislike-module href="#"
+                      .button 噓
+                      .counter #{rand(100)}
+
+              .question-item.panel
+                ul.question-header
+                  li.push
+                    .btn-like-module.in-question
+                      .button 大推
+                      .counter #{rand(100)}
+                  li.date 09/12
+                  li.open
+                    button.btn_small data-parent="#all-question" data-toggle="collapse" href="#question-all-3" 展開
+                  li.question-title 提到環保，國外搖籃到搖籃的設計，台灣何時引進？
+
+                .question-content.collapse id="question-all-3"
+                  .question-status
+                    .info 22 人已大推，至 <span class="date">12/31</span> 問題消失前，尚需 28 人大推。
+                    .action
+                      a.btn-like-module.push href="#"
+                        .button 讚
+                        .text 大推
+                      a.btn-share-module href="/lightbox/share.html"
+                        .button 分享
+                  h3.question-title 提到環保，國外搖籃到搖籃的設計，台灣何時引進？
+                  .question
+                    p 搖籃到搖籃的設計，意為萬物都是養分，沒有廢棄物的觀念，設計之初就好好把關，而不是在製造出一堆難以分解的物品再來談有名無實的回收。希望政府在這方面多加扶持。
+                  .answer
+                    .unanswered-message 尚未有任何回答，快推爆此問題，我們會幫您請教立委。
+
+              .question-item.panel
+                ul.question-header
+                  li.push
+                    .btn-like-module.in-question
+                      .button 大推
+                      .counter #{rand(100)}
+                  li.date 09/12
+                  li.open
+                    button.btn_small data-parent="#all-question" data-toggle="collapse" href="#question-all-4" 展開
+                  li.question-title 請問對龍山寺附近遊民的解決辦法
+
+                .question-content.collapse id="question-all-4"
+                  .question-status
+                    .info 22 人已大推，至 <span class="date">12/31</span> 問題消失前，尚需 28 人大推。
+                    .action
+                      a.btn-like-module.push href="#"
+                        .button 讚
+                        .text 大推
+                      a.btn-share-module href="/lightbox/share.html"
+                        .button 分享
+                  h3.question-title 請問對龍山寺附近遊民的解決辦法
+                  .question
+                    p 龍山寺周遭有許多遊民聚集，且近年來數量不減反增 遊民們的處境令人同情，但也帶來許多問題 請問市長是否有具體方法協助這些遊民朋友，使他們能夠被安置或輔導？
+                  .answer
+                    p 遊民問題沒有簡單解決的辦法。成為遊民可能是因為經濟、健康、家庭等方面出了問題的結果，台灣遊民形成的原因與國外以失業為主的情況不同，家庭崩壞、身心障礙都是台灣遊民形成的主要原因，這些都不是用就業、安置等方法就可以解決。
+                    p 我認為我們應該參考國外的經驗，以美國紐約市為例，市政府和許多專業團體合作，以個案指導的方式來輔導遊民，使其重返社會。即使是無法回歸或不願重返社會的遊民也能夠獲平安、平靜的照顧。我當選市長之後將整合市府內部各局處的資源，並向專業團體尋求協助，結合市政府與民間專業團體的力量，妥善、有效的處理遊民問題。
+                  .feedback
+                    span 你對這回答滿意嗎？
+                    a.btn-like-module href="#"
+                      .button 讚
+                      .counter #{rand(1000)}
+                    a.btn-dislike-module href="#"
+                      .button 噓
+                      .counter #{rand(100)}
+
+            .tab-pane.fade#answered
+              .question-item.panel
+                ul.question-header
+                  li.push
+                    .btn-like-module.in-question
+                      .button 大推
+                      .counter #{rand(100)}
+                  li.date 09/12
+                  li.open
+                    button.btn_small data-parent="#answered" data-toggle="collapse" href="#question-answered-1" 展開
+                  li.question-title 對流浪動物的政策規劃
+
+                .question-content.collapse id="question-answered-1"
+                  .question-status
+                    .info 22 人已大推，至 <span class="date">12/31</span> 問題消失前，尚需 28 人大推。
+                    .action
+                      a.btn-like-module.push href="#"
+                        .button 讚
+                        .text 大推
+                      a.btn-share-module href="/lightbox/share.html"
+                        .button 分享
+                  h3.question-title 對流浪動物的政策規劃
+                  .question
+                    p 在台灣關進動物收容所的流浪狗倘若無人認養，牠們的生命就只有短暫的十二天。 每年粗估有10萬隻流浪狗遭到撲殺，雖然如此，流浪動物的數量並沒有因此下降。 流浪動物以TNR（捕捉、絕育、放回）方式進行數量控制是近幾年逐步成熟的概念， 根據民間團體的粗估，一隻流浪狗從捕捉、安置到安樂死，大約需花上4810元，但進行結紮手術僅需要1000元， 即使加上術後休養，價格仍比目前政府執行的處理方式便宜。 1.是否贊成台北市以TNR（捕捉、絕育、放回）方式控制流浪動物的數量? 2.會有何具體做法? 3.另外對於流浪犬製造來源之一，繁殖大量幼犬,又無領牌的非法狗場。又有何管制辦法?
+                  .answer
+                    p 我主張台北市要建立一個對動物友善的城市，將來公園腹地大到一個程度，應該要有一個柵欄的空間讓動物奔跑。公園裡也增加提供公園犬貓拾便袋的設施。建立一個動物友善的空間，讓更多的餐廳、公共場所、遊樂設施等，讓寵物可以進入。
+                    p 另外要加強養育動物的教育，教育是一切的根本。我認為在國民義務教育裡面，要灌輸學童正確的概念，比方說以領養的方式來代替購買，或是餵養動物要餵飼料，而不是剩菜剩飯。也可鼓勵民間成立犬貓學校，不只是訓練貓狗，同時也要提供飼主教材，透過教育方式來灌輸與寵物相處的觀念。
+                  .feedback
+                    span 你對這回答滿意嗎？
+                    a.btn-like-module href="#"
+                      .button 讚
+                      .counter #{rand(1000)}
+                    a.btn-dislike-module href="#"
+                      .button 噓
+                      .counter #{rand(100)}
+
+              .question-item.panel
+                ul.question-header
+                  li.push
+                    .btn-like-module.in-question
+                      .button 大推
+                      .counter #{rand(100)}
+                  li.date 09/12
+                  li.open
+                    button.btn_small data-parent="#answered" data-toggle="collapse" href="#question-answered-2" 展開
+                  li.question-title 請問對龍山寺附近遊民的解決辦法
+
+                .question-content.collapse id="question-answered-2"
+                  .question-status
+                    .info 22 人已大推，至 <span class="date">12/31</span> 問題消失前，尚需 28 人大推。
+                    .action
+                      a.btn-like-module.push href="#"
+                        .button 讚
+                        .text 大推
+                      a.btn-share-module href="/lightbox/share.html"
+                        .button 分享
+                  h3.question-title 請問對龍山寺附近遊民的解決辦法
+                  .question
+                    p 龍山寺周遭有許多遊民聚集，且近年來數量不減反增 遊民們的處境令人同情，但也帶來許多問題 請問市長是否有具體方法協助這些遊民朋友，使他們能夠被安置或輔導？
+                  .answer
+                    p 遊民問題沒有簡單解決的辦法。成為遊民可能是因為經濟、健康、家庭等方面出了問題的結果，台灣遊民形成的原因與國外以失業為主的情況不同，家庭崩壞、身心障礙都是台灣遊民形成的主要原因，這些都不是用就業、安置等方法就可以解決。
+                    p 我認為我們應該參考國外的經驗，以美國紐約市為例，市政府和許多專業團體合作，以個案指導的方式來輔導遊民，使其重返社會。即使是無法回歸或不願重返社會的遊民也能夠獲平安、平靜的照顧。我當選市長之後將整合市府內部各局處的資源，並向專業團體尋求協助，結合市政府與民間專業團體的力量，妥善、有效的處理遊民問題。
+                  .feedback
+                    span 你對這回答滿意嗎？
+                    a.btn-like-module href="#"
+                      .button 讚
+                      .counter #{rand(1000)}
+                    a.btn-dislike-module href="#"
+                      .button 噓
+                      .counter #{rand(100)}
+
+            .tab-pane.fade#unanswered
+              .question-item.panel
+                ul.question-header
+                  li.push
+                    .btn-like-module.in-question
+                      .button 大推
+                      .counter #{rand(100)}
+                  li.date 09/12
+                  li.open
+                    button.btn_small data-parent="#unanswered" data-toggle="collapse" href="#question-unanswered-1" 展開
+                  li.question-title 為何不考慮徵收空屋稅？
+
+                .question-content.collapse id="question-unanswered-1"
+                  .question-status
+                    .info 22 人已大推，至 <span class="date">12/31</span> 問題消失前，尚需 28 人大推。
+                    .action
+                      a.btn-like-module.push href="#"
+                        .button 讚
+                        .text 大推
+                      a.btn-share-module href="/lightbox/share.html"
+                        .button 分享
+                  h3.question-title 為何不考慮徵收空屋稅？
+                  .question
+                    p 台北房價居高不下，現在有在交易中的房舍也大多不是自住客在購買，幾乎都是投資課在互相轉手炒房價。台北新北的新成屋到晚上幾乎開燈的沒幾戶，都是空屋。<br>請問是否有考慮增收空屋稅？除了增收之外也可以開放大家檢舉人頭空屋增加稅收，如此一來可以預期<br>1. 房價下降，因為空屋就會課重稅<br>2. 房租下跌，投機客需要儘速將房屋租出去<br>這樣相信對台北的房價有所幫助，請問為何都不曾考慮要這樣做呢？
+                  .answer
+                    .unanswered-message 尚未有任何回答，快推爆此問題，我們會幫您請教立委。
+
+              .question-item.panel
+                ul.question-header
+                  li.push
+                    .btn-like-module.in-question
+                      .button 大推
+                      .counter #{rand(100)}
+                  li.date 09/12
+                  li.open
+                    button.btn_small data-parent="#unanswered" data-toggle="collapse" href="#question-unanswered-2" 展開
+                  li.question-title 提到環保，國外搖籃到搖籃的設計，台灣何時引進？
+
+                .question-content.collapse id="question-unanswered-2"
+                  .question-status
+                    .info 22 人已大推，至 <span class="date">12/31</span> 問題消失前，尚需 28 人大推。
+                    .action
+                      a.btn-like-module.push href="#"
+                        .button 讚
+                        .text 大推
+                      a.btn-share-module href="/lightbox/share.html"
+                        .button 分享
+                  h3.question-title 提到環保，國外搖籃到搖籃的設計，台灣何時引進？
+                  .question
+                    p 搖籃到搖籃的設計，意為萬物都是養分，沒有廢棄物的觀念，設計之初就好好把關，而不是在製造出一堆難以分解的物品再來談有名無實的回收。希望政府在這方面多加扶持。
+                  .answer
+                    .unanswered-message 尚未有任何回答，快推爆此問題，我們會幫您請教立委。
+
+          button.btn_loadmore 看更多
+
+        .tab-pane.fade#data
+          .legislator-data
+            h3.data-title 基本介紹
+            .article
+              p 我們有一個很簡單而實際的夢想：我們相信台灣可以更好，而讓台灣更好的力量來自於更多主動參與、向外關注的公民。
+              p 沃草的英文名字「Watchout」，原意是「提防」和「警戒」，只要我們每個小小公民都能時時張大眼睛、提防警戒，政客就不容易為所欲為。
+              p 一個成熟的公民社會，絕對不能只靠少數人付出一切去投入在社會運動之中。每個人只要一起付出各自一小部分的時間心力，就能改變這個社會，更接近那個你我嚮往的理想樂土一步。
+              p 沃草希望做一個農夫，提供公民更好的參與時政的平台和工具，在這公民社會的土壤施肥灌溉，讓這個理想的種子在每個人心中萌芽滋長，建立真正的公民社會。
+            h3.data-title 基本資料
+            ul.list
+              li
+                .list-label 黨籍
+                .list-content 沃草黨
+              li
+                .list-label 委員會
+                .list-content 草泥馬保育委員會
+              li
+                .list-label 屆別
+                .list-content 第八屆
+              li
+                .list-label 選區
+                .list-content 台北市 第一選區
+              li
+                .list-label 學歷
+                .list-content
+                  | 沃草公民學院（在學中）
+              li
+                .list-label 經歷
+                .list-content
+                  | 南投清境農場<br>
+                  | 台中東勢林場<br>
+                  | 沃草公民學院（在學中）
+              li
+                .list-label 近況
+                .list-content
+                  .positive-status 參選南投市長
+                  .positive-status 參選立法委員
+              li
+                .list-label 相關連結
+                .list-content
+                  a.facebook target="_blank" href="#" 官方臉書
+                  a.wikipedia target="_blank" href="#" 維基百科
+                  a.lyvote target="_blank" href="http://vote.ly.g0v.tw/" g0v 立委投票指南
+              li
+                .list-content
+                  p.note 更詳細的資料請至 <a href="#">g0v 立委投票指南</a> 觀看

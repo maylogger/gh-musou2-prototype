@@ -1,0 +1,23 @@
+.message {
+  text-align: center;
+  .message-text {
+    @include box-sizing(border-box);
+    margin: rhythm() auto;
+    padding: rhythm();
+    max-width: 400px;
+    @include adjust-font-size-to(ms(0));
+    text-align: left;
+    border: 1px solid $color-gray-light;
+    @include border-radius(5px);
+    ol {
+      @include leader(.5);
+      @include trailer(0);
+    }
+  }
+}
+@include at-breakpoint($desktop) {
+  .message {
+    @include squish(3,3);
+    @include span-columns(6);
+  }
+}

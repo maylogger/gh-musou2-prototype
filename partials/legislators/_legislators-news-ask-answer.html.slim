@@ -1,5 +1,5 @@
 .news-post
-  h3.news-title =zh_lorem_sentence
+  h3.news-title #{zh_lorem_name} 已回答了一個問題
   .meta-info
       .meta
         .label 日期
@@ -8,9 +8,10 @@
         .label 作者
         =zh_lorem_name
   .news-content
-    p =zh_lorem_paragraph
-    - rand(2).times do
-      =image_tag lorem_image("640x360")
+    p #{zh_lorem_name} 回答了一個問題：
+    blockquote
+      .question =zh_lorem_paragraph
+    a.answer-link href="#" 點此看立委回答內容
   .news-interactive
     .news-rating
       a.btn-share-module href="/lightbox/share.html"

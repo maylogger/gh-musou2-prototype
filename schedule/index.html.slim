@@ -1,4 +1,5 @@
 - @page_name = "schedule"
+- @schedule_status = "open"
 
 .breadcrumb
   .breadcrumb-inner
@@ -24,8 +25,13 @@
         - (1 + rand(3)).times do
           = render "/partials/schedule/schedule-forecast"
     .tab-pane.fade#live
-      - (1 + rand(5)).times do
-        = render "/partials/schedule/schedule-live"
+      - if @schedule_status == "open"
+        - (1 + rand(5)).times do
+          = render "/partials/schedule/schedule-live"
+      - if @schedule_status == "close"
+        .schedule-empty
+          img src="/images/schedule_empty.png"
+          span 目前沒有賽事耶（摳）。
     .tab-pane.fade#report
       .nav-select
         .select-label 委員會分類

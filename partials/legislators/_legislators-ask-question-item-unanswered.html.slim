@@ -7,7 +7,7 @@
           .counter #{rand(1000)}
       li.date 09/12
       li.open
-        button.btn_small data-parent="#unanswered" data-toggle="collapse" href="#question-unanswered#{i+1}" 展開
+        button.btn_small.question-collapse-button data-parent="#unanswered" data-toggle="collapse" href="#question-unanswered#{i+1}" 展開
       li.question-title =zh_lorem_sentence
 
     .question-content.collapse id="question-unanswered#{i+1}"

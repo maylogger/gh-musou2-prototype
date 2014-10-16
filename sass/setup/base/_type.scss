@@ -71,11 +71,12 @@ p {
 
 blockquote {
   @include reset-box-model;
+  position: relative;
   @include leader(1);
   @include trailer(1);
-  border-left: 3px solid $color-gray-light;
   padding-left: rhythm(1);
-  @include adjust-font-size-to($base-font-size);
+  @include adjust-font-size-to(ms(1));
+  border-left: 5px solid darken($color-gray-light, 10%);
   cite {
     display: block;
     color: $global-text-color-muted;

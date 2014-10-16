@@ -25,6 +25,14 @@ $('.month-post-list').on("hide.bs.collapse", function(){
   $(this).prev('.month-title').removeClass('is-open');
 });
 
+$('.question-content').on("show.bs.collapse", function(){
+  $(this).prev('.question-header').children('.open').children('.question-collapse-button').text('收合');
+});
+
+$('.question-content').on("hide.bs.collapse", function(){
+  $(this).prev('.question-header').children('.open').children('.question-collapse-button').text('展開');
+});
+
 $('.catalog').hcSticky({
   top: 24,
   responsive: true,
