@@ -113,9 +113,11 @@
     .question {
       position: relative;
       @include trailer();
+      @include adjust-font-size-to(ms(1), 1.2);
       &:before {
         content: "Ｑ";
         position: absolute;
+        top: -10px;
         left: -40px;
         @include adjust-font-size-to(ms(4));
         font-weight: bold;
@@ -125,6 +127,7 @@
     .answer {
       position: relative;
       @include trailer();
+      @include adjust-font-size-to(ms(1), 1.2);
       .unanswered-message {
         color: $text-gray;
         font-weight: bold;
@@ -132,6 +135,7 @@
       &:before {
         content: "Ａ";
         position: absolute;
+        top: -10px;
         left: -40px;
         @include adjust-font-size-to(ms(4));
         font-weight: bold;
