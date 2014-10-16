@@ -15,7 +15,10 @@
   a {
     @include unstyled-link;
     display: block;
-    &:hover { text-decoration: underline; }
+    &:hover {
+      text-decoration: underline;
+      .list-content { color: $color-red; }
+    }
   }
   .list-label {
     @extend %subpixel;
@@ -36,9 +39,7 @@
       @include leader(.5);
       @include padding-leader(.5);
     }
-    .list-content-row {
-      padding-bottom: rhythm(.25);
-    }
+    .list-content-row { padding-bottom: rhythm(.25); }
   }
 }
 
