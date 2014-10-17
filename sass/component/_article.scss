@@ -9,11 +9,15 @@
     display: block;
     @include trailer();
   }
+  a { display: inline-block; }
   &.big-text {
     #{headings()} {
       @include leader(2);
       @include trailer();
       text-align: center;
+    }
+    li {
+      #{headings()} { text-align: left; }
     }
     @include at-breakpoint($desktop) {
       %h1, h1 { @include adjust-font-size-to(ms(4), 2); }
