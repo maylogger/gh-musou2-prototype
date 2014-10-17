@@ -2,7 +2,7 @@
 @import "vender/modular-scale";
 
 // ---- modular scale setting ----
-$ms-base: 13px 42px;
+$ms-base: 13px 44px;
 $ms-ratio: $golden;
 
 @include establish-baseline;
