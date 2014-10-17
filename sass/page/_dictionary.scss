@@ -109,7 +109,7 @@
     @include trailer(.5);
     padding: 0 0 6px 0;
     background-color: transparent;
-    border-bottom: 1px solid $color-red;
+    border-bottom: 1px solid $color-gray;
     @include border-radius(0px);
     &:after {
       display: none;
