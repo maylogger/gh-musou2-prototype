@@ -2,22 +2,28 @@
   @include box-sizing(border-box);
   position: fixed;
   z-index: 1000;
-  top: 48px;
-  left: 0;
+  bottom: 12px;
   padding: 6px;
   width: 100%;
-  text-align: center;
   .announce-inner {
     @include pie-clearfix;
     position: relative;
     display: inline-block;
-    max-width: 720px;
+    max-width: 500px;
     padding: 24px;
     text-align: left;
-    background-color: $color-gray-light;
-    border: 2px solid $color-red;
-    @include border-radius(5px);
-    @include box-shadow(0px 5px 10px rgba(black, .5));
+    background-color: white;
+    border: 1px solid $color-red;
+    @include box-shadow(0px 3px 6px rgba(black, .25));
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 10px;
+      background-color: $color-red;
+    }
   }
   .announcer { display: none; }
   .announce-content {
@@ -28,9 +34,14 @@
       @include adjust-font-size-to(ms(0));
     }
     .content {
-      // height: 48px;
+      @include trailer(0);
+      height: 48px;
       overflow: hidden;
       @include adjust-font-size-to(ms(0));
+    }
+    .action {
+      @include adjust-font-size-to(ms(0));
+      font-weight: bold;
     }
   }
   .close {
@@ -48,7 +59,8 @@
 
 @include at-breakpoint($pad) {
   .announce {
-    top: 72px;
+    bottom: 24px;
+    left: 24px;
     .announce-inner {
       padding: 18px;
     }
@@ -57,9 +69,6 @@
       float: left;
       margin-top: 3px;
       margin-right: 12px;
-    }
-    .announce-content {
-      .content { @include adjust-font-size-to(ms(1)); }
     }
   }
 }
