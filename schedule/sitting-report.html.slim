@@ -8,16 +8,18 @@
 .container.lead
   .post
     .article
-      h1 第8屆第5會期第2次臨時會第2次會議
-      .meta-info
-        .meta.is-highlight
-          .label 議題
-          =zh_lorem_words(4+rand(5))
+      .post-title
+        h1 第8屆第5會期第2次臨時會第2次會議
+        .meta-info
+          .meta.is-highlight
+            .label 議題
+            =zh_lorem_words(4+rand(5))
       p = zh_lorem_paragraphs 2+rand(3)
       p = zh_lorem_paragraphs 3+rand(5)
     .post-extend-content
       h3.content-title 戰況記錄
       = render "/partials/live-comment"
+    = render "/partials/disqus"
   .sidebar
     .sitting-info-card.sidebar-item
       a.president href="/legislators/legislator.html"

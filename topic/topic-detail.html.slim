@@ -13,6 +13,7 @@
     .article
       - (2+rand(3)).times do
         = render "/partials/article"
+    = render "/partials/disqus"
 
   .topic-timeline.sidebar
     - 2.times do |i|

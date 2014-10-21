@@ -11,14 +11,14 @@
   }
   .post-title {
     @include trailer(.5);
-    @include padding-trailer(.5);
     font-weight: bold;
     border-bottom: 1px solid $color-gray-light;
   }
   .meta-info {
     @include trailer(.5);
-    @include padding-trailer(.5);
-    border-bottom: 1px solid $color-gray-light;
+  }
+  .iframe-video {
+    @include trailer();
   }
 }
 

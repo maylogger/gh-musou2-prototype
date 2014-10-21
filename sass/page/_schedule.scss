@@ -56,7 +56,7 @@
         position: relative;
         z-index: 10;
         display: inline-block;
-        padding-left: 34px;
+        padding-left: 6px;
         padding-right: 6px;
         background-color: $color-gray;
         &:before {
@@ -68,9 +68,6 @@
           @include transition(opacity .25s);
         }
       }
-      &.schedule-forecast span:before { @include replace-text-with-svg("icon_forecast"); }
-      &.schedule-live span:before { @include replace-text-with-svg("icon_live"); }
-      &.schedule-report span:before { @include replace-text-with-svg("icon_report_white"); }
       &:hover {
         color: white;
         span:before { opacity: 1; }
@@ -237,7 +234,15 @@
 }
 
 @include at-breakpoint($pad) {
-  .schedule-tab li a { @include adjust-font-size-to(ms(2), 1); }
+  .schedule-tab {
+    li a {
+      @include adjust-font-size-to(ms(2), 1);
+      span { padding-left: 34px; }
+      &.schedule-forecast span:before { @include replace-text-with-svg("icon_forecast"); }
+      &.schedule-live span:before { @include replace-text-with-svg("icon_live"); }
+      &.schedule-report span:before { @include replace-text-with-svg("icon_report_white"); }
+    }
+  }
   .schedule-table {
     .topic-label { display: inline-block; }
   }
