@@ -1,19 +1,68 @@
 .schedule-slider {
-  @include padding-leader();
-  @include background( radial-gradient( $color-gray 0%, black 100%) );
-  .slider-title {
-    @include trailer(.5);
-    @include adjust-font-size-to(ms(3));
-    text-align: center;
-    color: $color-gray;
-  }
+  @include padding-trailer(4);
+  @include background( linear-gradient( to bottom, black 0%, $color-black 30%, white 100% ));
   .schedule-table {
     @include leader(0);
-    @include trailer(2);
   }
-  .sitting {
-    margin-left: 12px;
-    margin-right: 12px;
+  .slider-item {
+    float: left;
+    opacity: 0.5;
+    @include scale(.9);
+    @include transition(opacity .25s, transform .25s);
+    &.slick-center {
+      opacity: 1;
+      @include scale(1);
+    }
+  }
+  .sitting.in-index {
+    margin: 0 auto;
+    max-width: 580px;
+    overflow: hidden;
+    border: none;
+    @include border-radius(5px);
+    .sitting-inner {
+      position: relative;
+      padding-top: 100%;
+      background-position: center center;
+      @include background-size(cover);
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // overflow: hidden;
+        // @include border-radius(5px);
+        @include background( linear-gradient( to bottom, rgba(black, 0), rgba(black, 1) 80% ));
+      }
+      @include at-breakpoint(500px 4) { padding-top: 70%; }
+      @include at-breakpoint($pad) { padding-top: 51.75%; }
+    }
+    .sitting-info {
+      position: absolute;
+      z-index: 1000;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      .title {
+        padding: 0 12px;
+        @include adjust-font-size-to(ms(1));
+      }
+      .meta-info {
+        .meta { display: block; }
+        .label { color: white; }
+      }
+      @include at-breakpoint($pad) {
+        .title { @include adjust-font-size-to(ms(2), 1.25); }
+        .meta-info {
+          .meta { display: inline-block; }
+        }
+      }
+    }
     &.empty {
       @include padding-leader(6);
       height: 339px;
@@ -21,39 +70,48 @@
       text-align: center;
       color: $color-gray-light;
       background-color: transparent;
-      border: 1px solid $color-gray;
+      border: none;
       &:hover {
         color: $color-gray-light;
         background-color: transparent;
       }
     }
   }
-  #slider-forecast .sitting,
-  #slider-report .sitting {
-    margin-top: 10px;
-    margin-bottom: 34px;
-  }
-  .schedule-tab li.active a {
-    &:after {
-      content: "";
-      position: absolute;
-      top: -20px;
-      bottom: auto;
-      left: 50%;
-      margin-left: -10px;
-      border: 10px solid transparent;
-      border-bottom-color: $color-gray;
+  .schedule-tab {
+    background-color: transparent;
+    ul {
+      max-width: 480px;
+      &:before { display: none; }
+    }
+    li a {
+      padding-top: 6px;
+      padding-bottom: 42px;
+      @include adjust-font-size-to(ms(1));
+      span {
+        padding-left: 6px;
+        background-color: transparent;
+        &:before { display: none; }
+      }
+    }
+    li.active a {
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 18px;
+        margin-left: -10px;
+        border-top-color: white;
+      }
     }
   }
 }
 
 .slogan {
-  @include trailer(2);
-  background: $color-gray-light;
   .slogan-content {
     padding: rhythm(.5) 0 rhythm(1);
-    color: $color-gray;
+    color: white;
     @include adjust-font-size-to(ms(1), 2);
+    font-weight: bold;
     text-align: center;
     @include at-breakpoint($pad) {
       @include adjust-font-size-to(ms(2));
@@ -67,6 +125,8 @@
     background-image: none, image-url("icon_mark.svg");
   }
 }
+
+.news { margin-top: -48px; }
 
 .focus-collection, .video-collection {
   @include leader(2);
@@ -154,7 +214,7 @@
 
 @include at-breakpoint($pad) {
   .schedule-slider {
-    .sitting {
+    .sitting.in-index {
       &.empty {
         height: 345px;
       }
@@ -164,7 +224,10 @@
 
 @include at-breakpoint($desktop) {
   .schedule-slider {
-    .sitting {
+    .sitting.in-index {
+      .sitting-info {
+        padding: 24px 0;
+      }
       &.empty {
         @include padding-leader(3);
         height: 186px;

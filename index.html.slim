@@ -1,47 +1,39 @@
-.schedule-slider
-  h1.slider-title 精彩賽事
-  = render "/partials/index/schedule"
+= render "/partials/index/schedule"
 
-.slogan
+.news
   .container
-    .slogan-content
-      | 一天一分鐘
-      span.slogan-mark
-      | 國會大小事
+    .focus-collection
+      .title
+        | 精選場邊焦點
+        a.entrance href="/focus/" 回顧歷史
+      ul.list-with-image
+        - 6.times do
+          li: a href="/focus/post.html"
+            .list-content = zh_lorem_sentence
+            .list-image = image_tag("http://hhhhold.com/80x50/#{rand(100)}")
 
-.container
-  .focus-collection
-    .title
-      | 精選場邊焦點
-      a.entrance href="/focus/" 回顧歷史
-    ul.list-with-image
-      - 6.times do
-        li: a href="/focus/post.html"
-          .list-content = zh_lorem_sentence
-          .list-image = image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+    .video-collection
+      .title
+        | 精選沃草影音
+        a.entrance href="/video/" 回顧歷史
+      ul.list-with-image
+        - 6.times do
+          li: a href="/video/video-post.html"
+            .list-content = zh_lorem_sentence
+            .list-image = image_tag("http://hhhhold.com/80x50/#{rand(100)}")
 
-  .video-collection
-    .title
-      | 精選沃草影音
-      a.entrance href="/video/" 回顧歷史
-    ul.list-with-image
-      - 6.times do
-        li: a href="/video/video-post.html"
-          .list-content = zh_lorem_sentence
-          .list-image = image_tag("http://hhhhold.com/80x50/#{rand(100)}")
-
-  .legislator-update
-    .title
-      | 立委線上近況
-      a.entrance href="/legislators/" 回顧歷史
-    ul.list
-      - 6.times do
-        li: a href="/legislators/legislator.html"
-          .avatar.is-small.has-party
-            .party = image_tag("/images/DPP.png")
-            = image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
-          .update-content
-            .name = zh_lorem_name
+    .legislator-update
+      .title
+        | 立委線上近況
+        a.entrance href="/legislators/" 回顧歷史
+      ul.list
+        - 6.times do
+          li: a href="/legislators/legislator.html"
+            .avatar.is-small.has-party
+              .party = image_tag("/images/DPP.png")
+              = image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+            .update-content
+              .name = zh_lorem_name
             .content = zh_lorem_sentence
 
 .dictionary-tip

@@ -1,0 +1,17 @@
+- sitting_time =[['9:00-12:00'], ['14:30-17:30'], ['9:00-17:30']]
+
+a.sitting.in-index href="/schedule/sitting-live.html"
+  .sitting-inner style="background-image: url('http://hhhhold.com/580x300/#{rand(100)}')"
+    .sitting-info
+      .date #{lorem_date.to_date} #{sitting_time[rand(3)]}
+      .title 第8屆第5會期第2次臨時會第2次會議
+      .meta-info
+        .meta
+          .label 委員會
+          =zh_lorem_words(4+rand(5))
+        .meta
+          .label 議題
+          =zh_lorem_words(4+rand(5))
+        .meta
+          .label 主席
+          =zh_lorem_name

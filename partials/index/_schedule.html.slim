@@ -1,64 +1,38 @@
 - sitting_time =[['9:00-12:00'], ['14:30-17:30'], ['9:00-17:30']]
 
-.container
-  .schedule-table.tab-content
+.schedule-slider
+
+  .slogan
+    .container
+      .slogan-content
+        | 一天一分鐘
+        span.slogan-mark
+        | 國會大小事
+
+  .schedule-tab
+    ul
+      li
+        a.schedule-forecast href="#forecast" role="tab" data-toggle="tab" <span>準備開戰</span>
+      li.active
+        a.schedule-live href="#live" role="tab" data-toggle="tab" <span>戰鬥中</span>
+      li
+        a.schedule-report href="#report" role="tab" data-toggle="tab" <span>戰況報告</span>
+
+  #index-schedule-tab.schedule-table.tab-content
     .tab-pane.fade#forecast
-      #slider-forecast.carousel.slide data-ride="carousel"
-        / ol.carousel-indicators
-        /   li.active data-target="#slider-forecast" data-slide-to="0"
-        /   li data-target="#slider-forecast" data-slide-to="1"
-        /   li data-target="#slider-forecast" data-slide-to="2"
-        .carousel-inner
-          .item.active
-            .sitting.empty 目前沒有賽事
-            / = render "/partials/schedule/schedule-forecast"
-          / - 2.times do
-          /   .item
-          /     = render "/partials/schedule/schedule-forecast"
-        / a.left.carousel-control href="#slider-forecast" data-slide="prev"
-        /   span.glyphicon.icon-prev
-        / a.right.carousel-control href="#slider-forecast" data-slide="next"
-        /   span.glyphicon.icon-next
+      #slider-forecast
+        - 5.times do
+          .slider-item
+            = render "/partials/index/schedule-card"
 
     .tab-pane.fade.in.active#live
-      #slider-live.carousel.slide data-ride="carousel"
-        ol.carousel-indicators
-          li.active data-target="#slider-live" data-slide-to="0"
-          li data-target="#slider-live" data-slide-to="1"
-          li data-target="#slider-live" data-slide-to="2"
-        .carousel-inner
-          .item.active
-            = render "/partials/schedule/schedule-live"
-          - 2.times do
-            .item
-              = render "/partials/schedule/schedule-live"
-        a.left.carousel-control href="#slider-live" data-slide="prev"
-          span.glyphicon.icon-prev
-        a.right.carousel-control href="#slider-live" data-slide="next"
-          span.glyphicon.icon-next
+      #slider-live
+        - 3.times do
+          .slider-item
+            = render "/partials/index/schedule-card-live"
 
     .tab-pane.fade#report
-      #slider-report.carousel.slide data-ride="carousel"
-        ol.carousel-indicators
-          li.active data-target="#slider-report" data-slide-to="0"
-          li data-target="#slider-report" data-slide-to="1"
-          li data-target="#slider-report" data-slide-to="2"
-        .carousel-inner
-          .item.active
-            = render "/partials/schedule/schedule-report"
-          - 2.times do
-            .item
-              = render "/partials/schedule/schedule-report"
-        a.left.carousel-control href="#slider-report" data-slide="prev"
-          span.glyphicon.icon-prev
-        a.right.carousel-control href="#slider-report" data-slide="next"
-          span.glyphicon.icon-next
-
-.schedule-tab
-  ul
-    li
-      a.schedule-forecast href="#forecast" role="tab" data-toggle="tab" <span>準備開戰</span>
-    li.active
-      a.schedule-live href="#live" role="tab" data-toggle="tab" <span>戰鬥中</span>
-    li
-      a.schedule-report href="#report" role="tab" data-toggle="tab" <span>戰況報告</span>
+      #slider-report
+        - 5.times do
+          .slider-item
+            = render "/partials/index/schedule-card"

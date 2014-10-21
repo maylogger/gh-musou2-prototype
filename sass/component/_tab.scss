@@ -13,3 +13,22 @@
     }
   }
 }
+
+#index-schedule-tab {
+  position: relative;
+  padding-top: 70%;
+  .tab-pane {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    &.active {
+      z-index: 10;
+    }
+  }
+  @include at-breakpoint(500px 4) { padding-top: 50%; }
+  @include at-breakpoint($pad) { padding-top: 30%; }
+  @include at-breakpoint(1200px 12) { padding-top: 25%; }
+}
