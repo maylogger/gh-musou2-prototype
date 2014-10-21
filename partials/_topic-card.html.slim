@@ -1,22 +1,39 @@
-- 2.times do |i|
-  .topic-item.panel
-    .topic-header style="background-image: url('http://hhhhold.com/1136x200/#{rand(100)}')"
-      a.topic-title href="/topic/topic-detail.html"
-        h2 =zh_lorem_words(4+rand(5))
-        .sitting-time 上次交戰於：2014年9月12日
-        .topic-entrance 了解此議題
-      .topic-detail-toggle.is-open data-parent="#topic-list" data-toggle="collapse" href="#topic#{i+1}"
-    .topic-detail.collapse.in id="topic#{i+1}"
-      .topic-summary
-        h3 摘要
-        p =zh_lorem_paragraphs 2
+.topic-item.panel
+  .topic-header style="background-image: url('http://hhhhold.com/1136x200/#{rand(100)}')"
+    a.topic-title href="/topic/topic-detail.html"
+      h2 =zh_lorem_words(4+rand(5))
+      .sitting-time 上次交戰於：2014年9月12日
+      .topic-entrance 了解此議題
+    .topic-detail-toggle.is-open data-parent="#topic-list" data-toggle="collapse" href="#topic1"
+  .topic-detail.collapse.in id="topic1"
+    .topic-summary
+      h3 摘要
+      p =zh_lorem_paragraphs 2
 
-      .topic-report
-        h3 近期戰況
-        ul.list
-          - 3.times do
-            li: a href="#"
-              .list-content =zh_lorem_sentence
+    .topic-report
+      h3 近期戰況
+      ul.list
+        - 3.times do
+          li: a href="#"
+            .list-content =zh_lorem_sentence
+
+.topic-item.panel
+  .topic-header style="background-image: url('http://hhhhold.com/1136x200/#{rand(100)}')"
+    a.topic-title href="/topic/topic-detail.html"
+      h2 =zh_lorem_words(4+rand(5))
+      .sitting-time 上次交戰於：2014年9月12日
+      .topic-entrance 了解此議題
+    .topic-detail-toggle.is-open data-parent="#topic-list" data-toggle="collapse" href="#topic2"
+  .topic-detail.collapse.in id="topic2"
+    .topic-summary
+      h3 摘要
+      p =zh_lorem_paragraphs 2
+
+    .topic-report
+      h3 近期戰況
+      .topic-no-post
+        span 啊啊還沒有戰況耶
+        img src="/images/topic_no_post.png"
 
 - 8.times do |i|
   .topic-item.panel

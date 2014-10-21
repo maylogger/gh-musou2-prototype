@@ -93,6 +93,22 @@
     .list, .list-with-image {
       li + li { border-top: 1px solid darken($color-gray-light, 10%); }
     }
+    .topic-no-post {
+      @include leader(.75);
+      text-align: center;
+      border-top: 1px solid darken($color-gray-light, 10%);
+      border-bottom: 1px solid darken($color-gray-light, 10%);
+      span {
+        display: inline-block;
+        @include adjust-font-size-to(ms(1));
+        color: $color-gray;
+        vertical-align: middle;
+      }
+      img {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
   }
 }
 
@@ -124,6 +140,9 @@
       }
       .topic-report {
         @include span-columns(3 omega);
+      }
+      .topic-no-post {
+        span { @include adjust-font-size-to(ms(2)); }
       }
     }
   }
