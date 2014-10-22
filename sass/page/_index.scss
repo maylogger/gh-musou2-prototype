@@ -19,6 +19,7 @@
     max-width: 580px;
     overflow: hidden;
     border: none;
+    background-color: $color-black;
     @include border-radius(5px);
     .sitting-inner {
       position: relative;
