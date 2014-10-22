@@ -221,7 +221,7 @@ body.open-menu { height: 100%; }
   .menu { position: static; width: 100%; margin: 0 auto; max-width: 71em; }
   .main { position: static; } }
 @media (min-width: 1520px) { .wrap { max-width: 1420px; } }
-.announce { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: fixed; z-index: 1000; bottom: 12px; padding: 6px; width: 100%; }
+.announce { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: fixed; z-index: 1000; bottom: 12px; padding: 6px; width: 100%; -webkit-transform: translate3d(0px, 0px, 0px); -moz-transform: translate3d(0px, 0px, 0px); -ms-transform: translate3d(0px, 0px, 0px); -o-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px); }
 .announce .announce-inner { position: relative; display: inline-block; max-width: 500px; padding: 24px; text-align: left; background-color: white; border: 1px solid #880013; -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25); box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25); }
 .announce .announce-inner:after { content: ""; display: table; clear: both; }
 .announce .announce-inner:before { content: ""; position: absolute; top: 0; left: 0; bottom: 0; width: 10px; background-color: #880013; }
@@ -859,7 +859,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 
 .slogan .slogan-content { padding: 12px 0 24px; color: white; font-size: 16.8065px; line-height: 48px; font-weight: bold; text-align: center; }
 @media (min-width: 640px) { .slogan .slogan-content { font-size: 21.03444px; line-height: 48px; } }
-.slogan .slogan-mark { position: relative; top: 16px; display: inline-block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_mark.png?1413879126'); background-repeat: no-repeat; background-position: 50% 50%; width: 49px; height: 48px; background-image: none, url('/images/icon_mark.svg?1413879126'); }
+.slogan .slogan-mark { position: relative; top: 16px; display: inline-block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_mark.png?1413893458'); background-repeat: no-repeat; background-position: 50% 50%; width: 49px; height: 48px; background-image: none, url('/images/icon_mark.svg?1413893458'); }
 
 .news { margin-top: -48px; }
 
