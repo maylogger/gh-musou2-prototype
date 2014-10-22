@@ -981,7 +981,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .schedule-tab { background-color: #999999; }
 .schedule-tab ul { margin: 0; padding: 0; border: 0; position: relative; margin: 0 auto; list-style: none; }
 .schedule-tab ul:after { content: ""; display: table; clear: both; }
-.schedule-tab ul:before { content: ""; position: absolute; z-index: 0; top: 50%; left: 15%; right: 15%; height: 3px; background-color: white; }
+.schedule-tab ul:before { content: ""; position: absolute; z-index: 0; top: 50%; left: 15%; right: 15%; height: 3px; background-color: rgba(255, 255, 255, 0.35); }
 .schedule-tab li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; float: left; width: 33.333%; }
 .schedule-tab li a { color: inherit; text-decoration: inherit; cursor: inherit; display: block; padding: 36px 0; text-align: center; font-size: 16.8065px; line-height: 24px; text-decoration: none; color: rgba(255, 255, 255, 0.6); -webkit-transition: color 0.25s; -moz-transition: color 0.25s; -o-transition: color 0.25s; transition: color 0.25s; }
 .schedule-tab li a:active, .schedule-tab li a:focus { outline: none; }
