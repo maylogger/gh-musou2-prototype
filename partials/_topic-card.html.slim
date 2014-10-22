@@ -12,10 +12,9 @@
 
     .topic-report
       h3 近期戰況
-      ul.list
+      ul.topic-report-list
         - 3.times do
-          li: a href="#"
-            .list-content =zh_lorem_sentence
+          li: a href="#" =zh_lorem_sentence
 
 .topic-item.panel
   .topic-header style="background-image: url('http://hhhhold.com/1136x200/#{rand(100)}')"
@@ -32,7 +31,7 @@
     .topic-report
       h3 近期戰況
       .topic-no-post
-        span 啊啊還沒有戰況耶
+        span 呃 還沒有戰況耶
         img src="/images/topic_no_post.png"
 
 - 8.times do |i|
@@ -50,7 +49,6 @@
 
       .topic-report
         h3 相關戰報
-        ul.list
+        ul.topic-report-list
           - 3.times do
-            li: a href="#"
-              .list-content =zh_lorem_sentence
+            li: a href="#" =zh_lorem_sentence
