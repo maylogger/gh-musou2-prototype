@@ -7,5 +7,5 @@
 }
 .collapsing {
   overflow-y: hidden;
-  @include transition(height .5s ease-in-out);
+  @include transition(height .25s ease-in-out);
 }

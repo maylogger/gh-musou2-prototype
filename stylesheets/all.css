@@ -474,7 +474,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 
 .in { height: auto; }
 
-.collapsing { overflow-y: hidden; -webkit-transition: height 0.5s ease-in-out; -moz-transition: height 0.5s ease-in-out; -o-transition: height 0.5s ease-in-out; transition: height 0.5s ease-in-out; }
+.collapsing { overflow-y: hidden; -webkit-transition: height 0.25s ease-in-out; -moz-transition: height 0.25s ease-in-out; -o-transition: height 0.25s ease-in-out; transition: height 0.25s ease-in-out; }
 
 .avatar { display: inline-block; -webkit-border-radius: 100%; -moz-border-radius: 100%; -ms-border-radius: 100%; -o-border-radius: 100%; border-radius: 100%; border: 1px solid #333333; background-color: #eeeeee; }
 .avatar img { display: block; width: 60px; height: 60px; margin: 0 auto; -webkit-border-radius: 100%; -moz-border-radius: 100%; -ms-border-radius: 100%; -o-border-radius: 100%; border-radius: 100%; border: 2px solid white; }
