@@ -130,7 +130,7 @@
 }
 
 
-.btn_loadmore {
+input[type="submit"].btn_loadmore {
   width: 100%;
   @include leader();
   padding: 12px 12px;

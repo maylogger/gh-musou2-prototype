@@ -20,7 +20,7 @@
       @include adjust-font-size-to(13px);
       font-weight: bold;
     }
-    textarea, input {
+    textarea, input[type="text"] {
       @include reset-box-model;
       @include box-sizing(border-box);
       overflow: hidden;

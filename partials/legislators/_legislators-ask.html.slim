@@ -1,4 +1,4 @@
-- @ask_form_status = "no_signin"
+- @ask_form_status = "open"
 
 .ask-form
   - if @ask_form_status == "open"
@@ -9,7 +9,7 @@
     textarea rows="5"
     p.rule 一天可以發問 5 個問題，發問的問題在尚未回答或尚未過大推門檻前會存在一個月，問題一個月內立委未回答或未過大推門檻將會刪除。
     form
-      button 我要提問
+      input type="submit" value="我要提問"
   - if @ask_form_status == "close"
     .close
       = image_tag("ask_close.jpg")

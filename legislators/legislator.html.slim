@@ -66,7 +66,8 @@
           = render "/partials/legislators/legislators-news-ask-answer"
           - 4.times do
             = render "/partials/legislators/legislators-news"
-          button.btn_loadmore 看更多
+          form
+            input.btn_loadmore type="submit" value="看更多"
         .tab-pane.fade#ask
           = render "/partials/legislators/legislators-ask"
         .tab-pane.fade#data

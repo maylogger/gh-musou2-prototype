@@ -1,4 +1,7 @@
-%button, button, .button {
+%button,
+.button,
+button,
+input[type="submit"] {
   @include reset-box-model;
   @include unstyled-link;
   display: inline-block;
