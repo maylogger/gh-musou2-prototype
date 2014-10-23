@@ -25,7 +25,7 @@
         position: relative;
         z-index: 10;
         padding: 3px 12px 3px;
-        @include adjust-font-size-to(ms(0));
+        @include adjust-font-size-to(13px);
         color: $text-black-light;
         border-bottom: 1px solid darken($color-gray-light, 10%);
         @include transition(color .25s);

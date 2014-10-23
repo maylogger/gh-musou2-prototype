@@ -1,4 +1,5 @@
 - @page_name = "legislator"
+- @btn_loadmore_status = "loading"
 
 .breadcrumb
   .breadcrumb-inner
@@ -16,5 +17,8 @@
         option #{zh_lorem_words(3+rand(5))}委員會
   .legislator-list
     = render "/partials/legislators/legislators-list"
-
-  button.btn_loadmore 看更多
+  form
+    - if @btn_loadmore_status == "normal"
+      input.btn_loadmore type="submit" value="看更多"
+    - if @btn_loadmore_status == "loading"
+      input.btn_loadmore.loading type="submit" value="讀取中"

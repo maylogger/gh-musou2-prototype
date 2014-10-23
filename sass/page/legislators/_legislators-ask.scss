@@ -5,10 +5,10 @@
     top: -4px;
     color: $color-red;
     font-weight: bold;
-    @include adjust-font-size-to(ms(0));
+    @include adjust-font-size-to(13px);
     .number {
       height: 24px;
-      @include adjust-font-size-to(ms(3), 1);
+      @include adjust-font-size-to(27px, 1);
     }
   }
   .ask-form {
@@ -17,10 +17,10 @@
     border-bottom: 1px solid $color-gray-light;
     h3 { @include trailer(.5); }
     .label {
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
       font-weight: bold;
     }
-    textarea, input {
+    textarea, input[type="text"] {
       @include reset-box-model;
       @include box-sizing(border-box);
       overflow: hidden;
@@ -34,21 +34,21 @@
         background-color: $color-gray-light;
       }
     }
-    .rule { @include adjust-font-size-to(ms(0)); }
+    .rule { @include adjust-font-size-to(13px); }
     .close {
       @include leader();
       text-align: center;
-      p { @include adjust-font-size-to(ms(2)); }
+      p { @include adjust-font-size-to(21px); }
     }
   }
   .question-list {
     position: relative;
     .sort {
       @include trailer(.5);
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
       select {
         margin-left: 6px;
-        @include adjust-font-size-to(ms(1));
+        @include adjust-font-size-to(16px);
       }
     }
     .filter { margin: 0; }
@@ -66,7 +66,7 @@
     li {
       float: left;
       margin-right: 12px;
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
       font-weight: bold;
     }
     li.push {
@@ -90,10 +90,10 @@
       @include pie-clearfix;
       @include leader(.5);
       @include trailer(.5);
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
       .info {
         @include trailer(.5);
-        @include adjust-font-size-to(ms(0), .75);
+        @include adjust-font-size-to(13px, .75);
         .date {
           color: $color-red;
           font-weight: bold;
@@ -113,13 +113,13 @@
     .question {
       position: relative;
       @include trailer();
-      @include adjust-font-size-to(ms(1), 1.2);
+      @include adjust-font-size-to(16px, 1.2);
       &:before {
         content: "Ｑ";
         position: absolute;
         top: -10px;
         left: -40px;
-        @include adjust-font-size-to(ms(4));
+        @include adjust-font-size-to(34px);
         font-weight: bold;
         color: lighten($color-red, 5%);
       }
@@ -127,7 +127,7 @@
     .answer {
       position: relative;
       @include trailer();
-      @include adjust-font-size-to(ms(1), 1.2);
+      @include adjust-font-size-to(13px, 1.2);
       .unanswered-message {
         color: $text-gray;
         font-weight: bold;
@@ -137,7 +137,7 @@
         position: absolute;
         top: -10px;
         left: -40px;
-        @include adjust-font-size-to(ms(4));
+        @include adjust-font-size-to(34px);
         font-weight: bold;
         color: $color-gray;
       }
@@ -161,10 +161,10 @@
   .legislator-profile {
     .push-threshold {
       top: -3px;
-      @include adjust-font-size-to(ms(1));
+      @include adjust-font-size-to(16px);
     }
     .ask-form {
-      .label { @include adjust-font-size-to(ms(1)); }
+      .label { @include adjust-font-size-to(16px); }
     }
     .question-list {
       .sort {
@@ -190,7 +190,7 @@
       }
       .answer {
         .unanswered-message {
-          @include adjust-font-size-to(ms(2), 1.75);
+          @include adjust-font-size-to(21px, 1.75);
         }
       }
       .feedback {

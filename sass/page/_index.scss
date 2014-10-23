@@ -19,6 +19,7 @@
     max-width: 580px;
     overflow: hidden;
     border: none;
+    background-color: $color-black;
     @include border-radius(5px);
     .sitting-inner {
       position: relative;
@@ -50,14 +51,14 @@
       color: white;
       .title {
         padding: 0 12px;
-        @include adjust-font-size-to(ms(1));
+        @include adjust-font-size-to(16px);
       }
       .meta-info {
         .meta { display: block; }
         .label { color: white; }
       }
       @include at-breakpoint($pad) {
-        .title { @include adjust-font-size-to(ms(2), 1.25); }
+        .title { @include adjust-font-size-to(21px, 1.25); }
         .meta-info {
           .meta { display: inline-block; }
         }
@@ -66,7 +67,7 @@
     &.empty {
       @include padding-leader(6);
       height: 339px;
-      @include adjust-font-size-to(ms(3));
+      @include adjust-font-size-to(27px);
       text-align: center;
       color: $color-gray-light;
       background-color: transparent;
@@ -86,7 +87,7 @@
     li a {
       padding-top: 6px;
       padding-bottom: 42px;
-      @include adjust-font-size-to(ms(1));
+      @include adjust-font-size-to(16px);
       span {
         padding-left: 6px;
         background-color: transparent;
@@ -110,11 +111,11 @@
   .slogan-content {
     padding: rhythm(.5) 0 rhythm(1);
     color: white;
-    @include adjust-font-size-to(ms(1), 2);
+    @include adjust-font-size-to(16px, 2);
     font-weight: bold;
     text-align: center;
     @include at-breakpoint($pad) {
-      @include adjust-font-size-to(ms(2));
+      @include adjust-font-size-to(21px);
     }
   }
   .slogan-mark {
@@ -133,13 +134,13 @@
   .title {
     @include trailer(.5);
     @include padding-trailer(.25);
-    @include adjust-font-size-to(ms(1), 1.25);
+    @include adjust-font-size-to(16px, 1.25);
     font-weight: bold;
     border-bottom: 1px solid $color-gray;
     .entrance {
       float: right;
       margin-top: 6px;
-      @include adjust-font-size-to(ms(0), 1);
+      @include adjust-font-size-to(13px, 1);
     }
   }
 }
@@ -149,13 +150,13 @@
   .title {
     @include trailer(.5);
     @include padding-trailer(.25);
-    @include adjust-font-size-to(ms(1), 1.25);
+    @include adjust-font-size-to(16px, 1.25);
     font-weight: bold;
     border-bottom: 1px solid $color-gray;
     .entrance {
       float: right;
       margin-top: 6px;
-      @include adjust-font-size-to(ms(0), 1);
+      @include adjust-font-size-to(13px, 1);
     }
   }
   .list {
@@ -180,7 +181,7 @@
   .update-content {
     overflow: hidden;
     .name {
-      @include adjust-font-size-to(ms(1));
+      @include adjust-font-size-to(16px);
       color: $color-gray;
       font-weight: bold;
     }
@@ -201,12 +202,12 @@
   .dictionary-card {
     .title {
       @include trailer(.25);
-      @include adjust-font-size-to(ms(1), 1.25);
+      @include adjust-font-size-to(16px, 1.25);
       font-weight: bold;
       .entrance {
         float: right;
         margin-top: 6px;
-        @include adjust-font-size-to(ms(0), 1);
+        @include adjust-font-size-to(13px, 1);
       }
     }
   }

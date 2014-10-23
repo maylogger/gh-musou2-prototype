@@ -37,14 +37,14 @@
         font-weight: bold;
         @include ellipsis;
       }
-      .sitting-time { @include adjust-font-size-to(ms(0)); }
+      .sitting-time { @include adjust-font-size-to(13px); }
     }
     .topic-entrance {
       display: block;
       width: 68px;
       margin: 6px 0 12px;
       padding: 3px 9px;
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
       color: white;
       text-decoration: none;
       background-color: rgba(black, .6);
@@ -85,10 +85,17 @@
     }
     .topic-summary {
       @include leader(.5);
-      p { @include adjust-font-size-to(ms(0)); }
+      p { @include adjust-font-size-to(13px); }
     }
     .topic-report {
       @include leader();
+    }
+    .topic-report-list {
+      margin: 0;
+      a {
+        color: $text-black;
+        &:hover { color: $color-red; }
+      }
     }
     .list, .list-with-image {
       li + li { border-top: 1px solid darken($color-gray-light, 10%); }
@@ -96,11 +103,10 @@
     .topic-no-post {
       @include leader(.75);
       text-align: center;
-      border-top: 1px solid darken($color-gray-light, 10%);
       border-bottom: 1px solid darken($color-gray-light, 10%);
       span {
         display: inline-block;
-        @include adjust-font-size-to(ms(1));
+        @include adjust-font-size-to(16px);
         color: $color-gray;
         vertical-align: middle;
       }
@@ -119,7 +125,7 @@
       .topic-title {
         padding: 24px 24px 24px 78px;
         &:before { left: 24px; }
-        .sitting-time { @include adjust-font-size-to(ms(1)); }
+        .sitting-time { @include adjust-font-size-to(16px); }
       }
       .topic-entrance {
         position: absolute;
@@ -128,7 +134,7 @@
         width: auto;
         margin: 36px 24px;
         padding: 6px 18px;
-        @include adjust-font-size-to(ms(1));
+        @include adjust-font-size-to(16px);
       }
     }
     .topic-detail {
@@ -136,13 +142,13 @@
       .topic-summary {
         @include leader();
         @include span-columns(3);
-        p { @include adjust-font-size-to(ms(1)); }
+        p { @include adjust-font-size-to(16px); }
       }
       .topic-report {
         @include span-columns(3 omega);
       }
       .topic-no-post {
-        span { @include adjust-font-size-to(ms(2)); }
+        span { @include adjust-font-size-to(21px); }
       }
     }
   }

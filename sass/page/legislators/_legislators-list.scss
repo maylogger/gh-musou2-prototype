@@ -54,7 +54,7 @@
       float: left;
       position: relative;
       padding: 12px;
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
       font-weight: bold;
       &:after {
         content: "";
@@ -68,7 +68,7 @@
     p {
       @include trailer(0);
       padding: 12px;
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
       text-align: left;
       @include ellipsis;
     }

@@ -54,7 +54,7 @@
   }
   .label {
     display: block;
-    @include adjust-font-size-to(ms(0), .75);
+    @include adjust-font-size-to(13px, .75);
     font-weight: bold;
   }
 }
@@ -79,7 +79,7 @@
           overflow: hidden;
           @include trailer(0);
           height: 48px;
-          @include adjust-font-size-to(ms(0));
+          @include adjust-font-size-to(13px);
           color: lighten($text-black, 25%);
           @include transition(color .25s);
         }

@@ -1,3 +1,25 @@
+@keyframes btn-loading {
+  0% {
+    opacity: 1;
+    @include scale(0);
+  }
+  100% {
+    opacity: 0;
+    @include scale(10);
+  }
+}
+
+@-webkit-keyframes btn-loading {
+  0% {
+    opacity: 1;
+    @include scale(0);
+  }
+  100% {
+    opacity: 0;
+    @include scale(10);
+  }
+}
+
 .btn-share-module {
   display: inline-block;
   text-align: center;
@@ -8,12 +30,12 @@
     display: inline-block;
     margin: 0 4px;
     color: $color-blue-deep;
-    @include adjust-font-size-to(ms(0), .5);
+    @include adjust-font-size-to(13px, .5);
   }
   .button {
     padding: 2px 9px 3px;
     color: white;
-    @include adjust-font-size-to(ms(0));
+    @include adjust-font-size-to(13px);
     background-color: $color-blue-deep;
     &:hover { background-color: lighten($color-blue-deep, 10%); }
   }
@@ -38,7 +60,7 @@
     margin: 0 4px;
     color: $color-red;
     vertical-align: middle;
-    @include adjust-font-size-to(ms(0), .5);
+    @include adjust-font-size-to(13px, .5);
   }
   .button {
     display: inline-block;
@@ -97,7 +119,7 @@
     margin: 0 4px;
     color: $color-gray;
     vertical-align: middle;
-    @include adjust-font-size-to(ms(0), .5);
+    @include adjust-font-size-to(13px, .5);
   }
   .button {
     display: inline-block;
@@ -130,7 +152,8 @@
 }
 
 
-.btn_loadmore {
+input[type="submit"].btn_loadmore {
+  position: relative;
   width: 100%;
   @include leader();
   padding: 12px 12px;
@@ -139,4 +162,5 @@
   @include border-radius(5px);
   @include transition(background-color .25s);
   &:hover { background-color: lighten($color-red, 10%); }
+  &.loading { background-color: $color-gray; }
 }

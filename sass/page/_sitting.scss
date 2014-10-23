@@ -16,7 +16,7 @@
   }
   .label {
     display: block;
-    @include adjust-font-size-to(ms(0), .75);
+    @include adjust-font-size-to(13px, .75);
     font-weight: bold;
   }
 }

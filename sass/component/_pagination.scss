@@ -8,7 +8,7 @@
   a {
     margin: 0 rhythm(.05);
     padding: rhythm(.3) rhythm(.5);
-    @include adjust-font-size-to(ms(0));
+    @include adjust-font-size-to(13px);
     color: white;
     text-decoration: none;
     background: $color-black;
@@ -47,7 +47,7 @@
     @include at-breakpoint($pad) {
       margin: 0 rhythm(.15);
       padding: rhythm(.35) rhythm(.55);
-      @include adjust-font-size-to(ms(1));
+      @include adjust-font-size-to(16px);
       &.more { padding: rhythm(.35) rhythm(.5); }
     }
   }

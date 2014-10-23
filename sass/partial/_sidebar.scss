@@ -20,7 +20,7 @@
 .sidebar-title {
   @include trailer(.5);
   @include padding-trailer(.25);
-  @include adjust-font-size-to(ms(1), 1.25);
+  @include adjust-font-size-to(16px, 1.25);
   font-weight: bold;
   border-bottom: 1px solid $color-gray;
 }

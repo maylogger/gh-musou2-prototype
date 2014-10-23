@@ -79,7 +79,7 @@
     @include trailer(.5);
     margin-left: 1px;
     list-style: none;
-    @include adjust-font-size-to(ms(0));
+    @include adjust-font-size-to(13px);
   }
   .nav a { padding-left: 12px; }
   .nav .active a {

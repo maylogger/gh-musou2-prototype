@@ -21,18 +21,18 @@
   #index-schedule-tab.schedule-table.tab-content
     .tab-pane.fade#forecast
       #slider-forecast
-        - 5.times do
+        - (1+rand(5)).times do
           .slider-item
             = render "/partials/index/schedule-card"
 
     .tab-pane.fade.in.active#live
       #slider-live
-        - 3.times do
+        - (1+rand(5)).times do
           .slider-item
             = render "/partials/index/schedule-card-live"
 
     .tab-pane.fade#report
       #slider-report
-        - 5.times do
+        - (1+rand(5)).times do
           .slider-item
             = render "/partials/index/schedule-card"

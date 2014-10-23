@@ -155,7 +155,8 @@ button::-moz-focus-inner {
   font-family: Arial, Baskerville, monospace; }
   .mfp-close:hover, .mfp-close:focus {
     opacity: 1;
-    filter: alpha(opacity=100); }
+    filter: alpha(opacity=100);
+    background-color: transparent; }
   .mfp-close:active {
     top: -43px; }
 

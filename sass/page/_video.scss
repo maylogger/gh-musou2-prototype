@@ -58,7 +58,7 @@
 .video-intro {
   padding: 12px;
   .title {
-    @include adjust-font-size-to(ms(1));
+    @include adjust-font-size-to(16px);
     font-weight:  bold;
     @include ellipsis;
   }
@@ -82,7 +82,7 @@
         h1 {
           @include padding-leader();
           @include padding-trailer(.5);
-          @include adjust-font-size-to(ms(3), 1.5);
+          @include adjust-font-size-to(27px, 1.5);
           font-weight: bold;
         }
         .meta-info {
@@ -159,14 +159,14 @@
           @include translateY(-50%);
           h1 {
             @include padding-leader(0);
-            @include adjust-font-size-to(ms(5));
+            @include adjust-font-size-to(44px);
             font-weight: bold;
           }
           .meta-info {
             display: block;
             @include leader(.5);
             color: white;
-            @include adjust-font-size-to(ms(1));
+            @include adjust-font-size-to(16px);
             font-weight: bold;
             .label {
               color: white;
@@ -215,7 +215,7 @@
     position: fixed;
     top: auto;
     left: 0;
-    bottom: 48px;
+    bottom: 172px;
     height: auto;
     opacity: 0;
     @include translateX(50%);
@@ -235,10 +235,10 @@
       @include span-columns(4 omega);
       padding: 6px;
       height: 210px;
-      border: 1px solid $color-gray;
+      border: 1px solid lighten($color-gray, 15%);
       @include border-radius(5px);
       background-color: white;
-      @include box-shadow(0px 0px 10px rgba(black, .5));
+      @include box-shadow(0px 5px 0px lighten($color-gray, 15%));
     }
   }
 }
