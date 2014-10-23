@@ -299,6 +299,12 @@ body.open-menu { height: 100%; }
 .filter ul li:hover a { color: #880013; }
 .filter ul li.active a { padding: 3px 12px 1px; color: #880013; border-bottom: 3px solid #880013; }
 
+@keyframes btn-loading { 0% { opacity: 1; -webkit-transform: scale(0, 0); -moz-transform: scale(0, 0); -ms-transform: scale(0, 0); -o-transform: scale(0, 0); transform: scale(0, 0); }
+  100% { opacity: 0; -webkit-transform: scale(10, 10); -moz-transform: scale(10, 10); -ms-transform: scale(10, 10); -o-transform: scale(10, 10); transform: scale(10, 10); } }
+
+@-webkit-keyframes btn-loading { 0% { opacity: 1; -webkit-transform: scale(0, 0); -moz-transform: scale(0, 0); -ms-transform: scale(0, 0); -o-transform: scale(0, 0); transform: scale(0, 0); }
+  100% { opacity: 0; -webkit-transform: scale(10, 10); -moz-transform: scale(10, 10); -ms-transform: scale(10, 10); -o-transform: scale(10, 10); transform: scale(10, 10); } }
+
 .btn-share-module { display: inline-block; text-align: center; vertical-align: bottom; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
 .btn-share-module:hover { text-decoration: none; }
 .btn-share-module .counter { display: inline-block; margin: 0 4px; color: #415692; font-size: 13px; line-height: 12px; }
@@ -330,8 +336,9 @@ body.open-menu { height: 100%; }
 
 .btn-share-module + .btn-like-module, .btn-like-module + .btn-share-module { margin-left: 6px; }
 
-input[type="submit"].btn_loadmore { width: 100%; margin-top: 24px; padding: 12px 12px; color: white; background-color: #880013; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
+input[type="submit"].btn_loadmore { position: relative; width: 100%; margin-top: 24px; padding: 12px 12px; color: white; background-color: #880013; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
 input[type="submit"].btn_loadmore:hover { background-color: #bb001a; }
+input[type="submit"].btn_loadmore.loading { background-color: #999999; }
 
 .pagination { margin-top: 48px; margin-bottom: 48px; padding: 0; text-align: center; list-style: none; }
 .pagination li { display: inline-block; }

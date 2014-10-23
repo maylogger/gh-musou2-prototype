@@ -1,3 +1,25 @@
+@keyframes btn-loading {
+  0% {
+    opacity: 1;
+    @include scale(0);
+  }
+  100% {
+    opacity: 0;
+    @include scale(10);
+  }
+}
+
+@-webkit-keyframes btn-loading {
+  0% {
+    opacity: 1;
+    @include scale(0);
+  }
+  100% {
+    opacity: 0;
+    @include scale(10);
+  }
+}
+
 .btn-share-module {
   display: inline-block;
   text-align: center;
@@ -131,6 +153,7 @@
 
 
 input[type="submit"].btn_loadmore {
+  position: relative;
   width: 100%;
   @include leader();
   padding: 12px 12px;
@@ -139,4 +162,5 @@ input[type="submit"].btn_loadmore {
   @include border-radius(5px);
   @include transition(background-color .25s);
   &:hover { background-color: lighten($color-red, 10%); }
+  &.loading { background-color: $color-gray; }
 }
