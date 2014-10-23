@@ -32,16 +32,16 @@
     .title {
       color: $color-gray;
       font-weight: bold;
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
     }
     .content {
       @include trailer(0);
       height: 48px;
       overflow: hidden;
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
     }
     .action {
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
       font-weight: bold;
     }
   }

@@ -8,12 +8,12 @@
     display: inline-block;
     margin: 0 4px;
     color: $color-blue-deep;
-    @include adjust-font-size-to(ms(0), .5);
+    @include adjust-font-size-to(13px, .5);
   }
   .button {
     padding: 2px 9px 3px;
     color: white;
-    @include adjust-font-size-to(ms(0));
+    @include adjust-font-size-to(13px);
     background-color: $color-blue-deep;
     &:hover { background-color: lighten($color-blue-deep, 10%); }
   }
@@ -38,7 +38,7 @@
     margin: 0 4px;
     color: $color-red;
     vertical-align: middle;
-    @include adjust-font-size-to(ms(0), .5);
+    @include adjust-font-size-to(13px, .5);
   }
   .button {
     display: inline-block;
@@ -97,7 +97,7 @@
     margin: 0 4px;
     color: $color-gray;
     vertical-align: middle;
-    @include adjust-font-size-to(ms(0), .5);
+    @include adjust-font-size-to(13px, .5);
   }
   .button {
     display: inline-block;

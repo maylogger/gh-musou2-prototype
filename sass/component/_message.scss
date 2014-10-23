@@ -5,7 +5,7 @@
     margin: rhythm() auto;
     padding: rhythm();
     max-width: 400px;
-    @include adjust-font-size-to(ms(0));
+    @include adjust-font-size-to(13px);
     text-align: left;
     border: 1px solid $color-gray-light;
     @include border-radius(5px);

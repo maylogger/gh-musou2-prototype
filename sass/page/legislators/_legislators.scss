@@ -41,14 +41,14 @@
       color: white;
       vertical-align: middle;
       h2 {
-        @include adjust-font-size-to(ms(4));
+        @include adjust-font-size-to(34px);
         font-weight: bold;
       }
       .online-status {
         position: relative;
         padding-left: 22px;
         padding-right: 6px;
-        @include adjust-font-size-to(ms(0));
+        @include adjust-font-size-to(13px);
         text-align: left;
         font-weight: bold;
         color: $color-gray;
@@ -85,7 +85,7 @@
       display: inline-block;
       margin-top : 8px;
       padding: 9px 18px 9px 48px;
-      @include adjust-font-size-to(ms(1), 1);
+      @include adjust-font-size-to(16px, 1);
       color: white;
       background-color: $color-red;
       @include border-radius(5px);
@@ -165,7 +165,7 @@
     .note {
       text-align: right;
       @include trailer(0);
-      @include adjust-font-size-to(ms(0));
+      @include adjust-font-size-to(13px);
       a {
         display: inline-block;
         color: $color-blue;

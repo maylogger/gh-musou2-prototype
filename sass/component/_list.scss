@@ -3,7 +3,7 @@
   @include leader(.5);
   @include trailer(.5);
   list-style: none;
-  @include adjust-font-size-to(ms(0), .75);
+  @include adjust-font-size-to(13px, .75);
   li {
     @include pie-clearfix;
   }
@@ -34,7 +34,7 @@
     @include pie-clearfix;
   }
   @include at-breakpoint($pad) {
-    @include adjust-font-size-to(ms(1));
+    @include adjust-font-size-to(16px);
     li + li {
       @include leader(.5);
       @include padding-leader(.5);

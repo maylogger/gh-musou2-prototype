@@ -58,7 +58,7 @@
 .video-intro {
   padding: 12px;
   .title {
-    @include adjust-font-size-to(ms(1));
+    @include adjust-font-size-to(16px);
     font-weight:  bold;
     @include ellipsis;
   }
@@ -82,7 +82,7 @@
         h1 {
           @include padding-leader();
           @include padding-trailer(.5);
-          @include adjust-font-size-to(ms(3), 1.5);
+          @include adjust-font-size-to(27px, 1.5);
           font-weight: bold;
         }
         .meta-info {
@@ -159,14 +159,14 @@
           @include translateY(-50%);
           h1 {
             @include padding-leader(0);
-            @include adjust-font-size-to(ms(5));
+            @include adjust-font-size-to(44px);
             font-weight: bold;
           }
           .meta-info {
             display: block;
             @include leader(.5);
             color: white;
-            @include adjust-font-size-to(ms(1));
+            @include adjust-font-size-to(16px);
             font-weight: bold;
             .label {
               color: white;

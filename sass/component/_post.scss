@@ -46,7 +46,7 @@
 .writer-intro-button {
   margin-left: 6px;
   padding: 0 6px;
-  @include adjust-font-size-to(ms(0), .9);
+  @include adjust-font-size-to(13px, .9);
   color: $text-gray;
   background-color: transparent;
   border: 1px solid $color-gray;
@@ -69,7 +69,7 @@
   p.intro-content {
     overflow: hidden;
     margin-bottom: 0;
-    @include adjust-font-size-to(ms(0));
+    @include adjust-font-size-to(13px);
     text-align: left;
   }
   .close {
@@ -78,7 +78,7 @@
     right: 0;
     padding: 6px 9px;
     color: $text-gray;
-    @include adjust-font-size-to(ms(4), 1);
+    @include adjust-font-size-to(34px, 1);
     @include transition(color .25s);
     cursor: pointer;
     &:hover { color: $text-black; }

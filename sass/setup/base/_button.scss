@@ -3,7 +3,7 @@
   @include unstyled-link;
   display: inline-block;
   padding: 3px 12px;
-  @include adjust-font-size-to(ms(1));
+  @include adjust-font-size-to(16px);
   @extend %subpixel;
   color: white;
   text-align: center;
@@ -14,6 +14,6 @@
   &:hover { background-color: lighten($color-red, 7.5%); }
   &.btn_small {
     padding: 0 9px;
-    @include adjust-font-size-to(ms(0));
+    @include adjust-font-size-to(13px);
   }
 }

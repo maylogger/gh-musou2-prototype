@@ -8,7 +8,7 @@
   .select-label {
     display: inline-block;
     margin-right: 6px;
-    @include adjust-font-size-to(ms(0));
+    @include adjust-font-size-to(13px);
     font-weight: bold;
   }
 }

@@ -43,7 +43,7 @@
 .search-results {
   .sub-results-title {
     @include trailer(.5);
-    @include adjust-font-size-to(ms(1));
+    @include adjust-font-size-to(16px);
     font-weight: bold;
     color: $color-red;
   }

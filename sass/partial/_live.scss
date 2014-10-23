@@ -56,7 +56,7 @@
           margin-left: -100%;
           width: auto;
           padding: 0 6px;
-          @include adjust-font-size-to(ms(0));
+          @include adjust-font-size-to(13px);
           font-weight: bold;
           text-align: center;
           color: white;
@@ -111,7 +111,7 @@
       width: 720px;
       p {
         @include trailer(0);
-        @include adjust-font-size-to(ms(1));
+        @include adjust-font-size-to(16px);
         text-align: left;
       }
     }
