@@ -1,4 +1,28 @@
+@keyframes announce-animation {
+  0% {
+    opacity: 0;
+    @include translate3d(-100px, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    @include translate3d(0px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes announce-animation {
+  0% {
+    opacity: 0;
+    @include translate3d(-100px, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    @include translate3d(0px, 0px, 0px);
+  }
+}
+
+
 .announce {
+  display: block;
   @include box-sizing(border-box);
   position: fixed;
   z-index: 1000;
@@ -6,31 +30,29 @@
   padding: 6px;
   width: 100%;
   @include translate3d(0px, 0px, 0px);
+  @include transition(transform 1s, opacity 1s);
+  animation: announce-animation .5s ease-out;
+  -webkit-animation: announce-animation .5s ease-out;
+  &.is-drop {
+    @include translate3d(0px, 100px, 0px);
+    @include rotate(-45deg);
+  }
   .announce-inner {
     @include pie-clearfix;
     position: relative;
     display: inline-block;
-    max-width: 500px;
+    max-width: 420px;
     padding: 24px;
     text-align: left;
-    background-color: white;
-    border: 1px solid $color-red;
-    @include box-shadow(0px 3px 6px rgba(black, .25));
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 10px;
-      background-color: $color-red;
-    }
+    background-color: $color-black;
+    border: 1px solid $color-gray-light;
+    @include border-radius(5px);
   }
   .announcer { display: none; }
   .announce-content {
     overflow: hidden;
     .title {
-      color: $color-gray;
+      color: $color-gray-light;
       font-weight: bold;
       @include adjust-font-size-to(13px);
     }
@@ -39,10 +61,12 @@
       height: 48px;
       overflow: hidden;
       @include adjust-font-size-to(13px);
-    }
-    .action {
-      @include adjust-font-size-to(13px);
       font-weight: bold;
+      color: white;
+    }
+    &:hover {
+      text-decoration: none;
+      .content { text-decoration: underline; }
     }
   }
   .close {
@@ -54,7 +78,7 @@
     @include adjust-font-size-to(ms(4), 1);
     @include transition(color .25s);
     cursor: pointer;
-    &:hover { color: $text-black; }
+    &:hover { color: white; }
   }
 }
 
