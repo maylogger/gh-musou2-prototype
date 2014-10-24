@@ -66,7 +66,9 @@ $('.writer-intro .close').on("click", function(){
 });
 
 $('.announce .close').on("click", function(){
-  $('.announce').remove();
+  $('.announce').addClass('is-drop').delay(1000).queue(function(){
+    $('.announce').remove();
+  });
 });
 
 $('.search-bar-toggle').on("click", function(){

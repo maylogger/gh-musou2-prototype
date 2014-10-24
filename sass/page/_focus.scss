@@ -38,6 +38,11 @@
         @include ellipsis;
       }
       p { display: none; }
+      .highlight {
+        float: left;
+        margin-right: 6px;
+        @include replace-text-with-dimensions("badge_highlight.png");
+      }
     }
     &:hover {
       .focus-content {
