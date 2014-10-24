@@ -5,6 +5,8 @@
     .video-image
       = image_tag("http://hhhhold.com/480x270/#{rand(100)}")
     .video-intro
+      - rand(2).times do
+        .highlight 精選
       h3.title #{"["}#{video_type[rand(3)]}#{"]"} #{zh_lorem_sentence}
       .meta-info
         .meta

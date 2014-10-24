@@ -911,6 +911,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .focus-list .focus-item .focus-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 100%; }
 .focus-list .focus-item .focus-content .title { margin-bottom: 3px; color: #880013; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 .focus-list .focus-item .focus-content p { display: none; }
+.focus-list .focus-item .focus-content .highlight { float: left; margin-right: 6px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414044767'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
 .focus-list .focus-item:hover .focus-content .title { text-decoration: underline; }
 
 .author-card .author { margin-bottom: 24px; text-align: center; }
@@ -938,8 +939,9 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .video-list-item .video-image:after { content: ""; position: absolute; z-index: 2; top: 50%; left: 50%; margin-top: -7px; margin-left: -6px; border: 10px solid transparent; border-left: 20px solid white; opacity: .9; }
 .video-list-item .video-image img { display: block; position: absolute; top: 0; left: 0; width: 100%; height: auto; }
 
-.video-intro { padding: 12px; }
+.video-intro { position: relative; padding: 12px; }
 .video-intro .title { font-size: 16px; line-height: 24px; font-weight: bold; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+.video-intro .highlight { position: absolute; right: 4px; bottom: 4px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414044767'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
 
 .video { position: relative; background-color: #333333; }
 .video .container { max-width: 960px; }

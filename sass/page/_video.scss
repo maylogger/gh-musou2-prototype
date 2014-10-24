@@ -56,11 +56,18 @@
 }
 
 .video-intro {
+  position: relative;
   padding: 12px;
   .title {
     @include adjust-font-size-to(16px);
     font-weight:  bold;
     @include ellipsis;
+  }
+  .highlight {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    @include replace-text-with-dimensions("badge_highlight.png");
   }
 }
 

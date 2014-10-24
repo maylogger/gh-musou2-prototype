@@ -1,6 +1,8 @@
 - 10.times do
   a.focus-item href="/focus/post.html"
     .focus-content
+      - rand(2).times do
+        .highlight 精選
       h3.title = zh_lorem_sentence
       .meta-info
         .meta
