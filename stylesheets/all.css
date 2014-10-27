@@ -228,7 +228,7 @@ body.open-menu { height: 100%; }
   100% { opacity: 1; -webkit-transform: translate3d(0px, 0px, 0px); -moz-transform: translate3d(0px, 0px, 0px); -ms-transform: translate3d(0px, 0px, 0px); -o-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px); } }
 
 .announce { display: block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: fixed; z-index: 1000; bottom: 12px; padding: 6px; width: 100%; -webkit-transform: translate3d(0px, 0px, 0px); -moz-transform: translate3d(0px, 0px, 0px); -ms-transform: translate3d(0px, 0px, 0px); -o-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px); -webkit-transition: -webkit-transform 1s, opacity 1s; -moz-transition: -moz-transform 1s, opacity 1s; -o-transition: -o-transform 1s, opacity 1s; transition: transform 1s, opacity 1s; animation: announce-animation .5s ease-out; -webkit-animation: announce-animation .5s ease-out; }
-.announce.is-drop { -webkit-transform: translate3d(0px, 100px, 0px); -moz-transform: translate3d(0px, 100px, 0px); -ms-transform: translate3d(0px, 100px, 0px); -o-transform: translate3d(0px, 100px, 0px); transform: translate3d(0px, 100px, 0px); -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
+.announce.is-drop { -webkit-transform:  rotateZ(-45deg) translateX(-25px); -moz-transform:  rotateZ(-45deg) translateX(-25px); -ms-transform:  rotateZ(-45deg) translateX(-25px); -o-transform:  rotateZ(-45deg) translateX(-25px); transform:  rotateZ(-45deg) translateX(-25px); }
 .announce .announce-inner { position: relative; display: inline-block; max-width: 420px; padding: 24px; text-align: left; background-color: #333333; border: 1px solid #eeeeee; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 .announce .announce-inner:after { content: ""; display: table; clear: both; }
 .announce .announcer { display: none; }
@@ -918,7 +918,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .focus-list .focus-item .focus-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 100%; }
 .focus-list .focus-item .focus-content .title { margin-bottom: 3px; color: #880013; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 .focus-list .focus-item .focus-content p { display: none; }
-.focus-list .focus-item .focus-content .highlight { float: left; margin-right: 6px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414044767'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
+.focus-list .focus-item .focus-content .highlight { float: left; margin-right: 6px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414150574'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
 .focus-list .focus-item:hover .focus-content .title { text-decoration: underline; }
 
 .author-card .author { margin-bottom: 24px; text-align: center; }
@@ -948,7 +948,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 
 .video-intro { position: relative; padding: 12px; }
 .video-intro .title { font-size: 16px; line-height: 24px; font-weight: bold; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
-.video-intro .highlight { position: absolute; right: 4px; bottom: 4px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414044767'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
+.video-intro .highlight { position: absolute; right: 4px; bottom: 4px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414150574'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
 
 .video { position: relative; background-color: #333333; }
 .video .container { max-width: 960px; }
