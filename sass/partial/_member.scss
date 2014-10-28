@@ -10,7 +10,9 @@
   @include transition(transform .25s);
   @include at-breakpoint($desktop) {
     position: relative;
+    margin: 0 auto;
     width: 90%;
+    max-width: 71em;
   }
 }
 
@@ -109,6 +111,8 @@
     .member-nav {
       padding: 18px 12px 18px 43px;
       text-indent: 0;
+      max-width: 70px;
+      @include ellipsis;
       &:before { left: 12px; }
     }
     .member-menu {

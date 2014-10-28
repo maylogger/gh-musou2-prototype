@@ -545,7 +545,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .open-menu .member { -webkit-transform: translateX(260px); -moz-transform: translateX(260px); -ms-transform: translateX(260px); -o-transform: translateX(260px); transform: translateX(260px); }
 
 .member { position: absolute; z-index: 10; right: 0; -webkit-transition: -webkit-transform 0.25s; -moz-transition: -moz-transform 0.25s; -o-transition: -o-transform 0.25s; transition: transform 0.25s; }
-@media (min-width: 900px) { .member { position: relative; width: 90%; } }
+@media (min-width: 900px) { .member { position: relative; width: 90%; max-width: 71em; margin: 0 auto; } }
 
 .signin, .signed { position: relative; z-index: 10; float: right; font-weight: bold; color: white; cursor: pointer; }
 .signin .member-nav, .signed .member-nav { position: relative; display: block; padding: 18px 16px 18px 26px; text-indent: -119988px; overflow: hidden; text-align: left; }
@@ -563,7 +563,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .signin .member-menu .legislator-member a span, .signed .member-menu .legislator-member a span { position: relative; padding-left: 30px; }
 .signin .member-menu .legislator-member a span:before, .signed .member-menu .legislator-member a span:before { content: ""; position: absolute; top: -1px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_legislator.png?1414483325'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_legislator.svg?1414483325'); }
 
-@media (min-width: 900px) { .signin .member-nav, .signed .member-nav { padding: 18px 12px 18px 43px; text-indent: 0; }
+@media (min-width: 900px) { .signin .member-nav, .signed .member-nav { padding: 18px 12px 18px 43px; text-indent: 0; max-width: 70px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
   .signin .member-nav:before, .signed .member-nav:before { left: 12px; }
   .signin .member-menu, .signed .member-menu { margin: 12px -12px 12px 0; min-width: 144px; }
   .signin .member-menu:before, .signed .member-menu:before { right: 48px; } }
