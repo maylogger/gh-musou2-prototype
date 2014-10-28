@@ -43,12 +43,8 @@
     top: 100%;
     right: 0;
     margin: 12px 6px;
-    padding: 0;
     min-width: 132px;
-    list-style: none;
     text-align: center;
-    background-color: $color-red;
-    @include border-radius(5px);
     &.is-open { display: block; }
     &:before {
       content: "";
@@ -58,6 +54,14 @@
       border: 10px solid transparent;
       border-top: none;
       border-bottom-color: $color-red;
+    }
+    ul {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background-color: $color-red;
+      @include border-radius(5px);
     }
     li a {
       display: block;
@@ -72,7 +76,6 @@
       border-top: 1px solid rgba(white, .25);
     }
     .normal-member a {
-      @include border-radius(5px 5px 0 0);
       span {
         position: relative;
         padding-left: 30px;
@@ -86,7 +89,6 @@
       }
     }
     .legislator-member a {
-      @include border-radius(0 0 5px 5px);
       span {
         position: relative;
         padding-left: 30px;
