@@ -50,9 +50,9 @@ body.open-menu {
   z-index: 2;
   min-height: 100%;
   background: inherit;
-  @include transition(left .3s);
+  @include transition(transform .25s);
   .open-menu & {
-    left: 260px;
+    @include translateX(260px);
   }
 }
 

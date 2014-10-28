@@ -1,0 +1,118 @@
+.open-menu {
+  .member {
+    @include translateX(260px);
+  }
+}
+.member {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  @include transition(transform .25s);
+  @include at-breakpoint($desktop) {
+    position: relative;
+    width: 90%;
+  }
+}
+
+.signin, .signed {
+  position: relative;
+  z-index: 10;
+  float: right;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  .member-nav {
+    position: relative;
+    display: block;
+    padding: 18px 16px 18px 26px;
+    @include hide-text();
+    &:before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      left: 16px;
+      @include replace-text-with-svg("member_normal");
+    }
+    &:hover {
+      background-color: $color-red-dark;
+    }
+  }
+  .member-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: 12px 6px;
+    padding: 0;
+    min-width: 132px;
+    list-style: none;
+    text-align: center;
+    background-color: $color-red;
+    @include border-radius(5px);
+    &.is-open { display: block; }
+    &:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 15px;
+      border: 10px solid transparent;
+      border-top: none;
+      border-bottom-color: $color-red;
+    }
+    li a {
+      display: block;
+      padding: 12px;
+      color: white;
+      &:hover {
+        text-decoration: none;
+        background-color: $color-red-dark;
+      }
+    }
+    li + li {
+      border-top: 1px solid rgba(white, .25);
+    }
+    .normal-member a {
+      @include border-radius(5px 5px 0 0);
+      span {
+        position: relative;
+        padding-left: 30px;
+        &:before {
+          content: "";
+          position: absolute;
+          top: -1px;
+          left: 0;
+          @include replace-text-with-svg("member_normal");
+        }
+      }
+    }
+    .legislator-member a {
+      @include border-radius(0 0 5px 5px);
+      span {
+        position: relative;
+        padding-left: 30px;
+        &:before {
+          content: "";
+          position: absolute;
+          top: -1px;
+          left: 0;
+          @include replace-text-with-svg("member_legislator");
+        }
+      }
+    }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .signin, .signed {
+    .member-nav {
+      padding: 18px 12px 18px 43px;
+      text-indent: 0;
+      &:before { left: 12px; }
+    }
+    .member-menu {
+      margin: 12px -12px 12px 0;
+      min-width: 144px;
+      &:before { right: 48px; }
+    }
+  }
+}
