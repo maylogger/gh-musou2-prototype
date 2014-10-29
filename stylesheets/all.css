@@ -1112,6 +1112,10 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .sitting-info-card .presenter .anchor, .sitting-info-card .presenter .reviewer { display: inline-block; padding: 0 12px; }
 .sitting-info-card .label { display: block; font-size: 13px; line-height: 18px; font-weight: bold; }
 
+.report-editing { margin-top: 24px; text-align: center; }
+.report-editing img { margin: 0 auto; }
+.report-editing span { display: inline-block; margin-top: 24px; font-size: 27px; line-height: 48px; }
+
 .dictionary { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 @media (min-width: 900px) { .dictionary { width: 66.19718%; float: left; margin-right: 1.40845%; padding-right: 48px; } }
 
