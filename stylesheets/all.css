@@ -957,7 +957,6 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
   .dictionary-tip .a-cao { position: absolute; bottom: -24px; right: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/dictionary_acao.png?1412866446'); background-repeat: no-repeat; background-position: 50% 50%; width: 203px; height: 175px; } }
 .focus-list .focus-item { display: block; margin-bottom: 12px; padding-bottom: 12px; color: #333330; border-bottom: 1px solid #d4d4d4; }
 .focus-list .focus-item:after { content: ""; display: table; clear: both; }
-.focus-list .focus-item:first-child { padding-top: 12px; border-top: 1px solid #d4d4d4; }
 .focus-list .focus-item .focus-image { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: none; }
 .focus-list .focus-item .focus-image .focus-image-wrap { position: relative; height: 0; padding-top: 56.667%; background-image: url(/images/focus_image_bg.png); background-size: cover; }
 .focus-list .focus-item .focus-image img { position: absolute; top: 0; left: 0; display: block; width: 100%; }
@@ -972,7 +971,6 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .author-card .label { display: block; font-size: 13px; line-height: 18px; font-weight: bold; }
 
 @media (min-width: 640px) { .focus-list .focus-item { margin-bottom: 24px; padding-bottom: 24px; }
-  .focus-list .focus-item:first-child { padding-top: 24px; }
   .focus-list .focus-item .focus-image { float: right; display: block; width: 30%; }
   .focus-list .focus-item .focus-content { display: inline-block; width: 67%; }
   .focus-list .focus-item .focus-content .meta-info { margin-bottom: 12px; }
