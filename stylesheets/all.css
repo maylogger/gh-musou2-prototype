@@ -649,13 +649,12 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 @media (min-width: 900px) { .iframe-livehouse-in { padding-bottom: 56.25%; } }
 .footer { position: relative; margin-top: 48px; padding: 48px 0; background-color: #333333; }
 .footer:after { content: ""; display: table; clear: both; }
-.footer .link-item { float: none; text-align: center; margin-bottom: 24px; }
-@media (min-width: 900px) { .footer .link-item { float: left; margin-bottom: 0; text-align: left; } }
+.footer .link-item { text-align: center; margin-bottom: 24px; }
 .footer .link-item a { display: block; color: white; padding: 6px 0; }
 @media (min-width: 640px) { .footer .link-item a { display: inline-block; padding: 0 12px; } }
-.footer .link-item a:first-child { padding-left: 0; }
-.footer .credit { float: none; text-align: center; color: white; }
-@media (min-width: 900px) { .footer .credit { float: right; text-align: right; } }
+@media (min-width: 640px) { .footer .link-item a + a { border-left: 2px solid #555555; } }
+.footer .footer-logo { margin: 36px auto 12px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/footer_logo.png?1414573853'); background-repeat: no-repeat; background-position: 50% 50%; width: 167px; height: 24px; background-image: none, url('/images/footer_logo.svg?1414573853'); }
+.footer .credit { float: none; text-align: center; color: #999999; font-size: 13px; line-height: 24px; }
 
 .legislator-list:after { content: ""; display: table; clear: both; }
 
