@@ -106,7 +106,7 @@
   text-align: center;
   span {
     display: block;
-    @include adjust-font-size-to(34px);
+    @include adjust-font-size-to(21px);
   }
 }
 
@@ -251,6 +251,9 @@
     .sitting-summary {
       p { @include adjust-font-size-to(16px); }
     }
+  }
+  .schedule-empty {
+    span { @include adjust-font-size-to(34px); }
   }
 }
 
