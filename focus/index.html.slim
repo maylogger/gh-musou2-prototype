@@ -22,7 +22,10 @@
       li: a href="#tab3" role="tab" data-toggle="tab" = zh_lorem_words(2+rand(3))
       li: a href="#tab4" role="tab" data-toggle="tab" = zh_lorem_words(2+rand(3))
 
-  .focus-list
+  .focus-list.tab-pane.fade.in.active#tab1
     = render "/partials/focus-list"
+  - 3.times do |i|
+    .focus-list.tab-pane.fade id="tab#{i+2}"
+      = render "/partials/focus-list"
 
   = render "/partials/pagination"
