@@ -43,6 +43,11 @@
         margin-right: 6px;
         @include replace-text-with-dimensions("badge_highlight.png");
       }
+      .watchout {
+        float: left;
+        margin-right: 6px;
+        @include replace-text-with-dimensions("badge_watchout.png");
+      }
     }
     &:hover {
       .focus-content {

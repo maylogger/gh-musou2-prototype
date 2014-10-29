@@ -69,6 +69,12 @@
     bottom: 4px;
     @include replace-text-with-dimensions("badge_highlight.png");
   }
+  .watchout {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    @include replace-text-with-dimensions("badge_watchout.png");
+  }
 }
 
 .video {

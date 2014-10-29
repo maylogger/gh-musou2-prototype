@@ -965,6 +965,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .focus-list .focus-item .focus-content .title { margin-bottom: 3px; color: #880013; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 .focus-list .focus-item .focus-content p { display: none; }
 .focus-list .focus-item .focus-content .highlight { float: left; margin-right: 6px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414150574'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
+.focus-list .focus-item .focus-content .watchout { float: left; margin-right: 6px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_watchout.png?1414572161'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
 .focus-list .focus-item:hover .focus-content .title { text-decoration: underline; }
 
 .author-card .author { margin-bottom: 24px; text-align: center; }
@@ -995,6 +996,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .video-intro { position: relative; padding: 12px; }
 .video-intro .title { font-size: 16px; line-height: 24px; font-weight: bold; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 .video-intro .highlight { position: absolute; right: 4px; bottom: 4px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414150574'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
+.video-intro .watchout { position: absolute; right: 4px; bottom: 4px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_watchout.png?1414572161'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
 
 .video { position: relative; background-color: #333333; }
 .video .container { max-width: 960px; }
