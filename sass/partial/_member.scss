@@ -173,6 +173,7 @@
   .contact-time {
     select + select { margin-left: 6px; }
     span { margin: 0 6px; }
+    .start, .end { display: inline-block; }
   }
 }
 

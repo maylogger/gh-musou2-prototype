@@ -578,6 +578,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .sign-form .identity .radio input[type="radio"] { margin-right: 3px; }
 .sign-form .contact-time select + select { margin-left: 6px; }
 .sign-form .contact-time span { margin: 0 6px; }
+.sign-form .contact-time .start, .sign-form .contact-time .end { display: inline-block; }
 
 @media (min-width: 900px) { .signin .member-nav, .signed .member-nav { padding: 18px 12px 18px 43px; text-indent: 0; max-width: 70px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
   .signin .member-nav:before, .signed .member-nav:before { left: 12px; }
