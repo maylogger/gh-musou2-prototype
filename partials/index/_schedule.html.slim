@@ -1,4 +1,7 @@
 - sitting_time =[['9:00-12:00'], ['14:30-17:30'], ['9:00-17:30']]
+- @schedule_forecast_status = "open"
+- @schedule_live_status = "open"
+- @schedule_report_status = "open"
 
 .schedule-slider
 
@@ -21,18 +24,30 @@
   #index-schedule-tab.schedule-table.tab-content
     .tab-pane.fade#forecast
       #slider-forecast
-        - (1+rand(5)).times do
+        - if @schedule_forecast_status === "close"
           .slider-item
-            = render "/partials/index/schedule-card"
+            = render "/partials/index/schedule-card-empty"
+        - if @schedule_forecast_status === "open"
+          - (1+rand(5)).times do
+            .slider-item
+              = render "/partials/index/schedule-card"
 
     .tab-pane.fade.in.active#live
       #slider-live
-        - (1+rand(5)).times do
+        - if @schedule_live_status === "close"
           .slider-item
-            = render "/partials/index/schedule-card-live"
+            = render "/partials/index/schedule-card-empty"
+        - if @schedule_live_status === "open"
+          - (1+rand(5)).times do
+            .slider-item
+              = render "/partials/index/schedule-card-live"
 
     .tab-pane.fade#report
       #slider-report
-        - (1+rand(5)).times do
+        - if @schedule_report_status === "close"
           .slider-item
-            = render "/partials/index/schedule-card"
+            = render "/partials/index/schedule-card-empty"
+        - if @schedule_report_status === "open"
+          - (1+rand(5)).times do
+            .slider-item
+              = render "/partials/index/schedule-card"

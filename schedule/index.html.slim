@@ -1,5 +1,5 @@
 - @page_name = "schedule"
-- @schedule_status = "open"
+- @schedule_status = "close"
 
 .breadcrumb
   .breadcrumb-inner
@@ -31,7 +31,7 @@
       - if @schedule_status == "close"
         .schedule-empty
           img src="/images/schedule_empty.png"
-          span 目前沒有賽事耶（摳）。
+          span 目前沒有賽事耶...
     .tab-pane.fade#report
       .nav-select
         .select-label 委員會分類

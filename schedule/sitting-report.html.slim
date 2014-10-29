@@ -1,3 +1,5 @@
+- @report_status = "editing"
+
 .breadcrumb
   .breadcrumb-inner
     ol.breadcrumb-list
@@ -14,8 +16,13 @@
           .meta.is-highlight
             .label 議題
             =zh_lorem_words(4+rand(5))
-      p = zh_lorem_paragraphs 2+rand(3)
-      p = zh_lorem_paragraphs 3+rand(5)
+      - if @report_status === "editing"
+        .report-editing
+          img src="/images/report_editing.png"
+          span 戰況報告正在編輯中，先看阿草跳支舞吧！
+      - if @report_status === "complete"
+        p = zh_lorem_paragraphs 2+rand(3)
+        p = zh_lorem_paragraphs 3+rand(5)
     .post-extend-content
       h3.content-title 戰況記錄
       = render "/partials/live-comment"

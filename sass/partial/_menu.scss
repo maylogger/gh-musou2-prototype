@@ -1,6 +1,6 @@
 .menu {
   background-color: $color-black;
-  @include at-breakpoint($pad) {
+  @include at-breakpoint($desktop) {
     width: 90%;
   }
 }

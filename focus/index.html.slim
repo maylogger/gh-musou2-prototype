@@ -8,14 +8,24 @@
     = render "/partials/search"
 
 .container.lead.thin
-  .nav-select
-    .select-label 團體分類
-    select
-      option 全部
-      option 沃草精選
-      - 4.times do
-        option #{zh_lorem_words(3+rand(5))}
-  .focus-list
+  .filter
+    .nav-select.in-filter
+      .select-label 團體分類
+      select
+        option 全部
+        option 沃草精選
+        - 4.times do
+          option #{zh_lorem_words(3+rand(5))}
+    ul
+      li.active: a href="#tab1" role="tab" data-toggle="tab" 全部
+      li: a href="#tab2" role="tab" data-toggle="tab" = zh_lorem_words(2+rand(3))
+      li: a href="#tab3" role="tab" data-toggle="tab" = zh_lorem_words(2+rand(3))
+      li: a href="#tab4" role="tab" data-toggle="tab" = zh_lorem_words(2+rand(3))
+
+  .focus-list.tab-pane.fade.in.active#tab1
     = render "/partials/focus-list"
+  - 3.times do |i|
+    .focus-list.tab-pane.fade id="tab#{i+2}"
+      = render "/partials/focus-list"
 
   = render "/partials/pagination"

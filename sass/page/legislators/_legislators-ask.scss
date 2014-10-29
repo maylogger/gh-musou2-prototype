@@ -29,7 +29,7 @@
       @include trailer(.5);
       padding: rhythm(.25);
       border: 1px solid $color-gray;
-      @include border-radius(5px);
+      @include border-radius(2px);
       &:disabled {
         background-color: $color-gray-light;
       }

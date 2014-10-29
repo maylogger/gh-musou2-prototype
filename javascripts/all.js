@@ -3,6 +3,10 @@ $('.menu-btn').on("click", function(){
   $('body').toggleClass('open-menu');
 });
 
+$('.member-nav').on("click", function(){
+  $('.member-menu').toggleClass('is-open');
+});
+
 $('.comment-button').on("click", function(){
   $(this).next('.comment-input').addClass('is-open');
   $(this).parent('.comment-form').addClass('is-open');

@@ -34,8 +34,13 @@
   animation: announce-animation .5s ease-out;
   -webkit-animation: announce-animation .5s ease-out;
   &.is-drop {
-    @include translate3d(0px, 100px, 0px);
-    @include rotate(-45deg);
+    @include create-transform( false, false, false, false, false, false , -25deg, false, -100px, 500px );
+    @include at-breakpoint($pad) {
+      @include create-transform( false, false, false, false, false, false , -25deg, false, -50px, 300px );
+    }
+    @include at-breakpoint($desktop) {
+      @include create-transform( false, false, false, false, false, false , -25deg, false, -50px, 200px );
+    }
   }
   .announce-inner {
     @include pie-clearfix;

@@ -1,0 +1,14 @@
+/ - if @member_status === "unsigned"
+.signin
+  .member-nav 登入
+  .member-menu
+    ul
+      li.normal-member: a href="http://watchout-auth.herokuapp.com/login": span 會員登入
+      li.legislator-member: a href="/signin/legislator-signin.html": span 立委登入
+
+/ - if @member_status === "signed"
+/ .signed
+/   .member-nav = zh_lorem_name
+/   .member-menu
+/     ul
+/       li.sign-out: a href="#" 登出

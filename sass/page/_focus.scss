@@ -6,10 +6,6 @@
     @include padding-trailer(.5);
     color: $text-black;
     border-bottom: 1px solid darken($color-gray-light, 10%);
-    &:first-child {
-      @include padding-leader(.5);
-      border-top: 1px solid darken($color-gray-light, 10%);
-    }
     .focus-image {
       @include box-sizing(border-box);
       display: none;
@@ -43,6 +39,11 @@
         margin-right: 6px;
         @include replace-text-with-dimensions("badge_highlight.png");
       }
+      .watchout {
+        float: left;
+        margin-right: 6px;
+        @include replace-text-with-dimensions("badge_watchout.png");
+      }
     }
     &:hover {
       .focus-content {
@@ -69,7 +70,6 @@
     .focus-item {
       @include trailer();
       @include padding-trailer();
-      &:first-child { @include padding-leader(); }
       .focus-image {
         float: right;
         display: block;
