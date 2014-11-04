@@ -663,7 +663,6 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .legislator-list-item:hover { color: inherit; text-decoration: inherit; cursor: inherit; background-color: #f4f4f4; }
 .legislator-list-item:hover:active, .legislator-list-item:hover:focus { outline: none; }
 .legislator-list-item .legislator-bgimage { position: relative; height: 120px; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-.legislator-list-item .legislator-bgimage:after { content: ""; position: absolute; height: 100px; bottom: 0; left: 0; right: 0; background: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.2))); background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); }
 .legislator-list-item .legislator-avatar { display: block; margin-top: -45px; vertical-align: middle; text-align: center; }
 .legislator-list-item .legislator-data { display: block; text-align: center; }
 .legislator-list-item .legislator-data .legislator-name { margin-bottom: 6px; font-weight: bold; color: #880013; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
