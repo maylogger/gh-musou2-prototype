@@ -76,7 +76,7 @@
   .schedule-tab {
     background-color: transparent;
     ul {
-      max-width: 480px;
+      max-width: 260px;
       &:before { display: none; }
     }
     li a {
@@ -214,6 +214,9 @@
       &.empty {
         height: 345px;
       }
+    }
+    .schedule-tab {
+      ul { max-width: 320px; }
     }
   }
 }

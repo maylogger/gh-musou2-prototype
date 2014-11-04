@@ -239,7 +239,7 @@ body.open-menu { height: 100%; }
 .announce .announce-content .content { margin-bottom: 0px; height: 48px; overflow: hidden; font-size: 13px; line-height: 24px; font-weight: bold; color: white; }
 .announce .announce-content:hover { text-decoration: none; }
 .announce .announce-content:hover .content { text-decoration: underline; }
-.announce .close { position: absolute; top: 6px; right: 6px; padding: 2px 5px; color: white; opacity: .5; font-size: 34.03444px; line-height: 24px; -webkit-transition: opacity 0.25s; -moz-transition: opacity 0.25s; -o-transition: opacity 0.25s; transition: opacity 0.25s; cursor: pointer; }
+.announce .close { position: absolute; top: 6px; right: 8px; padding: 2px 5px; color: white; opacity: .5; font-size: 34.03444px; line-height: 24px; -webkit-transition: opacity 0.25s; -moz-transition: opacity 0.25s; -o-transition: opacity 0.25s; transition: opacity 0.25s; cursor: pointer; }
 .announce .close:hover { opacity: 1; }
 
 @media (min-width: 640px) { .announce { bottom: 24px; left: 24px; }
@@ -912,7 +912,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .schedule-slider .schedule-empty img { margin: 0 auto; }
 .schedule-slider .schedule-empty span { margin-top: 12px; }
 .schedule-slider .schedule-tab { background-color: transparent; }
-.schedule-slider .schedule-tab ul { max-width: 480px; }
+.schedule-slider .schedule-tab ul { max-width: 260px; }
 .schedule-slider .schedule-tab ul:before { display: none; }
 .schedule-slider .schedule-tab li a { padding-top: 6px; padding-bottom: 42px; font-size: 16px; line-height: 24px; }
 .schedule-slider .schedule-tab li a span { padding-left: 6px; background-color: transparent; }
@@ -947,7 +947,8 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .dictionary-tip .dictionary-card .title { margin-bottom: 6px; font-size: 16px; line-height: 30px; font-weight: bold; }
 .dictionary-tip .dictionary-card .title .entrance { float: right; margin-top: 6px; font-size: 13px; line-height: 24px; }
 
-@media (min-width: 640px) { .schedule-slider .sitting.in-index.empty { height: 345px; } }
+@media (min-width: 640px) { .schedule-slider .sitting.in-index.empty { height: 345px; }
+  .schedule-slider .schedule-tab ul { max-width: 320px; } }
 @media (min-width: 900px) { .schedule-slider .sitting.in-index .sitting-info { padding: 24px 0; }
   .schedule-slider .sitting.in-index.empty { padding-top: 72px; height: 186px; }
   .focus-collection, .video-collection { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 32.39437%; float: left; margin-right: 1.40845%; margin-top: 0px; padding-right: 24px; }
