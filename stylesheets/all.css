@@ -227,11 +227,11 @@ body.open-menu { height: 100%; }
 @-webkit-keyframes announce-animation { 0% { opacity: 0; -webkit-transform: translate3d(-100px, 0px, 0px); -moz-transform: translate3d(-100px, 0px, 0px); -ms-transform: translate3d(-100px, 0px, 0px); -o-transform: translate3d(-100px, 0px, 0px); transform: translate3d(-100px, 0px, 0px); }
   100% { opacity: 1; -webkit-transform: translate3d(0px, 0px, 0px); -moz-transform: translate3d(0px, 0px, 0px); -ms-transform: translate3d(0px, 0px, 0px); -o-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px); } }
 
-.announce { display: block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: fixed; z-index: 1000; bottom: 12px; padding: 6px; width: 100%; -webkit-transform: translate3d(0px, 0px, 0px); -moz-transform: translate3d(0px, 0px, 0px); -ms-transform: translate3d(0px, 0px, 0px); -o-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px); -webkit-transition: -webkit-transform 1s, opacity 1s; -moz-transition: -moz-transform 1s, opacity 1s; -o-transition: -o-transform 1s, opacity 1s; transition: transform 1s, opacity 1s; animation: announce-animation .5s ease-out; -webkit-animation: announce-animation .5s ease-out; }
+.announce { display: block; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: fixed; z-index: 1000; bottom: 12px; padding: 6px; -webkit-transform: translate3d(0px, 0px, 0px); -moz-transform: translate3d(0px, 0px, 0px); -ms-transform: translate3d(0px, 0px, 0px); -o-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px); -webkit-transition: -webkit-transform 1s, opacity 1s; -moz-transition: -moz-transform 1s, opacity 1s; -o-transition: -o-transform 1s, opacity 1s; transition: transform 1s, opacity 1s; animation: announce-animation .5s ease-out; -webkit-animation: announce-animation .5s ease-out; }
 .announce.is-drop { -webkit-transform:  rotateZ(-25deg) translate(-100px, 500px); -moz-transform:  rotateZ(-25deg) translate(-100px, 500px); -ms-transform:  rotateZ(-25deg) translate(-100px, 500px); -o-transform:  rotateZ(-25deg) translate(-100px, 500px); transform:  rotateZ(-25deg) translate(-100px, 500px); }
 @media (min-width: 640px) { .announce.is-drop { -webkit-transform:  rotateZ(-25deg) translate(-50px, 300px); -moz-transform:  rotateZ(-25deg) translate(-50px, 300px); -ms-transform:  rotateZ(-25deg) translate(-50px, 300px); -o-transform:  rotateZ(-25deg) translate(-50px, 300px); transform:  rotateZ(-25deg) translate(-50px, 300px); } }
 @media (min-width: 900px) { .announce.is-drop { -webkit-transform:  rotateZ(-25deg) translate(-50px, 200px); -moz-transform:  rotateZ(-25deg) translate(-50px, 200px); -ms-transform:  rotateZ(-25deg) translate(-50px, 200px); -o-transform:  rotateZ(-25deg) translate(-50px, 200px); transform:  rotateZ(-25deg) translate(-50px, 200px); } }
-.announce .announce-inner { position: relative; display: inline-block; max-width: 420px; padding: 24px; text-align: left; background-color: #333333; border: 1px solid #eeeeee; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+.announce .announce-inner { display: inline-block; max-width: 420px; padding: 24px; text-align: left; background-color: #880013; border: 1px solid #333333; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 .announce .announce-inner:after { content: ""; display: table; clear: both; }
 .announce .announcer { display: none; }
 .announce .announce-content { overflow: hidden; }
@@ -239,8 +239,8 @@ body.open-menu { height: 100%; }
 .announce .announce-content .content { margin-bottom: 0px; height: 48px; overflow: hidden; font-size: 13px; line-height: 24px; font-weight: bold; color: white; }
 .announce .announce-content:hover { text-decoration: none; }
 .announce .announce-content:hover .content { text-decoration: underline; }
-.announce .close { position: absolute; top: 0; right: 0; padding: 2px 5px; color: #8a8a8a; font-size: 34.03444px; line-height: 24px; -webkit-transition: color 0.25s; -moz-transition: color 0.25s; -o-transition: color 0.25s; transition: color 0.25s; cursor: pointer; }
-.announce .close:hover { color: white; }
+.announce .close { position: absolute; top: 6px; right: 6px; padding: 2px 5px; color: white; opacity: .5; font-size: 34.03444px; line-height: 24px; -webkit-transition: opacity 0.25s; -moz-transition: opacity 0.25s; -o-transition: opacity 0.25s; transition: opacity 0.25s; cursor: pointer; }
+.announce .close:hover { opacity: 1; }
 
 @media (min-width: 640px) { .announce { bottom: 24px; left: 24px; }
   .announce .announce-inner { padding: 18px; }
@@ -549,7 +549,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 
 .signin, .signed { position: relative; z-index: 10; float: right; font-weight: bold; color: white; cursor: pointer; }
 .signin .member-nav, .signed .member-nav { position: relative; display: block; padding: 18px 16px 18px 26px; text-indent: -119988px; overflow: hidden; text-align: left; }
-.signin .member-nav:before, .signed .member-nav:before { content: ""; position: absolute; top: 18px; left: 16px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_normal.png?1414502381'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_normal.svg?1414502381'); }
+.signin .member-nav:before, .signed .member-nav:before { content: ""; position: absolute; top: 18px; left: 16px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_normal.png?1414574114'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_normal.svg?1414574114'); }
 .signin .member-nav:hover, .signed .member-nav:hover { background-color: #700007; }
 .signin .member-menu, .signed .member-menu { display: none; position: absolute; top: 100%; right: 0; margin: 12px 6px; min-width: 132px; text-align: center; }
 .signin .member-menu.is-open, .signed .member-menu.is-open { display: block; }
@@ -559,15 +559,15 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .signin .member-menu li a:hover, .signed .member-menu li a:hover { text-decoration: none; background-color: #700007; }
 .signin .member-menu li + li, .signed .member-menu li + li { border-top: 1px solid rgba(255, 255, 255, 0.25); }
 .signin .member-menu .normal-member a span, .signed .member-menu .normal-member a span { position: relative; padding-left: 30px; }
-.signin .member-menu .normal-member a span:before, .signed .member-menu .normal-member a span:before { content: ""; position: absolute; top: -1px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_normal.png?1414502381'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_normal.svg?1414502381'); }
+.signin .member-menu .normal-member a span:before, .signed .member-menu .normal-member a span:before { content: ""; position: absolute; top: -1px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_normal.png?1414574114'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_normal.svg?1414574114'); }
 .signin .member-menu .legislator-member a span, .signed .member-menu .legislator-member a span { position: relative; padding-left: 30px; }
-.signin .member-menu .legislator-member a span:before, .signed .member-menu .legislator-member a span:before { content: ""; position: absolute; top: -1px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_legislator.png?1414502381'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_legislator.svg?1414502381'); }
+.signin .member-menu .legislator-member a span:before, .signed .member-menu .legislator-member a span:before { content: ""; position: absolute; top: -1px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_legislator.png?1414574114'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_legislator.svg?1414574114'); }
 
 .sign-form .title { margin-bottom: 12px; font-size: 21px; line-height: 48px; font-weight: bold; color: #880013; border-bottom: 1px solid #999999; }
 .sign-form .title.legislator-signin { position: relative; padding-left: 30px; }
-.sign-form .title.legislator-signin:before { content: ""; position: absolute; top: 12px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_legislator.png?1414502381'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_legislator.svg?1414502381'); }
+.sign-form .title.legislator-signin:before { content: ""; position: absolute; top: 12px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_legislator.png?1414574114'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_legislator.svg?1414574114'); }
 .sign-form .title.legislator-forget-pw { position: relative; padding-left: 30px; }
-.sign-form .title.legislator-forget-pw:before { content: ""; position: absolute; top: 12px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_forget_pw.png?1414502381'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_forget_pw.svg?1414502381'); }
+.sign-form .title.legislator-forget-pw:before { content: ""; position: absolute; top: 12px; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/member_forget_pw.png?1414574114'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/member_forget_pw.svg?1414574114'); }
 .sign-form .form-row { margin-bottom: 24px; }
 .sign-form .label { margin-bottom: 12px; color: #333330; font-weight: bold; }
 .sign-form input[type="text"], .sign-form input[type="password"] { margin: 0; padding: 0; border: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow: hidden; width: 100%; padding: 6px; border: 1px solid #999999; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
@@ -653,7 +653,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .footer .link-item a { display: block; color: white; padding: 6px 0; }
 @media (min-width: 640px) { .footer .link-item a { display: inline-block; padding: 0 12px; } }
 @media (min-width: 640px) { .footer .link-item a + a { border-left: 2px solid #555555; } }
-.footer .footer-logo { margin: 36px auto 12px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/footer_logo.png?1414573853'); background-repeat: no-repeat; background-position: 50% 50%; width: 167px; height: 24px; background-image: none, url('/images/footer_logo.svg?1414573853'); }
+.footer .footer-logo { margin: 36px auto 12px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/footer_logo.png?1414574114'); background-repeat: no-repeat; background-position: 50% 50%; width: 167px; height: 24px; background-image: none, url('/images/footer_logo.svg?1414574114'); }
 .footer .credit { float: none; text-align: center; color: #999999; font-size: 13px; line-height: 24px; }
 
 .legislator-list:after { content: ""; display: table; clear: both; }
@@ -963,7 +963,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .focus-list .focus-item .focus-content .title { margin-bottom: 3px; color: #880013; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 .focus-list .focus-item .focus-content p { display: none; }
 .focus-list .focus-item .focus-content .highlight { float: left; margin-right: 6px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414150574'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
-.focus-list .focus-item .focus-content .watchout { float: left; margin-right: 6px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_watchout.png?1414572161'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
+.focus-list .focus-item .focus-content .watchout { float: left; margin-right: 6px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_watchout.png?1414574114'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
 .focus-list .focus-item:hover .focus-content .title { text-decoration: underline; }
 
 .author-card .author { margin-bottom: 24px; text-align: center; }
@@ -993,7 +993,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .video-intro { position: relative; padding: 12px; }
 .video-intro .title { font-size: 16px; line-height: 24px; font-weight: bold; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 .video-intro .highlight { position: absolute; right: 4px; bottom: 4px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_highlight.png?1414150574'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
-.video-intro .watchout { position: absolute; right: 4px; bottom: 4px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_watchout.png?1414572161'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
+.video-intro .watchout { position: absolute; right: 4px; bottom: 4px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/badge_watchout.png?1414574114'); background-repeat: no-repeat; background-position: 50% 50%; width: 65px; height: 30px; }
 
 .video { position: relative; background-color: #333333; }
 .video .container { max-width: 960px; }

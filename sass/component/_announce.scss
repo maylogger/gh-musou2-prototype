@@ -23,12 +23,12 @@
 
 .announce {
   display: block;
+  position: relative;
   @include box-sizing(border-box);
   position: fixed;
   z-index: 1000;
   bottom: 12px;
   padding: 6px;
-  width: 100%;
   @include translate3d(0px, 0px, 0px);
   @include transition(transform 1s, opacity 1s);
   animation: announce-animation .5s ease-out;
@@ -44,13 +44,12 @@
   }
   .announce-inner {
     @include pie-clearfix;
-    position: relative;
     display: inline-block;
     max-width: 420px;
     padding: 24px;
     text-align: left;
-    background-color: $color-black;
-    border: 1px solid $color-gray-light;
+    background-color: $color-red;
+    border: 1px solid $color-black;
     @include border-radius(5px);
   }
   .announcer { display: none; }
@@ -76,14 +75,15 @@
   }
   .close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 6px;
+    right: 6px;
     padding: 2px 5px;
-    color: $text-gray;
+    color: white;
+    opacity: .5;
     @include adjust-font-size-to(ms(4), 1);
-    @include transition(color .25s);
+    @include transition(opacity .25s);
     cursor: pointer;
-    &:hover { color: white; }
+    &:hover { opacity: 1; }
   }
 }
 
