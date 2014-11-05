@@ -280,7 +280,7 @@ img.mfp-img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 40px 0 40px;
+  padding: 12px 0 12px;
   margin: 0 auto; }
 
 /* The shadow behind the image */
@@ -299,7 +299,12 @@ img.mfp-img {
   background: #444444; }
 
 .mfp-figure {
-  line-height: 0; }
+  line-height: 0;
+}
+
+.mfp-figure figure {
+  margin: 0;
+}
 
 .mfp-bottom-bar {
   margin-top: -36px;
