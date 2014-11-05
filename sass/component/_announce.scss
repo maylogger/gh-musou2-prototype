@@ -1,21 +1,17 @@
 @keyframes announce-animation {
   0% {
-    opacity: 0;
-    @include translate3d(-100px, 0px, 0px);
+    @include translate3d(-100%, 0px, 0px);
   }
   100% {
-    opacity: 1;
     @include translate3d(0px, 0px, 0px);
   }
 }
 
 @-webkit-keyframes announce-animation {
   0% {
-    opacity: 0;
-    @include translate3d(-100px, 0px, 0px);
+    @include translate3d(-100%, 0px, 0px);
   }
   100% {
-    opacity: 1;
     @include translate3d(0px, 0px, 0px);
   }
 }
@@ -28,41 +24,38 @@
   position: fixed;
   z-index: 1000;
   bottom: 12px;
-  padding: 6px;
+  margin-right: 12px;
   @include translate3d(0px, 0px, 0px);
-  @include transition(transform 1s, opacity 1s);
+  @include transition(transform .5s cubic-bezier(0.55, 0.085, 0.68, 0.53));
   animation: announce-animation .5s ease-out;
   -webkit-animation: announce-animation .5s ease-out;
-  &.is-drop {
-    @include create-transform( false, false, false, false, false, false , -25deg, false, -100px, 500px );
-    @include at-breakpoint($pad) {
-      @include create-transform( false, false, false, false, false, false , -25deg, false, -50px, 300px );
-    }
-    @include at-breakpoint($desktop) {
-      @include create-transform( false, false, false, false, false, false , -25deg, false, -50px, 200px );
-    }
-  }
   .announce-inner {
     @include pie-clearfix;
     display: inline-block;
     max-width: 420px;
-    padding: 24px;
+    padding: 18px 30px 18px 18px;
     text-align: left;
     background-color: $color-red;
     border: 1px solid $color-black;
-    @include border-radius(5px);
+    @include border-radius(0 5px 5px 0);
+    @include transform-origin(0%, 100%, 0);
+    @include transition(background-color .25s, transform .5s cubic-bezier(0.55, 0.085, 0.68, 0.53));
+    &:hover {
+      background-color: lighten($color-red, 5%);
+    }
+  }
+  &.is-drop {
+    @include translate(30px, 200px, 0px);
+    .announce-inner {
+      @include rotate(60deg);
+    }
   }
   .announcer { display: none; }
   .announce-content {
     overflow: hidden;
-    .title {
-      color: $color-gray-light;
-      font-weight: bold;
-      @include adjust-font-size-to(13px);
-    }
     .content {
       @include trailer(0);
-      height: 48px;
+      height: 72px;
       overflow: hidden;
       @include adjust-font-size-to(13px);
       font-weight: bold;
@@ -70,16 +63,15 @@
     }
     &:hover {
       text-decoration: none;
-      .content { text-decoration: underline; }
     }
   }
   .close {
     position: absolute;
-    top: 6px;
-    right: 8px;
+    top: 0;
+    right: 2px;
     padding: 2px 5px;
     color: white;
-    opacity: .5;
+    opacity: .7;
     @include adjust-font-size-to(ms(4), 1);
     @include transition(opacity .25s);
     cursor: pointer;
@@ -89,11 +81,7 @@
 
 @include at-breakpoint($pad) {
   .announce {
-    bottom: 24px;
-    left: 24px;
-    .announce-inner {
-      padding: 18px;
-    }
+    bottom: 48px;
     .announcer {
       display: block;
       float: left;
