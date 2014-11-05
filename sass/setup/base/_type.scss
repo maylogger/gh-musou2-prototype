@@ -42,12 +42,12 @@ body {
   @include reset-box-model;
   font-weight: normal;
 }
-%h1, h1 { @include adjust-font-size-to(ms(3), 1.5); }
-%h2, h2 { @include adjust-font-size-to(ms(2), 1.25); }
-%h3, h3 { @include adjust-font-size-to(ms(1)); }
-%h4, h4 { @include adjust-font-size-to(ms(0)); }
-%h5, h5 { @include adjust-font-size-to(ms(-1), .875); }
-%h6, h6 { @include adjust-font-size-to(ms(-2), .75); }
+%h1, h1 { @include adjust-font-size-to(27px, 1.5); }
+%h2, h2 { @include adjust-font-size-to(21px, 1.25); }
+%h3, h3 { @include adjust-font-size-to(16px); }
+%h4, h4 { @include adjust-font-size-to(13px); }
+%h5, h5 { @include adjust-font-size-to(10px, .875); }
+%h6, h6 { @include adjust-font-size-to(8px, .75); }
 
 p {
   @include leader(0);
@@ -56,16 +56,16 @@ p {
 }
 
 @include at-breakpoint($pad) {
-  %h1, h1 { @include adjust-font-size-to(ms(4), 2); }
-  %h2, h2 { @include adjust-font-size-to(ms(3), 1.5); }
-  %h3, h3 { @include adjust-font-size-to(ms(2), 1.25); }
-  %h4, h4 { @include adjust-font-size-to(ms(1)); }
-  %h5, h5 { @include adjust-font-size-to(ms(0)); }
-  %h6, h6 { @include adjust-font-size-to(ms(-1), .875); }
+  %h1, h1 { @include adjust-font-size-to(34px, 2); }
+  %h2, h2 { @include adjust-font-size-to(27px, 1.5); }
+  %h3, h3 { @include adjust-font-size-to(21px, 1.25); }
+  %h4, h4 { @include adjust-font-size-to(16px); }
+  %h5, h5 { @include adjust-font-size-to(13px); }
+  %h6, h6 { @include adjust-font-size-to(10px, .875); }
   p {
     @include leader(0);
     @include trailer(1);
-    @include adjust-font-size-to(ms(1), 1.2);
+    @include adjust-font-size-to(16px, 1.2);
   }
 }
 
@@ -75,7 +75,7 @@ blockquote {
   @include leader(1);
   @include trailer(1);
   padding-left: rhythm(1);
-  @include adjust-font-size-to(ms(1));
+  @include adjust-font-size-to(16px);
   border-left: 5px solid darken($color-gray-light, 10%);
   cite {
     display: block;
