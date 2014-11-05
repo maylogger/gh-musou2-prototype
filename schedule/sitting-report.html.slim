@@ -29,13 +29,14 @@
     = render "/partials/disqus"
   .sidebar
     .sitting-info-card.sidebar-item
-      a.president href="/legislators/legislator.html"
-        .avatar.is-large.is-highlight.has-party
-          .party =image_tag("/images/DPP.png")
-          =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
-        .name
-          .label 主席
-          =zh_lorem_name
+      .presenter
+        a.president href="/legislators/legislator.html"
+          .avatar.is-president.has-party
+            .party =image_tag("/images/DPP.png")
+            =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+          .name
+            .label 主席
+            =zh_lorem_name
 
       ul.list
         li
