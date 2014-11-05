@@ -1,11 +1,11 @@
-.share-popup {
+.popup {
   position: relative;
   z-index: 1;
   padding: 24px;
   text-align: center;
   background-color: white;
   @include border-radius(2px);
-  .share-popup-title {
+  .popup-title {
     @extend %h4;
     @include trailer(.5);
     @include padding-trailer(.25);
@@ -51,6 +51,23 @@
         @include unstyled-link;
         color: white;
       }
+    }
+  }
+  .message-confirm {
+    p {
+      padding: 12px;
+      border: 1px solid $color-gray-light;
+      @include border-radius(5px);
+    }
+    .notice {
+      @include trailer(.5);
+      @include adjust-font-size-to(13px);
+      font-weight: bold;
+      color: $color-red;
+    }
+    .button {
+      display: block;
+      width: 100%;
     }
   }
 }
