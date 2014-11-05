@@ -80,8 +80,14 @@ $('.search-bar-toggle').on("click", function(){
   $('.search-bar').toggleClass('is-open');
 });
 
-$('.btn-share-module').magnificPopup({
+$('.btn-share-module, .message-sent').magnificPopup({
   type: 'ajax',
+  removalDelay: 300,
+  mainClass: 'mfp-fade'
+});
+
+$('.comment-image').magnificPopup({
+  type: 'image',
   removalDelay: 300,
   mainClass: 'mfp-fade'
 });
