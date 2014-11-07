@@ -588,7 +588,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
   .sign-form { margin-left: 25.35211%; margin-right: 25.35211%; width: 49.29577%; float: left; margin-right: 1.40845%; } }
 .header { background-color: #880013; }
 .header .logo { padding: 11px 0 13px; text-align: center; }
-.header .logo a { display: inline-block; vertical-align: top; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1415285176'); background-repeat: no-repeat; background-position: 50% 50%; width: 142px; height: 37px; background-image: none, url('/images/logo.svg?1415285176'); }
+.header .logo a { display: inline-block; vertical-align: top; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1415355207'); background-repeat: no-repeat; background-position: 50% 50%; width: 142px; height: 36px; background-image: none, url('/images/logo.svg?1415355207'); }
 @media (min-width: 900px) { .header .logo { text-align: left; } }
 
 .menu-btn { position: absolute; left: 0; width: 60px; height: 60px; background-color: transparent; border: none; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
