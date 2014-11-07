@@ -8,13 +8,16 @@
       li: a href="/legislators/" 立委線上
     = render "/partials/search"
 
+.filter
+  .container
+    .nav-select.in-filter
+      .select-label 委員會分類
+      select
+        option 最新更新
+        - 11.times do
+          option #{zh_lorem_words(3+rand(5))}委員會
+
 .container.lead
-  .nav-select
-    .select-label 委員會分類
-    select
-      option 最新更新
-      - 11.times do
-        option #{zh_lorem_words(3+rand(5))}委員會
   .legislator-list
     = render "/partials/legislators/legislators-list"
   form

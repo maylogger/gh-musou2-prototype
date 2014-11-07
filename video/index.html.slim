@@ -7,8 +7,8 @@
       li: a href="/video/" 無雙影音
     = render "/partials/search"
 
-.container.lead
-  .filter
+.filter
+  .container
     .nav-select.in-filter
       .select-label 團體分類
       select
@@ -22,6 +22,7 @@
       li: a href="#tab3" role="tab" data-toggle="tab" 烏龍球
       li: a href="#tab4" role="tab" data-toggle="tab" 界外球
 
+.container.lead
   .video-list.tab-pane.fade.in.active#tab1
     = render "/partials/video-list"
   - 3.times do |i|

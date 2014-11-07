@@ -1,7 +1,7 @@
 .filter {
   position: relative;
-  @include leader(1.5);
   @include trailer();
+  background-color: $color-gray-light;
   &:after {
     content: "";
     display: block;
@@ -24,7 +24,7 @@
         display: block;
         position: relative;
         z-index: 10;
-        padding: 3px 12px 3px;
+        padding: 5px 12px 3px;
         @include adjust-font-size-to(13px);
         color: $text-black-light;
         border-bottom: 1px solid darken($color-gray-light, 10%);
@@ -35,7 +35,7 @@
       }
       &.active a {
         @extend %subpixel;
-        padding: 3px 12px 1px;
+        padding: 5px 12px 1px;
         color: $color-red;
         border-bottom: 3px solid $color-red;
       }
