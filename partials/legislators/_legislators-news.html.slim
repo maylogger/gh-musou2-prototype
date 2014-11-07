@@ -25,17 +25,6 @@
   h4.news-comment-title 立委評論
   .news-comment
     - rand(5).times do
-      .comment-item
-        a.avatar.is-small.has-party href="/legislators/legislator.html"
-          .party =image_tag("/images/DPP.png")
-          =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
-        .content
-          .name =zh_lorem_name
-          p =zh_lorem_sentence
-    .comment-form
-      a.avatar.is-small.has-party href="/legislators/legislator.html"
-        .party =image_tag("/images/DPP.png")
-        =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
-      .comment-button 發表評論...
-      .comment-input
-        input type="text" placeholder="請輸入訊息..."
+      = render "/partials/legislators/legislators-news-comment-item"
+    = render "/partials/legislators/legislators-news-comment-form"
+

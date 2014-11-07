@@ -26,6 +26,9 @@
 }
 
 @include at-breakpoint($desktop) {
+  .sidebar.is-move {
+    @include translate3d(0, 0, 0);
+  }
   .sidebar-item {
     padding: 20px 24px;
   }

@@ -99,13 +99,13 @@
   .comment-input {
     display: none;
     &.is-open { display: block; }
-    input {
+    input[type="text"] {
       @include reset-box-model;
       @include box-sizing(border-box);
       overflow: hidden;
-      width: 75%;
-      margin: 6px 0;
-      padding: 6px;
+      width: 50%;
+      margin: 6px 6px 6px 0;
+      padding: 5px;
       border: 1px solid $color-gray;
       @include border-radius(3px);
     }
@@ -114,8 +114,8 @@
 
 @include at-breakpoint($pad) {
   .legislator-profile {
-    .news-comment-form {
-      input { width: 85%; }
+    .comment-form {
+      input[type="text"] { width: 70%; }
     }
   }
 }

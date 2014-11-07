@@ -1,4 +1,3 @@
-// off canvas menu switch
 $(function(){
   $('.menu-btn').on("click", function(){
   $('body').toggleClass('open-menu');
@@ -81,11 +80,27 @@ $(function(){
     $('.search-bar').toggleClass('is-open');
   });
 
-  $('.btn-share-module').magnificPopup({
+  $('.btn-share-module, .message-sent').magnificPopup({
     type: 'ajax',
     removalDelay: 300,
     mainClass: 'mfp-fade'
   });
 
+  $('.comment-image').magnificPopup({
+    type: 'image',
+    removalDelay: 300,
+    mainClass: 'mfp-fade'
+  });
+
   $('.big-text h1, .big-text h2, .big-text h3, .big-text h4, .video-info-inner h1').macho();
-})
+
+  $('#slider-forecast, #slider-live, #slider-report').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 1,
+    cssEase: 'ease-in-out',
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 500,
+  });
+});

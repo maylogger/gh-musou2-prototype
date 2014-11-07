@@ -18,6 +18,9 @@ $page-container: ".container";
 #{$page-container}, %container, .container {
   $container-style: fluid;
   @include container($phone, $pad, $desktop);
-  &.lead { @include leader(2); }
+  &.lead {
+    @include leader(2);
+    @include trailer(2);
+  }
   &.thin { max-width: 900px; }
 }

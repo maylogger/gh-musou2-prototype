@@ -1,34 +1,44 @@
 .live-comment-list
-  .live-comment.highlight
-    .time 10:57
+  .live-comment id="comment-01"
+    .info
+      .time 10:57
+      .share
+        a.btn-share-module href="/lightbox/share.html"
+          .button 分享
+          .counter #{rand(1000)}
     .comment
-      - (rand(8)).times do
-        a.legislator href="/legislators/legislator.html"
-          .avatar.is-small.has-party
-            .party =image_tag("/images/DPP.png")
-            =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
-          .name
-            span =zh_lorem_name
       p.text =zh_lorem_sentences 5
-      a href="#"
-        img src="http://hhhhold.com/150x100/#{rand(100)}"
-    .share
-      a.btn-share-module href="/lightbox/share.html"
-        .counter #{rand(1000)}
-        .button 分享
-  - 4.times do |i|
-    .live-comment
-      .time 10:#{50-i*7}
-      .comment
-        - (rand(8)).times do
+      a.comment-image href="http://hhhhold.com/800x600/#{rand(100)}"
+        img src="http://hhhhold.com/100x75/#{rand(100)}"
+      a.comment-image href="http://hhhhold.com/800x600/#{rand(100)}"
+        img src="http://hhhhold.com/100x75/#{rand(100)}"
+    - rand(2).times do
+      .tag-legislator
+        span 相關立委
+        - (1+rand(6)).times do
           a.legislator href="/legislators/legislator.html"
             .avatar.is-small.has-party
               .party =image_tag("/images/DPP.png")
               =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
             .name
               span =zh_lorem_name
-        .text =zh_lorem_sentences 5
-      .share
-        a.btn-share-module href="#"
-          .counter #{rand(1000)}
-          .button href="#" 分享
+  - 4.times do |i|
+    .live-comment id="comment-0#{i+2}"
+      .info
+        .time 10:#{50-i*7}
+        .share
+          a.btn-share-module href="/lightbox/share.html"
+            .button 分享
+            .counter #{rand(1000)}
+      .comment
+        p.text =zh_lorem_sentences 5
+      - rand(2).times do
+        .tag-legislator
+          span 相關立委
+          - (1+rand(6)).times do
+            a.legislator href="/legislators/legislator.html"
+              .avatar.is-small.has-party
+                .party =image_tag("/images/DPP.png")
+                =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
+              .name
+                span =zh_lorem_name

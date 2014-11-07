@@ -44,10 +44,16 @@
 
 @include at-breakpoint($desktop) {
   .main-nav {
-    li.active a { border-bottom: 3px solid white; }
-    a {
+    li.active a {
       padding: 18px 12px 15px;
-      &:hover { border-bottom: 3px solid $color-red-dark; }
+      border-bottom: 3px solid white;
+    }
+    a {
+      padding: 18px 12px 18px;
+      &:hover {
+        padding: 18px 12px 15px;
+        border-bottom: 3px solid $color-red-dark;
+      }
     }
   }
 }

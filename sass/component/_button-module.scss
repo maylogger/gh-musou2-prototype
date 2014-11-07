@@ -156,7 +156,7 @@ input[type="submit"].btn_loadmore {
   position: relative;
   width: 100%;
   @include leader();
-  padding: 12px 12px;
+  padding: 9px 12px;
   color: white;
   background-color: $color-red;
   @include border-radius(5px);

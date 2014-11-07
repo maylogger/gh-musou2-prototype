@@ -32,8 +32,9 @@
         margin-bottom: 3px;
         color: $color-red;
         @include ellipsis;
+        &:hover { text-decoration: underline; }
       }
-      p { display: none; }
+      .summary { display: none; }
       .highlight {
         float: left;
         margin-right: 6px;
@@ -43,11 +44,6 @@
         float: left;
         margin-right: 6px;
         @include replace-text-with-dimensions("badge_watchout.png");
-      }
-    }
-    &:hover {
-      .focus-content {
-        .title { text-decoration: underline; }
       }
     }
   }
@@ -79,19 +75,14 @@
         display: inline-block;
         width: 67%;
         .meta-info { @include trailer(.5); }
-        p {
+        .summary {
           display: block;
           overflow: hidden;
           @include trailer(0);
           height: 48px;
-          @include adjust-font-size-to(13px);
-          color: lighten($text-black, 25%);
+          @include adjust-font-size-to(15px);
+          color: $text-black;
           @include transition(color .25s);
-        }
-      }
-      &:hover {
-        .focus-content {
-          p { color: $text-black; }
         }
       }
       &.video {

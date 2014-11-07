@@ -28,6 +28,10 @@
   }
 }
 
+#disqus_thread {
+  @include trailer(.5);
+}
+
 @include at-breakpoint($pad) {
   .iframe-livehouse-in {
     padding-bottom: 100%

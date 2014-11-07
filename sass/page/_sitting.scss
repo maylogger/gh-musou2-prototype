@@ -1,18 +1,22 @@
 .sitting-info-card {
   .president {
     @include unstyled-link;
-    display: block;
-    @include trailer();
-    text-align: center;
   }
   .presenter {
-    @include trailer();
+    display: block;
+    @include leader();
+    @include trailer(2);
     text-align: center;
     .anchor,
-    .reviewer {
+    .reviewer,
+    .president {
       display: inline-block;
       padding: 0 12px;
     }
+  }
+  .list {
+    @include adjust-font-size-to(13px);
+    text-align: left;
   }
   .label {
     display: block;
