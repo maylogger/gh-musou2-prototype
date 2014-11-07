@@ -16,10 +16,9 @@
     position: relative;
     height: 128px;
     margin-bottom: 128px;
-    background-color: $color-black;
+    background-color: white;
     background-position: center center;
     @include background-size(cover);
-    border-bottom: 1px solid $color-gray-light;
     &:after {
       content: "";
       position: absolute;
@@ -115,9 +114,9 @@
 }
 
 .legislator-main {
-  @include padding-leader();
+  @include padding-leader(.75);
   background-color: $color-gray-light;
-  padding-bottom: 48px;
+  padding-bottom: 18px;
   margin-bottom: -48px;
   .sidebar {
     .sidebar-item { border: none; }
@@ -158,6 +157,7 @@
     .legislator-header-bg {
       height: auto;
       margin-bottom: 0;
+      background-color: $color-black;
       &:after { @include background(linear-gradient(to right, rgba(black, .75), rgba(black, 0))); }
     }
     .legislator-head {
