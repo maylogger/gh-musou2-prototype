@@ -36,8 +36,6 @@
     padding: 18px 30px 18px 18px;
     text-align: left;
     background-color: $color-red;
-    border: 1px solid $color-black;
-    @include border-radius(0 5px 5px 0);
     @include transform-origin(0%, 100%, 0);
     @include transition(background-color .25s, transform .5s cubic-bezier(0.55, 0.085, 0.68, 0.53));
     &:hover {
