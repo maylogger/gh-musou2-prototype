@@ -18,6 +18,7 @@
     &.in-filter {
       display: inline-block;
       @include trailer(0);
+      padding: 3px 0 5px;
     }
   }
 }
