@@ -66,7 +66,10 @@ body.open-menu {
     $container-style: magic;
     @include set-container-width;
   }
-  .wrap { @include transition(max-width 1s); }
+  .wrap {
+    min-width: 900px;
+    @include transition(max-width 1s);
+  }
   .open-menu .wrap {
     overflow: visible;
   }
