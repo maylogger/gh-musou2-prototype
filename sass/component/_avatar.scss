@@ -23,6 +23,7 @@
         height: 24px;
         display: block;
         margin: 0 auto;
+        background-color: white;
         @include border-radius(100%);
         border: 1px solid $color-black;
       }
