@@ -1,6 +1,6 @@
 $(function(){
   $('.menu-btn').on("click", function(){
-  $('body').toggleClass('open-menu');
+    $('body').toggleClass('open-menu');
   });
 
   $('.member-nav').on("click", function(){
