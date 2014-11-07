@@ -26,6 +26,7 @@ function playVideo() {
 // youtube controller
 $('.video-info-inner > .play-button').on("click", function(event){
   $('.video').addClass('is-playing');
+  $('.sidebar-item').addClass('is-move');
   $('.video-cover').addClass('is-hidden').delay(500).queue(function(){
     $('.video-cover').addClass('is-remove');
   });
@@ -39,6 +40,12 @@ $(window).scroll(function() {
   var playingVideo = $('.is-playing .iframe-video-inner');
 
   if ( windowScroll > fixedStart ) {
+    $('.is-move').hcSticky({
+      top: 256,
+      responsive: true,
+      stickTo: '.main > .container',
+      offResolutions: -1024
+    });
     playingVideo.addClass('is-fixed').delay(500).queue(function(){
       playingVideo.addClass('is-visible');
       playingVideo.dequeue();
