@@ -26,6 +26,22 @@
       padding-top: 100%;
       background-position: center center;
       @include background-size(cover);
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(black, .15);
+        @include transition(background-color .25s);
+
+      }
+      &:hover {
+        &:before {
+          background-color: rgba(black, 0);
+        }
+      }
       &:after {
         content: "";
         position: absolute;
@@ -33,9 +49,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        // overflow: hidden;
-        // @include border-radius(5px);
-        @include background( linear-gradient( to bottom, rgba(black, 0), rgba(black, 1) 80% ));
+        @include background( linear-gradient( to bottom, rgba(black, 0), rgba(black, .7) 100% ));
       }
       @include at-breakpoint(500px 4) { padding-top: 70%; }
       @include at-breakpoint($pad) { padding-top: 51.75%; }
@@ -49,6 +63,7 @@
       text-align: center;
       font-weight: bold;
       color: white;
+      @include text-shadow(0 1px 2px rgba(black, .5));
       .title {
         padding: 0 12px;
         @include adjust-font-size-to(16px);
@@ -58,7 +73,7 @@
         .label { color: white; }
       }
       @include at-breakpoint($pad) {
-        .title { @include adjust-font-size-to(21px, 1.25); }
+        .title { @include adjust-font-size-to(25px, 1.5); }
         .meta-info {
           .meta { display: inline-block; }
         }
@@ -143,7 +158,7 @@
 .legislator-update {
   @include leader(2);
   .title {
-    @include trailer(.5);
+    margin-bottom: -1px;
     @include padding-trailer(.25);
     @include adjust-font-size-to(16px, 1.25);
     font-weight: bold;
