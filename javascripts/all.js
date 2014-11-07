@@ -94,13 +94,15 @@ $(function(){
 
   $('.big-text h1, .big-text h2, .big-text h3, .big-text h4, .video-info-inner h1').macho();
 
-  $('#slider-forecast, #slider-live, #slider-report').slick({
-    centerMode: true,
-    centerPadding: '0px',
-    slidesToShow: 1,
-    cssEase: 'ease-in-out',
-    autoplay: true,
-    autoplaySpeed: 5000,
-    speed: 500,
-  });
+  if ( $('#slider-forecast, #slider-live, #slider-report').length != 0 ) {
+    $('#slider-forecast, #slider-live, #slider-report').slick({
+      centerMode: true,
+      centerPadding: '0px',
+      slidesToShow: 1,
+      cssEase: 'ease-in-out',
+      autoplay: true,
+      autoplaySpeed: 5000,
+      speed: 500,
+    });
+  }
 });

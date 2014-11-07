@@ -588,7 +588,8 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
   .sign-form { margin-left: 25.35211%; margin-right: 25.35211%; width: 49.29577%; float: left; margin-right: 1.40845%; } }
 .header { background-color: #880013; }
 .header .logo { padding: 11px 0 13px; text-align: center; }
-.header .logo a { display: inline-block; vertical-align: top; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1415355207'); background-repeat: no-repeat; background-position: 50% 50%; width: 142px; height: 36px; background-image: none, url('/images/logo.svg?1415355207'); }
+.header .logo a { display: inline-block; vertical-align: top; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1415355349'); background-repeat: no-repeat; background-position: 50% 50%; width: 142px; height: 36px; background-image: none, url('/images/logo.svg?1415355349'); }
+
 @media (min-width: 900px) { .header .logo { text-align: left; } }
 
 .menu-btn { position: absolute; left: 0; width: 60px; height: 60px; background-color: transparent; border: none; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
@@ -608,7 +609,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 
 .sidebar-title { margin-bottom: 12px; padding-bottom: 6px; font-size: 16px; line-height: 30px; font-weight: bold; border-bottom: 1px solid #999999; }
 
-@media (min-width: 900px) { .sidebar.is-move { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+@media (min-width: 900px) { .sidebar-item.is-move { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
   .sidebar-item { padding: 20px 24px; } }
 .live-video { position: relative; padding: 48px 0; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #880013), color-stop(100%, #000000)); background: -webkit-radial-gradient(#880013, #000000); background: -moz-radial-gradient(#880013, #000000); background: -o-radial-gradient(#880013, #000000); background: radial-gradient(#880013, #000000); }
 .live-video .live-title { color: white; margin-bottom: 24px; }
