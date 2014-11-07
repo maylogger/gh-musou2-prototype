@@ -14,7 +14,10 @@
       padding: 0 12px;
     }
   }
-  ul { text-align: left; }
+  .list {
+    @include adjust-font-size-to(13px);
+    text-align: left;
+  }
   .label {
     display: block;
     @include adjust-font-size-to(13px, .75);

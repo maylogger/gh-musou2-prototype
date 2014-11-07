@@ -2,6 +2,7 @@
   display: none;
   border: 1px solid $color-gray-light;
   @include border-radius(5px);
+  .list { @include adjust-font-size-to(13px); }
 }
 
 @mixin text-with-icon($icon-name) {
