@@ -10,6 +10,7 @@
 
 .live-content {
   padding-top: 1px;
+  padding-bottom: 1px;
   margin-bottom: -48px;
   background-color: $color-gray-light;
   .title {
@@ -34,7 +35,7 @@
   background-color: white;
   border: 1px solid $color-gray-light;
   @include border-radius(5px);
-  &.highlight { border-color: $color-red; }
+  &:target { background-color: #ffe; }
   .info {
     @include pie-clearfix;
     @include trailer(.5);
@@ -124,6 +125,14 @@
         }
       }
     }
+  }
+}
+
+.post-extend-content {
+  .live-comment {
+    border-color: transparent;
+    background-color: lighten($color-gray-light, 0%);
+    &.highlight { border-color: $color-red; }
   }
 }
 
