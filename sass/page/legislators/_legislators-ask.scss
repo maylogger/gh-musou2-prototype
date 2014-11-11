@@ -51,7 +51,10 @@
         @include adjust-font-size-to(16px);
       }
     }
-    .filter { margin: 0; }
+    .filter {
+      margin: 0;
+      background-color: transparent;
+    }
     .tab-pane { padding: 0; }
   }
   .question-item:nth-child(odd) {

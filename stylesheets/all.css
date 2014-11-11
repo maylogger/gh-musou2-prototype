@@ -706,9 +706,9 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .legislator-header .legislator-head .avatar { vertical-align: middle; }
 .legislator-header .legislator-head .name { display: block; color: #333333; vertical-align: middle; }
 .legislator-header .legislator-head .name h2 { font-size: 34px; line-height: 48px; font-weight: bold; }
-.legislator-header .legislator-head .name .online-status { display: inline-block; position: relative; padding-left: 22px; padding-right: 6px; font-size: 13px; line-height: 24px; text-align: left; font-weight: bold; color: #999999; border-top: 1px solid #999999; }
+.legislator-header .legislator-head .name .online-status { display: inline-block; position: relative; padding-left: 22px; padding-right: 6px; font-size: 13px; line-height: 24px; text-align: left; font-weight: bold; color: #999999; }
 .legislator-header .legislator-head .name .online-status:before { content: ""; position: absolute; left: 6px; top: 50%; margin-top: -5px; width: 10px; height: 10px; background-color: #999999; -webkit-border-radius: 100%; -moz-border-radius: 100%; -ms-border-radius: 100%; -o-border-radius: 100%; border-radius: 100%; }
-.legislator-header .legislator-head .name .online-status.online { color: #333333; border-top-color: #d4d4d4; }
+.legislator-header .legislator-head .name .online-status.online { color: #00d607; border-top-color: #d4d4d4; }
 .legislator-header .legislator-head .name .online-status.online:before { background-color: #00d607; animation: online 1s linear infinite; -webkit-animation: online 1s linear infinite; }
 .legislator-header .ask-info-wrap { display: none; }
 .legislator-header .profile-tab { margin: 0; padding: 0; border: 0; position: relative; margin-left: -16px; margin-right: -16px; list-style: none; }
@@ -790,7 +790,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .legislator-profile .question-list { position: relative; }
 .legislator-profile .question-list .sort { margin-bottom: 12px; font-size: 13px; line-height: 24px; }
 .legislator-profile .question-list .sort select { margin-left: 6px; font-size: 16px; line-height: 24px; }
-.legislator-profile .question-list .filter { margin: 0; }
+.legislator-profile .question-list .filter { margin: 0; background-color: transparent; }
 .legislator-profile .question-list .tab-pane { padding: 0; }
 .legislator-profile .question-item:nth-child(odd) .question-header { background-color: #eeeeee; }
 .legislator-profile .question-header { margin: 0; padding: 0; border: 0; padding: 12px 0; border-bottom: 1px solid #e1e1e1; list-style: none; }

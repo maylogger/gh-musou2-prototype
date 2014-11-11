@@ -53,7 +53,6 @@
         text-align: left;
         font-weight: bold;
         color: $color-gray;
-        border-top: 1px solid $color-gray;
         &:before {
           content: "";
           position: absolute;
@@ -66,7 +65,7 @@
           @include border-radius(100%);
         }
         &.online {
-          color: $color-black;
+          color: $color-green;
           border-top-color: darken($color-gray-light, 10%);
           &:before {
             background-color: $color-green;
