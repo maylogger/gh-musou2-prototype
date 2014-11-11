@@ -100,16 +100,6 @@
   }
 }
 
-.schedule-empty {
-  @include leader(5);
-  @include trailer(3);
-  text-align: center;
-  span {
-    display: block;
-    @include adjust-font-size-to(21px);
-  }
-}
-
 .sitting {
   @include pie-clearfix;
   @include unstyled-link;
