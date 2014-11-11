@@ -1,3 +1,5 @@
+- @forget_pw_form = "close"
+
 .breadcrumb
   .breadcrumb-inner
     ol.breadcrumb-list
@@ -7,44 +9,47 @@
 .container.lead
   .sign-form
     .title.legislator-forget-pw 忘記密碼
-    p 請提供您的聯絡資訊給我們，或電洽 02-23617588 國會無雙服務專線，我們會有專員為您服務。
-    form
-      .form-row
-        .label 姓名
-        input type="text" placeholder="請輸入您的姓名"
-        .identity
-          .radio
-            input type="radio" name="identity" value="" checked="" 本人
-          .radio
-            input type="radio" name="identity" value="" 助理
-      .form-row
-        .label 電話
-        input type="text" placeholder="請輸入您的聯絡電話"
-      .form-row
-        .label 聯絡時間
-        .contact-time
-          .start
-            select
-              option 上午
-              option 下午
-            select
-              - 12.times do |i|
-                option #{i+1}
-            select
-              option 00
-              option 30
-          span ～
-          .end
-            select
-              option 上午
-              option 下午
-            select
-              - 12.times do |i|
-                option #{i+1}
-            select
-              option 00
-              option 30
-      .form-row
-        .label e-mail
-        input type="text" placeholder="請輸入您的 e-mail (選填)"
-      input type="submit" value="送出"
+    - if @forget_pw_form == "close"
+      p.sign-message 請電洽 02-23617588 國會無雙服務專線，專員會協助您取回密碼。
+    - if @forget_pw_form == "open"
+      p.sign-message 請提供您的聯絡資訊給我們，或電洽 02-23617588 國會無雙服務專線，我們會有專員為您服務。
+      form
+        .form-row
+          .label 姓名
+          input type="text" placeholder="請輸入您的姓名"
+          .identity
+            .radio
+              input type="radio" name="identity" value="" checked="" 本人
+            .radio
+              input type="radio" name="identity" value="" 助理
+        .form-row
+          .label 電話
+          input type="text" placeholder="請輸入您的聯絡電話"
+        .form-row
+          .label 聯絡時間
+          .contact-time
+            .start
+              select
+                option 上午
+                option 下午
+              select
+                - 12.times do |i|
+                  option #{i+1}
+              select
+                option 00
+                option 30
+            span ～
+            .end
+              select
+                option 上午
+                option 下午
+              select
+                - 12.times do |i|
+                  option #{i+1}
+              select
+                option 00
+                option 30
+        .form-row
+          .label e-mail
+          input type="text" placeholder="請輸入您的 e-mail (選填)"
+        input type="submit" value="送出"
