@@ -1,3 +1,5 @@
+- @live_situation = "empty"
+
 .breadcrumb
   .breadcrumb-inner
     ol.breadcrumb-list
@@ -14,7 +16,13 @@
   .container.lead
     .title 即時戰報
     .live-situation
-      = render "/partials/live-comment"
+      - if @live_situation == "empty"
+        .data-empty
+          img src="/images/data_empty.png"
+          span 目前尚無即時戰報 Yo~
+
+      - if @live_situation == "exist"
+        = render "/partials/live-comment"
 
     .sidebar
       .sitting-info-card.sidebar-item

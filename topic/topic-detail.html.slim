@@ -1,3 +1,5 @@
+- @history_data = "empty"
+
 .breadcrumb
   .breadcrumb-inner
     ol.breadcrumb-list
@@ -16,39 +18,49 @@
     = render "/partials/disqus"
 
   .topic-timeline.sidebar
-    - 2.times do |i|
-      .timeline.panel
-        .month-title.is-open data-parent="#topic-timeline" data-toggle="collapse" href="#month#{8-i}" 2014 年 #{8-i} 月 <span class="post-counter">(#{rand(100)})</span>
-        .month-post-list.collapse.in id="month#{8-i}"
-          .month-foucs-list
-            .title 場邊焦點
-            ul.list-with-image
-              - (3+rand(3)).times do
-                li: a href="#"
-                  .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
-                  .list-content =zh_lorem_sentence
-          .month-report-list
-            .title 戰況報告
-            ul.list
-              - (3+rand(3)).times do
-                li: a href="#"
-                  .list-content =zh_lorem_sentence
+    -if @history_data == "exist"
+      - 2.times do |i|
+        .timeline.panel
+          .month-title.is-open data-parent="#topic-timeline" data-toggle="collapse" href="#month#{8-i}" 2014 年 #{8-i} 月 <span class="post-counter">(#{rand(100)})</span>
+          .month-post-list.collapse.in id="month#{8-i}"
+            .month-foucs-list
+              .title 場邊焦點
+              ul.list-with-image
+                - (3+rand(3)).times do
+                  li: a href="#"
+                    .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+                    .list-content =zh_lorem_sentence
+            .month-report-list
+              .title 戰況報告
+              ul.list
+                - (3+rand(3)).times do
+                  li: a href="#"
+                    .list-content =zh_lorem_sentence
 
-    - 5.times do |i|
+      - 5.times do |i|
+        .timeline.panel
+          .month-title data-parent="#topic-timeline" data-toggle="collapse" href="#month#{6-i}" 2014 年 #{6-i} 月 <span class="post-counter">(#{rand(100)})</span>
+          .month-post-list.collapse id="month#{6-i}"
+            .month-foucs-list
+              .title 場邊焦點
+              ul.list-with-image
+                - (3+rand(3)).times do
+                  li: a href="#"
+                    .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+                    .list-content =zh_lorem_sentence
+            .month-report-list
+              .title 戰況報告
+              ul.list
+                - (3+rand(3)).times do
+                  li: a href="#"
+                    .list-content =zh_lorem_sentence
+
+    -if @history_data == "empty"
       .timeline.panel
-        .month-title data-parent="#topic-timeline" data-toggle="collapse" href="#month#{6-i}" 2014 年 #{6-i} 月 <span class="post-counter">(#{rand(100)})</span>
-        .month-post-list.collapse id="month#{6-i}"
-          .month-foucs-list
-            .title 場邊焦點
-            ul.list-with-image
-              - (3+rand(3)).times do
-                li: a href="#"
-                  .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
-                  .list-content =zh_lorem_sentence
-          .month-report-list
-            .title 戰況報告
-            ul.list
-              - (3+rand(3)).times do
-                li: a href="#"
-                  .list-content =zh_lorem_sentence
+        .month-title.is-open data-parent="#topic-timeline" data-toggle="collapse" href="#month1" 2014 年 1 月 <span class="post-counter">(0)</span>
+        .month-post-list.collapse.in id="month1"
+          .data-empty
+            img src="/images/data_empty.png"
+            span 目前尚無相關文章 Yo~
+
     .topic-start 議題發起
