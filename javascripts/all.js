@@ -25,6 +25,20 @@ $(function(){
     $(this).toggleClass('is-open');
   });
 
+  $('.btn-like-module').on("click", function(){
+    $(this).toggleClass('clicked');
+    $(this).next('.btn-dislike-module').removeClass('clicked');
+  });
+  $('.btn-like-module.push').on("click", function(){
+    $(this).addClass('clicked');
+    $(this).children('.text').text('已推');
+  });
+
+  $('.btn-dislike-module').on("click", function(){
+    $(this).toggleClass('clicked');
+    $(this).prev('.btn-like-module').removeClass('clicked');
+  });
+
   $('.month-post-list').on("hide.bs.collapse", function(){
     $(this).prev('.month-title').removeClass('is-open');
   });
