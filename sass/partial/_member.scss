@@ -136,6 +136,9 @@
       }
     }
   }
+  .sign-message {
+    @include adjust-font-size-to(18px, 1.5);
+  }
   .form-row { @include trailer(); }
   .label {
     @include trailer(.5);

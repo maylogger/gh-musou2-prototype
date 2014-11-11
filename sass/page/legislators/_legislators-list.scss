@@ -44,7 +44,7 @@
     .title {
       float: left;
       position: relative;
-      padding: 12px;
+      padding: 11px 12px 13px 12px;
       @include adjust-font-size-to(13px);
       font-weight: bold;
       &:after {
@@ -78,5 +78,8 @@
     @include span-columns(4);
     @include remove-nth-omega(2n);
     @include nth-omega(3n);
+    &:nth-child(3n+1) {
+      clear: left;
+    }
   }
 }
