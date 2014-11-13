@@ -506,10 +506,10 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .avatar.is-large .party img { margin: 0; width: 30px; height: 30px; }
 
 .nav-select { margin-bottom: 24px; }
-.nav-select.in-filter { display: block; margin-bottom: 12px; margin-right: 12px; }
+.nav-select.in-filter { display: block; margin-bottom: 0px; padding-top: 12px; padding-bottom: 12px; margin-right: 12px; }
 .nav-select .select-label { display: inline-block; margin-right: 6px; font-size: 13px; line-height: 24px; font-weight: bold; }
 
-@media (min-width: 640px) { .nav-select.in-filter { display: inline-block; margin-bottom: 0px; padding: 3px 0 5px; } }
+@media (min-width: 640px) { .nav-select.in-filter { display: inline-block; padding-top: 0px; padding-bottom: 0px; padding: 3px 0 5px; } }
 .popup { position: relative; z-index: 1; padding: 24px; text-align: center; background-color: white; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
 .popup .popup-title { margin-bottom: 12px; padding-bottom: 6px; font-weight: bold; border-bottom: 1px solid #eeeeee; }
 .popup .share-facebook .button { display: block; background-color: #415692; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
@@ -737,9 +737,9 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .legislator-profile .legislator-data .note a { display: inline-block; color: #40a9de; }
 
 @media (min-width: 640px) { .legislator-header .legislator-header-bg { height: auto; margin-bottom: 0; background-color: #333333; }
-  .legislator-header .legislator-header-bg:after { background: -webkit-gradient(linear, to right, to left, color-stop(0%, rgba(0, 0, 0, 0.75)), color-stop(100%, rgba(0, 0, 0, 0))); background: -webkit-linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background: -moz-linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background: -o-linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
-  .legislator-header .legislator-head { text-align: left; padding: 24px 0; }
-  .legislator-header .legislator-head .name { display: inline-block; padding-left: 12px; color: white; }
+  .legislator-header .legislator-header-bg:after { background: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.75))); background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)); background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)); background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)); background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)); }
+  .legislator-header .legislator-head { text-align: left; padding-top: 10%; padding-bottom: 24px; }
+  .legislator-header .legislator-head .name { display: inline-block; padding-left: 12px; color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
   .legislator-header .legislator-head .name .online-status { display: block; }
   .legislator-header .legislator-head .name .online-status.online { color: white; }
   .legislator-header .ask-info-wrap { display: block; position: relative; width: 48.57143%; float: right; margin-right: 0; text-align: right; }
