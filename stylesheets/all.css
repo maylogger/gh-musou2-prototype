@@ -506,10 +506,10 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .avatar.is-large .party img { margin: 0; width: 30px; height: 30px; }
 
 .nav-select { margin-bottom: 24px; }
-.nav-select.in-filter { display: block; margin-bottom: 12px; margin-right: 12px; }
+.nav-select.in-filter { display: block; margin-bottom: 0px; padding-top: 12px; padding-bottom: 12px; margin-right: 12px; }
 .nav-select .select-label { display: inline-block; margin-right: 6px; font-size: 13px; line-height: 24px; font-weight: bold; }
 
-@media (min-width: 640px) { .nav-select.in-filter { display: inline-block; margin-bottom: 0px; padding: 3px 0 5px; } }
+@media (min-width: 640px) { .nav-select.in-filter { display: inline-block; padding-top: 0px; padding-bottom: 0px; padding: 3px 0 5px; } }
 .popup { position: relative; z-index: 1; padding: 24px; text-align: center; background-color: white; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
 .popup .popup-title { margin-bottom: 12px; padding-bottom: 6px; font-weight: bold; border-bottom: 1px solid #eeeeee; }
 .popup .share-facebook .button { display: block; background-color: #415692; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
