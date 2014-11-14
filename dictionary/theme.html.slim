@@ -16,10 +16,11 @@
         li: a href="/dictionary/index.html" 簡介
         li.active
           a href="/dictionary/index.html" 立法院初步
-          ul.nav
-            li: a.go-anchor href="#tab0" =zh_lorem_words(2+rand(8))
-            - 10.times do |i|
-              li: a.go-anchor href="#tab#{i+1}" =zh_lorem_words(2+rand(8))
+          .sub-catalog
+            ul.nav
+              li: a.go-anchor href="#tab0" =zh_lorem_words(2+rand(8))
+              - 10.times do |i|
+                li: a.go-anchor href="#tab#{i+1}" =zh_lorem_words(2+rand(8))
         li: a href="/dictionary/theme.html" 立法院的權利
         li: a href="/dictionary/theme.html" 立法院成份分析
         li: a href="/dictionary/theme.html" 立院之緣起緣滅
