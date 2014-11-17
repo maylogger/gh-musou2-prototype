@@ -3,7 +3,7 @@ html lang="zh-TW"
   head
     = render "/layout_head"
     = render "/layout_og"
-  body data-spy="scroll" data-target=".catalog"
+  body data-spy="scroll" data-target=".sub-catalog"
     .wrap
       .member
         = render "/partials/member"
@@ -11,7 +11,8 @@ html lang="zh-TW"
         = render "/partials/menu"
       .main
         = render "/partials/header"
-        = yield
+        #body_context
+          = yield
         = render "/partials/footer"
     = render "/layout_foot"
     = render "/layout_livereload"

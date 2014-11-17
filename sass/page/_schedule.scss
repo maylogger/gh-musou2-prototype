@@ -27,16 +27,6 @@
     position: relative;
     margin: 0 auto;
     list-style: none;
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      top: 50%;
-      left: 15%;
-      right: 15%;
-      height: 3px;
-      background-color: rgba(white, .35);
-    }
   }
   li {
     @include box-sizing(border-box);
@@ -50,7 +40,7 @@
       text-align: center;
       @include adjust-font-size-to(ms(1));
       text-decoration: none;
-      color: rgba(white, .6);
+      color: white;
       @include transition(color .25s);
       span {
         position: relative;
@@ -58,34 +48,21 @@
         display: inline-block;
         padding-left: 6px;
         padding-right: 6px;
-        background-color: $color-gray;
         &:before {
           content: "";
           position: absolute;
           top: 0;
           left: 6px;
-          opacity: .6;
-          @include transition(opacity .25s);
         }
       }
       &:hover {
-        color: white;
-        span:before { opacity: 1; }
+        background-color: rgba(white, .25);
       }
     }
     &.active a {
       position: relative;
-      color: white;
-      span:before { opacity: 1; }
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        margin-left: -10px;
-        border: 10px solid transparent;
-        border-top-color: $color-gray;
-      }
+      color: $color-red;
+      @include background(linear-gradient( to bottom, rgba(white, .5), rgba(white, 1)));
     }
   }
 }
@@ -232,6 +209,9 @@
       &.schedule-live span:before { @include replace-text-with-svg("icon_live"); }
       &.schedule-report span:before { @include replace-text-with-svg("icon_report_white"); }
     }
+    li.active a.schedule-forecast span:before { @include replace-text-with-svg("icon_forecast_red"); }
+    li.active a.schedule-live span:before { @include replace-text-with-svg("icon_live_red"); }
+    li.active a.schedule-report span:before { @include replace-text-with-svg("icon_report_red"); }
   }
   .schedule-table {
     .topic-label { display: inline-block; }

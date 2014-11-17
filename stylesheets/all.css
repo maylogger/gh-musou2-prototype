@@ -346,6 +346,8 @@ body.open-menu { height: 100%; }
 
 .btn-share-module + .btn-like-module, .btn-like-module + .btn-share-module { margin-left: 6px; }
 
+.fb-like-button { text-align: center; }
+
 input[type="submit"].btn_loadmore { position: relative; width: 100%; margin-top: 24px; padding: 9px 12px; color: white; background-color: #880013; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
 input[type="submit"].btn_loadmore:hover { background-color: #bb001a; }
 input[type="submit"].btn_loadmore.loading { background-color: #999999; }
@@ -506,10 +508,10 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .avatar.is-large .party img { margin: 0; width: 30px; height: 30px; }
 
 .nav-select { margin-bottom: 24px; }
-.nav-select.in-filter { display: block; margin-bottom: 12px; margin-right: 12px; }
+.nav-select.in-filter { display: block; margin-bottom: 0px; padding-top: 12px; padding-bottom: 12px; margin-right: 12px; }
 .nav-select .select-label { display: inline-block; margin-right: 6px; font-size: 13px; line-height: 24px; font-weight: bold; }
 
-@media (min-width: 640px) { .nav-select.in-filter { display: inline-block; margin-bottom: 0px; padding: 3px 0 5px; } }
+@media (min-width: 640px) { .nav-select.in-filter { display: inline-block; padding-top: 0px; padding-bottom: 0px; padding: 3px 0 5px; } }
 .popup { position: relative; z-index: 1; padding: 24px; text-align: center; background-color: white; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
 .popup .popup-title { margin-bottom: 12px; padding-bottom: 6px; font-weight: bold; border-bottom: 1px solid #eeeeee; }
 .popup .share-facebook .button { display: block; background-color: #415692; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
@@ -738,9 +740,9 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .legislator-profile .legislator-data .note a { display: inline-block; color: #40a9de; }
 
 @media (min-width: 640px) { .legislator-header .legislator-header-bg { height: auto; margin-bottom: 0; background-color: #333333; }
-  .legislator-header .legislator-header-bg:after { background: -webkit-gradient(linear, to right, to left, color-stop(0%, rgba(0, 0, 0, 0.75)), color-stop(100%, rgba(0, 0, 0, 0))); background: -webkit-linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background: -moz-linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background: -o-linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
-  .legislator-header .legislator-head { text-align: left; padding: 24px 0; }
-  .legislator-header .legislator-head .name { display: inline-block; padding-left: 12px; color: white; }
+  .legislator-header .legislator-header-bg:after { background: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.75))); background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)); background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)); background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)); background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)); }
+  .legislator-header .legislator-head { text-align: left; padding-top: 10%; padding-bottom: 24px; }
+  .legislator-header .legislator-head .name { display: inline-block; padding-left: 12px; color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
   .legislator-header .legislator-head .name .online-status { display: block; }
   .legislator-header .legislator-head .name .online-status.online { color: white; }
   .legislator-header .ask-info-wrap { display: block; position: relative; width: 48.57143%; float: right; margin-right: 0; text-align: right; }
@@ -943,7 +945,9 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .schedule-slider .schedule-tab li a { padding-top: 6px; padding-bottom: 42px; font-size: 16px; line-height: 24px; }
 .schedule-slider .schedule-tab li a span { padding-left: 6px; background-color: transparent; }
 .schedule-slider .schedule-tab li a span:before { display: none; }
-.schedule-slider .schedule-tab li.active a:after { content: ""; position: absolute; left: 50%; bottom: 18px; margin-left: -10px; border-top-color: white; }
+.schedule-slider .schedule-tab li a:hover { background: transparent; }
+.schedule-slider .schedule-tab li.active a { color: white; background: transparent; }
+.schedule-slider .schedule-tab li.active a:after { content: ""; position: absolute; left: 50%; bottom: 18px; margin-left: -10px; border: 10px solid transparent; border-top-color: white; }
 
 .slogan .slogan-content { padding: 12px 0 24px; color: white; font-size: 16px; line-height: 48px; font-weight: bold; text-align: center; }
 @media (min-width: 640px) { .slogan .slogan-content { font-size: 21px; line-height: 48px; } }
@@ -1075,17 +1079,13 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .schedule-tab { background-color: #999999; }
 .schedule-tab ul { margin: 0; padding: 0; border: 0; position: relative; margin: 0 auto; list-style: none; }
 .schedule-tab ul:after { content: ""; display: table; clear: both; }
-.schedule-tab ul:before { content: ""; position: absolute; z-index: 0; top: 50%; left: 15%; right: 15%; height: 3px; background-color: rgba(255, 255, 255, 0.35); }
 .schedule-tab li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; float: left; width: 33.333%; }
-.schedule-tab li a { color: inherit; text-decoration: inherit; cursor: inherit; display: block; padding: 36px 0; text-align: center; font-size: 16.8065px; line-height: 24px; text-decoration: none; color: rgba(255, 255, 255, 0.6); -webkit-transition: color 0.25s; -moz-transition: color 0.25s; -o-transition: color 0.25s; transition: color 0.25s; }
+.schedule-tab li a { color: inherit; text-decoration: inherit; cursor: inherit; display: block; padding: 36px 0; text-align: center; font-size: 16.8065px; line-height: 24px; text-decoration: none; color: white; -webkit-transition: color 0.25s; -moz-transition: color 0.25s; -o-transition: color 0.25s; transition: color 0.25s; }
 .schedule-tab li a:active, .schedule-tab li a:focus { outline: none; }
-.schedule-tab li a span { position: relative; z-index: 10; display: inline-block; padding-left: 6px; padding-right: 6px; background-color: #999999; }
-.schedule-tab li a span:before { content: ""; position: absolute; top: 0; left: 6px; opacity: .6; -webkit-transition: opacity 0.25s; -moz-transition: opacity 0.25s; -o-transition: opacity 0.25s; transition: opacity 0.25s; }
-.schedule-tab li a:hover { color: white; }
-.schedule-tab li a:hover span:before { opacity: 1; }
-.schedule-tab li.active a { position: relative; color: white; }
-.schedule-tab li.active a span:before { opacity: 1; }
-.schedule-tab li.active a:after { content: ""; position: absolute; bottom: -20px; left: 50%; margin-left: -10px; border: 10px solid transparent; border-top-color: #999999; }
+.schedule-tab li a span { position: relative; z-index: 10; display: inline-block; padding-left: 6px; padding-right: 6px; }
+.schedule-tab li a span:before { content: ""; position: absolute; top: 0; left: 6px; }
+.schedule-tab li a:hover { background-color: rgba(255, 255, 255, 0.25); }
+.schedule-tab li.active a { position: relative; color: #880013; background: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, #ffffff)); background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #ffffff); background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #ffffff); background: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #ffffff); background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #ffffff); }
 
 .schedule-table { margin-top: 24px; }
 .schedule-table .committee { margin-bottom: 12px; font-size: 16px; line-height: 24px; font-weight: bold; color: #880013; }
@@ -1120,6 +1120,9 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
   .schedule-tab li a.schedule-forecast span:before { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_forecast.png?1413467336'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_forecast.svg?1413467336'); }
   .schedule-tab li a.schedule-live span:before { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_live.png?1412866446'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_live.svg?1412866446'); }
   .schedule-tab li a.schedule-report span:before { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_report_white.png?1412866446'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_report_white.svg?1412866446'); }
+  .schedule-tab li.active a.schedule-forecast span:before { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_forecast_red.png?1415959829'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_forecast_red.svg?1415959829'); }
+  .schedule-tab li.active a.schedule-live span:before { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_live_red.png?1415959720'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_live_red.svg?1415959720'); }
+  .schedule-tab li.active a.schedule-report span:before { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_report_red.png?1415960687'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_report_red.svg?1415960687'); }
   .schedule-table .topic-label { display: inline-block; }
   .sitting { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
   .sitting .sitting-summary p { font-size: 16px; line-height: 24px; }

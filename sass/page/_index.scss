@@ -103,14 +103,18 @@
         background-color: transparent;
         &:before { display: none; }
       }
+      &:hover { background: transparent; }
     }
     li.active a {
+      color: white;
+      background: transparent;
       &:after {
         content: "";
         position: absolute;
         left: 50%;
         bottom: 18px;
         margin-left: -10px;
+        border: 10px solid transparent;
         border-top-color: white;
       }
     }

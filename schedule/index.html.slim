@@ -29,8 +29,8 @@
         - (1 + rand(5)).times do
           = render "/partials/schedule/schedule-live"
       - if @schedule_status == "close"
-        .schedule-empty
-          img src="/images/schedule_empty.png"
+        .data-empty
+          img src="/images/data_empty.png"
           span 目前沒有賽事耶...
     .tab-pane.fade#report
       .nav-select
