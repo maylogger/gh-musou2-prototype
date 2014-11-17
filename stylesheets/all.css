@@ -346,6 +346,8 @@ body.open-menu { height: 100%; }
 
 .btn-share-module + .btn-like-module, .btn-like-module + .btn-share-module { margin-left: 6px; }
 
+.fb-like-button { text-align: center; }
+
 input[type="submit"].btn_loadmore { position: relative; width: 100%; margin-top: 24px; padding: 9px 12px; color: white; background-color: #880013; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
 input[type="submit"].btn_loadmore:hover { background-color: #bb001a; }
 input[type="submit"].btn_loadmore.loading { background-color: #999999; }

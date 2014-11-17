@@ -23,6 +23,8 @@
             .writer
               .avatar =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
             p.intro-content =zh_lorem_paragraphs 2
+      .fb-like-button
+        = render "/partials/fb-like/fb-button"
       - (2+rand(1)).times do
         = render "/partials/article"
 
@@ -44,3 +46,4 @@
             .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
             .list-content =zh_lorem_sentence
     = render "/partials/disqus"
+    = render "/partials/fb-like/fb-jssdk"
