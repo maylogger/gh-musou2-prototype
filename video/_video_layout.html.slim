@@ -11,7 +11,8 @@ html lang="zh-TW"
         = render "/partials/menu"
       .main
         = render "/partials/header"
-        = yield
+        #body_context
+          = yield
         = render "/partials/footer"
     = render "/video/layout_foot"
     = render "/layout_livereload"
