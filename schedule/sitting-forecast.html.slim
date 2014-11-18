@@ -23,17 +23,19 @@
         a.president href="/legislators/legislator.html"
           .avatar.is-president.has-party
             .party =image_tag("/images/DPP.png")
-            =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+            .photo =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
           .name
             .label 主席
             =zh_lorem_name
         .anchor
-          .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
+          .avatar
+            .photo =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
           .name
             .label 主播 - 上午
             =zh_lorem_name
         .reviewer
-          .avatar =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
+          .avatar
+            .photo =image_tag("http://lorempixel.com/60/60/people/#{rand(10)}")
           .name
             .label 主播 - 下午
             =zh_lorem_name

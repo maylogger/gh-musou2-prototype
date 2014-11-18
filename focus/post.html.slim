@@ -21,7 +21,8 @@
           .writer-intro
             .close ×
             .writer
-              .avatar =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
+              .avatar
+                .photo =image_tag("http://lorempixel.com/48/48/people/#{rand(10)}")
             p.intro-content =zh_lorem_paragraphs 2
       .fb-like-button
         = render "/partials/fb-like/fb-button"
