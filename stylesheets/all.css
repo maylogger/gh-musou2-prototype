@@ -354,7 +354,7 @@ input[type="submit"].btn_loadmore.loading { background-color: #999999; }
 
 .pagination { margin-top: 48px; margin-bottom: 48px; padding: 0; text-align: center; list-style: none; }
 .pagination li { display: inline-block; }
-.pagination a { margin: 0 1px; padding: 7px 12px; font-size: 13px; line-height: 24px; color: white; text-decoration: none; background: #333333; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-transition: background ease-in-out; -webkit-transition-delay: 0.2s; -moz-transition: background ease-in-out 0.2s; -o-transition: background ease-in-out 0.2s; transition: background ease-in-out 0.2s; }
+.pagination a { display: block; margin: 6px 3px; padding: 5px 12px; font-size: 13px; line-height: 24px; color: white; text-decoration: none; background: #333333; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-transition: background ease-in-out; -webkit-transition-delay: 0.2s; -moz-transition: background ease-in-out 0.2s; -o-transition: background ease-in-out 0.2s; transition: background ease-in-out 0.2s; }
 .pagination a.more { padding: 7px 10px; }
 .pagination a .previous, .pagination a .next { display: inline-block; width: 0px; height: 0px; text-indent: -119988px; overflow: hidden; text-align: left; border: 5px solid transparent; }
 .pagination a .previous { margin-right: 3px; border-left: 2px solid transparent; border-right: 5px solid white; }
@@ -363,7 +363,7 @@ input[type="submit"].btn_loadmore.loading { background-color: #999999; }
 .pagination a.active { background: #880013; }
 .pagination a.active:hover { background: #bb001a; }
 .pagination a:hover { background: #595959; }
-@media (min-width: 640px) { .pagination a { margin: 0 3px; padding: 8px 13px; font-size: 16px; line-height: 24px; }
+@media (min-width: 640px) { .pagination a { font-size: 16px; line-height: 24px; }
   .pagination a.more { padding: 8px 12px; } }
 
 .search-bar-toggle { position: absolute; top: 0; right: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_search.png?1412866446'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_search.svg?1412866446'); padding: 6px; background-color: #333333; cursor: pointer; }

@@ -6,8 +6,9 @@
   list-style: none;
   li { display: inline-block; }
   a {
-    margin: 0 rhythm(.05);
-    padding: rhythm(.3) rhythm(.5);
+    display: block;
+    margin: 6px 3px;
+    padding: 5px 12px;
     @include adjust-font-size-to(13px);
     color: white;
     text-decoration: none;
@@ -45,8 +46,6 @@
     &.active:hover { background: lighten($color-red, 10%); }
     &:hover { background: lighten($color-black, 15%); }
     @include at-breakpoint($pad) {
-      margin: 0 rhythm(.15);
-      padding: rhythm(.35) rhythm(.55);
       @include adjust-font-size-to(16px);
       &.more { padding: rhythm(.35) rhythm(.5); }
     }
