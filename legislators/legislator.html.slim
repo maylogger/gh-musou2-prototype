@@ -13,7 +13,7 @@
       .legislator-head
         .avatar.is-large.has-party
           .party =image_tag("/images/DPP.png")
-          =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
+          .photo =image_tag("http://lorempixel.com/90/90/people/#{rand(10)}")
         .name
           h2 =zh_lorem_name
           - if @legislator_online_status == "online"

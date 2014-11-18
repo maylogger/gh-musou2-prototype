@@ -65,6 +65,7 @@
   &.is-open { display: block; }
   .writer {
     text-align: center;
+    .avatar { overflow: hidden; }
   }
   p.intro-content {
     overflow: hidden;
