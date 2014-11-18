@@ -54,7 +54,7 @@ $(function(){
   $('.catalog').hcSticky({
     top: 24,
     responsive: true,
-    stickTo: '.main > .container',
+    stickTo: '#body_context > .container',
     offResolutions: -900
   });
 
