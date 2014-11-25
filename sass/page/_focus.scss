@@ -10,6 +10,7 @@
       @include box-sizing(border-box);
       display: none;
       .focus-image-wrap {
+        overflow: hidden;
         position: relative;
         height: 0;
         padding-top: 56.667%;

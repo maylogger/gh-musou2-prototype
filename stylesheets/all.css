@@ -292,7 +292,7 @@ body.open-menu { height: 100%; }
 
 .list-with-image a:after { content: ""; display: table; clear: both; }
 .list-with-image a:hover .list-content { text-decoration: underline; }
-.list-with-image .list-image { float: left; max-width: 25%; width: 80px; height: 50px; margin-right: 10px; line-height: 0; background-image: url(/images/list_image_bg.png); }
+.list-with-image .list-image { overflow: hidden; float: left; max-width: 25%; width: 80px; height: 50px; margin-right: 10px; line-height: 0; background-image: url(/images/list_image_bg.png); }
 .list-with-image .list-content { float: left; margin-top: 6px; width: 70%; height: 36px; overflow: hidden; text-align: left; }
 @media (min-width: 640px) { .list-with-image .list-content { margin-top: 3px; height: 48px; } }
 
@@ -381,11 +381,17 @@ input[type="submit"].btn_loadmore.loading { background-color: #999999; }
 @media (min-width: 640px) { .search-bar-toggle { display: none; }
   .search-bar { display: block; position: absolute; top: 0; right: 16px; margin-left: 0; margin-right: 0; }
   .search-bar input { width: auto; } }
-.article h1, .article h2, .article h3, .article h4, .article h5, .article h6 { margin-bottom: 12px; font-weight: bold; }
+.article h1 { margin-bottom: 24px; }
+.article h2, .article h3, .article h4, .article h5, .article h6 { margin-bottom: 24px; font-weight: bold; }
+.article h1 ~ h1 { margin-top: 48px; }
 .article h2 ~ h2 { margin-top: 48px; }
-.article ul { padding-left: 24px; }
+.article ul, .article ol { padding-left: 24px; }
 .article img { display: block; margin-bottom: 24px; }
 .article a { display: inline-block; }
+.article hr { border: none; border-top: 1px solid #999999; }
+.article table { margin-bottom: 48px; }
+.article table tr:nth-child(even) { background-color: #eeeeee; }
+.article table td { padding: 6px 9px; vertical-align: top; }
 .article.big-text h1, .article.big-text h2, .article.big-text h3, .article.big-text h4, .article.big-text h5, .article.big-text h6 { margin-top: 48px; margin-bottom: 24px; text-align: center; }
 .article.big-text li h1, .article.big-text li h2, .article.big-text li h3, .article.big-text li h4, .article.big-text li h5, .article.big-text li h6 { text-align: left; }
 @media (min-width: 900px) { .article.big-text h1 { font-size: 34px; line-height: 48px; }
@@ -400,6 +406,7 @@ input[type="submit"].btn_loadmore.loading { background-color: #999999; }
 .post { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .post.isolate img { margin-left: auto; margin-right: auto; }
 .post.isolate .meta-info { text-align: center; }
+.post.isolate iframe { display: block; margin: 0 auto; }
 .post .post-title { margin-bottom: 12px; font-weight: bold; border-bottom: 1px solid #eeeeee; }
 .post .meta-info { margin-bottom: 12px; }
 .post .iframe-video { margin-bottom: 24px; }
@@ -638,7 +645,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .live-comment .info:after { content: ""; display: table; clear: both; }
 .live-comment .time { float: left; display: block; margin-top: 3px; text-align: center; color: #8a8a8a; font-weight: bold; }
 .live-comment .share { float: right; display: block; text-align: center; }
-.live-comment .comment { display: block; text-align: center; }
+.live-comment .comment { display: block; text-align: center; -ms-word-break: break-all; word-break: break-all; word-break: break-word; }
 .live-comment .comment .text { display: block; text-align: left; }
 .live-comment .comment a { display: inline-block; margin: 0; }
 .live-comment .comment img { max-width: 100px; width: 100%; height: auto; }
@@ -991,7 +998,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .focus-list .focus-item { display: block; margin-bottom: 12px; padding-bottom: 12px; color: #333330; border-bottom: 1px solid #d4d4d4; }
 .focus-list .focus-item:after { content: ""; display: table; clear: both; }
 .focus-list .focus-item .focus-image { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: none; }
-.focus-list .focus-item .focus-image .focus-image-wrap { position: relative; height: 0; padding-top: 56.667%; background-image: url(/images/focus_image_bg.png); background-size: cover; }
+.focus-list .focus-item .focus-image .focus-image-wrap { overflow: hidden; position: relative; height: 0; padding-top: 56.667%; background-image: url(/images/focus_image_bg.png); background-size: cover; }
 .focus-list .focus-item .focus-image img { position: absolute; top: 0; left: 0; display: block; width: 100%; }
 .focus-list .focus-item .focus-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 100%; }
 .focus-list .focus-item .focus-content .title { margin-bottom: 3px; color: #880013; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
@@ -1018,7 +1025,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .video-list-item:active, .video-list-item:focus { outline: none; }
 .video-list-item:hover { color: inherit; text-decoration: inherit; cursor: inherit; background-color: #f4f4f4; }
 .video-list-item:hover:active, .video-list-item:hover:focus { outline: none; }
-.video-list-item .video-image { position: relative; height: 0; padding-top: 56.25%; }
+.video-list-item .video-image { overflow: hidden; position: relative; height: 0; padding-top: 56.25%; }
 .video-list-item .video-image:before { content: ""; position: absolute; z-index: 1; top: 50%; left: 50%; margin-top: -25px; margin-left: -25px; width: 50px; height: 50px; background-color: #333333; border: 3px solid white; -webkit-border-radius: 100%; -moz-border-radius: 100%; -ms-border-radius: 100%; -o-border-radius: 100%; border-radius: 100%; opacity: .75; }
 .video-list-item .video-image:after { content: ""; position: absolute; z-index: 2; top: 50%; left: 50%; margin-top: -7px; margin-left: -6px; border: 10px solid transparent; border-left: 20px solid white; opacity: .9; }
 .video-list-item .video-image img { display: block; position: absolute; top: 0; left: 0; width: 100%; height: auto; }
