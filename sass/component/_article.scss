@@ -1,15 +1,31 @@
 .article {
-  h1, h2, h3, h4, h5, h6 {
-    @include trailer(.5);
+  h1 { @include trailer(); }
+  h2, h3, h4, h5, h6 {
+    @include trailer();
     font-weight: bold;
   }
+  h1 ~ h1 { @include leader(2); }
   h2 ~ h2 { @include leader(2); }
-  ul { padding-left: 24px; }
+  ul, ol {
+    padding-left: 24px;
+  }
   img {
     display: block;
     @include trailer();
   }
   a { display: inline-block; }
+  hr {
+    border: none;
+    border-top: 1px solid $color-gray;
+  }
+  table {
+    @include trailer(2);
+    tr:nth-child(even) { background-color: $color-gray-light; }
+    td {
+      padding: 6px 9px;
+      vertical-align: top;
+    }
+  }
   &.big-text {
     #{headings()} {
       @include leader(2);
