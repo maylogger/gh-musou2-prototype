@@ -8,6 +8,10 @@
     .meta-info {
       text-align: center;
     }
+    iframe {
+      display: block;
+      margin: 0 auto;
+    }
   }
   .post-title {
     @include trailer(.5);
