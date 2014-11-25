@@ -58,6 +58,7 @@
   .comment {
     display: block;
     text-align: center;
+    @include word-break(break-all);
     .text {
       display: block;
       text-align: left;
