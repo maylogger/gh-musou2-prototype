@@ -1,4 +1,5 @@
 - @legislator_online_status = "online"
+- @btn_loadmore_status = "normal"
 
 .breadcrumb
   .breadcrumb-inner
@@ -66,8 +67,12 @@
           = render "/partials/legislators/legislators-news-ask-answer"
           - 4.times do
             = render "/partials/legislators/legislators-news"
-          form
-            input.btn_loadmore type="submit" value="看更多"
+          - if @btn_loadmore_status == "normal"
+            .pageaction
+              a.btn_loadmore rel="next" href="#" data-remote="true" 看更多
+          - if @btn_loadmore_status == "loading"
+            .pageaction
+              a.btn_loadmore.loading rel="next" href="#" data-remote="true" 讀取中
         .tab-pane.fade#ask
           = render "/partials/legislators/legislators-ask"
         .tab-pane.fade#data

@@ -348,9 +348,9 @@ body.open-menu { height: 100%; }
 
 .fb-like-button { text-align: center; }
 
-input[type="submit"].btn_loadmore { position: relative; width: 100%; margin-top: 24px; padding: 9px 12px; color: white; background-color: #880013; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
-input[type="submit"].btn_loadmore:hover { background-color: #bb001a; }
-input[type="submit"].btn_loadmore.loading { background-color: #999999; }
+a.btn_loadmore { display: block; position: relative; width: 100%; margin-top: 24px; padding: 9px 0; text-align: center; color: white; background-color: #880013; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
+a.btn_loadmore:hover { text-decoration: none; background-color: #bb001a; }
+a.btn_loadmore.loading { background-color: #999999; }
 
 .pagination { margin-top: 48px; margin-bottom: 48px; padding: 0; text-align: center; list-style: none; }
 .pagination li { display: inline-block; }

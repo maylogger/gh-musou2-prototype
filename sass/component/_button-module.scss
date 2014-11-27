@@ -166,15 +166,20 @@
 .fb-like-button { text-align: center; }
 
 
-input[type="submit"].btn_loadmore {
+a.btn_loadmore {
+  display: block;
   position: relative;
   width: 100%;
   @include leader();
-  padding: 9px 12px;
+  padding: 9px 0;
+  text-align: center;
   color: white;
   background-color: $color-red;
   @include border-radius(5px);
   @include transition(background-color .25s);
-  &:hover { background-color: lighten($color-red, 10%); }
+  &:hover {
+    text-decoration: none;
+    background-color: lighten($color-red, 10%);
+  }
   &.loading { background-color: $color-gray; }
 }
