@@ -1,5 +1,5 @@
 - @page_name = "legislator"
-- @btn_loadmore_status = "loading"
+- @btn_loadmore_status = "normal"
 
 .breadcrumb
   .breadcrumb-inner
@@ -20,8 +20,9 @@
 .container.lead
   .legislator-list
     = render "/partials/legislators/legislators-list"
-  form
-    - if @btn_loadmore_status == "normal"
-      input.btn_loadmore type="submit" value="看更多"
-    - if @btn_loadmore_status == "loading"
-      input.btn_loadmore.loading type="submit" value="讀取中"
+  - if @btn_loadmore_status == "normal"
+    .pageaction
+      a.btn_loadmore rel="next" href="#" data-remote="true" 看更多
+  - if @btn_loadmore_status == "loading"
+    .pageaction
+      a.btn_loadmore.loading rel="next" href="#" data-remote="true" 讀取中

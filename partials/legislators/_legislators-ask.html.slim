@@ -39,8 +39,9 @@
   .tab-pane.fade#unanswered
     = render "legislators-ask-question-item-unanswered"
 
-form
-  - if @btn_loadmore_status == "normal"
-    input.btn_loadmore type="submit" value="看更多"
-  - if @btn_loadmore_status == "loading"
-    input.btn_loadmore.loading type="submit" value="讀取中"
+- if @btn_loadmore_status == "normal"
+  .pageaction
+    a.btn_loadmore rel="next" href="#" data-remote="true" 看更多
+- if @btn_loadmore_status == "loading"
+  .pageaction
+    a.btn_loadmore.loading rel="next" href="#" data-remote="true" 讀取中
