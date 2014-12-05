@@ -184,6 +184,7 @@
         position: relative;
         display: inline-block;
         margin-top : 5px;
+        margin-bottom: 5px;
         padding: 7px 18px 7px 48px;
         @include adjust-font-size-to(16px, 1);
         color: white;

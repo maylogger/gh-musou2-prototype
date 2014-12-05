@@ -172,6 +172,7 @@ a.btn_loadmore {
   width: 100%;
   @include leader();
   padding: 9px 0;
+  font-weight: bold;
   text-align: center;
   color: white;
   background-color: $color-red;
