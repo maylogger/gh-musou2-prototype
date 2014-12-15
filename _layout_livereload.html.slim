@@ -1,1 +1,1 @@
-= livereload_js unless ENV["RACK_ENV"] == "production"
+= livereload_js if ENV["RACK_ENV"] != "production"
