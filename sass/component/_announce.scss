@@ -31,7 +31,7 @@
   -webkit-animation: announce-animation .5s ease-out;
   .announce-inner {
     @include pie-clearfix;
-    display: inline-block;
+    display: block;
     max-width: 420px;
     padding: 18px 30px 18px 18px;
     text-align: left;
@@ -50,6 +50,8 @@
   }
   .announcer { display: none; }
   .announce-content {
+    float: left;
+    max-width: 340px;
     overflow: hidden;
     .content {
       @include trailer(0);
