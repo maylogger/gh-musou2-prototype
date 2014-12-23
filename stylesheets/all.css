@@ -215,7 +215,8 @@ body.open-menu { height: 100%; }
 .main { position: relative; left: 0; z-index: 2; min-height: 100%; background: inherit; -webkit-transition: -webkit-transform 0.25s; -moz-transition: -moz-transform 0.25s; -o-transition: -o-transform 0.25s; transition: transform 0.25s; }
 .open-menu .main { -webkit-transform: translateX(260px); -moz-transform: translateX(260px); -ms-transform: translateX(260px); -o-transform: translateX(260px); transform: translateX(260px); }
 
-@media (min-width: 640px) { .container, .breadcrumb .breadcrumb-inner, .page-header .page-header-inner, .legislator-header .legislator-header-inner, .video .video-cover .video-info .video-info-inner, .iframe-video-inner.is-fixed .fixed-container, .schedule-tab ul { width: 90%; } }
+@media (min-width: 640px) { .container, .breadcrumb .breadcrumb-inner, .page-header .page-header-inner, .legislator-header .legislator-header-inner, .video .video-cover .video-info .video-info-inner, .iframe-video-inner.is-fixed .fixed-container, .schedule-tab ul { width: 90%; }
+  #body_context { min-height: 600px; } }
 @media (min-width: 900px) { .container, .breadcrumb .breadcrumb-inner, .page-header .page-header-inner, .legislator-header .legislator-header-inner, .video .video-cover .video-info .video-info-inner, .iframe-video-inner.is-fixed .fixed-container, .schedule-tab ul { max-width: 71em; }
   .wrap { min-width: 900px; -webkit-transition: max-width 1s; -moz-transition: max-width 1s; -o-transition: max-width 1s; transition: max-width 1s; }
   .open-menu .wrap { overflow: visible; }

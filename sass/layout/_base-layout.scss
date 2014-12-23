@@ -59,6 +59,9 @@ body.open-menu {
   #{$page-container}, %container {
     width: 90%;
   }
+  #body_context {
+    min-height: 600px;
+  }
 }
 
 @include at-breakpoint($desktop) {
