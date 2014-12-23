@@ -354,6 +354,7 @@ a.btn_loadmore.loading { background-color: #999999; }
 
 .pagination { margin-top: 48px; margin-bottom: 48px; padding: 0; text-align: center; list-style: none; }
 .pagination li { display: inline-block; }
+.pagination li.active a { background: #880013; }
 .pagination a { display: block; margin: 6px 3px; padding: 5px 12px; font-size: 13px; line-height: 24px; color: white; text-decoration: none; background: #333333; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-transition: background ease-in-out; -webkit-transition-delay: 0.2s; -moz-transition: background ease-in-out 0.2s; -o-transition: background ease-in-out 0.2s; transition: background ease-in-out 0.2s; }
 .pagination a.more { padding: 7px 10px; }
 .pagination a .previous, .pagination a .next { display: inline-block; width: 0px; height: 0px; text-indent: -119988px; overflow: hidden; text-align: left; border: 5px solid transparent; }
