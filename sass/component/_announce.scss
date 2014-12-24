@@ -51,7 +51,7 @@
   .announcer { display: none; }
   .announce-content {
     float: left;
-    max-width: 340px;
+    max-width: 330px;
     overflow: hidden;
     .content {
       @include trailer(0);
