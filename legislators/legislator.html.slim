@@ -64,6 +64,7 @@
     .legislator-profile
       .tab-content.profile-content
         .tab-pane.fade.in.active#news
+          = render "/partials/legislators/legislators-news-focus-tagged"
           = render "/partials/legislators/legislators-news-ask-answer"
           - 4.times do
             = render "/partials/legislators/legislators-news"

@@ -33,7 +33,7 @@
       .content-title 相關議題
       - (1+rand(2)).times do
         .topic-item
-          .topic-header style="background-image: url('http://hhhhold.com/1136x200/#{rand(100)}')"
+          .topic-header style="background-image: url('http://lorem.me/1136x200/#{rand(100)}')"
             a.topic-title href="/topic/topic-detail.html"
               h2 =zh_lorem_words(4+rand(5))
               .sitting-time 上次交戰於：2014年9月12日
@@ -44,7 +44,7 @@
       ul.list-with-image
         - 6.times do
           li: a href=""
-            .list-image =image_tag("http://hhhhold.com/80x50/#{rand(100)}")
+            .list-image =image_tag("http://lorem.me/80x50/#{rand(100)}")
             .list-content =zh_lorem_sentence
     = render "/partials/disqus"
     = render "/partials/fb-like/fb-jssdk"

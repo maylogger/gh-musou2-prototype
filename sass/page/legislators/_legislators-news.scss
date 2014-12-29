@@ -21,7 +21,20 @@
           color: lighten($color-red, 5%);
         }
       }
-      .answer-link {
+      .focus-content {
+        .title {
+          color: $color-red;
+          @include adjust-font-size-to(18px, 1.25);
+          @include ellipsis;
+        }
+        .content {
+          overflow: hidden;
+          max-height: 72px;
+          @include adjust-font-size-to(13px);
+
+        }
+      }
+      .answer-link, .focus-link {
         &:before { content: "[ "; }
         &:after { content: " ]"; }
       }

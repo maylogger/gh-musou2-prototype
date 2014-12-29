@@ -775,8 +775,10 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .legislator-profile .news-post .meta-info { margin-bottom: 24px; }
 .legislator-profile .news-post .news-content .question { position: relative; margin-bottom: 24px; padding-left: 20px; font-size: 13px; line-height: 28px; }
 .legislator-profile .news-post .news-content .question:before { content: "Ｑ"; position: absolute; top: -10px; left: -20px; font-size: 34px; line-height: 48px; font-weight: bold; color: #a20017; }
-.legislator-profile .news-post .news-content .answer-link:before { content: "[ "; }
-.legislator-profile .news-post .news-content .answer-link:after { content: " ]"; }
+.legislator-profile .news-post .news-content .focus-content .title { color: #880013; font-size: 18px; line-height: 30px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+.legislator-profile .news-post .news-content .focus-content .content { overflow: hidden; max-height: 72px; font-size: 13px; line-height: 24px; }
+.legislator-profile .news-post .news-content .answer-link:before, .legislator-profile .news-post .news-content .focus-link:before { content: "[ "; }
+.legislator-profile .news-post .news-content .answer-link:after, .legislator-profile .news-post .news-content .focus-link:after { content: " ]"; }
 .legislator-profile .news-post .news-content .video-wrap { position: relative; width: 100%; height: 0; padding-top: 56.25%; }
 .legislator-profile .news-post .news-content .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .legislator-profile .news-interactive { margin-top: 24px; margin-bottom: 24px; }

@@ -1,0 +1,32 @@
+.news-post
+  h3.news-title #{zh_lorem_name} 已被標註在一篇場邊焦點中
+  .meta-info
+      .meta
+        .label 日期
+        =lorem_date.to_date
+      .meta
+        .label 作者
+        =zh_lorem_name
+  .news-content
+    p #{zh_lorem_name} 已被標註在一篇場邊焦點中
+    blockquote
+      .focus-content
+        .title = zh_lorem_sentence
+        .content = zh_lorem_paragraphs 2
+    a.focus-link href="#" 觀看全文
+  .news-interactive
+    .news-rating
+      a.btn-share-module href="/lightbox/share.html"
+        .button 分享
+        .counter #{rand(1000)}
+      a.btn-like-module href="#"
+        .button 讚
+        .counter #{rand(1000)}
+      a.btn-dislike-module href="#"
+        .button 噓
+        .counter #{rand(100)}
+  h4.news-comment-title 立委評論
+  .news-comment
+    - rand(5).times do
+      = render "/partials/legislators/legislators-news-comment-item"
+    = render "/partials/legislators/legislators-news-comment-form"
