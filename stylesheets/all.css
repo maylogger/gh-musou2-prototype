@@ -626,6 +626,7 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 
 .sidebar-item { margin-bottom: 24px; padding: 10px 12px; background-color: white; border: 1px solid #eeeeee; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 .sidebar-item.is-borderless { padding: 0; border: none; -webkit-border-radius: none; -moz-border-radius: none; -ms-border-radius: none; -o-border-radius: none; border-radius: none; }
+.sidebar-item.is-nobg { background-color: transparent; }
 
 .sidebar-title { margin-bottom: 12px; padding-bottom: 6px; font-size: 16px; line-height: 30px; font-weight: bold; border-bottom: 1px solid #999999; }
 
