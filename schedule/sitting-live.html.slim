@@ -66,3 +66,11 @@
           li
             .list-label 開會時間
             .list-content 上午（09:00 - 12:00）
+
+      .sidebar-item.is-borderless
+        h3.sidebar-title 精選場邊焦點
+        ul.list-with-image
+          - 3.times do
+            li: a href=""
+              .list-image =image_tag("http://lorem.me/80x50/#{rand(100)}")
+              .list-content =zh_lorem_sentence
