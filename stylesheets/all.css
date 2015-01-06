@@ -442,6 +442,7 @@ a.btn_loadmore.loading { background-color: #999999; }
 .meta-info .meta .label { display: inline-block; }
 .meta-info .meta.is-highlight { padding-right: 9px; color: white; background-color: #880013; }
 .meta-info .meta.is-highlight .label { margin-right: 3px; padding: 3px 9px; color: white; background-color: #333333; }
+.meta-info .meta.is-highlight a { color: white; }
 
 .label { display: inline-block; padding-right: 3px; color: #999999; }
 
