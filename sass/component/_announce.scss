@@ -19,13 +19,13 @@
 
 .announce {
   display: block;
-  position: relative;
   @include box-sizing(border-box);
   position: fixed;
   z-index: 1000;
   bottom: 12px;
   margin-right: 12px;
-  @include translate3d(0px, 0px, 0px);
+  @include translate(0px, 0px, 0px);
+  @include transform-origin(0, 100%, 0);
   @include transition(transform .5s cubic-bezier(0.55, 0.085, 0.68, 0.53));
   animation: announce-animation .5s ease-out;
   -webkit-animation: announce-animation .5s ease-out;
@@ -36,17 +36,13 @@
     padding: 18px 30px 18px 18px;
     text-align: left;
     background-color: $color-red;
-    @include transform-origin(0%, 100%, 0);
-    @include transition(background-color .25s, transform .5s cubic-bezier(0.55, 0.085, 0.68, 0.53));
+    @include transition(background-color .25s);
     &:hover {
       background-color: lighten($color-red, 5%);
     }
   }
   &.is-drop {
-    @include translate(30px, 200px, 0px);
-    .announce-inner {
-      @include rotate(60deg);
-    }
+    @include transform(translate(30px, 200px) rotate(60deg));
   }
   .announcer { display: none; }
   .announce-content {
