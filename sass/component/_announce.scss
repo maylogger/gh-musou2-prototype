@@ -24,7 +24,6 @@
   z-index: 1000;
   bottom: 12px;
   margin-right: 12px;
-  @include translate(0px, 0px, 0px);
   @include transform-origin(0, 100%, 0);
   @include transition(transform .5s cubic-bezier(0.55, 0.085, 0.68, 0.53));
   animation: announce-animation .5s ease-out;
