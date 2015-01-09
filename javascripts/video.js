@@ -43,7 +43,7 @@ $(window).scroll(function() {
     $('.is-move').hcSticky({
       top: 256,
       responsive: true,
-      stickTo: '.main > .container',
+      stickTo: '#body_context > .container',
       offResolutions: -1024
     });
     playingVideo.addClass('is-fixed').delay(500).queue(function(){
