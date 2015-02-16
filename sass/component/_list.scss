@@ -29,6 +29,8 @@
   .list-content {
     color: $text-black;
     overflow: hidden;
+    a { color: $color-red; }
+    p { @include adjust-font-size-to(13px, .75); }
   }
   .list-content-row {
     @include pie-clearfix;
@@ -38,6 +40,9 @@
     li + li {
       @include leader(.5);
       @include padding-leader(.5);
+    }
+    .list-content {
+      p { @include adjust-font-size-to(16px); }
     }
     .list-content-row { padding-bottom: rhythm(.25); }
   }

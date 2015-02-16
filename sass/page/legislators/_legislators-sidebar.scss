@@ -8,12 +8,17 @@
 @mixin text-with-icon($icon-name) {
   position: relative;
   @include trailer(.25);
+  padding-top: 3px;
   padding-left: 30px;
   &:before {
     content: "";
     position: absolute;
     left: 0;
+    top: 0;
     @include replace-text-with-svg($icon-name);
+  }
+  @include at-breakpoint($pad) {
+    padding-top: 0;
   }
 }
 .positive-status {

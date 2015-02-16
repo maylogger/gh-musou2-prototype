@@ -285,9 +285,12 @@ body.open-menu { height: 100%; }
 .list-with-image a:hover .list-content, .dictionary-menu a:hover .list-content, .list a:hover .list-content { color: #880013; }
 .list-with-image .list-label, .dictionary-menu .list-label, .list .list-label { float: left; width: 7em; color: #999999; }
 .list-with-image .list-content, .dictionary-menu .list-content, .list .list-content { color: #333330; overflow: hidden; }
+.list-with-image .list-content a, .dictionary-menu .list-content a, .list .list-content a { color: #880013; }
+.list-with-image .list-content p, .dictionary-menu .list-content p, .list .list-content p { font-size: 13px; line-height: 18px; }
 .list-with-image .list-content-row:after, .dictionary-menu .list-content-row:after, .list .list-content-row:after { content: ""; display: table; clear: both; }
 @media (min-width: 640px) { .list-with-image, .dictionary-menu, .list { font-size: 16px; line-height: 24px; }
   .list-with-image li + li, .dictionary-menu li + li, .list li + li { margin-top: 12px; padding-top: 12px; }
+  .list-with-image .list-content p, .dictionary-menu .list-content p, .list .list-content p { font-size: 16px; line-height: 24px; }
   .list-with-image .list-content-row, .dictionary-menu .list-content-row, .list .list-content-row { padding-bottom: 6px; } }
 
 .list-with-image a:after { content: ""; display: table; clear: both; }
@@ -858,23 +861,29 @@ ol.carousel-indicators { position: absolute; bottom: -10px; left: 50%; z-index: 
 .legislator-info { display: none; border: 1px solid #eeeeee; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 .legislator-info .list { font-size: 13px; line-height: 24px; }
 
-.positive-status { position: relative; margin-bottom: 6px; padding-left: 30px; color: #880013; font-weight: bold; }
-.positive-status:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/positive_status.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/positive_status.svg?1412253061'); }
+.positive-status { position: relative; margin-bottom: 6px; padding-top: 3px; padding-left: 30px; color: #880013; font-weight: bold; }
+.positive-status:before { content: ""; position: absolute; left: 0; top: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/positive_status.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/positive_status.svg?1412253061'); }
+@media (min-width: 640px) { .positive-status { padding-top: 0; } }
 
-.negative-status { position: relative; margin-bottom: 6px; padding-left: 30px; }
-.negative-status:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/negative_status.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/negative_status.svg?1412253061'); }
+.negative-status { position: relative; margin-bottom: 6px; padding-top: 3px; padding-left: 30px; }
+.negative-status:before { content: ""; position: absolute; left: 0; top: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/negative_status.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/negative_status.svg?1412253061'); }
+@media (min-width: 640px) { .negative-status { padding-top: 0; } }
 
-.facebook { position: relative; margin-bottom: 6px; padding-left: 30px; }
-.facebook:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_facebook.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_facebook.svg?1412253061'); }
+.facebook { position: relative; margin-bottom: 6px; padding-top: 3px; padding-left: 30px; }
+.facebook:before { content: ""; position: absolute; left: 0; top: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_facebook.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_facebook.svg?1412253061'); }
+@media (min-width: 640px) { .facebook { padding-top: 0; } }
 
-.wikipedia { position: relative; margin-bottom: 6px; padding-left: 30px; }
-.wikipedia:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_wiki.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_wiki.svg?1412253061'); }
+.wikipedia { position: relative; margin-bottom: 6px; padding-top: 3px; padding-left: 30px; }
+.wikipedia:before { content: ""; position: absolute; left: 0; top: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_wiki.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_wiki.svg?1412253061'); }
+@media (min-width: 640px) { .wikipedia { padding-top: 0; } }
 
-.lyvote { position: relative; margin-bottom: 6px; padding-left: 30px; }
-.lyvote:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_lyvote.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_lyvote.svg?1412253061'); }
+.lyvote { position: relative; margin-bottom: 6px; padding-top: 3px; padding-left: 30px; }
+.lyvote:before { content: ""; position: absolute; left: 0; top: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_lyvote.png?1412253061'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_lyvote.svg?1412253061'); }
+@media (min-width: 640px) { .lyvote { padding-top: 0; } }
 
-.hyperlink { position: relative; margin-bottom: 6px; padding-left: 30px; }
-.hyperlink:before { content: ""; position: absolute; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_hyperlink.png?1413467336'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_hyperlink.svg?1413467336'); }
+.hyperlink { position: relative; margin-bottom: 6px; padding-top: 3px; padding-left: 30px; }
+.hyperlink:before { content: ""; position: absolute; left: 0; top: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_hyperlink.png?1413467336'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_hyperlink.svg?1413467336'); }
+@media (min-width: 640px) { .hyperlink { padding-top: 0; } }
 
 @media (min-width: 900px) { .legislator-info { display: block; } }
 .topic-item { margin-bottom: 24px; overflow: hidden; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
