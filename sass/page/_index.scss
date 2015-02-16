@@ -13,6 +13,11 @@
       opacity: 1;
       @include scale(1);
     }
+    .data-empty {
+      @include leader(1);
+      @include trailer(1);
+      img { display: inline-block; }
+    }
   }
   .sitting.in-index {
     margin: 0 auto;

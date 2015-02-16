@@ -32,7 +32,6 @@
       .title {
         margin-bottom: 3px;
         color: $color-red;
-        @include ellipsis;
         &:hover { text-decoration: underline; }
       }
       .summary { display: none; }

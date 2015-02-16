@@ -27,6 +27,7 @@
     }
   }
   &.big-text {
+    @include adjust-font-size-to(21px, 1.5);
     #{headings()} {
       @include leader(2);
       @include trailer();
