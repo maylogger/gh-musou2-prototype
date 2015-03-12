@@ -411,10 +411,10 @@ a.btn_loadmore.loading { background-color: #999999; }
 .post { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .post.isolate img { margin-left: auto; margin-right: auto; }
 .post.isolate .meta-info { text-align: center; }
-.post.isolate iframe { display: block; margin: 0 auto; }
 .post .post-title { margin-bottom: 12px; font-weight: bold; border-bottom: 1px solid #eeeeee; }
 .post .meta-info { margin-bottom: 12px; }
 .post .iframe-video { margin-bottom: 24px; }
+.post iframe { display: block; margin: 0 auto; max-width: 100%; }
 
 .post-extend-content { margin-top: 48px; margin-bottom: 72px; padding-top: 12px; border-top: 3px solid #eeeeee; }
 .post-extend-content .content-title { margin-bottom: 12px; padding-bottom: 12px; font-weight: bold; border-bottom: 1px solid #eeeeee; }
